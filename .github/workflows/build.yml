@@ -37,7 +37,12 @@ jobs:
           make copy_theme THEME=${{ matrix.theme }}
 
       - name: Set Executable Name
-        run: echo "EXEC_NAME=backgammon" >> $GITHUB_ENV
+        run: |
+          if [ "${{ matrix.theme }}" == "aquatic" ]; then
+            echo "EXEC_NAME=aquagammon" >> $GITHUB_ENV
+          else
+            echo "EXEC_NAME=backgammon" >> $GITHUB_ENV
+          fi
         shell: bash
 
       - name: Build Executable (Windows)
@@ -72,5 +77,5 @@ jobs:
       - name: Upload Executable
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.EXEC_NAME }}-${{ env.OS_LABEL }}-${{ env.ARCH || 'x86_64' }}-${{ matrix.theme }}
+          name: backgammon-${{ env.OS_LABEL }}-${{ env.ARCH || 'x86_64' }}-${{ matrix.theme }}
           path: src/backgammon/dist/${{ env.EXEC_NAME }}${{ (runner.os == 'Windows') && '.exe' || '' }}

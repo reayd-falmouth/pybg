@@ -37,7 +37,12 @@ jobs:
           make copy_theme THEME=${{ matrix.theme }}
 
       - name: Set Executable Name
-        run: echo "EXEC_NAME=backgammon" >> $GITHUB_ENV
+        run: |
+          if [ "${{ matrix.theme }}" == "aquatic" ]; then
+            echo "EXEC_NAME=aquagammon" >> $GITHUB_ENV
+          else
+            echo "EXEC_NAME=backgammon" >> $GITHUB_ENV
+          fi
         shell: bash
 
       - name: Build Executable (Windows)
@@ -72,7 +77,7 @@ jobs:
       - name: Upload Executable
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.EXEC_NAME }}-${{ env.OS_LABEL }}-${{ env.ARCH || 'x86_64' }}-${{ matrix.theme }}
+          name: backgammon-${{ env.OS_LABEL }}-${{ env.ARCH || 'x86_64' }}-${{ matrix.theme }}
           path: src/backgammon/dist/${{ env.EXEC_NAME }}${{ (runner.os == 'Windows') && '.exe' || '' }}
 
   release:
@@ -87,7 +92,12 @@ jobs:
         uses: actions/download-artifact@v4
 
       - name: Set Executable Name
-        run: echo "EXEC_NAME=backgammon" >> $GITHUB_ENV
+        run: |
+          if [ "${{ matrix.theme }}" == "aquatic" ]; then
+            echo "EXEC_NAME=aquagammon" >> $GITHUB_ENV
+          else
+            echo "EXEC_NAME=backgammon" >> $GITHUB_ENV
+          fi
         shell: bash
 
       - name: Set Itch.io Project Name
@@ -102,7 +112,7 @@ jobs:
       - name: Deploy Windows Build to Itch.io
         uses: robpc/itchio-upload-action@v1
         with:
-          path: ${{ env.EXEC_NAME }}-windows-x86_64-${{ matrix.theme }}/${{ env.ITCH_PROJECT }}.exe
+          path: backgammon-windows-x86_64-${{ matrix.theme }}/${{ env.EXEC_NAME }}.exe
           project: ${{ env.ITCHIO_USER }}/${{ env.ITCH_PROJECT }}
           channel: windows
           version: ${{ github.ref_name }}
@@ -111,7 +121,7 @@ jobs:
       - name: Deploy Linux Build to Itch.io
         uses: robpc/itchio-upload-action@v1
         with:
-          path: ${{ env.EXEC_NAME }}-linux-x86_64-${{ matrix.theme }}/${{ env.ITCH_PROJECT }}
+          path: backgammon-linux-x86_64-${{ matrix.theme }}/${{ env.EXEC_NAME }}
           project: ${{ env.ITCHIO_USER }}/${{ env.ITCH_PROJECT }}
           channel: linux
           version: ${{ github.ref_name }}
@@ -120,8 +130,7 @@ jobs:
       - name: Deploy macOS ARM64 Build to Itch.io
         uses: robpc/itchio-upload-action@v1
         with:
-          path: ${{ env.EXEC_NAME }}-macOS-arm64-${{ matrix.theme }}/${{ env.ITCH_PROJECT }}
-          project: ${{ env.ITCHIO_USER }}/${{ env.ITCH_PROJECT }}
+          path: backgammon-macOS-arm64-${{ matrix.theme }}/${{ env.EXEC_NAME }}
           channel: mac-arm64
           version: ${{ github.ref_name }}
           api-key: ${{ secrets.ITCHIO_API_KEY }}
@@ -129,7 +138,7 @@ jobs:
       - name: Deploy macOS x86_64 Build to Itch.io
         uses: robpc/itchio-upload-action@v1
         with:
-          path: ${{ env.EXEC_NAME }}-macOS-x86_64-${{ matrix.theme }}/${{ env.ITCH_PROJECT }}
+          path: backgammon-macOS-x86_64-${{ matrix.theme }}/${{ env.EXEC_NAME }}
           project: ${{ env.ITCHIO_USER }}/${{ env.ITCH_PROJECT }}
           channel: mac-x86_64
           version: ${{ github.ref_name }}
