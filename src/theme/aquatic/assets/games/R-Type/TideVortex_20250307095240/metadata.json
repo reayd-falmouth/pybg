@@ -1,0 +1,26 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'R-Type' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Go slowly all the way round the outside'.",
+    "path": "ideas/aquatic",
+    "game_type": "R-Type",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Tide Vortex",
+    "game_id": "TideVortex_20250307095240",
+    "branding_data": {
+        "short_description": "Tide Vortex is an aquatic-themed side-scrolling shooter where you navigate ocean environments, battling pollution and conserving marine life at a thoughtful pace.",
+        "detailed_description": "Tide Vortex is a unique twist on the classic 'R-Type' side-scrolling shooter genre, set in a vibrant underwater world. Players control a futuristic submersible vehicle navigating through beautifully rendered oceanic environments. Unlike traditional shooters, Tide Vortex emphasizes a slower, more deliberate approach as players travel around the peripheries of vast aquatic territories. The game challenges players to engage in combat while also focusing on ethical choices, such as minimizing harm to marine life and conserving the environment. Power-ups allow players to clean oil spills, recycle plastic waste, and restore coral reefs, integrating sustainability themes seamlessly into gameplay. Players must strategize their path around each level's boundaries, uncovering mysteries of the deep and collaborating with various aquatic creatures. Inspired by the concept 'Go slowly all the way round the outside,' Tide Vortex encourages players to consider the impact of their actions while providing a captivating and enriching gaming experience.",
+        "tags": [
+            "side-scroller",
+            "shooter",
+            "aquatic theme",
+            "sustainability",
+            "ethical choices",
+            "slow-paced",
+            "environmental"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

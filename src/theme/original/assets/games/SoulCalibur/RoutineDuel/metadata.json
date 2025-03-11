@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Soul Calibur' game. Modify it by applying the oblique strategy: 'Do something boring'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Routine Duel",
+    "game_type": "SoulCalibur",
+    "branding_data": {
+        "short_description": "Routine Duel is a simplified fighting game inspired by Soul Calibur, emphasizing repetitive and mundane combat scenarios.",
+        "detailed_description": "Routine Duel takes the essence of the classic Soul Calibur series and introduces a unique twist by incorporating the oblique strategy of 'doing something boring.' The game offers a stripped-down combat system with minimalistic controls and limited move sets, focusing on the predictability and monotony of routine battles. Players engage in repetitive duels where the excitement lies in mastering the art of mundane combat, emphasizing timing and precision over flashy moves. The game's aesthetic is deliberately plain, with simple arenas and unremarkable character designs, challenging players to find depth in what seems ordinary.",
+        "tags": [
+            "Fighting",
+            "Simplified Combat",
+            "Routine",
+            "Minimalistic",
+            "Strategy",
+            "Monotony",
+            "Precision",
+            "Soul Calibur Inspired"
+        ]
+    },
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "Do something boring"
+}

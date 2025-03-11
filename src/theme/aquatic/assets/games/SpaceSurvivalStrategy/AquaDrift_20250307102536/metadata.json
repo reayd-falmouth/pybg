@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Space Survival Strategy' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Consider different fading systems'.",
+    "path": "ideas/aquatic",
+    "game_type": "Space Survival Strategy",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Aqua Drift",
+    "game_id": "AquaDrift_20250307102536",
+    "branding_data": {
+        "short_description": "In 'Aqua Drift', manage resources and technologies to survive in a dynamic aquatic environment, balancing exploration and ethical sustainability.",
+        "detailed_description": "'Aqua Drift' is a space survival strategy game with a unique aquatic twist, designed as a creative concept for a Game Jam. Set in the vast expanse of a futuristic water-covered planet, players must navigate their spaceship through oceans, seas, and rivers, focusing on aquatic survival. Employ strategic thinking to manage limited resources while exploring underwater ecosystems and harvesting vital elements. As you drift through the aquatic world, implement different fading systems that challenge your ability to maintain power and preserve your vessel's integrity. Decisions impact the environment and the communities encountered, engaging players to consider ethical and sustainable practices. Tailored for developers of all skill levels, 'Aqua Drift' offers an immersive experience emphasizing creativity, strategy, and ecological awareness.",
+        "tags": [
+            "Space Survival",
+            "Strategy",
+            "Aquatic",
+            "Game Jam",
+            "Ethics",
+            "Sustainability",
+            "Resource Management",
+            "Exploration"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

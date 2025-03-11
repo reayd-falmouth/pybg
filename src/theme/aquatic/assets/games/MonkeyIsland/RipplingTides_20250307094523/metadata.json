@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Monkey Island' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Cascades'.",
+    "path": "ideas/aquatic",
+    "game_type": "Monkey Island",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Rippling Tides",
+    "game_id": "RipplingTides_20250307094523",
+    "branding_data": {
+        "short_description": "Rippling Tides is an aquatic-themed adventure game inspired by the classic 'Monkey Island' series, focusing on creative game jam concepts, cascading puzzles, and sustainable oceanic exploration.",
+        "detailed_description": "Rippling Tides invites players to explore a vibrant, aquatic world filled with mysterious islands and hidden depths. Embark on a whimsical journey as a budding game developer during a prestigious Game Jam event, tasked with creating a unique game concept based on the ocean. Navigate through cascading puzzles and morally complex decisions involving ocean preservation and ethics in game design. The game blends point-and-click adventure mechanics with resource management, challenging players to tackle ecological sustainability using their creativity and wit. As you venture across stunning seascapes, communicate with quirky marine characters, solve challenges influenced by cascading environmental and ethical dilemmas, and strive to leave the game world better than you found it.",
+        "tags": [
+            "Adventure",
+            "Point-and-click",
+            "Puzzle",
+            "Ocean",
+            "Sustainability",
+            "Ethics",
+            "Exploration",
+            "Game Development",
+            "Humor",
+            "Environmental"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

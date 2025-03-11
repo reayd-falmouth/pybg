@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Darkest Dungeon' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'What wouldn't you do?'.",
+    "path": "ideas",
+    "game_type": "Darkest Dungeon",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Abyssal Virtues",
+    "game_id": "AbyssalVirtues_20250306215507",
+    "branding_data": {
+        "short_description": "Abyssal Virtues is a turn-based tactical RPG that explores the ethics and sustainability of ocean life through the lens of a dark, challenging undersea adventure.",
+        "detailed_description": "Dive into the depths of the ocean with Abyssal Virtues, a tactical RPG inspired by Darkest Dungeon with a unique fish theme. Players assemble a crew of marine creatures, each with their own strengths and weaknesses, to explore the perilous abyss. Decisions weigh heavily as players must confront ethical dilemmas surrounding sustainability and conservation of the ocean. Guided by the oblique strategy 'What wouldn't you do?', players must consider unconventional tactics and embrace morally complex choices to survive. Navigate through haunting underwater caverns, encountering morally ambiguous situations where you must balance the health of your crew against the well-being of the ocean. The game emphasizes the importance of responsible actions and sustainability in a world where every choice affects the fragile ecosystem of the deep sea.",
+        "tags": [
+            "Tactical RPG",
+            "Turn-based Strategy",
+            "Darkest Dungeon",
+            "Fish Theme",
+            "Ethics",
+            "Sustainability",
+            "Ocean Life",
+            "Moral Dilemmas",
+            "Challenging Gameplay",
+            "Indie Game"
+        ]
+    },
+    "strategy": "What wouldn"
+}

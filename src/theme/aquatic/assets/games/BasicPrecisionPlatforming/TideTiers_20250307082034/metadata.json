@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Basic Precision Platforming' game with the theme Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.. Modify it by applying the oblique strategy: 'Honor thy error as a hidden intention'.",
+    "path": "ideas/aquatic",
+    "game_type": "Basic Precision Platforming",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Tide Tiers",
+    "game_id": "TideTiers_20250307082034",
+    "branding_data": {
+        "short_description": "Navigate aquatic platforms with precise jumps in Tide Tiers, where every misstep reveals new paths and secrets.",
+        "detailed_description": "Tide Tiers is a unique precision platformer set in a vibrant underwater world. Players navigate through different aquatic environments, including oceans, seas, and rivers, each tier offering challenges related to these diverse habitats. The game creatively embraces mistakes as players’ missed jumps or slips can lead to hidden areas or secret pathways, encouraging exploration and curiosity. The game integrates themes of ethics and sustainability by featuring levels that highlight the impact of pollution, overfishing, and climate change on aquatic environments. Players help restore these areas by solving environmental puzzles and supporting marine life, experiencing firsthand the importance of ecology and the difference small actions can make. Accessible to developers of all skill levels, the game leverages simple controls and gradual difficulty progression.",
+        "tags": [
+            "precision platformer",
+            "aquatic theme",
+            "environmental awareness",
+            "sustainability",
+            "game jam",
+            "exploration",
+            "underwater",
+            "hidden secrets",
+            "replayability",
+            "eco-friendly"
+        ]
+    },
+    "strategy": "Honor thy error as a hidden intention"
+}

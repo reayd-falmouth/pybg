@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Bomberman' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Make a sudden, destructive, unpredictable action; incorporate'.",
+    "path": "ideas/aquatic",
+    "game_type": "Bomberman",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Submarine Saboteur",
+    "game_id": "SubmarineSaboteur_20250307094807",
+    "branding_data": {
+        "short_description": "Navigate underwater mazes, deploy explosive devices, and protect marine life in Submarine Saboteur, an aquatic-themed twist on classic Bomberman gameplay.",
+        "detailed_description": "Submarine Saboteur invites players to dive into a vibrant underwater world where they control saboteurs navigating complex marine environments. The game challenges players to strategically place explosive devices to clear paths and foil adversaries while preserving the delicate underwater ecosystem. With the sudden and unpredictable nature of underwater currents, players must carefully plan their moves to avoid causing unintended harm to marine life. Players can unlock unique power-ups inspired by aquatic creatures and learn about the importance of ethical and sustainable underwater practices. Whether you're a novice or a seasoned gamer, Submarine Saboteur offers engaging gameplay with an educational twist.",
+        "tags": [
+            "Action",
+            "Puzzle",
+            "Strategy",
+            "Aquatic",
+            "Environmental",
+            "Bomberman-like",
+            "Underwater",
+            "Ethics",
+            "Sustainability",
+            "Game Jam"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

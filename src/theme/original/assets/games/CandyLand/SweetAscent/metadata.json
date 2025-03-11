@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Candy Land' game. Modify it by applying the oblique strategy: 'Abandon normal instruments'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Sweet Ascent",
+    "game_type": "CandyLand",
+    "branding_data": {
+        "short_description": "Embark on a whimsical journey in 'Sweet Ascent', a Candy Land-inspired game with a twist.",
+        "detailed_description": "Sweet Ascent is a reimagined board game experience inspired by the classic 'Candy Land', but with a creative twist. In this version, players navigate a vibrant, candy-themed world without the use of traditional dice or cards. Instead, players progress by solving puzzles and engaging in mini-games that determine their path. The game's colorful board is filled with delightful surprises and challenges, each inspired by a different type of candy. Players must use strategy and creativity to reach the top of the candy mountain, encountering unique characters and obstacles along the way. Sweet Ascent combines the nostalgic charm of a classic board game with innovative gameplay mechanics that encourage players to think outside the box.",
+        "tags": [
+            "Board Game",
+            "Family",
+            "Puzzle",
+            "Strategy",
+            "Casual",
+            "Creative",
+            "Colorful",
+            "Whimsical",
+            "Innovative",
+            "Candy-themed"
+        ]
+    },
+    "strategy": "Abandon normal instruments"
+}

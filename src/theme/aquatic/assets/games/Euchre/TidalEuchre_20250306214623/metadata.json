@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Euchre' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Imagine the music as a moving chain or caterpillar'.",
+    "path": "ideas",
+    "game_type": "Euchre",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Tidal Euchre",
+    "game_id": "TidalEuchre_20250306214623",
+    "branding_data": {
+        "short_description": "Tidal Euchre is a card game that blends traditional Euchre mechanics with a fish-themed ethical twist and a unique musical experience.",
+        "detailed_description": "Tidal Euchre transforms the classic card game of Euchre into an engaging, fish-themed adventure. Players navigate the ethical and sustainable fishing world, strategically playing cards to win tricks and enhance their fishing environment. The game incorporates a unique musical element where the soundtrack evolves like a moving chain or caterpillar, reflecting players' progress and influencing the game's atmosphere. Players must balance winning hands with making ethical choices about fishing practices, promoting insightful decisions about resource sustainability.",
+        "tags": [
+            "Card Game",
+            "Euchre",
+            "Fish Theme",
+            "Ethics",
+            "Sustainability",
+            "Music",
+            "Strategy",
+            "Game Jam"
+        ]
+    },
+    "strategy": "Imagine the music as a moving chain or caterpillar"
+}

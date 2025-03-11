@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Grid-Based Turn-Based RPG' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Courage!'.",
+    "path": "ideas/aquatic",
+    "game_type": "Grid-Based Turn-Based RPG",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Tidal Valor",
+    "game_id": "TidalValor_20250307083400",
+    "branding_data": {
+        "short_description": "Tidal Valor is a grid-based turn-based RPG where players navigate aquatic realms and make courageous choices for sustainability.",
+        "detailed_description": "In Tidal Valor, players embark on an oceanic adventure through grid-based arenas, diving into the depths of seas, exploring sprawling coral reefs, and traversing mysterious riverways. Set in a vibrant aquatic world, players command a crew of unique characters, each with distinct abilities and backstories rooted in marine lore. The core objective is to battle against environmental threats and rival factions to restore harmony to a world disrupted by unethical overfishing and pollution. The game incorporates elements of ethical decision-making where the player must courageously decide how to manage resources responsibly, choose alliances carefully, and undertake missions to clean and revive the aquatic environment. Combining strategic planning with a captivating narrative, Tidal Valor presents an engaging and thoughtful experience suitable for game developers and players of all skill levels.",
+        "tags": [
+            "turn-based RPG",
+            "grid-based",
+            "aquatic theme",
+            "ocean exploration",
+            "sustainability",
+            "ethics",
+            "strategic gameplay",
+            "environmental conservation",
+            "courage",
+            "game jam concept"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

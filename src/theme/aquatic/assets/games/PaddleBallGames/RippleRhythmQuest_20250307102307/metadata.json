@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Paddle Ball Games' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Left channel, right channel, center channel'.",
+    "path": "ideas/aquatic",
+    "game_type": "Paddle Ball Games",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Ripple Rhythm Quest",
+    "game_id": "RippleRhythmQuest_20250307102307",
+    "branding_data": {
+        "short_description": "Ripple Rhythm Quest is a unique aquatic-themed paddle ball game where players harmonize with ocean melodies using left, right, and center channels, promoting sustainability and ocean awareness.",
+        "detailed_description": "Ripple Rhythm Quest reimagines the classic paddle ball game within an immersive aquatic theme, tailored for a game jam. In this game, players control paddles to strike and navigate rhythmic waves of water droplets, each tied to melodies inspired by oceanic sounds. Using three channels—left, right, and center—players guide the droplets to hit environmental and ethical targets scattered across a beautifully rendered underwater landscape. As players progress, they unlock fascinating facts and mini-challenges that highlight the importance of aquatic ecosystems and the need for sustainable practices. The game melds creativity, relaxation, and education through its soothing visuals, engaging gameplay, and thought-provoking messages, making it accessible to game developers of all skill levels.",
+        "tags": [
+            "paddle ball",
+            "aquatic",
+            "sustainability",
+            "ocean",
+            "rhythm",
+            "game jam",
+            "educational",
+            "musical"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

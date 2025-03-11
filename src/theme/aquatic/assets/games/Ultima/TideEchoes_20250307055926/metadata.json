@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Ultima' game with the theme Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.. Modify it by applying the oblique strategy: 'Repetition is a form of change'.",
+    "path": "ideas",
+    "game_type": "Ultima",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Tide Echoes",
+    "game_id": "TideEchoes_20250307055926",
+    "branding_data": {
+        "short_description": "Explore the endless sea in 'Tide Echoes', where repetition becomes the key to understanding an ever-changing aquatic realm.",
+        "detailed_description": "'Tide Echoes' is an engaging role-playing game inspired by the classic 'Ultima' series with a fresh aquatic twist. Participants of all skill levels dive into the vast, mysterious oceans, seas, and rivers of a vibrant aquatic world that constantly shifts and evolves. The game's core mechanic draws from the oblique strategy 'Repetition is a form of change', encouraging players to explore familiar places repeatedly to witness subtle shifts in the environment and encounters. As players journey through the underwater realms, they uncover secrets hidden within repetitive cycles, influencing the world's narrative and their own paths. Themes of ethics and sustainability are woven throughout, challenging players to consider their impact on the fragile marine ecosystem and make choices that balance progress and conservation. The game encourages creative problem-solving and strategic thinking against a backdrop of shimmering tides and echoing ocean depths.",
+        "tags": [
+            "RPG",
+            "Adventure",
+            "Aquatic",
+            "Exploration",
+            "Ethics",
+            "Sustainability",
+            "Oblique Strategy",
+            "Repetition",
+            "Fantasy",
+            "Single-player"
+        ]
+    },
+    "strategy": "Repetition is a form of change"
+}

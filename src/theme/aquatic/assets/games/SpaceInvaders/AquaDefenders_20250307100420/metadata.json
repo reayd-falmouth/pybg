@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Space Invaders' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Is the tuning appropriate?'.",
+    "path": "ideas/aquatic",
+    "game_type": "Space Invaders",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Aqua Defenders",
+    "game_id": "AquaDefenders_20250307100420",
+    "branding_data": {
+        "short_description": "Defend marine life from invasive species in a unique aquatic-themed arcade shooter.",
+        "detailed_description": "Aqua Defenders is an underwater arcade shooter where you protect the ocean's ecosystems from invasive alien species. In this aquatic-themed twist on the classic 'Space Invaders,' players maneuver submarines to block and eliminate threats before they reach vulnerable sea creatures. The game's engaging mechanics encourage players to consider the balance between defense and environmental impact. Strategically deploy resources and upgrades to ensure minimal disruption to marine habitats, encapsulating the themes of sustainability and ethics. Suitable for developers of all skill levels, Aqua Defenders challenges players to tune their defenses and manage ecosystem health appropriately.",
+        "tags": [
+            "Arcade",
+            "Shooter",
+            "Aquatic",
+            "Ocean",
+            "Invasive Species",
+            "Sustainability",
+            "Ethics",
+            "Environment",
+            "Game Jam",
+            "Creative"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Darkest Dungeon' game. Modify it by applying the oblique strategy: 'Emphasize differences'.",
+    "path": "../oblique-games/ideas/",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Title: \"Shadow Variance\"",
+    "game_type": "DarkestDungeon",
+    "branding_data": {
+        "short_description": "A turn-based RPG where players explore dungeons filled with unique challenges and diverse characters.",
+        "detailed_description": "Shadow Variance is a strategic, turn-based RPG inspired by Darkest Dungeon. Set in a dark and foreboding world, players lead a team of adventurers through treacherous dungeons filled with monstrous foes and psychological horrors. Each character is distinct, with unique abilities, strengths, and weaknesses that players must strategically utilize. The game emphasizes the differences between characters and enemies, requiring players to adapt their strategies to the varied threats they encounter. As they delve deeper into the dungeons, players must manage their team's stress and resources to survive the escalating challenges.",
+        "tags": [
+            "RPG",
+            "Turn-based",
+            "Strategy",
+            "Dark Fantasy",
+            "Dungeon Crawler",
+            "Psychological Horror",
+            "Character Management",
+            "Tactical Combat"
+        ]
+    },
+    "errors": null,
+    "strategy": "Emphasize differences"
+}

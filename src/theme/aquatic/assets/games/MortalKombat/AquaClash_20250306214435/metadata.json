@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Mortal Kombat' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Feedback recordings into an acoustic situation'.",
+    "path": "ideas",
+    "game_type": "Mortal Kombat",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Aqua Clash",
+    "game_id": "AquaClash_20250306214435",
+    "branding_data": {
+        "short_description": "A fish-themed fighting game with a focus on ethics and sustainability, featuring a unique sound-based combat mechanic.",
+        "detailed_description": "Aqua Clash is a fighting game where players embody various aquatic creatures in intense battles under the sea. Each character, inspired by marine life, comes with unique abilities emphasizing ethical and sustainable practices within their environment. The game introduces an innovative mechanic where players must 'record' their combos and then 'feed' these recordings back into the game as they fight, simulating an acoustic environment where sound waves play a crucial role in the combat strategy. This integrates the theme of feedback for sustainability, as players must adapt to the reverberations of their previous actions to succeed. The visual theme emphasizes the beauty of the ocean and the need for sustainable interaction with its ecosystems.",
+        "tags": [
+            "Fighting",
+            "Fish theme",
+            "Ethics",
+            "Sustainability",
+            "Sound-based mechanics",
+            "Marine life",
+            "Unique combat",
+            "Game jam"
+        ]
+    },
+    "strategy": "Feedback recordings into an acoustic situation"
+}

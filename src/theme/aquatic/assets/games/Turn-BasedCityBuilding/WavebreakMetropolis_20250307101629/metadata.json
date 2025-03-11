@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Turn-Based City Building' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Cut a vital connection'.",
+    "path": "ideas/aquatic",
+    "game_type": "Turn-Based City Building",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Wavebreak Metropolis",
+    "game_id": "WavebreakMetropolis_20250307101629",
+    "branding_data": {
+        "short_description": "Build a thriving aquatic civilization in the turn-based game Wavebreak Metropolis, where the challenge is to maintain sustainability without the lifeline of fresh water sources.",
+        "detailed_description": "In Wavebreak Metropolis, players take on the role of architects and leaders in a futuristic, aquatic civilization. The objective is to build a sustainable and thriving metropolis beneath the waves, with a twist: the traditional lifeline of freshwater from rivers has been severed, forcing players to innovate new methods of water management and resource distribution. Players must manage their city's resources carefully, leveraging ocean currents, desalination technologies, and sustainable energy solutions. Ethical decisions play a crucial role as players encounter dilemmas such as balancing environmental conservation with urban expansion and ensuring equitable resource distribution among citizens. This creative spin on city-building encourages developers at all skill levels to explore a fresh, engaging challenge while considering the impacts of their decisions on the ecosystem.",
+        "tags": [
+            "Turn-Based",
+            "City Building",
+            "Aquatic",
+            "Sustainability",
+            "Strategy",
+            "Simulation",
+            "Ethics",
+            "Resource Management",
+            "Innovative Mechanics",
+            "Eco-Friendly"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

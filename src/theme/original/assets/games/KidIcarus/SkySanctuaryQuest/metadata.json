@@ -1,0 +1,26 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Kid Icarus' game. Modify it by applying the oblique strategy: 'Define an area as 'safe' and use it as an anchor'.",
+    "path": "ideas",
+    "game_type": "Kid Icarus",
+    "model": "gpt-4o",
+    "name": "Sky Sanctuary Quest",
+    "branding_data": {
+        "short_description": "Embark on a celestial adventure in Sky Sanctuary Quest, where you navigate through perilous skies using a 'safe' sanctuary as your strategic anchor.",
+        "detailed_description": "Sky Sanctuary Quest is a reimagined take on the classic 'Kid Icarus' formula, set in a vibrant, mythological sky realm. Players take on the role of a young winged hero tasked with restoring balance to the heavens. The game introduces a unique mechanic where players can define specific areas in the sky as 'safe zones.' These sanctuaries serve as strategic anchors, allowing players to regroup, plan their next move, and manage resources effectively. The gameplay involves navigating through treacherous skies, battling mythical creatures, and solving puzzles to unlock new abilities and areas. With a blend of platforming, exploration, and strategic planning, Sky Sanctuary Quest offers a fresh and engaging experience for fans of adventure games.",
+        "tags": [
+            "Action",
+            "Adventure",
+            "Platformer",
+            "Mythology",
+            "Strategy",
+            "Fantasy",
+            "Exploration",
+            "Puzzle",
+            "Celestial"
+        ]
+    },
+    "strategy": "Define an area as "
+}

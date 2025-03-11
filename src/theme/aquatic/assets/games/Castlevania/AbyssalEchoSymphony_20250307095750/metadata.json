@@ -1,0 +1,30 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Castlevania' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Feedback recordings into an acoustic situation'.",
+    "path": "ideas/aquatic",
+    "game_type": "Castlevania",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Abyssal Echo Symphony",
+    "game_id": "AbyssalEchoSymphony_20250307095750",
+    "branding_data": {
+        "short_description": "Abyssal Echo Symphony: Dive into an oceanic world where echoes guide your way as you fight against pollution and restore harmony.",
+        "detailed_description": "In 'Abyssal Echo Symphony,' players embark on an epic journey through underwater realms filled with mysteries and dangers. Drawing inspiration from classic 'Castlevania' gameplay, this game challenges players to navigate labyrinthine underwater castles, battling aquatic creatures and pollution entities. The game uniquely incorporates sound mechanics where players must record and utilize acoustic echoes to interact with their environment, unlock secrets, and solve puzzles. By feeding these recorded echoes back into the environment, players can influence and reshape their surroundings dynamically. The game emphasizes themes of sustainability and ethics, tasking players with cleaning up pollution, repairing coral reefs, and negotiating with sea life for peaceful coexistence. These actions promote awareness of marine conservation while providing an engaging and unique gameplay experience.",
+        "tags": [
+            "Underwater",
+            "Adventure",
+            "Puzzle",
+            "Platformer",
+            "Sound Mechanics",
+            "Sustainability",
+            "Ethical Gameplay",
+            "Action",
+            "Exploration",
+            "2D",
+            "Ocean"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Euchre' game. Modify it by applying the oblique strategy: 'Make an exhaustive list of everything you might do and do the last thing on the list'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Euchre: Final Play",
+    "game_type": "Euchre",
+    "branding_data": {
+        "short_description": "Euchre: Final Play is a unique twist on the classic card game, encouraging strategic depth with a creative approach.",
+        "detailed_description": "Euchre: Final Play takes the traditional card game of Euchre and infuses it with an innovative twist inspired by the oblique strategy 'Make an exhaustive list of everything you might do and do the last thing on the list.' In this game, players must carefully plan their moves, listing all potential strategies before executing the least conventional option. This rule adds a layer of unpredictability and requires players to think outside the box, creating a dynamic and challenging experience. The game maintains the core mechanics of Euchre, such as forming partnerships, selecting trump suits, and winning tricks, but the added strategic layer ensures that no two games are alike.",
+        "tags": [
+            "Card Game",
+            "Strategy",
+            "Multiplayer",
+            "Euchre",
+            "Creative",
+            "Unconventional",
+            "Challenging",
+            "Innovative"
+        ]
+    },
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "Make an exhaustive list of everything you might do and do the last thing on the list"
+}

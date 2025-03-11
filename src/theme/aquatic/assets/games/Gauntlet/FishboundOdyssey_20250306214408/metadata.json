@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Gauntlet' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'A line has two sides'.",
+    "path": "ideas",
+    "game_type": "Gauntlet",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Fishbound Odyssey",
+    "game_id": "FishboundOdyssey_20250306214408",
+    "branding_data": {
+        "short_description": "Navigate treacherous waters in Fishbound Odyssey, a classic Gauntlet-style game focusing on ethical fishing practices and sustainability in aquatic environments.",
+        "detailed_description": "Fishbound Odyssey is a Gauntlet-inspired action-adventure game set in a vibrant underwater world filled with challenges and ethical dilemmas. Players assume the role of an aquatic hero tasked with navigating through procedurally generated environments teeming with marine life and hazards. The game incorporates the theme of 'A line has two sides' by presenting moral choices where each action impacts both the environment and the player's resources. Players must decide when and how to fish sustainably, avoid overfishing, and tackle environmental threats, such as pollution and invasive species. The objective is to find balance and harmony in the ecosystem while progressing through waves of enemies and obstacles. The game is designed to raise awareness about ethical fishing and the importance of sustainability through gameplay mechanics, offering educational insights as players advance on their odyssey.",
+        "tags": [
+            "Action",
+            "Adventure",
+            "Gauntlet-style",
+            "Ethics",
+            "Sustainability",
+            "Fish theme",
+            "Environmental awareness",
+            "Moral choices",
+            "Educational",
+            "Underwater"
+        ]
+    },
+    "strategy": "A line has two sides"
+}

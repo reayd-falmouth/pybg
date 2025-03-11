@@ -1,0 +1,30 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Chutes and Ladders' game. Modify it by applying the oblique strategy: 'Decorate, decorate'.",
+    "path": "ideas",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Chutes and Ladders: Grand Gala",
+    "game_type": "ChutesandLadders",
+    "branding_data": {
+        "short_description": "A lavish twist on the classic board game where every chute and ladder is adorned with opulent decorations.",
+        "detailed_description": "Chutes and Ladders: Grand Gala is a reimagined version of the timeless board game, infusing it with a sense of grandeur and extravagance. Players navigate a beautifully illustrated board where each chute and ladder is transformed into a lavish spectacle, adorned with intricate decorations and vibrant colors. The game invites players to experience the thrill of ascending ornate ladders and the suspense of descending through luxurious chutes, all set against a backdrop of a grand gala. The goal remains the same: reach the final square first. However, the journey is now a feast for the eyes, with each step offering a new visual delight.",
+        "tags": [
+            "Board Game",
+            "Family",
+            "Casual",
+            "Decorative",
+            "Classic",
+            "Strategy",
+            "Multiplayer",
+            "Colorful",
+            "Visual",
+            "Fun"
+        ]
+    },
+    "errors": null,
+    "strategy": "Decorate, decorate"
+}

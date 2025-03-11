@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Tafl' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Listen in total darkness, or in a very large room, very quietly'.",
+    "path": "ideas",
+    "game_type": "Tafl",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Silent Waters Maneuver",
+    "game_id": "SilentWatersManeuver_20250306213454",
+    "branding_data": {
+        "short_description": "Silent Waters Maneuver is a tafl-inspired strategy game with a fish theme, focusing on ethics and sustainability.",
+        "detailed_description": "Silent Waters Maneuver is a unique strategy game drawing inspiration from traditional Tafl games, with an engaging fish theme based on ethics and sustainability. Players navigate underwater realms as fish clans, trying to outmaneuver opponents while maintaining balance in the ecosystem. The game uses the oblique strategy 'Listen in total darkness, or in a very large room, very quietly,' to incorporate stealth tactics and strategic listening. Each move must consider the harmony of the underwater world, as overfishing or aggressive expansion can disrupt the ecosystem. The ambient sound design immerses players in the quiet, serene depths, challenging them to make thoughtful and sustainable choices.",
+        "tags": [
+            "strategy",
+            "board game",
+            "fish theme",
+            "sustainability",
+            "ethics",
+            "stealth",
+            "ambient",
+            "tafli-inspired"
+        ]
+    },
+    "strategy": "Listen in total darkness, or in a very large room, very quietly"
+}

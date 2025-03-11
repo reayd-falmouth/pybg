@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Missile Command' game with the theme Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.. Modify it by applying the oblique strategy: 'Abandon normal instruments'.",
+    "path": "ideas/aquatic",
+    "game_type": "Missile Command",
+    "model": "gpt-4o",
+    "count": 5,
+    "name": "Tide Defender",
+    "game_id": "TideDefender_20250307072946",
+    "branding_data": {
+        "short_description": "Defend aquatic worlds from threats using unconventional underwater defenses.",
+        "detailed_description": "Tide Defender is an innovative take on the classic 'Missile Command' mechanics set in a rich aquatic environment. Players must protect diverse underwater ecosystems from impending threats by deploying creative and unconventional defenses. Instead of traditional weaponry, utilize elements like ocean currents, schools of fish, and coral formations. Embrace ethical gameplay by ensuring minimal environmental damage while defending. The game challenges players to maintain balance and sustainability beneath the waves, promoting awareness of ecological conservation. Suitable for all developers, the game encourages experimentation with non-traditional instruments to solve problems, fostering creativity and a deeper appreciation for ocean life.",
+        "tags": [
+            "Strategy",
+            "Aquatic",
+            "Ecological",
+            "Creativity",
+            "Game Jam",
+            "Sustainability",
+            "Underwater",
+            "Defense",
+            "Puzzle"
+        ]
+    },
+    "strategy": "Abandon normal instruments"
+}

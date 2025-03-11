@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Donkey Kong' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Don't break the silence'.",
+    "path": "ideas",
+    "game_type": "Donkey Kong",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Ripple Rescue",
+    "game_id": "RippleRescue_20250306214842",
+    "branding_data": {
+        "short_description": "Navigate the ocean's layers as a fish hero, avoiding silent predators, and rescue your fish friends while promoting ocean ethics and sustainability.",
+        "detailed_description": "Ripple Rescue is a thrilling oceanic adventure where you take on the role of a small, yet determined fish navigating various underwater structures to rescue your trapped friends. Inspired by the classic 'Donkey Kong' mechanics, you will traverse from the ocean floor to coral reefs. The challenge lies in rescuing your companions while maintaining stealth, as silent and menacing predators lurk about. The game incorporates elements of ethics and sustainability, delivering messages about the importance of protecting marine life and the ecosystem. Players must strategically maneuver through levels, collecting tools and oxygen bubbles, avoiding direct confrontation, and aiming for peaceful solutions to challenges. The game focuses on awareness and education, encouraging players to not disturb the natural silence of the sea but witness it calmly.",
+        "tags": [
+            "Platformer",
+            "Stealth",
+            "Oceanic Adventure",
+            "Environmental Education",
+            "Marine Life",
+            "Sustainability",
+            "Ethical Choices",
+            "Puzzle",
+            "Donkey Kong Inspired",
+            "Multilayered Levels"
+        ]
+    },
+    "strategy": "Don"
+}

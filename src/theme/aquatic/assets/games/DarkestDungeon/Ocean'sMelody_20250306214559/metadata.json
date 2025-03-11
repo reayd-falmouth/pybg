@@ -1,0 +1,31 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Darkest Dungeon' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Children's voices - speaking - singing'.",
+    "path": "ideas",
+    "game_type": "Darkest Dungeon",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Title  \nOcean's Melody",
+    "game_id": "Title\nOcean'sMelody_20250306214559",
+    "branding_data": {
+        "short_description": "An underwater roguelike centering on ocean sustainability with haunting children's voices narrating your journey.",
+        "detailed_description": "Ocean's Melody is a captivating roguelike that draws inspiration from the tactical challenge of 'Darkest Dungeon', woven with a unique fish-themed narrative. Players explore the depths of an underwater world, taking on the role of a guardian spirit tasked with confronting the damage done to the oceans. The game integrates ethics and sustainability into its core mechanics, challenging players to make difficult decisions about resource management and ecological impact. Throughout the journey, children's voices—voicing, speaking, and singing—intertwine with the environment, acting as the conscience and emotional guide for the player. These voices provide insights, warnings, and encouragement as players fight against pollution and overfishing while trying to restore harmony to the marine ecosystem.",
+        "tags": [
+            "roguelike",
+            "ocean",
+            "sustainability",
+            "ethics",
+            "strategy",
+            "resource management",
+            "narrative",
+            "children",
+            "atmosphere",
+            "environmental",
+            "darkest dungeon",
+            "underwater"
+        ]
+    },
+    "strategy": "Children"
+}

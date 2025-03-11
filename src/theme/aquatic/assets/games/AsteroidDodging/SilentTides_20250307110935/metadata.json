@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Asteroid Dodging' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Don't break the silence'.",
+    "path": "ideas/aquatic",
+    "game_type": "Asteroid Dodging",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Silent Tides",
+    "game_id": "SilentTides_20250307110935",
+    "branding_data": {
+        "short_description": "An aquatic-themed asteroid dodging game focused on sustainability and silence.",
+        "detailed_description": "Silent Tides immerses players in an oceanic world where the aim is to navigate through mesmerizing underwater environments filled with floating debris and obstacles resembling asteroid belts. Players control a sleek, silent submarine tasked with avoiding collisions with these environmental hazards while exploring the deep seas. The game emphasizes the importance of maintaining oceanic silence to protect marine life, integrating a unique mechanic where loud crashes or noise can disrupt sea creatures and potentially trigger penalties. Collect sustainable power-ups that enhance your submarine's abilities without causing environmental harm. Throughout the journey, players learn about the ecological impact of noise pollution in the oceans, highlighting the significance of preserving the serenity and ecological balance of marine habitats. Silent Tides combines thrilling gameplay with meaningful messages about ocean sustainability, providing an engaging experience for players of all skill levels during any game jam.",
+        "tags": [
+            "Aquatic",
+            "Sustainability",
+            "Ocean",
+            "Silence",
+            "Asteroid Dodging",
+            "Environmental Education",
+            "Marine Life",
+            "Casual",
+            "Indie",
+            "Family-Friendly"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

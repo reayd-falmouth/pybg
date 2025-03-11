@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility Modify it by applying the oblique strategy: 'Put in earplugs'.",
+    "path": "ideas",
+    "game_type": "The Oregon Trail",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Echoes of the Abyss",
+    "game_id": "EchoesoftheAbyss_20250306212136",
+    "branding_data": {
+        "short_description": "Immerse yourself in the silent underwater world of Echoes of the Abyss, where you guide a fish community towards sustainable living while facing the challenges of a muted ocean environment.",
+        "detailed_description": "Echoes of the Abyss is a thought-provoking exploration game set in a vast and vibrant underwater ecosystem. Players are tasked with leading a school of fish as they navigate the challenges of maintaining balance in the face of human-induced environmental changes. The twist lies in the ocean's silence: with 'earplugs', the usual marine communication methods are hindered, forcing players to rely on visual cues and environmental storytelling. The core gameplay revolves around ethical decisions and sustainable practices, as players must avoid overfishing, protect endangered species, and find innovative ways to adapt to pollution and habitat destruction. Echoes of the Abyss challenges players to think critically about sustainability and the ethical implications of their actions in this immersive, soundless world.",
+        "tags": [
+            "underwater",
+            "exploration",
+            "sustainability",
+            "ethical decisions",
+            "environmental",
+            "puzzle",
+            "visual storytelling",
+            "singleplayer",
+            "indie",
+            "game jam"
+        ]
+    }
+}

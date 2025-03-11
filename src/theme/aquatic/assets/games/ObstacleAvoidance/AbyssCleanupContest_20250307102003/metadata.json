@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Obstacle Avoidance' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Reverse'.",
+    "path": "ideas/aquatic",
+    "game_type": "Obstacle Avoidance",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Abyss Cleanup Contest",
+    "game_id": "AbyssCleanupContest_20250307102003",
+    "branding_data": {
+        "short_description": "Participate in a reverse obstacle avoidance challenge to collect and remove trash from the ocean floor.",
+        "detailed_description": "Abyss Cleanup Contest is an immersive undersea adventure where players dive deep into the aquatic depths with the goal of cleaning up the ocean floor. In a creative twist on traditional obstacle avoidance games, players must actively seek out and collect debris, navigating through vibrant coral reefs and bustling ocean life. As players progress, they aid in the restoration of underwater environments by clearing sections of pollution. Incorporating ethical and sustainable practices, the game educates players about marine conservation, offers challenges that simulate real-world ecological impacts, and promotes ocean stewardship. Suitable for developers and players of any skill level, the game encourages learning while having fun through its engaging gameplay loop.",
+        "tags": [
+            "Aquatic",
+            "Obstacle Avoidance",
+            "Ethics",
+            "Sustainability",
+            "Environmental",
+            "Educational",
+            "Game Jam",
+            "Ocean",
+            "Pollution",
+            "Conservation"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Diablo' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Don't be frightened of cliches'.",
+    "path": "ideas",
+    "game_type": "Diablo",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Tidefall Quest",
+    "game_id": "TidefallQuest_20250306215118",
+    "branding_data": {
+        "short_description": "Tidefall Quest combines action RPG elements with an oceanic theme, emphasizing ethical fishing practices within a Diablo-like world.",
+        "detailed_description": "Tidefall Quest invites players to explore the deep sea in a classic action RPG style, combining the fast-paced combat and loot-driven mechanics of 'Diablo' with a unique focus on ocean life and sustainability. Set in a vibrant undersea kingdom where marine ecosystems are threatened by dark forces, players assume the role of a guardian tasked with saving the underwater realms. Through procedural dungeons filled with fish-like monsters and mythical sea creatures, players must balance their quest for power with ethical fishing and resource management. The game incorporates real-world principles of sustainability by rewarding players who engage in responsible practices and maintain the delicate balance of the undersea environment. While embracing well-known RPG tropes, Tidefall Quest offers a fresh take on the genre by integrating meaningful messages about conservation and the importance of ethical behavior in ecosystem preservation.",
+        "tags": [
+            "Action RPG",
+            "Underwater",
+            "Ethics",
+            "Sustainability",
+            "Fantasy",
+            "Adventure",
+            "Ocean",
+            "Crafting"
+        ]
+    },
+    "strategy": "Don"
+}

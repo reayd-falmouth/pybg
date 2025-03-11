@@ -1,0 +1,31 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Battlezone' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Emphasize differences'.",
+    "path": "ideas",
+    "game_type": "Battlezone",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Aqua Divide",
+    "game_id": "AquaDivide_20250306213916",
+    "branding_data": {
+        "short_description": "Aqua Divide is an underwater tank battle game where players navigate oceanic landscapes, emphasizing ethical fishing practices and sustainability in a competitive environment.",
+        "detailed_description": "Aqua Divide takes the classic 'Battlezone' tank battle concept and submerges it under the ocean’s surface, where players control futuristic fish-shaped submersibles. These vehicles battle in intricate coral reef arenas, all while promoting ethical and sustainable fishing practices. Players must manage resources responsibly, avoid overfishing, and combat illegal poaching operations. The theme 'Emphasize differences' is woven throughout the gameplay, highlighting the unique abilities and features of diverse marine life. Players learn to appreciate the ocean’s rich biodiversity, making strategic choices that impact the game's environment and wildlife. The objective is not just to win battles but to maintain a balanced ecosystem. Aqua Divide combines thrilling combat with educational elements, presenting players with scenarios that challenge their understanding of sustainability in marine environments.",
+        "tags": [
+            "action",
+            "strategy",
+            "underwater",
+            "sustainability",
+            "ethics",
+            "eco-friendly",
+            "marine",
+            "simulation",
+            "battle",
+            "educational",
+            "fish",
+            "diversity"
+        ]
+    },
+    "strategy": "Emphasize differences"
+}

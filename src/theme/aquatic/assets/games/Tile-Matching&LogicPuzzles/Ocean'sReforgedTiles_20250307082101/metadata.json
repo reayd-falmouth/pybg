@@ -1,0 +1,30 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Tile-Matching & Logic Puzzles' game with the theme Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.. Modify it by applying the oblique strategy: 'Reverse'.",
+    "path": "ideas/aquatic",
+    "game_type": "Tile-Matching & Logic Puzzles",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Ocean's Reforged Tiles",
+    "game_id": "Ocean'sReforgedTiles_20250307082101",
+    "branding_data": {
+        "short_description": "Ocean-themed tile-matching and logic puzzle game focusing on ethical and sustainable aquatic practices with a twist on traditional mechanics.",
+        "detailed_description": "Ocean's Reforged Tiles invites players into a captivating underwater world where the roles are reversed, and rather than eliminating tiles, you must strategically match and conserve aquatic elements. Embark on a journey through mesmerizing oceanic realms, filled with vibrant sea life and mysterious riverine depths. The game challenges you to think differently about traditional tile-matching by introducing a sustainability twist—each matched sequence helps restore and rejuvenate polluted waters and endangered species, encouraging ethical gameplay decisions. Players will face intricate logic puzzles requiring them to preserve the aquatic ecosystem by reversing detrimental effects, ensuring that the seas and rivers thrive. The game is designed to be approachable for developers and players of all skill levels, with a focus on creativity, problem-solving, and ecological awareness.",
+        "tags": [
+            "tile-matching",
+            "logic puzzles",
+            "aquatic theme",
+            "sustainability",
+            "ethical gaming",
+            "ocean",
+            "reverse mechanics",
+            "puzzle game",
+            "game jam",
+            "problem-solving",
+            "ecological awareness"
+        ]
+    },
+    "strategy": "Reverse"
+}

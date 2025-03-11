@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Galaga' game. Modify it by applying the oblique strategy: 'Don't be frightened of cliches'.",
+    "path": "../oblique-games/ideas/",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Star Squadron",
+    "game_type": "Galaga",
+    "branding_data": {
+        "short_description": "Star Squadron is a modern twist on the classic 'Galaga', embracing familiar elements with a fresh perspective.",
+        "detailed_description": "Star Squadron takes the beloved gameplay of 'Galaga' and enhances it with modern graphics and mechanics, while intentionally incorporating classic cliches to create a nostalgic yet refreshing experience. Players pilot a starfighter, battling waves of alien enemies in a vertical scrolling shooter. The game features power-ups, boss battles, and a variety of enemy types, all designed to evoke the charm of retro arcade games. By embracing familiar tropes, Star Squadron delivers a comforting yet thrilling space combat experience that appeals to both veterans of the genre and newcomers alike.",
+        "tags": [
+            "arcade",
+            "space shooter",
+            "retro",
+            "classic",
+            "vertical scrolling",
+            "nostalgia",
+            "aliens",
+            "power-ups",
+            "boss battles"
+        ]
+    },
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "Don"
+}

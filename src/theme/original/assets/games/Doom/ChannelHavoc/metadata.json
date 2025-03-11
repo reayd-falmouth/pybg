@@ -1,0 +1,30 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Doom' game. Modify it by applying the oblique strategy: 'Left channel, right channel, center channel'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Channel Havoc",
+    "game_type": "Doom",
+    "branding_data": {
+        "short_description": "Channel Havoc is a reimagined classic FPS with a unique audio twist, where players navigate a demonic onslaught using strategic sound channels.",
+        "detailed_description": "Channel Havoc takes the fast-paced, action-packed gameplay of classic 'Doom' and adds an innovative audio strategy element. Players find themselves in a hellish world filled with demons and must use their arsenal to survive. The twist comes from the audio system, where players must pay attention to the left, right, and center audio channels to detect enemy movements and environmental cues. This requires players to not only rely on visual cues but also to strategically use sound to anticipate and react to threats, creating a more immersive and challenging experience. With retro-inspired graphics and modern sound design, Channel Havoc offers a fresh take on the beloved FPS genre.",
+        "tags": [
+            "FPS",
+            "Action",
+            "Retro",
+            "Audio Strategy",
+            "Demonic",
+            "Immersive",
+            "Sound Design",
+            "Single Player",
+            "Shooter",
+            "Indie"
+        ]
+    },
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "Left channel, right channel, center channel"
+}

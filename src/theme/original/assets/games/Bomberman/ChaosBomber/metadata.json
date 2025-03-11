@@ -1,0 +1,30 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Bomberman' game. Modify it by applying the oblique strategy: 'The inconsistency principle'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Chaos Bomber",
+    "game_type": "Bomberman",
+    "branding_data": {
+        "short_description": "A chaotic twist on the classic Bomberman, where unpredictability reigns.",
+        "detailed_description": "Chaos Bomber is a unique take on the traditional Bomberman formula, introducing the oblique strategy of 'The inconsistency principle.' In this game, players must navigate through a labyrinthine battlefield, strategically placing bombs to eliminate opponents and obstacles. However, the twist lies in the unpredictable nature of the environment. Power-ups, bomb effects, and even player abilities change dynamically and inconsistently, ensuring no two matches are the same. This unpredictability forces players to adapt on the fly, embracing chaos as they outwit their opponents in this explosive, ever-changing arena.",
+        "tags": [
+            "Action",
+            "Strategy",
+            "Multiplayer",
+            "Arcade",
+            "Puzzle",
+            "Unpredictable",
+            "Dynamic Gameplay",
+            "Bomberman-like",
+            "Chaos",
+            "Inconsistency"
+        ]
+    },
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "The inconsistency principle"
+}

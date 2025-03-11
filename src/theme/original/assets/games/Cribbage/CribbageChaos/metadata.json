@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Cribbage' game. Modify it by applying the oblique strategy: 'Look closely at the most embarrassing details and amplify them'.",
+    "path": "ideas",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Cribbage Chaos",
+    "game_type": "Cribbage",
+    "branding_data": {
+        "short_description": "Cribbage Chaos is a whimsical twist on the classic card game, where embarrassing moments are exaggerated for comedic effect.",
+        "detailed_description": "Cribbage Chaos takes the traditional card game of Cribbage and turns it on its head by focusing on the humorous and awkward moments that can arise during play. Players will find themselves in bizarre situations where the most embarrassing details of their hand are amplified, leading to unexpected and hilarious outcomes. The game introduces new rules and mechanics that exaggerate these moments, such as cards that force players to share embarrassing stories or rounds where the worst hand wins. With quirky animations and a lively soundtrack, Cribbage Chaos offers a fresh and entertaining take on a beloved classic, making it a perfect choice for game nights filled with laughter.",
+        "tags": [
+            "Card Game",
+            "Humor",
+            "Strategy",
+            "Multiplayer",
+            "Casual",
+            "Party Game",
+            "Classic",
+            "Board Game"
+        ]
+    },
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "Look closely at the most embarrassing details and amplify them"
+}

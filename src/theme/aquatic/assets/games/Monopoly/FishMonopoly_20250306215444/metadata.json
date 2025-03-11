@@ -1,0 +1,31 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Monopoly' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Just carry on'.",
+    "path": "ideas",
+    "game_type": "Monopoly",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Fish Monopoly",
+    "game_id": "FishMonopoly_20250306215444",
+    "branding_data": {
+        "short_description": "Fish Monopoly is a board game that combines the classic Monopoly gameplay with a focus on ocean sustainability and ethical fishing practices.",
+        "detailed_description": "Fish Monopoly takes the beloved mechanics of the traditional Monopoly game and transports players into a vibrant aquatic world where the aim is to promote ethical fishing and sustainable practices. Instead of purchasing properties, players buy various types of fish stocks and ocean locations, each with its own conservation status and challenges. As you move around the board, you'll encounter opportunities to implement fishery improvements, reduce pollution, and invest in eco-friendly technologies. Special cards and chance elements will emphasize the importance of sustainability and encourage players to 'Just carry on' with continuous improvement efforts in their strategies, reflecting the oblique strategy theme. The game aims to educate players about the importance of ethical consumption and the effects of human actions on marine life, all while maintaining the competitive and strategic fun of Monopoly.",
+        "tags": [
+            "Board Game",
+            "Strategy",
+            "Sustainability",
+            "Educational",
+            "Multiplayer",
+            "Ocean",
+            "Environmental",
+            "Ethics",
+            "Family",
+            "Card and Board Game",
+            "Fish",
+            "Classic"
+        ]
+    },
+    "strategy": "Just carry on"
+}

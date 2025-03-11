@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Snakes and Ladders' game. Modify it by applying the oblique strategy: 'Just carry on'.",
+    "path": "ideas",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Endless Ascent",
+    "game_type": "SnakesandLadders",
+    "branding_data": {
+        "short_description": "Endless Ascent is a reimagined Snakes and Ladders game with an infinite board and continuous play.",
+        "detailed_description": "Endless Ascent takes the classic board game Snakes and Ladders and transforms it into an endless journey. Players navigate an infinite board filled with ladders that propel them upwards and snakes that send them back down. The unique twist of 'Just carry on' means the game has no endpoint; instead, players continue to climb, fall, and strive for the highest score possible. This perpetual play creates a dynamic experience where strategy and luck are in constant balance, making each playthrough unique and engaging.",
+        "tags": [
+            "Board Game",
+            "Snakes and Ladders",
+            "Infinite Play",
+            "Strategy",
+            "Casual",
+            "Family",
+            "Luck-based",
+            "Endless"
+        ]
+    },
+    "errors": null,
+    "strategy": "Just carry on"
+}

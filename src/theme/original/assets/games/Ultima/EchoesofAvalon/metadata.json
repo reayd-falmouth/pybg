@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Ultima' game. Modify it by applying the oblique strategy: 'Children's voices - speaking - singing'.",
+    "path": "../oblique-games/ideas/",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Echoes of Avalon",
+    "game_type": "Ultima",
+    "branding_data": {
+        "short_description": "Echoes of Avalon is a reimagined classic RPG where children's voices guide your journey through a mystical land.",
+        "detailed_description": "Echoes of Avalon is a unique take on the classic 'Ultima' series, infusing the traditional role-playing elements with a whimsical twist. Set in the enchanted world of Avalon, players embark on a quest filled with magic, exploration, and mystery. What sets this game apart is the integration of children's voices that narrate the story, offer guidance, and sing enchanting melodies that unlock secrets and pathways. As you navigate through lush forests, ancient ruins, and vibrant towns, these voices become your companions, adding a layer of innocence and wonder to the experience. The game features turn-based combat, character customization, and a rich narrative that encourages exploration and discovery.",
+        "tags": [
+            "RPG",
+            "Fantasy",
+            "Exploration",
+            "Magic",
+            "Narrative-driven",
+            "Children's Voices",
+            "Turn-based Combat",
+            "Mystical",
+            "Adventure"
+        ]
+    },
+    "errors": null,
+    "strategy": "Children"
+}

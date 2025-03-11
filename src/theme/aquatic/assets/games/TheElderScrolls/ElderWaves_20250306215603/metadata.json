@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'The Elder Scrolls' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Faced with a choice, do both (given by Dieter Roth)'.",
+    "path": "ideas",
+    "game_type": "The Elder Scrolls",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Elder Waves",
+    "game_id": "ElderWaves_20250306215603",
+    "branding_data": {
+        "short_description": "Elder Waves is an open-world RPG that blends deep sea exploration with the ethical management of marine resources, set in the fantastical world reminiscent of 'The Elder Scrolls'.",
+        "detailed_description": "Elder Waves transports players to an expansive, oceanic realm where they assume the role of a guardian of the seas, inspired by the legendary Elder Scrolls. Balancing exploration and conservation, players explore underwater cities, interact with mysterious aquatic races, and engage in combat with mythical sea creatures. The game challenges them to make ethical decisions about the marine environment, protecting it from exploitation while harvesting resources sustainably. The innovative twist of combining exploration with ethical dilemmas makes players face choices where they can pursue both options, blending preservation with resource collection to maintain harmony. The game features a rich narrative, allowing players to affect the underwater world profoundly with their decisions while enjoying the vast, open-world adventure.",
+        "tags": [
+            "RPG",
+            "Open World",
+            "Fantasy",
+            "Adventure",
+            "Underwater Exploration",
+            "Ethics",
+            "Sustainability",
+            "Resource Management",
+            "Mythical Creatures",
+            "Exploration"
+        ]
+    },
+    "strategy": "Faced with a choice, do both (given by Dieter Roth)"
+}

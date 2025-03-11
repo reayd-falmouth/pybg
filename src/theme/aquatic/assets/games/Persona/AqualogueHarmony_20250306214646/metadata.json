@@ -1,0 +1,30 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Persona' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Left channel, right channel, center channel'.",
+    "path": "ideas",
+    "game_type": "Persona",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Aqualogue Harmony",
+    "game_id": "AqualogueHarmony_20250306214646",
+    "branding_data": {
+        "short_description": "A unique 'Persona'-styled RPG that explores aquatic ethics and sustainability.",
+        "detailed_description": "Aqualogue Harmony combines role-playing mechanics with environmental education in a distinct underwater world. Players take on the role of a young protagonist who possesses the unique ability to communicate with fish spirits. The world is divided into three distinct zones, or 'channels': the vibrant Left Channel full of life, the troubled Right Channel suffering from pollution, and the neutral Center Channel. Each channel offers its own narrative challenges and opportunities for interaction with various fish personas, each embodying their own ethical dilemmas. Players must form bonds with these aquatic spirits, discover their stories, and make decisions that will restore balance and sustainability across the channels. Interpersonal relationships, ethical decisions, and sustainability themes drive the gameplay, offering a rich narrative that encourages players to reflect on the real-life impact of their choices.",
+        "tags": [
+            "RPG",
+            "Persona-style",
+            "Environmental",
+            "Ethics",
+            "Sustainability",
+            "Fish",
+            "Narrative-driven",
+            "Role-playing",
+            "Adventure",
+            "Aquatic",
+            "Unique abilities"
+        ]
+    },
+    "strategy": "Left channel, right channel, center channel"
+}

@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Run-and-Gun Shooters' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Convert a melodic element into a rhythmic element'.",
+    "path": "ideas/aquatic",
+    "game_type": "Run-and-Gun Shooters",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Tide Tactics",
+    "game_id": "TideTactics_20250307102657",
+    "branding_data": {
+        "short_description": "Tide Tactics: An aquatic-themed run-and-gun adventure where players battle threats polluting our oceans, with ethical and sustainable gameplay mechanics.",
+        "detailed_description": "Tide Tactics is a run-and-gun shooter set in an underwater world teeming with both life and danger. Players take on the role of intrepid marine conservationists tasked with battling pollution monsters that threaten the delicate balance of the oceanic ecosystem. The game uniquely transforms melodic elements of traditional platformer music into rhythmic cues that indicate the changing tides and enemy wave patterns, integrating rhythm-based mechanics into the shooting gameplay. As players progress through vibrant aquatic environments, they must collect eco-friendly ammunition and tools that promote sustainability. Additionally, players face ethical choices that impact the health of various sea habitats, encouraging replayability and a sense of environmental stewardship. The game can be enjoyed by developers of all skill levels, offering both a fun, engaging experience and a meaningful message about protecting our planet's waters.",
+        "tags": [
+            "run-and-gun",
+            "shooter",
+            "aquatic",
+            "ocean",
+            "sustainability",
+            "environmental",
+            "rhythm",
+            "game jam",
+            "indie",
+            "action"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

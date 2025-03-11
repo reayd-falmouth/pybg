@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Tile-Matching & Logic Puzzles' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Go slowly all the way round the outside'.",
+    "path": "ideas/aquatic",
+    "game_type": "Tile-Matching & Logic Puzzles",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Ripple Tides",
+    "game_id": "RippleTides_20250307111108",
+    "branding_data": {
+        "short_description": "Ripple Tides is an aquatic-themed tile-matching and logic puzzle game that emphasizes sustainability and ethical choices, promoting the conservation of marine life.",
+        "detailed_description": "Ripple Tides invites players into a tranquil underwater world where they match and align tiles representing different aquatic elements like fish, coral, and sea plants. The game features a circular progression system according to the strategy 'Go slowly all the way round the outside.' Players must carefully plan their moves around concentric rings of tiles to balance and sustain the ocean's ecosystem. Each level introduces new challenges related to ocean health, requiring thoughtful decisions to clean oil spills, protect endangered species, and prevent overfishing. Through its creative puzzles, Ripple Tides educates players on marine conservation and ethical choices, encouraging a mindful approach to resource management. The soothing underwater ambiance and gradual difficulty progression ensure that the game remains engaging for developers and players of all skill levels.",
+        "tags": [
+            "Tile Matching",
+            "Logic Puzzles",
+            "Aquatic Theme",
+            "Ocean Conservation",
+            "Ethical Choices",
+            "Sustainability",
+            "Game Jam",
+            "Strategy",
+            "Tranquil",
+            "Puzzle"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

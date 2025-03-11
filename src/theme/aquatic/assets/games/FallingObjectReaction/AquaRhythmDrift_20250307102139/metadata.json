@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Falling Object Reaction' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Convert a melodic element into a rhythmic element'.",
+    "path": "ideas/aquatic",
+    "game_type": "Falling Object Reaction",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Aqua Rhythm Drift",
+    "game_id": "AquaRhythmDrift_20250307102139",
+    "branding_data": {
+        "short_description": "Aqua Rhythm Drift: A rhythmic cascade of aquatic-themed objects requiring quick reactions and strategic stacking.",
+        "detailed_description": "Aqua Rhythm Drift is a game jam concept that challenges players to react to and manage a cascade of falling objects with an aquatic theme. Transform the melodic elegance of the ocean's natural flow into a rhythmic challenge where timing and precision are key. As objects such as fish, seashells, and seaweed fall from above, players must strategically stack and align them on a moving conveyor, mirroring the ebb and flow of the tides. The game emphasizes sustainability by rewarding players who sort recyclable ocean items correctly. Ethics are integrated through educational elements that inform players about ocean conservation. Accessible and engaging for developers of all skill levels, Aqua Rhythm Drift combines creative oceanic visuals with a rhythmic gameplay loop.",
+        "tags": [
+            "Rhythm",
+            "Reaction",
+            "Aquatic",
+            "Ocean",
+            "Sustainability",
+            "Educational",
+            "Indie",
+            "Puzzle",
+            "Game Jam",
+            "Interactive"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

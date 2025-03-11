@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Turn-Based Tactical Combat' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Courage!'.",
+    "path": "ideas/aquatic",
+    "game_type": "Turn-Based Tactical Combat",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Abyssal Guardians",
+    "game_id": "AbyssalGuardians_20250307111036",
+    "branding_data": {
+        "short_description": "Dive into turn-based tactical combat in Abyssal Guardians, where you strategize battles in an aquatic realm, promoting sustainable ocean practices.",
+        "detailed_description": "Abyssal Guardians is a turn-based tactical combat game set in an enchanting aquatic world. Players assume the roles of oceanic guardians, each with unique abilities derived from sea creatures and mythical marine beings. The game challenges players to engage in tactical battles against various threats that endanger the delicate ocean ecosystem. Driven by an underlying theme of courage, players must make critical ethical decisions that affect the health of the underwater world, promoting sustainability and awareness of ocean conservation. Designed to be accessible to game developers of all skill levels, Abyssal Guardians features adaptive difficulty settings and an intuitive combat system. The game, inspired by the beauty and mystery of the ocean, is perfect for a game jam, encouraging creativity and engagement through its meaningful environmental narrative.",
+        "tags": [
+            "Turn-Based",
+            "Tactical Combat",
+            "Aquatic",
+            "Ocean",
+            "Sustainability",
+            "Ethics",
+            "Mythical Creatures",
+            "Game Jam",
+            "Courage"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

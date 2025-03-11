@@ -1,0 +1,30 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Carmen Sandiego' game with the theme Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.. Modify it by applying the oblique strategy: 'Assemble some of the instruments in a group and treat the group'.",
+    "path": "ideas",
+    "game_type": "Carmen Sandiego",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Ocean Pursuit",
+    "game_id": "OceanPursuit_20250307055838",
+    "branding_data": {
+        "short_description": "Ocean Pursuit is an aquatic-themed detective game where players solve mysteries surrounding marine conservation, with a unique group-based gameplay mechanic.",
+        "detailed_description": "Ocean Pursuit invites players into an exhilarating world of oceanic intrigue, where they become detectives tasked with solving environmental mysteries. Set across various aquatic environments such as coral reefs, deep-sea trenches, and bustling harbors, players will gather clues to capture the elusive mastermind behind marine disruptions. Inspired by classic detective games, Ocean Pursuit integrates an innovative group-based mechanic: players form teams with NPCs, or collaborate in multiplayer, to solve complex puzzles that highlight real-world issues of marine sustainability. Players must learn about ethical oceanic practices and devise strategies to protect the ecosystems they're exploring. The game emphasizes teamwork, ethics, and sustainability in engaging ways, ensuring players understand both the beauty and the urgency of protecting our aquatic worlds.",
+        "tags": [
+            "Detective",
+            "Adventure",
+            "Puzzle",
+            "Multiplayer",
+            "Cooperative",
+            "Environmental",
+            "Educational",
+            "Sustainability",
+            "Ocean",
+            "Conservation",
+            "Aquatic"
+        ]
+    },
+    "strategy": "Assemble some of the instruments in a group and treat the group"
+}

@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Galaga' game. Modify it by applying the oblique strategy: 'Take away the elements in order of apparent non-importance'.",
+    "path": "ideas",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Galactic Streamline",
+    "game_type": "Galaga",
+    "branding_data": {
+        "short_description": "Galactic Streamline is a minimalist take on the classic space shooter, Galaga, focusing on core gameplay elements by removing non-essential features.",
+        "detailed_description": "Galactic Streamline reinvents the classic arcade shooter experience by stripping down the game to its most essential components. Inspired by the oblique strategy 'Take away the elements in order of apparent non-importance', the game removes unnecessary features to deliver a focused and intense gameplay experience. Players pilot a lone spacecraft against waves of alien invaders, relying on sharp reflexes and strategic maneuvering. The streamlined interface and mechanics ensure that every element on screen serves a purpose, enhancing the challenge and engagement of the game.",
+        "tags": [
+            "arcade",
+            "space shooter",
+            "minimalist",
+            "retro",
+            "strategy",
+            "action",
+            "single-player"
+        ]
+    },
+    "errors": null,
+    "strategy": "Take away the elements in order of apparent non-importance"
+}

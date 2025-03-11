@@ -1,0 +1,26 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Parcheesi' game. Modify it by applying the oblique strategy: 'Intentions - credibility of - nobility of - humility of'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Noble Quest",
+    "game_type": "Parcheesi",
+    "branding_data": {
+        "short_description": "A unique twist on the classic Parcheesi game, Noble Quest challenges players to balance intentions, credibility, nobility, and humility as they navigate the board.",
+        "detailed_description": "Noble Quest reimagines the traditional Parcheesi game by integrating the oblique strategy of 'Intentions - credibility of - nobility of - humility of.' In this game, players must move their pieces around the board, not only aiming to reach the finish line but also maintaining a balance between their intentions and actions. Players earn points based on their ability to display credibility, act with nobility, and maintain humility. Special cards and events challenge players to reconsider their strategies and adapt to new moral dilemmas. The game encourages strategic thinking and introspection as players strive to be the most noble adventurer.",
+        "tags": [
+            "Board Game",
+            "Strategy",
+            "Multiplayer",
+            "Family",
+            "Classic",
+            "Moral Choices",
+            "Adaptation"
+        ]
+    },
+    "strategy": "Intentions - credibility of - nobility of - humility of"
+}

@@ -1,0 +1,31 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Word Games' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'You can only make one dot at a time'.",
+    "path": "ideas/aquatic",
+    "game_type": "Word Games",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Drift Dot Dreams",
+    "game_id": "DriftDotDreams_20250307102339",
+    "branding_data": {
+        "short_description": "Create ocean-themed words by connecting single dots to form intricate patterns in Drift Dot Dreams.",
+        "detailed_description": "Drift Dot Dreams is an engaging word game set in a serene aquatic world. Players navigate various oceanic environments by connecting single dots to form words related to the sea, rivers, and oceanic life. With a unique and challenging twist inspired by the oblique strategy 'You can only make one dot at a time', players must carefully plan their moves to create the longest and most meaningful words possible. The game encourages creativity and strategic thinking, with levels that incorporate themes of ethics and sustainability. As players progress, they learn about the importance of marine conservation and the impact of human activities on aquatic ecosystems. The soothing soundscape and captivating visuals create a meditative gaming experience suitable for developers and players of all skill levels.",
+        "tags": [
+            "word game",
+            "puzzle",
+            "aquatic theme",
+            "ocean",
+            "creative",
+            "strategy",
+            "sustainability",
+            "game jam",
+            "beginner friendly",
+            "educational",
+            "relaxing",
+            "single dot connection"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

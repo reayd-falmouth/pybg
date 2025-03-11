@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Space Survival Strategy' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Mute and continue'.",
+    "path": "ideas/aquatic",
+    "game_type": "Space Survival Strategy",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Ocean Echo",
+    "game_id": "OceanEcho_20250307111658",
+    "branding_data": {
+        "short_description": "Strategize and survive in a muted aquatic world where underwater resources dictate your destiny in Ocean Echo.",
+        "detailed_description": "Ocean Echo is a captivating space survival strategy game that transposes the vastness of space into the mysterious depths of the ocean. Players must harness limited underwater resources to survive and thrive in an enigmatic maritime environment. The game challenges players to develop a sustainable ecosystem within which their aquatic civilization can flourish. Central to gameplay is the 'Mute and continue' mechanic, where moments of silence allow for strategic planning and conservation efforts without interruption from the noisy ecosystem, emphasizing the importance of ethical resource management and environmental stewardship. Navigate through the challenges of deep-sea currents, discover hidden underwater caverns, and negotiate with aquatic species to ensure the survival of your colony. Featuring engaging visuals, Ocean Echo offers an introspective experience on ecological balance and the necessity of quiet resilience.",
+        "tags": [
+            "Strategy",
+            "Survival",
+            "Aquatic",
+            "Ocean",
+            "Resource Management",
+            "Sustainability",
+            "Environment",
+            "Simulation",
+            "Silent Strategy",
+            "Ethics"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

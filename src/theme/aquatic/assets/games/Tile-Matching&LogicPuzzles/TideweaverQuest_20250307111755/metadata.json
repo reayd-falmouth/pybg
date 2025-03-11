@@ -1,0 +1,30 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Tile-Matching & Logic Puzzles' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Left channel, right channel, center channel'.",
+    "path": "ideas/aquatic",
+    "game_type": "Tile-Matching & Logic Puzzles",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Tideweaver Quest",
+    "game_id": "TideweaverQuest_20250307111755",
+    "branding_data": {
+        "short_description": "Tideweaver Quest: An aquatic-themed tile-matching and logic puzzle game with a focus on ethics and sustainability in oceanic environments.",
+        "detailed_description": "In Tideweaver Quest, players embark on a journey through a vibrant aquatic world, solving tile-matching and logic puzzles. The game is set against a backdrop of diverse aquatic environments, featuring oceans, seas, and rivers. Using an oblique strategy inspired design, each level splits aquascapes into three channels—left, right, and center—that players must navigate thoughtfully. Each channel represents different aspects of ocean life such as natural beauty, human impact, and ecological balance. Players match tiles depicting sea creatures, plants, and artificial debris. Completing puzzles cleans up channels, restores balance, and unlocks narratives about sustainability, encouraging players to consider ethical impacts on aquatic ecosystems. The game is designed for accessibility, catering to developers and players of varying skill levels, while weaving in messages about marine conservation and the importance of ethical interaction with nature.",
+        "tags": [
+            "Tile-Matching",
+            "Logic Puzzle",
+            "Aquatic Theme",
+            "Sustainability",
+            "Ethics",
+            "Game Jam",
+            "Ocean",
+            "Sea",
+            "River",
+            "Marine Conservation",
+            "Environmental Awareness"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

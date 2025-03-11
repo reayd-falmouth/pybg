@@ -1,0 +1,27 @@
+{
+    "random_game": false,
+    "oblique_strategy": true,
+    "branding": true,
+    "task": "Develop a basic Gomoku game. Modify it by applying the oblique strategy: 'Intentions - credibility of - nobility of - humility of'.",
+    "name": "Noble Intentions",
+    "path": "ideas",
+    "game_type": "Gomoku",
+    "model": "gpt-4o-mini",
+    "branding_data": {
+        "short_description": "Gomoku: Noble Intentions is a unique twist on the classic Gomoku game, integrating philosophical strategies into gameplay.",
+        "detailed_description": "Gomoku: Noble Intentions challenges players to engage in the traditional five-in-a-row strategy game while reflecting on the principles of intention, credibility, nobility, and humility. This innovative version encourages players to think deeply about their moves, not just in terms of winning or losing, but also in how their actions align with these values. As players take turns placing their pieces on the board, they must consider not only their immediate strategy but also the broader impact of their choices in the gameplay. With both single-player and multiplayer modes, Gomoku: Noble Intentions offers a compelling combination of strategic thinking and ethical reflection, making it a fascinating experience for both casual gamers and deep thinkers alike.",
+        "tags": [
+            "Gomoku",
+            "strategy",
+            "philosophy",
+            "board game",
+            "multiplayer",
+            "single-player",
+            "ethical gameplay",
+            "intention",
+            "creativity",
+            "mindfulness"
+        ]
+    },
+    "strategy": "Intentions - credibility of - nobility of - humility of"
+}

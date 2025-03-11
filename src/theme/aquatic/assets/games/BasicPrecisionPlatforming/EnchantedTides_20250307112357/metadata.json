@@ -1,0 +1,32 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Basic Precision Platforming' game with the theme 'Generate a unique concept for a Game Jam with an Fish theme, incorporating elements related to the ocean, seas, , jellyfish, cephalopods, and all sea creatures, boats submarines etc. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Convert a melodic element into a rhythmic element'.",
+    "path": "ideas/aquatic",
+    "game_type": "Basic Precision Platforming",
+    "model": "gpt-4o",
+    "count": 7,
+    "name": "Enchanted Tides",
+    "game_id": "EnchantedTides_20250307112357",
+    "branding_data": {
+        "short_description": "Dive into Enchanted Tides, a rhythmic platforming adventure beneath the waves.",
+        "detailed_description": "Enchanted Tides is a precision platformer set in a captivating underwater world. The game invites players to explore vibrant seascapes teeming with jellyfish, cephalopods, and myriad sea creatures. Players must navigate through the depths using precise jump and timing mechanics inspired by oceanic melodies transformed into rhythmic platforms that pulse and move like waves. The journey involves piloting boats and submarines, facing challenges that bring attention to marine conservation and sustainability. As you traverse this enchanting world, each level offers insights into the delicate balance of the ocean's ecosystem, encouraging ethical contemplation about our interactions with the sea.",
+        "tags": [
+            "Platformer",
+            "Rhythmic",
+            "Underwater",
+            "Ocean",
+            "Jellyfish",
+            "Cephalopods",
+            "Marine Life",
+            "Boats",
+            "Submarines",
+            "Conservation",
+            "Sustainability",
+            "Precision",
+            "Game Jam"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Fish theme, incorporating elements related to the ocean, seas, , jellyfish, cephalopods, and all sea creatures, boats submarines etc. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

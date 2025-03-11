@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Mahjong Solitaire' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Go slowly all the way round the outside'.",
+    "path": "ideas",
+    "game_type": "Mahjong Solitaire",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Driftwood Mahjong",
+    "game_id": "DriftwoodMahjong_20250306214308",
+    "branding_data": {
+        "short_description": "A fish-themed Mahjong Solitaire exploring ethics and sustainability.",
+        "detailed_description": "Driftwood Mahjong is a unique take on the classic Mahjong Solitaire game, set against the backdrop of an underwater ecosystem inspired by aquatic life and sustainability. The tiles are beautifully illustrated with marine creatures, coral formations, and sustainable fishing practices. The game encourages players to 'Go slowly all the way round the outside', engaging them to thoughtfully remove tile pairs while contemplating the ethics around each marine subject depicted. With each match, players learn about the importance of preserving marine biodiversity and the impact of sustainable practices in fisheries and ocean conservation.",
+        "tags": [
+            "Mahjong",
+            "Solitaire",
+            "Fish",
+            "Ethics",
+            "Sustainability",
+            "Underwater",
+            "Puzzle",
+            "Educational",
+            "Strategy",
+            "Environment"
+        ]
+    },
+    "strategy": "Go slowly all the way round the outside"
+}

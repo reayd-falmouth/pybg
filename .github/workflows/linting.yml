@@ -1,0 +1,30 @@
+name: Linting
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  black:
+    name: Black
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Install poetry
+        run: pipx install poetry
+
+      - name: Set up python
+        uses: actions/setup-python@v4.4.0
+        with:
+          python-version-file: .python-version
+          cache: 'poetry'
+
+      - name: Install dependencies
+        run:  poetry install --with linting --without main
+
+      - name: Check code with black
+        continue-on-error: false
+        run: make check-black

@@ -1,0 +1,30 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Grid-Based Turn-Based RPG' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Is it finished?'.",
+    "path": "ideas/aquatic",
+    "game_type": "Grid-Based Turn-Based RPG",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Marine Realms",
+    "game_id": "MarineRealms_20250307110413",
+    "branding_data": {
+        "short_description": "Marine Realms is a grid-based turn-based RPG with an aquatic theme, focused on ocean conservation and sustainability.",
+        "detailed_description": "Dive into the depths of Marine Realms, a grid-based turn-based RPG that immerses players in the mysteries of the ocean. As the guardians of the seas, players navigate through various oceanic environments, from vibrant coral reefs to enigmatic deep-sea trenches. The core of the game revolves around strategic movement on a grid, where each step and turn counts. Players encounter unique marine creatures and face challenges that highlight ethical dilemmas and sustainability issues, such as pollution and the effects of overfishing. In this game, victory is not just about conquering foes, but restoring balance to the marine ecosystems. Sustainability is key, and players must make choices that impact their surroundings, adding layers of depth to this engaging aquatic adventure. The question 'Is it finished?' resonates throughout the game, encouraging players to continually improve and sustain the world, even beyond their primary objectives.",
+        "tags": [
+            "RPG",
+            "Grid-Based",
+            "Turn-Based",
+            "Strategy",
+            "Aquatic",
+            "Ocean",
+            "Sustainability",
+            "Ethics",
+            "Fantasy",
+            "Adventure",
+            "Puzzle"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Galaga' game with the theme Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.. Modify it by applying the oblique strategy: 'Give the game away'.",
+    "path": "ideas/aquatic",
+    "game_type": "Galaga",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Ocean Drifters",
+    "game_id": "OceanDrifters_20250307073714",
+    "branding_data": {
+        "short_description": "Ocean Drifters is a unique twist on the classic 'Galaga' game, featuring aquatic themes and promoting ocean conservation.",
+        "detailed_description": "Ocean Drifters invites players to navigate through a vibrant underwater world, battling against waves of marine-themed adversaries. Inspired by the arcade classic 'Galaga', the game incorporates elements of the ocean, seas, and rivers, providing an immersive experience under the sea. The goal is not only to progress through levels but to protect the oceanic environment, integrating messages about ethics and sustainability. Players can choose to save endangered marine life by avoiding them while targeting ocean polluters and invasive species. The game adopts an altruistic approach by being freely available to promote awareness of ocean conservation to a wide audience. Featuring various aquatic scenarios, from coral reefs to deep-sea trenches, it appeals to both casual and seasoned gamers with its easy-to-learn mechanics and engaging gameplay.",
+        "tags": [
+            "Arcade",
+            "Shooter",
+            "Aquatic",
+            "Environment",
+            "Conservation",
+            "Free-to-Play",
+            "Casual",
+            "Strategy",
+            "Ocean",
+            "Ethical"
+        ]
+    },
+    "strategy": "Give the game away"
+}

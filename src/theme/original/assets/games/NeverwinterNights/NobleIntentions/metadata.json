@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Neverwinter Nights' game. Modify it by applying the oblique strategy: 'Intentions - credibility of - nobility of - humility of'.",
+    "path": "../oblique-games/ideas/",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Noble Intentions",
+    "game_type": "NeverwinterNights",
+    "branding_data": {
+        "short_description": "Embark on a journey of nobility and humility in a fantasy world inspired by 'Neverwinter Nights'.",
+        "detailed_description": "Noble Intentions is a role-playing game that draws inspiration from the classic 'Neverwinter Nights'. Set in a rich fantasy world, players are tasked with navigating the complex interplay of intentions, credibility, and nobility. As a hero of humble beginnings, you must prove your worth through actions that reflect the true nature of humility and nobility. The game challenges players to balance their intentions with the credibility of their actions, leading to dynamic storytelling and character development. Players will engage in strategic combat, form alliances, and make decisions that shape the world around them. Each choice impacts your reputation and the perception of your character's nobility and humility, ultimately determining the outcome of your quest.",
+        "tags": [
+            "RPG",
+            "Fantasy",
+            "Strategy",
+            "Adventure",
+            "Story-driven",
+            "Character Development",
+            "Choices Matter"
+        ]
+    },
+    "errors": null,
+    "strategy": "Intentions - credibility of - nobility of - humility of"
+}

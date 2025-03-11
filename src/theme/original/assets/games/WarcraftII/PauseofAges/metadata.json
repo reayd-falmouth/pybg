@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Warcraft II' game. Modify it by applying the oblique strategy: 'Take a break'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Warcraft: Pause of Ages",
+    "game_type": "WarcraftII",
+    "branding_data": {
+        "short_description": "Warcraft: Pause of Ages is a strategic real-time strategy game where players must master the art of timing and patience, incorporating strategic pauses to outwit their opponents.",
+        "detailed_description": "Warcraft: Pause of Ages reimagines the classic 'Warcraft II' gameplay by introducing a unique mechanic where players must strategically 'take a break' to gain advantages. In this innovative twist, time management and strategic pauses become key to success. Players will engage in classic resource gathering, base building, and army management, but with the added challenge of planning their actions around mandatory pause periods. These pauses allow players to gather their thoughts, plan their next moves, and sometimes trigger special events or bonuses. The game emphasizes the importance of timing, resourcefulness, and strategic foresight, providing a fresh take on the beloved RTS formula.",
+        "tags": [
+            "Real-Time Strategy",
+            "Strategy",
+            "Fantasy",
+            "Base Building",
+            "Time Management",
+            "Tactical",
+            "Single-player",
+            "Multiplayer"
+        ]
+    },
+    "strategy": "Take a break"
+}

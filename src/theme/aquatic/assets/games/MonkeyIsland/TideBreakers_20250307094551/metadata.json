@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Monkey Island' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Make a sudden, destructive, unpredictable action; incorporate'.",
+    "path": "ideas/aquatic",
+    "game_type": "Monkey Island",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Tide Breakers",
+    "game_id": "TideBreakers_20250307094551",
+    "branding_data": {
+        "short_description": "Embark on an aquatic adventure with unpredictable elements and a focus on ethics, in 'Tide Breakers'.",
+        "detailed_description": "In 'Tide Breakers', players explore vibrant oceanic environments as they navigate through a narrative that blends exploration, puzzle-solving, and moral decision-making. Set against the backdrop of vast oceans, intricate river systems, and mysterious seas, players must generate innovative concepts for a game jam with an aquatic theme. Unexpected, destructive forces periodically disrupt gameplay, requiring quick thinking and adaptability. As players immerse themselves in this aquatic adventure, they face ethical dilemmas related to ocean sustainability and resource management. The game invites participants of all skill levels to engage creatively with the theme, prompting reflection on the impact of their choices on the delicate marine ecosystem.",
+        "tags": [
+            "Adventure",
+            "Puzzle",
+            "Exploration",
+            "Ocean",
+            "Sustainability",
+            "Ethics",
+            "Game Jam",
+            "Aquatic",
+            "Narrative",
+            "Environmental"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

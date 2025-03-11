@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Space Invaders' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'What is the reality of the situation?'.",
+    "path": "ideas/aquatic",
+    "game_type": "Space Invaders",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Ocean Defenders",
+    "game_id": "OceanDefenders_20250307100354",
+    "branding_data": {
+        "short_description": "Ocean Defenders is a Space Invaders style game with an aquatic theme, focusing on ocean preservation and ethical sustainability.",
+        "detailed_description": "Ocean Defenders is a reimagined Space Invaders game set in the depths of the ocean. Players take control of a marine vehicle tasked with protecting the ocean ecosystem from harmful invaders, such as pollution and destructive fishing practices. The game is designed with a focus on ethics and sustainability, encouraging players to consider the impact of human activities on marine life. Players will battle wave after wave of invaders, represented by pollution clouds and illegal fishing trawlers, while also rescuing marine creatures in peril. With each level, players learn more about sustainable practices and the reality of current environmental challenges impacting our seas, oceans, and rivers. The game is designed to be accessible and engaging for developers of all skill levels, making it suitable for a wide audience during a Game Jam.",
+        "tags": [
+            "Space Invaders",
+            "Aquatic theme",
+            "Ocean preservation",
+            "Sustainability",
+            "Ethics",
+            "Marine life",
+            "Pollution",
+            "Environmental",
+            "Retro",
+            "Game Jam"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

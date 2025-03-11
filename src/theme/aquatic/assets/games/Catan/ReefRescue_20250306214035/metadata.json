@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Catan' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Short circuit'.",
+    "path": "ideas",
+    "game_type": "Catan",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Reef Rescue",
+    "game_id": "ReefRescue_20250306214035",
+    "branding_data": {
+        "short_description": "Reef Rescue combines strategic resource management with ethical decision-making, as players work to build and sustain vibrant coral reefs using a fish-centered approach.",
+        "detailed_description": "In Reef Rescue, players act as stewards of a coral reef ecosystem. Inspired by the classic mechanics of 'Catan' but infused with a fish and sustainability theme, players collect resources such as algae, coral fragments, fish schools, and clean water to develop their sections of the reef. The game challenges players to balance growth and sustainability, making ethical decisions that affect the health of the reef in the long run. Oblique strategy ‘Short circuit’ is applied by introducing sudden resource shortages or surges due to environmental events, forcing players to quickly adapt their strategies. Success lies in fostering a self-sustaining reef ecosystem that thrives on biodiversity while maintaining balance with limited resources.",
+        "tags": [
+            "strategy",
+            "board game",
+            "resource management",
+            "sustainability",
+            "environmental",
+            "fish",
+            "reef",
+            "Catan-inspired"
+        ]
+    },
+    "strategy": "Short circuit"
+}

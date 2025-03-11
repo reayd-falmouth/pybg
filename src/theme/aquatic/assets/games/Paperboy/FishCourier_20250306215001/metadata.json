@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Paperboy' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Are there sections? Consider transitions'.",
+    "path": "ideas",
+    "game_type": "Paperboy",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Fish Courier",
+    "game_id": "FishCourier_20250306215001",
+    "branding_data": {
+        "short_description": "Deliver sustainable fish to promote ethical fishing practices in a vibrant aquatic world.",
+        "detailed_description": "In 'Fish Courier', players take on the role of a fish delivering mail in an underwater environment. The game emphasizes ethical and sustainable fishing practices, encouraging players to navigate through a colorful ocean landscape while avoiding environmentally harmful obstacles like fishing nets and pollution. Players must manage their route efficiently, ensuring the delivery of mail to underwater homes while maintaining the health of the ocean ecosystem. The game is designed in segments, each representing different areas of the oceanic habitat. Transitions between sections are marked by changes in environmental challenges and visual themes, highlighting the diversity of marine life and the importance of environmental stewardship.",
+        "tags": [
+            "Aquatic",
+            "Ethical",
+            "Sustainability",
+            "Arcade",
+            "Adventure",
+            "Strategy",
+            "Environment",
+            "Puzzle"
+        ]
+    },
+    "strategy": "Are there sections? Consider transitions"
+}

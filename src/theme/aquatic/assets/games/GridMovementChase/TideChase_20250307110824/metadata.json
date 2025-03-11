@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Grid Movement Chase' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Emphasize repetitions'.",
+    "path": "ideas/aquatic",
+    "game_type": "Grid Movement Chase",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Tide Chase",
+    "game_id": "TideChase_20250307110824",
+    "branding_data": {
+        "short_description": "Embark on a grid-based chase through aquatic environments, emphasizing repetitive patterns and sustainable objectives.",
+        "detailed_description": "In 'Tide Chase', players dive into an aquatic-themed grid-based movement game where the primary challenge is to evade and outsmart pursuing entities. Set in vibrant oceanic, river, and sea environments, players control a character who must navigate by making precise moves on a grid. The gameplay features repetitive patterns in the movement of pursuers and changing tides, requiring players to recognize and adapt to these rhythms. Players must gather sustainable resources like coral seeds or clean debris as they evade capture, promoting awareness of ocean conservation. The objective is to survive and collect as much of these resources as possible before the game ends, with each successful collection contributing to the regeneration of clean and vibrant water environments. The game encourages creativity by allowing developers to experiment with different aquatic settings and AI behaviors.",
+        "tags": [
+            "Grid Movement",
+            "Chase",
+            "Aquatic",
+            "Ocean",
+            "Sustainability",
+            "Repetitive Patterns",
+            "Conservation",
+            "Game Jam",
+            "Creative Concept",
+            "All Skill Levels"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

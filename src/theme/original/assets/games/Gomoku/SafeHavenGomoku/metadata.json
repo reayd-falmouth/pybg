@@ -1,0 +1,12 @@
+{
+    "randomise": false,
+    "oblique_strategy": true,
+    "branding": false,
+    "task": "Develop a basic Gomoku game. Modify it by applying the oblique strategy: 'Define an area as 'safe' and use it as an anchor'.",
+    "path": "ideas",
+    "game_type": "Gomoku",
+    "model": "gpt-4o",
+    "name": "Safe Haven Gomoku",
+    "branding_data": null,
+    "strategy": " and use it as an anchor"
+}

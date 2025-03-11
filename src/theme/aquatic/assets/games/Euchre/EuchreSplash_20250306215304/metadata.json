@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Euchre' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'What wouldn't you do?'.",
+    "path": "ideas",
+    "game_type": "Euchre",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Euchre Splash",
+    "game_id": "EuchreSplash_20250306215304",
+    "branding_data": {
+        "short_description": "Euchre Splash is a unique twist on the classic card game, infused with a fish theme that highlights ethics and sustainability in marine life.",
+        "detailed_description": "Euchre Splash transforms the traditional card game of Euchre into an underwater adventure, where players engage in voyages to collect the best fish pairs while maintaining an ethical and sustainable approach to fishing. The game challenges players to think differently, asking 'What wouldn't you do?' as they navigate through a vibrant oceanic world. Players must work strategically with their partner to outwit opponents, all while ensuring that they respect ocean resources and avoid overfishing. The game incorporates educational elements about marine life conservation and encourages thoughtful decision-making. The aquatic theme is richly illustrated with whimsical fish characters, and the ethical challenge adds a new layer of strategy to this beloved pastime.",
+        "tags": [
+            "card game",
+            "euchre",
+            "fish theme",
+            "ethics",
+            "sustainability",
+            "strategy",
+            "conservation",
+            "multiplayer"
+        ]
+    },
+    "strategy": "What wouldn"
+}

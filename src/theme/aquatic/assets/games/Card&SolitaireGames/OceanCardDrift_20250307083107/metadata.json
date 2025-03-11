@@ -1,0 +1,30 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Card & Solitaire Games' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Look at the order in which you do things'.",
+    "path": "ideas/aquatic",
+    "game_type": "Card & Solitaire Games",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Ocean Card Drift",
+    "game_id": "OceanCardDrift_20250307083107",
+    "branding_data": {
+        "short_description": "Ocean Card Drift is an aquatic-themed solitaire game where players navigate the currents of the ocean to achieve sustainable objectives using a unique card order system.",
+        "detailed_description": "Ocean Card Drift is a creative twist on classic solitaire card games, set in a vibrant underwater world. Players are tasked with arranging cards depicting various marine life, currents, and mythical oceanic artifacts. The goal is to harmonize ocean elements in sequential order, promoting sustainable ecosystems. The game introduces a unique challenge by requiring players to reorder their card plays, simulating the ebb and flow of ocean tides. As players progress, they encounter educational prompts on ocean conservation and ethical fishing practices. Developers can engage with intuitive mechanics suitable for all skill levels, while players enjoy an immersive and thoughtful experience that raises awareness about the importance of preserving aquatic environments.",
+        "tags": [
+            "Card Game",
+            "Solitaire",
+            "Aquatic Theme",
+            "Ocean Conservation",
+            "Sustainability",
+            "Educational",
+            "Strategy",
+            "Casual",
+            "Puzzle",
+            "Indie Game",
+            "Game Jam"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

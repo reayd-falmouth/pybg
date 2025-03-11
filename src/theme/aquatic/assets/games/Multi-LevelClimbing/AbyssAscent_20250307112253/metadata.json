@@ -1,0 +1,31 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Multi-Level Climbing' game with the theme 'Generate a unique concept for a Game Jam with an Fish theme, incorporating elements related to the ocean, seas, , jellyfish, cephalopods, and all sea creatures, boats submarines etc. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Do we need holes?'.",
+    "path": "ideas/aquatic",
+    "game_type": "Multi-Level Climbing",
+    "model": "gpt-4o",
+    "count": 7,
+    "name": "Abyss Ascent",
+    "game_id": "AbyssAscent_20250307112253",
+    "branding_data": {
+        "short_description": "Abyss Ascent is a multi-level climbing game where players navigate through a vibrant underwater world, interacting with various sea creatures, submarines, and boats. Incorporating ecosystem sustainability, the game invites players to make ethical choices while focusing on a central mystery: 'Do we need holes?'.",
+        "detailed_description": "In Abyss Ascent, players embark on an underwater adventure where the goal is to ascend through multiple aquatic levels, each teeming with unique sea life like jellyfish, cephalopods, and more. As they explore the depths of the ocean, players encounter various obstacles and platforms, which may include natural formations, shipwrecks, and modern submarines. Each level offers new challenges and mechanics that require strategic thinking and adaptability. A key feature is the recurring question, 'Do we need holes?', which introduces a puzzle element where players decide whether opening or closing gaps (holes) in the environment influences their path or affects the marine ecosystem. The game encourages players to think about sustainability and ethics, presenting choices that impact the ocean environment positively or negatively. Incorporating stunning visuals and a soothing aquatic soundtrack, Abyss Ascent offers both relaxing and thought-provoking gameplay in a thematic, immersive experience.",
+        "tags": [
+            "Platformer",
+            "Puzzle",
+            "Ocean",
+            "Underwater",
+            "Sea Creatures",
+            "Sustainability",
+            "Ethics",
+            "Adventure",
+            "Mystery",
+            "Strategy",
+            "Indie",
+            "Relaxing"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Fish theme, incorporating elements related to the ocean, seas, , jellyfish, cephalopods, and all sea creatures, boats submarines etc. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

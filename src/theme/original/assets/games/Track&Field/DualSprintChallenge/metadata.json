@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Track & Field' game. Modify it by applying the oblique strategy: 'A line has two sides'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Dual Sprint Challenge",
+    "game_type": "Track&Field",
+    "branding_data": {
+        "short_description": "Dual Sprint Challenge is a unique take on classic track and field racing, where players race simultaneously on parallel tracks, each with distinct challenges.",
+        "detailed_description": "Dual Sprint Challenge reimagines the traditional track and field racing game by introducing a dual-track system where players compete simultaneously on two parallel tracks. Each track presents its own set of obstacles and challenges, requiring players to strategize and switch focus between the tracks effectively. The game emphasizes quick decision-making and adaptability as players must navigate hurdles, water pits, and varying terrain on both sides. With its innovative approach inspired by the oblique strategy 'A line has two sides', Dual Sprint Challenge offers a fresh and dynamic racing experience that tests both physical agility and mental acuity.",
+        "tags": [
+            "Sports",
+            "Racing",
+            "Track and Field",
+            "Strategy",
+            "Multitasking",
+            "Obstacles",
+            "Competitive",
+            "Innovation"
+        ]
+    },
+    "strategy": "A line has two sides"
+}

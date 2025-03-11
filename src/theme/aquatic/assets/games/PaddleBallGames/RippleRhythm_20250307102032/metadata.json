@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Paddle Ball Games' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Imagine the music as a set of disconnected events'.",
+    "path": "ideas/aquatic",
+    "game_type": "Paddle Ball Games",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Ripple Rhythm",
+    "game_id": "RippleRhythm_20250307102032",
+    "branding_data": {
+        "short_description": "Engage in aquatic-themed paddle ball gameplay where each musical note triggers a ripple effect in this rhythmic ocean journey.",
+        "detailed_description": "Ripple Rhythm is a unique spin on classic paddle ball gameplay, set in a mesmerizing aquatic world. Players must keep the ball bouncing amidst serene oceanic environments that are both engaging and thought-provoking. Each successful hit on the paddle produces musical notes, as if the music is a set of disconnected events. These notes correspond to ripple effects that influence the environment, illuminating coral reefs or cleansing patches of ocean pollution. By strategically creating harmonious ripple patterns, players contribute to the sustainability of the underwater world. This game fosters awareness of marine ecosystems, urging players to consider the ethics of ocean conservation within an entertaining framework. Suitable for developers and players of all skill levels, Ripple Rhythm is a visual and auditory delight that encourages mindfulness and harmony with our planet's waters.",
+        "tags": [
+            "Rhythm",
+            "Paddle Ball",
+            "Aquatic Theme",
+            "Music",
+            "Sustainability",
+            "Ocean Conservation",
+            "Creative Design",
+            "Casual",
+            "Indie",
+            "Game Jam"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

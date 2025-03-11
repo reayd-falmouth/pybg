@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Grim Fandango' game. Modify it by applying the oblique strategy: 'Feedback recordings into an acoustic situation'.",
+    "path": "ideas",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Echo of the Underworld",
+    "game_type": "GrimFandango",
+    "branding_data": {
+        "short_description": "Navigate the afterlife as a detective, unraveling mysteries using sound feedback loops.",
+        "detailed_description": "Echo of the Underworld is an adventure game inspired by 'Grim Fandango', where players assume the role of a skeletal detective navigating the realm of the dead. The unique twist in this game is the use of 'feedback recordings into an acoustic situation' as a core gameplay mechanic. Players must solve intricate puzzles and unravel mysteries by recording sounds in the environment and playing them back to manipulate the world around them. This auditory feedback system reveals hidden paths, uncovers secrets, and aids in the interaction with otherworldly characters, all set against a backdrop of dark humor and a richly detailed underworld setting.",
+        "tags": [
+            "Adventure",
+            "Puzzle",
+            "Mystery",
+            "Noir",
+            "Sound-based Gameplay",
+            "Dark Humor",
+            "Point-and-Click",
+            "Narrative-driven"
+        ]
+    },
+    "errors": null,
+    "strategy": "Feedback recordings into an acoustic situation"
+}

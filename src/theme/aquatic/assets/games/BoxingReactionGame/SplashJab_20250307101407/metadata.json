@@ -1,0 +1,30 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Boxing Reaction Game' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Emphasize the flaws'.",
+    "path": "ideas/aquatic",
+    "game_type": "Boxing Reaction Game",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Splash Jab",
+    "game_id": "SplashJab_20250307101407",
+    "branding_data": {
+        "short_description": "Splash Jab is a quirky boxing reaction game with an aquatic twist, focusing on sustainability and emphasizing imperfections.",
+        "detailed_description": "Dive into the world of Splash Jab, where boxing meets the ocean's awry currents. Set in a whimsical underwater arena, players take on the roles of various sea creatures engaging in reaction-based boxing matches. The game highlights the quirks and flaws of both the marine boxers and the environment itself, creating a unique twist on the genre. Each character, from clumsy crabs to wobbly jellyfish, has distinct weaknesses that players must exploit and adapt to. The underwater arena is filled with unpredictable waves, currents, and debris, introducing a layer of chaos to the matches. Embrace the beauty of imperfection as players focus on overcoming these challenges. Sustainability is woven into the gameplay through eco-friendly initiatives, such as cleaning up litter during matches or maintaining a balance in the marine ecosystem. Punctuated by vibrant visuals and an engaging aquatic soundscape, Splash Jab invites players of all skill levels to explore the depths of the ocean and celebrate its charming flaws.",
+        "tags": [
+            "Boxing",
+            "Reaction",
+            "Aquatic",
+            "Ocean",
+            "Sea Creatures",
+            "Whimsical",
+            "Environmental",
+            "Sustainability",
+            "Casual",
+            "Ecosystem",
+            "Underwater Arena"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Rummy' game. Modify it by applying the oblique strategy: 'Spectrum analysis'.",
+    "path": "../oblique-games/ideas/",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Prism Rummy",
+    "game_type": "Rummy",
+    "branding_data": {
+        "short_description": "Prism Rummy is a vibrant twist on the classic card game, utilizing a spectrum-based strategy for an enhanced experience.",
+        "detailed_description": "Prism Rummy is an innovative take on the traditional Rummy card game, infused with the concept of 'spectrum analysis'. In this game, players not only focus on forming sets and runs but also on creating combinations that align with different colors of a spectrum. Each card is associated with a color, and players can earn bonus points by completing color-specific objectives. The game introduces new strategic layers as players must analyze the 'spectrum' of their hands and adapt their strategies accordingly. The colorful and dynamic gameplay of Prism Rummy challenges players to think beyond the usual card combinations and engage with a visually stimulating spectrum of possibilities.",
+        "tags": [
+            "Card Game",
+            "Rummy",
+            "Strategy",
+            "Color Matching",
+            "Spectrum",
+            "Innovative",
+            "Family Game",
+            "Multiplayer"
+        ]
+    },
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "Spectrum analysis"
+}

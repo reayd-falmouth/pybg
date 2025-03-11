@@ -1,0 +1,30 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'R-Type' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Emphasize differences'.",
+    "path": "ideas/aquatic",
+    "game_type": "R-Type",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Tideguard Shoal",
+    "game_id": "TideguardShoal_20250307095337",
+    "branding_data": {
+        "short_description": "A reimagined R-Type game with an aquatic theme, focusing on diverse oceanic environments and the importance of sustainability and ethics in marine life.",
+        "detailed_description": "Tideguard Shoal is an engaging side-scrolling shooter inspired by classic R-Type games, but set in the vibrant and diverse underwater worlds of oceans, seas, and rivers. Players pilot a unique submersible ship through an ever-changing aquatic landscape, encountering both the serene beauty and perilous threats of underwater ecosystems. Each level emphasizes the diversity of marine environments, showcasing coral reefs, deep-sea trenches, and bustling riverbanks, each with distinct visuals and challenges. Central to the game is a focus on ethics and sustainability; players must choose their battles wisely to avoid harming endangered species or damaging fragile ecosystems. Unlockable upgrades emphasize eco-friendly technology, promoting balance and harmony. With a variety of missions that include ecological preservation, players navigate a richly animated aquatic world, constantly balancing firepower with ethical considerations.",
+        "tags": [
+            "R-Type",
+            "shooter",
+            "aquatic",
+            "ocean",
+            "sustainability",
+            "ethics",
+            "underwater",
+            "marine",
+            "diversity",
+            "eco-friendly",
+            "game jam"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Checkers' game. Modify it by applying the oblique strategy: 'You are an engineer'.",
+    "path": "../oblique-games/ideas/",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Checkered Engineering",
+    "game_type": "Checkers",
+    "branding_data": {
+        "short_description": "Checkered Engineering combines classic Checkers with engineering challenges.",
+        "detailed_description": "Checkered Engineering is an innovative twist on the traditional game of Checkers, inspired by the oblique strategy 'You are an engineer.' In this game, players not only engage in strategic moves typical of Checkers but also face unique engineering challenges that affect the board and pieces. Each turn, players must solve engineering puzzles or build structures to gain strategic advantages, such as altering the board layout or enhancing their pieces' abilities. This adds a layer of complexity and creativity to the classic game, making it a dynamic and intellectually stimulating experience.",
+        "tags": [
+            "Checkers",
+            "Strategy",
+            "Puzzle",
+            "Board Game",
+            "Engineering",
+            "Innovative",
+            "Creative",
+            "Challenges"
+        ]
+    },
+    "errors": null,
+    "strategy": "You are an engineer"
+}

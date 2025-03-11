@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Rogue' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Lowest common denominator check - single beat - single note - single riff'.",
+    "path": "ideas",
+    "game_type": "Rogue",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Abyssal Harmony",
+    "game_id": "AbyssalHarmony_20250306214215",
+    "branding_data": {
+        "short_description": "Abyssal Harmony is a roguelike game that combines fish-themed ethics with minimalist gameplay mechanics.",
+        "detailed_description": "Abyssal Harmony is a unique roguelike game set in the depths of the ocean, where players navigate the challenges of marine life while emphasizing ethics and sustainability. Using simplistic controls, the game focuses on the essence of ocean biodiversity and the interconnectedness of species. The player takes on the role of a guardian fish navigating procedurally generated underwater labyrinths. The core mechanics rely on a single action button, embodying the oblique strategy of simplifying gameplay to its lowest common denominator. This reflects the delicate balance of marine ecosystems. Key challenges include managing resources wisely, protecting the environment from pollution, and forging connections with sea creatures to maintain the harmony of the deep. The game's minimalist style reflects the single beat, riff, and note analogy, creating a resonant experience of ecological preservation in a vibrant aquatic world.",
+        "tags": [
+            "roguelike",
+            "minimalist",
+            "ocean theme",
+            "sustainability",
+            "environmental ethics",
+            "procedural generation",
+            "single-button gameplay",
+            "indie game",
+            "ecological balance",
+            "marine life"
+        ]
+    },
+    "strategy": "Lowest common denominator check - single beat - single note - single riff"
+}

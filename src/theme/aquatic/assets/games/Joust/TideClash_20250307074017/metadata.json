@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Joust' game with the theme Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.. Modify it by applying the oblique strategy: 'Abandon normal instruments'.",
+    "path": "ideas/aquatic",
+    "game_type": "Joust",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Tide Clash",
+    "game_id": "TideClash_20250307074017",
+    "branding_data": {
+        "short_description": "Tide Clash is an aquatic-themed jousting game where players navigate the open sea on unique aquatic mounts, incorporating sustainable practices and creative mechanics.",
+        "detailed_description": "Tide Clash invites players into a vibrant oceanic world where traditional jousting is reimagined with a fleet of fantastical aquatic mounts, such as dolphins, turtles, and mythical sea creatures. The game challenges players to engage in tournaments across various water-based locales like coral reefs, river deltas, and open seas. Abandon normal instruments by utilizing creative and eco-friendly lances made from biodegradable and recycled materials. The game emphasizes ethical and sustainable practices, encouraging players to protect marine life and reduce pollution as an integral part of the gameplay. Mechanics also include manipulating tides and currents to gain advantage, further emphasizing the harmony with nature. Tide Clash's intuitive controls and progressive challenges make it accessible and engaging for players of all skill levels, while the unique design and meaningful message about ocean conservation provide depth and purpose.",
+        "tags": [
+            "Jousting",
+            "Aquatic",
+            "Sustainability",
+            "Ocean",
+            "Creative Mechanics",
+            "Ethical Gaming",
+            "Indie Game",
+            "Game Jam",
+            "Sea Creatures",
+            "Environmental Awareness"
+        ]
+    },
+    "strategy": "Abandon normal instruments"
+}

@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Tetris' game. Modify it by applying the oblique strategy: 'Consider different fading systems'.",
+    "path": "ideas",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "FadeShift Blocks",
+    "game_type": "Tetris",
+    "branding_data": {
+        "short_description": "A unique twist on the classic Tetris game with dynamic fading blocks.",
+        "detailed_description": "FadeShift Blocks takes the timeless mechanics of Tetris and introduces an innovative fading system. As you stack and clear lines, the blocks don't just vanish instantly; they gradually fade away, adding a new layer of strategy. Players must consider the timing of fades to optimize their space and score. The game challenges you to adapt to the ever-changing visibility of the blocks, making each move more critical and engaging. The fading system is designed to create a visually captivating experience while maintaining the addictive gameplay of the original Tetris.",
+        "tags": [
+            "Puzzle",
+            "Tetris",
+            "Strategy",
+            "Fading",
+            "Blocks",
+            "Casual",
+            "Single-player",
+            "Indie"
+        ]
+    },
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "Consider different fading systems"
+}

@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Jetpac' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Just carry on'.",
+    "path": "ideas/aquatic",
+    "game_type": "Jetpac",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "AquaVoyage",
+    "game_id": "AquaVoyage_20250307094217",
+    "branding_data": {
+        "short_description": "AquaVoyage is an aquatic-themed exploration game where players pilot a jetpack-equipped submersible through oceanic levels, collecting treasures and promoting sustainability.",
+        "detailed_description": "In AquaVoyage, players take on the role of an explorer tasked with navigating the depths of the ocean in a jetpack-equipped submersible. The goal is to traverse various underwater landscapes, collecting treasures and artifacts while promoting ethical exploration and sustainability. Each level features unique challenges and obstacles, including diverse marine life, hidden currents, and environmental hazards. As players move through the game, they can upgrade their equipment, learn about marine ecosystems, and make choices that impact the ocean's health. The game's strategy revolves around the 'Just carry on' concept, encouraging players to persist through challenges and focus on long-term sustainability efforts. Engagement is heightened by creative level designs that reflect real-world oceanic themes, fostering an appreciation for the environment.",
+        "tags": [
+            "Aquatic",
+            "Exploration",
+            "Sustainability",
+            "Ocean",
+            "Game Jam",
+            "Jetpack",
+            "Adventure",
+            "Strategy",
+            "Environmental Awareness"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

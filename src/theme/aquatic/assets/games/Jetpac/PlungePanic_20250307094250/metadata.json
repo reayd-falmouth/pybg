@@ -1,0 +1,33 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Jetpac' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Give way to your worst impulse'.",
+    "path": "ideas/aquatic",
+    "game_type": "Jetpac",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Plunge Panic",
+    "game_id": "PlungePanic_20250307094250",
+    "branding_data": {
+        "short_description": "A chaotic aquatic adventure where players plunge into polluted waters to clean up and survive.",
+        "detailed_description": "Plunge Panic is a 'Jetpac' inspired game set in a post-apocalyptic aquatic world overrun by pollution. Players dive into the oceans, seas, and rivers to clean up the toxic mess using their jet-powered suits. The twist comes from embracing the worst impulses: players collect trash and must decide between hoarding it for points or responsibly disposing of it. The game introduces a sustainability mechanic, where unchecked hoarding leads to pollution spikes, spawning aggressive sea creatures and turbulent tidal waves. Players balance their greed with ethical choices as they plunge through dynamic underwater environments, each more hazardous than the last. The game aims to entertain while subtly educating players about the consequences of pollution and the importance of oceanic conservation. Fast-paced, engaging, and sprinkled with dark humor, 'Plunge Panic' offers an aquatic adventure that tests both reflexes and moral compass.",
+        "tags": [
+            "2D",
+            "Platformer",
+            "Action",
+            "Adventure",
+            "Aquatic",
+            "Environmental",
+            "Pollution",
+            "Jetpack",
+            "Survival",
+            "Ethics",
+            "Sustainability",
+            "Fast-paced",
+            "Indie",
+            "Game Jam"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Bomberman' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Breathe more deeply'.",
+    "path": "ideas/aquatic",
+    "game_type": "Bomberman",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Aqua Bomb Dive",
+    "game_id": "AquaBombDive_20250307094738",
+    "branding_data": {
+        "short_description": "Engage in underwater explosive battles while promoting marine conservation in Aqua Bomb Dive.",
+        "detailed_description": "Aqua Bomb Dive is an ocean-themed Bomberman-style game where players become marine conservationists competing against each other to collect and defuse harmful explosives left in the ocean. Set in vibrant underwater arenas inspired by coral reefs, sunken ships, and riverbeds, players must strategically place bombs to clear paths, defeat opponents, and safely dispose of hazardous materials. The game encourages deep exploration and mindfulness about marine life, integrating ethical choices that impact your surroundings. Power-ups include sustainable gadgets like coral shields and fish-friendly sonar pulses. Players must 'breathe more deeply', taking considered, slower movements to avoid causing unintended harm to the delicate underwater ecosystems. Aqua Bomb Dive highlights the importance of sustainability and conservation, providing an engaging gameplay experience suitable for all skill levels.",
+        "tags": [
+            "Action",
+            "Strategy",
+            "Multiplayer",
+            "Puzzle",
+            "Aquatic",
+            "Sustainability",
+            "Ocean",
+            "Marine Conservation",
+            "Bomberman-style",
+            "Casual"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

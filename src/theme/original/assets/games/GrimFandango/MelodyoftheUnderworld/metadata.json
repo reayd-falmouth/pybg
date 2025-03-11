@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Grim Fandango' game. Modify it by applying the oblique strategy: 'Imagine the music as a moving chain or caterpillar'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Title: \"Melody of the Underworld\"",
+    "game_type": "GrimFandango",
+    "branding_data": {
+        "short_description": "Navigate the afterlife with musical puzzles in 'Melody of the Underworld', where music guides your journey.",
+        "detailed_description": "'Melody of the Underworld' is an adventure game inspired by the classic 'Grim Fandango'. Set in a vibrant and mysterious afterlife, players assume the role of a soul navigating their way through a realm where music is a living, breathing entity. Each puzzle is intertwined with melodies that evolve like a moving chain or caterpillar, guiding players through challenges and uncovering secrets. The game combines narrative-driven exploration with unique musical mechanics, requiring players to listen, adapt, and solve puzzles by understanding the flow and rhythm of the music. With a captivating story and a beautifully haunting soundtrack, 'Melody of the Underworld' invites players to explore the afterlife in a way they've never experienced before.",
+        "tags": [
+            "Adventure",
+            "Puzzle",
+            "Music",
+            "Narrative",
+            "Exploration",
+            "Atmospheric",
+            "Soundtrack"
+        ]
+    },
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "Imagine the music as a moving chain or caterpillar"
+}

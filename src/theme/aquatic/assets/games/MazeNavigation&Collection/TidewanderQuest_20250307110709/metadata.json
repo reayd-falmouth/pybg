@@ -1,0 +1,26 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Maze Navigation & Collection' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Consider different fading systems'.",
+    "path": "ideas/aquatic",
+    "game_type": "Maze Navigation & Collection",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Tidewander Quest",
+    "game_id": "TidewanderQuest_20250307110709",
+    "branding_data": {
+        "short_description": "Navigate underwater mazes and collect treasures while promoting ocean sustainability in Tidewander Quest.",
+        "detailed_description": "Tidewander Quest is an engaging 'Maze Navigation & Collection' game set in a vibrant aquatic world. Players explore various underwater mazes, each inspired by different maritime environments. As they navigate these labyrinths, they collect treasures and clean up ocean debris, raising awareness about ocean sustainability. The game employs a unique fading system, where visibility and maze pathways change over time, mimicking ocean currents and tides. This dynamic environment challenges players to adapt their strategies. Ethical considerations are woven into gameplay, encouraging players to make sustainable decisions, like choosing the right paths that impact marine health positively.",
+        "tags": [
+            "Maze",
+            "Aquatic",
+            "Ocean",
+            "Sustainability",
+            "Puzzle",
+            "Educational",
+            "Exploration"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

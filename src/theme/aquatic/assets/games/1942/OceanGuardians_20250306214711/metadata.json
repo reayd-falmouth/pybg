@@ -1,0 +1,31 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic '1942' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Are there sections? Consider transitions'.",
+    "path": "ideas",
+    "game_type": "1942",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Ocean Guardians",
+    "game_id": "OceanGuardians_20250306214711",
+    "branding_data": {
+        "short_description": "In Ocean Guardians, players pilot a sustainable underwater vessel to protect marine life from unethical harm and pollution, transitioning through themed ocean sections.",
+        "detailed_description": "Ocean Guardians is an action-packed arcade-style game where players navigate a sustainable underwater vessel, safeguarding marine ecosystems from harmful pollutants and unethical fishing practices. Inspired by the classic game '1942', Ocean Guardians transitions players through various oceanic zones, each with unique challenges and visual styles representing different aspects of marine life and sustainability. Players will adapt tactics across these transitions, from bustling coral reefs to deep ocean trenches, all while collecting data and resources to support ethical marine practices. The game promotes awareness of ocean conservation through engaging gameplay, encouraging players to think critically about their impact on the environment.",
+        "tags": [
+            "Arcade",
+            "Action",
+            "Underwater",
+            "Sustainability",
+            "Ethics",
+            "Marine Conservation",
+            "Single Player",
+            "2D",
+            "Shooter",
+            "Environmental Themes",
+            "Retro-inspired",
+            "Transition Mechanics"
+        ]
+    },
+    "strategy": "Are there sections? Consider transitions"
+}

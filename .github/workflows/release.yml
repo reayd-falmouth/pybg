@@ -1,0 +1,133 @@
+name: Build and Release to Itch.io
+
+env:
+  ITCHIO_USER: reayd-falmouth
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - '*'  # Runs on any tag push
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [windows-latest, macos-13, macos-14, ubuntu-latest]
+        theme: [original, aquatic]
+    name: Build on ${{ matrix.os }} with theme ${{ matrix.theme }}
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install Dependencies
+        run: |
+          pip install -r src/oblique_games/requirements.txt
+          pip install pyinstaller pillow
+
+      - name: Copy games into source
+        run: |
+          make copy_theme THEME=${{ matrix.theme }}
+
+      - name: Set Executable Name
+        run: echo "EXEC_NAME=oblique-${{ (matrix.theme == 'aquatic') && 'aquatic-' || '' }}games" >> $GITHUB_ENV
+        shell: bash
+
+      - name: Build Executable (Windows)
+        if: runner.os == 'Windows'
+        run: |
+          cd src/oblique_games
+          pyinstaller --onefile --windowed --name ${{ env.EXEC_NAME }} --icon=assets/img/icon/icon_64x64.png --add-data "assets;assets" main.py
+        shell: cmd
+
+      - name: Build Executable (Linux/macOS)
+        if: runner.os != 'Windows'
+        run: |
+          cd src/oblique_games
+          pyinstaller --onefile --windowed --name ${{ env.EXEC_NAME }} --icon=assets/img/icon/icon_64x64.png --add-data "assets:assets" main.py
+        shell: bash
+
+      - name: Determine Architecture (macOS/Linux)
+        if: runner.os != 'Windows'
+        run: echo "ARCH=$(uname -m)" >> $GITHUB_ENV
+        shell: bash
+
+      - name: Set OS Label
+        run: |
+          case "${{ matrix.os }}" in
+            ubuntu-latest) echo "OS_LABEL=linux" >> $GITHUB_ENV ;;
+            windows-latest) echo "OS_LABEL=windows" >> $GITHUB_ENV ;;
+            macos-13 | macos-14) echo "OS_LABEL=macOS" >> $GITHUB_ENV ;;
+            *) echo "OS_LABEL=${{ matrix.os }}" >> $GITHUB_ENV ;;
+          esac
+        shell: bash
+
+      - name: Upload Executable
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.EXEC_NAME }}-${{ env.OS_LABEL }}-${{ env.ARCH || 'x86_64' }}-${{ matrix.theme }}
+          path: src/oblique_games/dist/${{ env.EXEC_NAME }}${{ (runner.os == 'Windows') && '.exe' || '' }}
+
+  release:
+    name: Release to Itch.io
+    needs: [ build ]
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        theme: [ original, aquatic ]
+    steps:
+      - name: Download Artifacts
+        uses: actions/download-artifact@v4
+
+      - name: Set Itch.io Project Name
+        run: |
+          if [ "${{ matrix.theme }}" == "original" ]; then
+            echo "ITCH_PROJECT=oblique-games" >> $GITHUB_ENV
+          else
+            echo "ITCH_PROJECT=oblique-${{ matrix.theme }}-games" >> $GITHUB_ENV
+          fi
+        shell: bash
+
+      - name: Deploy Windows Build to Itch.io
+        uses: robpc/itchio-upload-action@v1
+        with:
+          path: ${{ env.ITCH_PROJECT }}-windows-x86_64-${{ matrix.theme }}/${{ env.ITCH_PROJECT }}.exe
+          project: ${{ env.ITCHIO_USER }}/${{ env.ITCH_PROJECT }}
+          channel: windows
+          version: ${{ github.ref_name }}
+          api-key: ${{ secrets.ITCHIO_API_KEY }}
+
+      - name: Deploy Linux Build to Itch.io
+        uses: robpc/itchio-upload-action@v1
+        with:
+          path: ${{ env.ITCH_PROJECT }}-linux-x86_64-${{ matrix.theme }}/${{ env.ITCH_PROJECT }}
+          project: ${{ env.ITCHIO_USER }}/${{ env.ITCH_PROJECT }}
+          channel: linux
+          version: ${{ github.ref_name }}
+          api-key: ${{ secrets.ITCHIO_API_KEY }}
+
+      - name: Deploy macOS ARM64 Build to Itch.io
+        uses: robpc/itchio-upload-action@v1
+        with:
+          path: ${{ env.ITCH_PROJECT }}-macOS-arm64-${{ matrix.theme }}/${{ env.ITCH_PROJECT }}
+          project: ${{ env.ITCHIO_USER }}/${{ env.ITCH_PROJECT }}
+          channel: mac-arm64
+          version: ${{ github.ref_name }}
+          api-key: ${{ secrets.ITCHIO_API_KEY }}
+
+      - name: Deploy macOS x86_64 Build to Itch.io
+        uses: robpc/itchio-upload-action@v1
+        with:
+          path: ${{ env.ITCH_PROJECT }}-macOS-x86_64-${{ matrix.theme }}/${{ env.ITCH_PROJECT }}
+          project: ${{ env.ITCHIO_USER }}/${{ env.ITCH_PROJECT }}
+          channel: mac-x86_64
+          version: ${{ github.ref_name }}
+          api-key: ${{ secrets.ITCHIO_API_KEY }}
+

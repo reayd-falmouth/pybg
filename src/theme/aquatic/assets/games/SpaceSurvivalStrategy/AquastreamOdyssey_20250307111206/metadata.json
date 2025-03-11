@@ -1,0 +1,31 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Space Survival Strategy' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Think of the radio'.",
+    "path": "ideas/aquatic",
+    "game_type": "Space Survival Strategy",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Aquastream Odyssey",
+    "game_id": "AquastreamOdyssey_20250307111206",
+    "branding_data": {
+        "short_description": "Navigate the depths of space as aquatic radio signals guide survival and sustainability efforts.",
+        "detailed_description": "Aquastream Odyssey combines the vastness of space with the mysteries of the ocean in a unique survival strategy. Players must manage a spaceship that harnesses the power of aquatic life and underwater currents for survival. As players traverse through space, they encounter radio signals that lead to research on sustainable living using unique oceanic elements found on alien planets. Balancing resource management, ethical decisions, and innovative technology inspired by aquatic life forms the core gameplay, challenging players to create thriving civilizations that respect the cosmos and its resources.",
+        "tags": [
+            "Space",
+            "Strategy",
+            "Survival",
+            "Aquatic",
+            "Game Jam",
+            "Sustainability",
+            "Ethics",
+            "Innovation",
+            "Resource Management",
+            "Radio Signals",
+            "Ocean",
+            "Sci-Fi"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

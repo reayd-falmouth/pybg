@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Space Survival Strategy' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Give way to your worst impulse'.",
+    "path": "ideas/aquatic",
+    "game_type": "Space Survival Strategy",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Depths of Defiance",
+    "game_id": "DepthsofDefiance_20250307101724",
+    "branding_data": {
+        "short_description": "Survive in an underwater dystopia where morality is tested and sustainability is challenged.",
+        "detailed_description": "Depths of Defiance is a provocative space survival strategy game where players navigate the depths of an aquatic dystopia. Set in a future where Earth's ascendancy has led to societal collapse, humanity's remnants live in vast underwater colonies. The ocean holds both bountiful resources and existential threats. Players must balance resource management, survival strategies, and ethical dilemmas. Push the boundaries of moral courage by exploiting resources ruthlessly or pursue sustainable options at a crisis-inducing cost. The world reacts dynamically to your choices, with ecological consequences shaping the oceanic environment. This game challenges players to embrace their darkest impulses or strive for harmony in a watery abyss.",
+        "tags": [
+            "Strategy",
+            "Survival",
+            "Aquatic",
+            "Dystopian",
+            "Resource Management",
+            "Ethical Dilemmas",
+            "Sustainability",
+            "Dynamic Environment"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

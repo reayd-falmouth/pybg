@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Backgammon' game with the theme Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.. Modify it by applying the oblique strategy: 'Change instrument roles'.",
+    "path": "ideas/aquatic",
+    "game_type": "Backgammon",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "AquaGammon",
+    "game_id": "AquaGammon_20250307073525",
+    "branding_data": {
+        "short_description": "AquaGammon is an aquatic-themed twist on the classic Backgammon game, incorporating oceanic elements and promoting sustainable practices.",
+        "detailed_description": "AquaGammon reimagines the traditional game of Backgammon with a vibrant aquatic theme. Players navigate their pieces, represented as sea creatures, across a board designed to resemble the ocean floor. In an innovative twist inspired by the Oblique Strategy 'Change instrument roles,' the traditional roles of dice and pieces are altered. Dice are replaced with unique sea currents that influence movement, and players deploy their ocean guardian pieces to strategically control these currents. Through gameplay, AquaGammon integrates educational elements on ocean sustainability and marine life ethics. Players encounter challenges such as pollution and overfishing, which they must overcome using strategies that promote a healthy oceanic ecosystem. Perfect for game jammers of all skill levels, AquaGammon combines whimsy with a meaningful ecological message.",
+        "tags": [
+            "Backgammon",
+            "Aquatic Theme",
+            "Ocean",
+            "Sustainability",
+            "Educational",
+            "Strategy",
+            "Board Game",
+            "Game Jam",
+            "Creative Concepts"
+        ]
+    },
+    "strategy": "Change instrument roles"
+}

@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Paperboy' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Remove specifics and convert to ambiguities'.",
+    "path": "ideas/aquatic",
+    "game_type": "Paperboy",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Aqua Journey",
+    "game_id": "AquaJourney_20250307095905",
+    "branding_data": {
+        "short_description": "Deliver aquatic-themed parcels in a vibrant oceanic world while navigating environmental dilemmas.",
+        "detailed_description": "Aqua Journey is an immersive experience where players navigate a colorful seascape, delivering mysterious parcels across varied aquatic environments. Players are met with the challenge of interpreting ambiguous delivery instructions and finding innovative routes through shifting waters, encountering enigmatic sea creatures that offer both assistance and obfuscation. As the main character, you must balance fulfilling your delivery duties while making choices that impact the watery ecosystem and its sustainability. Each decision - from selecting a path across coral reefs to the timing of parcel drops - subtly influences the ocean's health, presenting moral and environmental challenges. The game's open-ended nature invites players of all skill levels to explore and engage with the ethics of conservation in an abstract yet impactful way.",
+        "tags": [
+            "Adventure",
+            "Puzzle",
+            "Exploration",
+            "Environment",
+            "Sustainability",
+            "Ocean",
+            "Ethics",
+            "Casual",
+            "Strategy",
+            "Abstract"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

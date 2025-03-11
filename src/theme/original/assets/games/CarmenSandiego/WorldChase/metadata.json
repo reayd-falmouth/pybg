@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Carmen Sandiego' game. Modify it by applying the oblique strategy: 'Discover the recipes you are using and abandon them'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "World Chase",
+    "game_type": "CarmenSandiego",
+    "branding_data": {
+        "short_description": "Embark on a thrilling global pursuit in 'World Chase', where traditional sleuthing meets unexpected twists.",
+        "detailed_description": "'World Chase' is a unique twist on the classic detective genre, inspired by the legendary 'Carmen Sandiego' series. Players assume the role of an international detective tasked with tracking down elusive criminals across the globe. However, in this game, traditional methods are abandoned in favor of innovative, unpredictable strategies. Players must adapt to ever-changing scenarios, utilizing unconventional tactics to gather clues and solve mysteries. With no set formula to follow, each chase offers a fresh, dynamic experience, challenging players to think outside the box and stay one step ahead of their cunning adversaries.",
+        "tags": [
+            "Adventure",
+            "Puzzle",
+            "Strategy",
+            "Detective",
+            "Mystery",
+            "Innovative",
+            "Non-linear",
+            "Global",
+            "Unpredictable"
+        ]
+    },
+    "errors": null,
+    "strategy": "Discover the recipes you are using and abandon them"
+}

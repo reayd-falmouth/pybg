@@ -1,0 +1,30 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Joust' game with the theme Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.. Modify it by applying the oblique strategy: 'Accretion'.",
+    "path": "ideas/aquatic",
+    "game_type": "Joust",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Tide Treasures",
+    "game_id": "TideTreasures_20250307074112",
+    "branding_data": {
+        "short_description": "Tide Treasures is an aquatic-themed game where players joust as marine creatures to collect sustainable treasures from the ocean's depths.",
+        "detailed_description": "In 'Tide Treasures', dive into an enchanting underwater world where players embody unique marine creatures equipped with special abilities. The aim is to participate in joust-like competitions as they navigate the ocean's vibrant and perilous depths in search of valuable, sustainable treasures. Players must use their agility and combat skills to overcome various oceanic obstacles and rival creatures vying for the same treasures. The game emphasizes ethics and sustainability by focusing on collecting artifacts that promote ocean health, avoiding harmful debris, and supporting marine conservation efforts. Accretion is woven into the gameplay as players gradually build and upgrade their creature's abilities and aesthetic by amassing treasure over time and forming beneficial symbiotic relationships with ocean flora and fauna.",
+        "tags": [
+            "Aquatic",
+            "Joust",
+            "Underwater",
+            "Strategy",
+            "Adventure",
+            "Sustainability",
+            "Ethics",
+            "Conservation",
+            "Multiplayer",
+            "Indie",
+            "Game Jam"
+        ]
+    },
+    "strategy": "Accretion"
+}

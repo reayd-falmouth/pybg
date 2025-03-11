@@ -1,0 +1,30 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Simplified Fighting Game' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Turn it upside down'.",
+    "path": "ideas/aquatic",
+    "game_type": "Simplified Fighting Game",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Abyssal Upheaval",
+    "game_id": "AbyssalUpheaval_20250307101931",
+    "branding_data": {
+        "short_description": "A unique fighting game set in an inverted aquatic realm where players duel as sea-creature champions to protect their ocean home and promote sustainability.",
+        "detailed_description": "Abyssal Upheaval is a creative and engaging fighting game with an aquatic theme, flipped upside down. In this game, players embody sea-creature champions in an upside-down ocean world, where the surface is at the bottom. Battle against other players or AI in thrilling duels where the aim is to defend your unique oceanic territory from pollution and exploitation. Each character represents a different marine ecosystem, with special abilities inspired by their real-world counterparts. The game encourages ethical decision-making by allowing players to restore their environments between fights with points earned. Dive into a world where tides turn, not only in battles but also in the pursuit of sustainable practices, making this game both entertaining and educational for players of all skill levels.",
+        "tags": [
+            "Fighting",
+            "Aquatic",
+            "Ocean",
+            "Sustainability",
+            "Game Jam",
+            "Ethical",
+            "Inverted World",
+            "Sea Creatures",
+            "Engaging",
+            "Educational",
+            "Creative"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

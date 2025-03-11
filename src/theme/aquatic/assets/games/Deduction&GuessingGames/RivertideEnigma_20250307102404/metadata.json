@@ -1,0 +1,31 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Deduction & Guessing Games' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Make a blank valuable by putting it in an exquisite frame'.",
+    "path": "ideas/aquatic",
+    "game_type": "Deduction & Guessing Games",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Rivertide Enigma",
+    "game_id": "RivertideEnigma_20250307102404",
+    "branding_data": {
+        "short_description": "Unravel the mysteries of the sea with ethical deducing in Rivertide Enigma, an aquatic-themed deduction game for all skill levels.",
+        "detailed_description": "Rivertide Enigma invites players to dive into the depths of a mysterious aquatic world where ethics and sustainability challenge every decision. Set within a beautifully crafted marine environment, players must deduce which creatures and resources belong to either the ocean, seas, or rivers. The strategic twist of this game lies in making each blank decision valuable by placing it into an exquisite narrative frame where the consequence of actions reflects on the marine ecosystem. Through thoughtful puzzles and guessing challenges, players learn about environmental impact while competing to solve the central enigma. Rivertide Enigma provides an engaging experience for both seasoned developers and newcomers looking to explore the creative realm of ethical game design during a Game Jam.",
+        "tags": [
+            "Deduction",
+            "Guessing Games",
+            "Aquatic",
+            "Ocean",
+            "Sustainability",
+            "Ethics",
+            "Puzzle",
+            "Strategy",
+            "Game Jam",
+            "Creative",
+            "Rivers",
+            "Sea Creatures"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

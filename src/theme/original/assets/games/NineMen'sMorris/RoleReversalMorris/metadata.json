@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Nine Men's Morris' game. Modify it by applying the oblique strategy: 'Change instrument roles'.",
+    "path": "ideas",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Role Reversal Morris",
+    "game_type": "NineMen'sMorris",
+    "branding_data": {
+        "short_description": "Role Reversal Morris is a unique twist on the classic Nine Men's Morris game, where players swap traditional roles for a fresh strategic challenge.",
+        "detailed_description": "Role Reversal Morris reinvents the timeless board game Nine Men's Morris by incorporating the oblique strategy 'Change instrument roles.' In this variant, players not only aim to form mills and remove opponent pieces, but they also switch roles with each turn. This means that players must adapt their strategies dynamically, as they play both offensive and defensive roles interchangeably. The board is the same as traditional Nine Men's Morris, featuring a grid with 24 intersections where players place their pieces. However, the role-swapping mechanic adds a layer of complexity, requiring players to think ahead and anticipate their opponent's moves while planning their own. This game challenges players to be versatile and strategic, offering a fresh take on a classic game.",
+        "tags": [
+            "board game",
+            "strategy",
+            "puzzle",
+            "multiplayer",
+            "classic",
+            "role reversal",
+            "Nine Men's Morris",
+            "innovative mechanics"
+        ]
+    },
+    "errors": null,
+    "strategy": " game. Modify it by applying the oblique strategy: "
+}

@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Turn-Based Command & Battle' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Trust in the you of now'.",
+    "path": "ideas/aquatic",
+    "game_type": "Turn-Based Command & Battle",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Current Drift",
+    "game_id": "CurrentDrift_20250307101433",
+    "branding_data": {
+        "short_description": "Engage in tactical turn-based battles and strategic decisions in Current Drift, an aquatic-themed adventure focused on ethics and sustainability in oceanic ecosystems.",
+        "detailed_description": "Current Drift is a turn-based command and battle game set in a vibrant aquatic world. Players dive into the ocean's depths, taking command of a diverse team of sea creatures, each with unique abilities. The game challenges players to navigate the ethical dilemmas of ocean sustainability as they restore balance to the aquatic ecosystem. Strategic decision-making is crucial, as players will face various environmental challenges, such as pollution and overfishing. As they progress, players can rely on their instincts and trust their decisions in the moment, encouraging them to adapt and thrive in this dynamic underwater environment.",
+        "tags": [
+            "Turn-Based Strategy",
+            "Aquatic",
+            "Eco-friendly",
+            "Tactical",
+            "Adventure",
+            "Single-player",
+            "Educational",
+            "Sustainability",
+            "Environmental",
+            "Indie Game"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

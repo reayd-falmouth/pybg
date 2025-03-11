@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility Modify it by applying the oblique strategy: 'Discard an axiom'.",
+    "path": "ideas",
+    "game_type": "Monopoly",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Ocean Balance",
+    "game_id": "OceanBalance_20250306212323",
+    "branding_data": {
+        "short_description": "Ocean Balance is a unique simulation game where players manage a delicate marine ecosystem, making ethical decisions to maintain sustainability and health of the ocean environment.",
+        "detailed_description": "Ocean Balance challenges players to rethink their approach to marine ecosystem management by discarding traditional assumptions about humans' role in the environment. Instead of being outside observers or exploiters, players are embedded within the system, experiencing the ocean's intricacies firsthand. The game involves managing a small coastal region, where you must balance fishing activities, pollution control, and marine species protection. Decisions are made from the perspective of different species, promoting empathy and understanding of their impact on the environment. Players must navigate ethical dilemmas, choosing between short-term gain and long-term ecosystem health. Innovative mechanics encourage learning about biodiversity, conservation tactics, and sustainable practices, challenging players to maintain the equilibrium of the ocean world by embracing an interconnected mindset.",
+        "tags": [
+            "Simulation",
+            "Strategy",
+            "Ethics",
+            "Sustainability",
+            "Marine Life",
+            "Environmental Education",
+            "Ecosystem",
+            "Biodiversity",
+            "Conservation",
+            "Empathy"
+        ]
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Cribbage' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Give way to your worst impulse'.",
+    "path": "ideas",
+    "game_type": "Cribbage",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Fishy Cribbage Frenzy",
+    "game_id": "FishyCribbageFrenzy_20250306215534",
+    "branding_data": {
+        "short_description": "Fish-themed Cribbage game with a twist of unethical strategies for a sustainability challenge.",
+        "detailed_description": "Fishy Cribbage Frenzy is a unique take on the classic card game Cribbage set in an underwater world. The game adds an ethical and sustainability dimension, challenging players to score points by forming card combinations while considering the environmental impact of their choices. The twist comes from applying the oblique strategy 'Give way to your worst impulse,' encouraging players to engage in sneaky, seemingly unethical tactics to gain the upper hand. This includes tactics like overfishing, polluting, and other harmful actions as metaphors within the game to win, but at a potential long-term cost to the ecosystem. Players must balance the immediate benefits of these actions against long-term sustainability, making ethical decision-making central to gameplay.",
+        "tags": [
+            "Cribbage",
+            "Card Game",
+            "Fish Theme",
+            "Ethics",
+            "Sustainability",
+            "Strategy",
+            "Multiplayer",
+            "Environmental",
+            "Underwater"
+        ]
+    },
+    "strategy": "Give way to your worst impulse"
+}

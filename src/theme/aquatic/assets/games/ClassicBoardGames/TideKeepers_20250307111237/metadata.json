@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Classic Board Games' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Destroy - nothing - the most important thing'.",
+    "path": "ideas/aquatic",
+    "game_type": "Classic Board Games",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Tide Keepers",
+    "game_id": "TideKeepers_20250307111237",
+    "branding_data": {
+        "short_description": "Tide Keepers is an aquatic-themed board game concept designed for a Game Jam, focusing on unique oceanic elements and sustainability.",
+        "detailed_description": "Tide Keepers is a board game concept where players embody Stewards of the Sea, seeking to maintain the natural balance of aquatic ecosystems. The game is set in a beautifully crafted world inspired by the oceans, seas, and rivers, where players work collaboratively or competitively to protect marine life, clean polluted waters, and promote sustainable fishing practices. The twist, inspired by the oblique strategy 'Destroy - nothing - the most important thing,' is that players may sometimes need to sacrifice resources or let certain areas fall into temporary disarray to ensure the overall health of the ecosystem thrives in the long run. This dilemma encourages strategic thinking and ethical decision-making, making it both a challenging and thought-provoking experience. The goal is to inspire players to consider the real-world implications and responsibilities of environmental stewardship while engaging in a classic board game format.",
+        "tags": [
+            "board game",
+            "aquatic theme",
+            "game jam",
+            "strategy",
+            "sustainability",
+            "environmental ethics",
+            "collaborative",
+            "competition",
+            "ocean",
+            "ecosystem"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

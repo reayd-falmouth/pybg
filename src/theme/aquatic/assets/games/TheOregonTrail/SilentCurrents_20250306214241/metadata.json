@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'The Oregon Trail' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Mute and continue'.",
+    "path": "ideas",
+    "game_type": "The Oregon Trail",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Silent Currents",
+    "game_id": "SilentCurrents_20250306214241",
+    "branding_data": {
+        "short_description": "Silent Currents is a fish-themed adaptation of the classic Oregon Trail, focusing on ethics and sustainability in underwater ecosystems.",
+        "detailed_description": "Silent Currents challenges players to guide a school of fish through a treacherous journey in the ocean, drawing inspiration from the classic Oregon Trail. Players must navigate through diverse underwater environments, facing ethical dilemmas and sustainability challenges. Utilizing the 'Mute and continue' oblique strategy, the game emphasizes non-verbal storytelling and dynamics of underwater life. Silent communication among the fish emphasizes the importance of action over speech. Players encounter various species and ecological scenarios, making critical choices that affect their survival and the environment. The game aims to educate about marine conservation while providing a compelling and immersive journey.",
+        "tags": [
+            "Fish",
+            "Ethics",
+            "Sustainability",
+            "Adventure",
+            "Simulation",
+            "Non-verbal Communication",
+            "Marine Conservation",
+            "Underwater Exploration",
+            "Educational"
+        ]
+    },
+    "strategy": "Mute and continue"
+}

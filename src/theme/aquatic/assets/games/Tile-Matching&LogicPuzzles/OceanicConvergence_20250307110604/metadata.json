@@ -1,0 +1,34 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Tile-Matching & Logic Puzzles' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Faced with a choice, do both (given by Dieter Roth)'.",
+    "path": "ideas/aquatic",
+    "game_type": "Tile-Matching & Logic Puzzles",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Oceanic Convergence",
+    "game_id": "OceanicConvergence_20250307110604",
+    "branding_data": {
+        "short_description": "Oceanic Convergence is an aquatic-themed tile-matching and logic puzzle game focused on ethics and sustainability, set in the enchanting realms of oceans, seas, and rivers.",
+        "detailed_description": "Oceanic Convergence invites players into a vibrant underwater world filled with aquatic beauty and ecological challenges. Players solve tile-matching puzzles that mimic the diverse ecosystems within the ocean. Each level introduces new elements, such as coral reefs, marine life, and ocean currents. The core mechanic combines traditional matching with logic puzzles, compelling players to make strategic decisions that affect the health of the virtual marine environment. Inspired by the oblique strategy 'Faced with a choice, do both,' the game allows players to balance two goals: clearing the board and maintaining the ecosystem's balance. Ethics and sustainability are woven into the gameplay, as players encounter mini-tasks that educate them on the role of pollution, overfishing, and conservation efforts. Suitable for game developers of all skill levels, Oceanic Convergence aims to engage players with both its challenging puzzles and impactful message.",
+        "tags": [
+            "Tile-Matching",
+            "Logic Puzzles",
+            "Aquatic Theme",
+            "Ocean",
+            "Sea",
+            "Rivers",
+            "Ecology",
+            "Ethics",
+            "Sustainability",
+            "Puzzle",
+            "Environmental Education",
+            "Game Jam",
+            "Creative",
+            "Engaging",
+            "Strategy"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

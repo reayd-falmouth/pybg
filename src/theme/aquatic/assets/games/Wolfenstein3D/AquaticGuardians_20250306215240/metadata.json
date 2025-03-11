@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Wolfenstein 3D' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Assemble some of the instruments in a group and treat the group'.",
+    "path": "ideas",
+    "game_type": "Wolfenstein 3D",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Aquatic Guardians",
+    "game_id": "AquaticGuardians_20250306215240",
+    "branding_data": {
+        "short_description": "Aquatic Guardians is a first-person shooter inspired by Wolfenstein 3D, set in an underwater world focused on ethical fishing and sustainability.",
+        "detailed_description": "In Aquatic Guardians, players navigate a series of underwater levels filled with vibrant sea life and ancient marine temples. Armed with eco-friendly tools, they must eliminate threats and collect valuable artifacts that promote the health of the ocean ecosystem. Players are tasked with ensuring the balance of marine life by tackling illegal fishing operations and restoring damaged coral reefs. The game emphasizes ethical decision-making, where each action impacts the sustainability of the underwater environment. The \"Assemble some of the instruments in a group and treat the group\" strategy is implemented through mechanics that allow players to control teams of marine animals, employing their unique skills to overcome obstacles and defeat enemies.",
+        "tags": [
+            "first-person shooter",
+            "underwater",
+            "eco-friendly",
+            "sustainability",
+            "ethical fishing",
+            "marine life",
+            "Wolfenstein 3D inspired",
+            "strategy"
+        ]
+    },
+    "strategy": "Assemble some of the instruments in a group and treat the group"
+}

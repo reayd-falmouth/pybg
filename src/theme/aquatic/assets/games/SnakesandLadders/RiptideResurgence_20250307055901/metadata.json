@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Snakes and Ladders' game with the theme Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.. Modify it by applying the oblique strategy: 'Make an exhaustive list of everything you might do and do the last thing on the list'.",
+    "path": "ideas",
+    "game_type": "Snakes and Ladders",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Riptide Resurgence",
+    "game_id": "RiptideResurgence_20250307055901",
+    "branding_data": {
+        "short_description": "Riptide Resurgence is an ocean-themed board game inspired by 'Snakes and Ladders,' focusing on aquatic ethics and sustainability.",
+        "detailed_description": "Riptide Resurgence transports players to an underwater world where they navigate a board resembling the oceanic floor, filled with vibrant coral reefs, hidden shipwrecks, and gentle sea creatures. Like Snakes and Ladders, players take turns navigating the board towards the finish line, encountering helpful riptides that assist them and treacherous debris that sets them back. Players are enlightened on ocean ethics and sustainability as they progress, with challenges and trivia questions that educate about marine conservation, pollution prevention, and the delicate balance of aquatic ecosystems. The game concludes not by simply reaching the endpoint but by achieving a shared sustainability goal, teaching players the importance of cooperation and responsible caretaking of our oceans. The unique twist is that players must continually adapt to rising sea levels as the board dynamically changes, adding a layer of strategy and unpredictability.",
+        "tags": [
+            "board game",
+            "educational",
+            "aquatic theme",
+            "sustainability",
+            "ocean conservation",
+            "family-friendly",
+            "cooperative play",
+            "strategy",
+            "environmental awareness"
+        ]
+    },
+    "strategy": "Make an exhaustive list of everything you might do and do the last thing on the list"
+}

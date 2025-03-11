@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Manic Miner' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Use fewer notes'.",
+    "path": "ideas/aquatic",
+    "game_type": "Manic Miner",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Ocean Rescuer",
+    "game_id": "OceanRescuer_20250307094357",
+    "branding_data": {
+        "short_description": "Navigate underwater caverns to save marine life in a minimalist platformer.",
+        "detailed_description": "Ocean Rescuer is an aquatic-themed platformer inspired by the classic style of Manic Miner. Players take on the role of a dedicated marine biologist exploring underwater caverns and shipwrecks to rescue endangered marine creatures and clean up ocean litter. With a minimalist design philosophy, the game uses simple visual and audio cues to create a deeply immersive experience. Players must solve puzzles, avoid environmental hazards, and make ethical decisions that impact the underwater ecosystem. The game emphasizes sustainability by integrating gameplay elements that promote ocean conservation and highlight the importance of protecting marine biodiversity.",
+        "tags": [
+            "Platformer",
+            "Underwater Adventure",
+            "Ocean Conservation",
+            "Puzzle",
+            "Minimalist Design",
+            "Ethics",
+            "Sustainability",
+            "Marine Life",
+            "2D"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

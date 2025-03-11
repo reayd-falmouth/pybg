@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Kid Icarus' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Go slowly all the way round the outside'.",
+    "path": "ideas",
+    "game_type": "Kid Icarus",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Fish Guardian",
+    "game_id": "FishGuardian_20250306214127",
+    "branding_data": {
+        "short_description": "Fish Guardian is an ethereal adventure set in a vibrant underwater world where you play as a mythical guardian, striving to protect aquatic life from environmental threats using ethical choices and sustainable practices.",
+        "detailed_description": "Fish Guardian is a whimsical yet thought-provoking platformer inspired by classic 'Kid Icarus' gameplay, set in a beautiful underwater realm. As a mythical fish guardian, you embark on a slow-paced journey around the outer edges of a vast oceanic world threatened by pollution and unsustainable fishing practices. Dive through colorful coral reefs and mysterious underwater caves while nurturing marine life and restoring the natural balance. Employ strategic environmental decisions to cleanse the waters, restore habitats, and engage in ethical interactions with other sea creatures. Uncover hidden secrets of the deep as you make tactical, slow-paced moves to heal the ocean from the outside in, promoting an eco-friendly message throughout your journey.",
+        "tags": [
+            "Platformer",
+            "Adventure",
+            "Underwater",
+            "Environmental",
+            "Ethics",
+            "Sustainability",
+            "Puzzle",
+            "Exploration",
+            "Marine Life"
+        ]
+    },
+    "strategy": "Go slowly all the way round the outside"
+}

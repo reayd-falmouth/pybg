@@ -1,0 +1,30 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'R-Type' game. Modify it by applying the oblique strategy: 'Repetition is a form of change'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Echo Squadron",
+    "game_type": "R-Type",
+    "branding_data": {
+        "short_description": "Echo Squadron is a side-scrolling shooter inspired by classic R-Type games, emphasizing strategic repetition to overcome challenges.",
+        "detailed_description": "Echo Squadron is a thrilling side-scrolling shooter that draws inspiration from the iconic R-Type series. Players control a futuristic spacecraft, navigating through hostile environments filled with waves of alien enemies and formidable bosses. The game introduces a unique twist on the classic formula by incorporating the oblique strategy 'Repetition is a form of change.' As players progress, they encounter repeating enemy formations and patterns that evolve with each encounter, requiring them to adapt their strategies and reflexes. The game challenges players to master these evolving patterns, turning repetition into a strategic advantage. With its retro-inspired graphics, dynamic soundtrack, and challenging gameplay, Echo Squadron offers a fresh take on a beloved genre, inviting players to engage in a cycle of learning, adaptation, and mastery.",
+        "tags": [
+            "Side-scrolling shooter",
+            "Retro",
+            "Space",
+            "Strategy",
+            "Action",
+            "Aliens",
+            "Repetition",
+            "Arcade",
+            "Challenging",
+            "Sci-fi"
+        ]
+    },
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "Repetition is a form of change"
+}

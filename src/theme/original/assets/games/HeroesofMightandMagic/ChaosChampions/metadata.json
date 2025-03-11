@@ -1,0 +1,30 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Heroes of Might and Magic' game. Modify it by applying the oblique strategy: 'Make a sudden, destructive, unpredictable action; incorporate'.",
+    "path": "../oblique-games/ideas/",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Chaos Champions",
+    "game_type": "HeroesofMightandMagic",
+    "branding_data": {
+        "short_description": "Chaos Champions is a turn-based strategy game where heroes lead armies in a world of unpredictable chaos.",
+        "detailed_description": "Chaos Champions takes the classic turn-based strategy gameplay of 'Heroes of Might and Magic' and introduces a unique twist with sudden, destructive, and unpredictable events. Players control heroes who command armies across a fantastical world, battling against other factions to conquer territories and gather resources. The game challenges players to adapt to chaotic events that can dramatically alter the battlefield, such as sudden natural disasters, unexpected enemy reinforcements, or magical anomalies. These events force players to think on their feet and adapt their strategies in real-time. With a variety of heroes, units, and spells, each playthrough offers a fresh and unpredictable experience.",
+        "tags": [
+            "Turn-Based Strategy",
+            "Fantasy",
+            "Tactical",
+            "Singleplayer",
+            "Multiplayer",
+            "Army Management",
+            "Hero Units",
+            "Random Events",
+            "Strategy",
+            "Adventure"
+        ]
+    },
+    "errors": null,
+    "strategy": "Make a sudden, destructive, unpredictable action; incorporate"
+}

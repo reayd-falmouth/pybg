@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Monopoly' game. Modify it by applying the oblique strategy: 'Lowest common denominator check - single beat - single note - single riff'.",
+    "path": "../oblique-games/ideas/",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Monobeat Tycoon",
+    "game_type": "Monopoly",
+    "branding_data": {
+        "short_description": "Monobeat Tycoon is a unique twist on the classic Monopoly game, integrating a rhythmic, minimalistic approach to strategy and gameplay.",
+        "detailed_description": "Monobeat Tycoon reimagines the classic board game Monopoly by infusing it with a musical and minimalistic twist. Players navigate the board with familiar mechanics of property acquisition and trading, but with a unique rhythmic element. Every turn is underscored by a single beat, requiring players to make decisions in sync with the rhythm. The game introduces 'riff cards' which add strategic depth by allowing players to alter the rhythm or impact opponents' moves. The aesthetic is stripped down, focusing on the essential elements of gameplay, with a soundtrack that emphasizes single notes and simple riffs to guide the player's experience. This game challenges players to think strategically within a rhythmic framework, providing a fresh take on a beloved classic.",
+        "tags": [
+            "Board Game",
+            "Strategy",
+            "Rhythm",
+            "Minimalism",
+            "Monopoly",
+            "Music",
+            "Family",
+            "Casual"
+        ]
+    },
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "Lowest common denominator check - single beat - single note - single riff"
+}

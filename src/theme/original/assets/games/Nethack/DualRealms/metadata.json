@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Nethack' game. Modify it by applying the oblique strategy: 'Emphasize differences'.",
+    "path": "../oblique-games/ideas/",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Dungeon Diver: Dual Realms",
+    "game_type": "Nethack",
+    "branding_data": {
+        "short_description": "Dungeon Diver: Dual Realms is a roguelike adventure where contrasting realms collide, offering unique challenges and strategies.",
+        "detailed_description": "Dungeon Diver: Dual Realms is a reimagined take on the classic roguelike formula inspired by Nethack. In this game, players navigate through two distinct realms, each with its own set of rules, enemies, and environments. The game's core mechanic emphasizes the differences between these realms, requiring players to adapt their strategies as they switch between them. The 'Light Realm' offers a bright, open environment with fewer but more powerful foes, while the 'Dark Realm' presents a claustrophobic, labyrinthine setting filled with numerous weaker enemies. Players must leverage the strengths and weaknesses of each realm to progress through procedurally generated dungeons, collect powerful artifacts, and ultimately defeat the overlords of both realms. With permadeath as a key feature, every decision matters in this challenging and rewarding journey.",
+        "tags": [
+            "roguelike",
+            "dungeon crawler",
+            "procedural generation",
+            "strategy",
+            "permadeath",
+            "fantasy",
+            "single-player",
+            "indie",
+            "adventure"
+        ]
+    },
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "Emphasize differences"
+}

@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Ghouls 'n Ghosts' game. Modify it by applying the oblique strategy: 'Mechanicalize something idiosyncratic'.",
+    "path": "ideas",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Clockwork Spirits",
+    "game_type": "Ghouls'nGhosts",
+    "branding_data": {
+        "short_description": "A side-scrolling action platformer where players control a mechanical knight battling through haunted lands.",
+        "detailed_description": "Clockwork Spirits is a thrilling side-scrolling action platformer inspired by the classic 'Ghouls 'n Ghosts'. Set in a world where machinery and the supernatural collide, players take on the role of a mechanical knight, Sir Gearheart. Tasked with rescuing the enchanted kingdom from the clutches of a ghostly menace, players must navigate through eerie landscapes filled with mechanical and spectral enemies. The game introduces a unique twist by integrating mechanical elements into the protagonist's abilities, allowing players to harness idiosyncratic clockwork mechanisms to overcome challenges and defeat bosses. With a steampunk aesthetic and fast-paced gameplay, Clockwork Spirits offers a fresh take on the classic formula, emphasizing strategic use of the knight's mechanical enhancements to conquer the haunted realms.",
+        "tags": [
+            "Action",
+            "Platformer",
+            "Side-scrolling",
+            "Steampunk",
+            "Supernatural",
+            "Adventure",
+            "Retro",
+            "Mechanical",
+            "Strategy"
+        ]
+    },
+    "errors": null,
+    "strategy": " game. Modify it by applying the oblique strategy: "
+}

@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Maze Navigation & Collection' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Humanize something free of error'.",
+    "path": "ideas/aquatic",
+    "game_type": "Maze Navigation & Collection",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Currents Quest",
+    "game_id": "CurrentsQuest_20250307101217",
+    "branding_data": {
+        "short_description": "Navigate a dynamic underwater maze, collecting treasures while confronting ethical dilemmas related to ocean sustainability in Currents Quest.",
+        "detailed_description": "Currents Quest is an innovative maze navigation game set in the enchanting world beneath the waves. Players become explorers navigating through intricate, procedurally generated underwater mazes. As they journey through vibrant seascapes filled with coral reefs and marine life, they collect treasures and artifacts that tell stories of the ocean's past. However, the challenge lies in the obstacles shaped by ethical dilemmas and sustainability issues. Players encounter critical choices that affect the marine environment, such as handling plastic waste, protecting endangered species, and promoting ocean health. The game, designed for a Game Jam with an aquatic theme, adds a human touch to the impersonal perfection of the ocean. Through engaging gameplay and an evocative underwater atmosphere, Currents Quest inspires players to reflect on their impact on the marine ecosystem and the importance of ethical responsibility in preserving our aquatic environments.",
+        "tags": [
+            "aquatic",
+            "maze",
+            "sustainability",
+            "ethical dilemmas",
+            "ocean",
+            "Game Jam",
+            "exploration",
+            "underwater",
+            "collection",
+            "environment"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

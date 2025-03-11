@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Hex-Based Army Strategy' game with the theme 'Generate a unique concept for a Game Jam with an Fish theme, incorporating elements related to the ocean, seas, , jellyfish, cephalopods, and all sea creatures, boats submarines etc. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Look at a very small object; look at its center'.",
+    "path": "ideas/aquatic",
+    "game_type": "Hex-Based Army Strategy",
+    "model": "gpt-4o",
+    "count": 7,
+    "name": "Hydrohex Command",
+    "game_id": "HydrohexCommand_20250307112502",
+    "branding_data": {
+        "short_description": "Hydrohex Command: A fish-themed hex-based strategy game exploring ocean life microcosms.",
+        "detailed_description": "Hydrohex Command is a unique, hex-based army strategy game where players command fleets of submarines, boats, and diverse marine creatures in an expansive ocean-themed battlefield. The twist: every strategic move and encounter is centered around the microcosms of the sea. Players will explore intricate ecosystems, focusing deeply on small oceanic details—a single coral, a lone jellyfish, or a tiny school of fish—while leveraging these elements to outmaneuver opponents. Ethical decisions revolve around sustainability of marine life, encouraging players to use resources responsibly and devise strategies that reflect ecological harmony. The game is designed to engage players with its rich aquatic visuals and creative mechanics while emphasizing the importance of ocean conservation.",
+        "tags": [
+            "Strategy",
+            "Hex-Based",
+            "Ocean",
+            "Marine Life",
+            "Sustainability",
+            "Fish",
+            "Game Jam",
+            "Submarines",
+            "Creative",
+            "Ecological"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Fish theme, incorporating elements related to the ocean, seas, , jellyfish, cephalopods, and all sea creatures, boats submarines etc. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

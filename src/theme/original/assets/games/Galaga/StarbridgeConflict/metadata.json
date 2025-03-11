@@ -1,0 +1,26 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Galaga' game. Modify it by applying the oblique strategy: 'Bridges - build - burn'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Starbridge Conflict",
+    "game_type": "Galaga",
+    "branding_data": {
+        "short_description": "Starbridge Conflict is a reimagined space shooter where strategic bridge building and destruction shape your path to victory.",
+        "detailed_description": "Starbridge Conflict takes the classic 'Galaga' gameplay and infuses it with a unique twist inspired by the oblique strategy 'Bridges - build - burn.' In this retro-inspired space shooter, players not only engage in thrilling battles against waves of alien invaders but also strategically construct and destroy bridges in space. These bridges serve as both pathways to new areas and tactical tools to outmaneuver enemies. Players must decide when to build bridges to gain advantages and when to burn them to cut off enemy reinforcements. With each level, the complexity of bridge management increases, adding a layer of strategy to the fast-paced action. The game's pixel art style and chiptune soundtrack pay homage to the classic arcade era while offering a fresh and challenging experience.",
+        "tags": [
+            "Space Shooter",
+            "Arcade",
+            "Strategy",
+            "Retro",
+            "Pixel Art",
+            "Action",
+            "Single Player"
+        ]
+    },
+    "strategy": "Bridges - build - burn"
+}

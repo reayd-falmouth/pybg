@@ -1,0 +1,30 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Dragon Quest' game. Modify it by applying the oblique strategy: 'Do the words need changing?'.",
+    "path": "ideas",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Wyvern Odyssey",
+    "game_type": "DragonQuest",
+    "branding_data": {
+        "short_description": "Embark on a mythical journey in Wyvern Odyssey, where words hold power and the quest for dragons is reimagined.",
+        "detailed_description": "Wyvern Odyssey is a reimagined adventure RPG that draws inspiration from classic 'Dragon Quest' games but introduces a unique twist where language and words play a crucial role in the gameplay. Set in a fantastical world where wyverns, not dragons, reign supreme, players will embark on an epic quest to restore balance to the land. The game challenges players to rethink how they communicate and interact with the world, as words can change the outcome of battles, alter relationships with NPCs, and unlock hidden paths. The storyline is rich with lore, and players must choose their words wisely to solve puzzles and overcome obstacles. With a vibrant world to explore, strategic turn-based combat, and a deep narrative that evolves based on player choices, Wyvern Odyssey offers a fresh take on the RPG genre.",
+        "tags": [
+            "RPG",
+            "Adventure",
+            "Fantasy",
+            "Turn-Based Combat",
+            "Narrative-Driven",
+            "Puzzle",
+            "Strategic",
+            "Single Player",
+            "Mythical Creatures",
+            "Word Play"
+        ]
+    },
+    "errors": null,
+    "strategy": "Do the words need changing?"
+}

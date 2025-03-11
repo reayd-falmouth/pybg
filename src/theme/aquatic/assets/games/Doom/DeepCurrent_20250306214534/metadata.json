@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Doom' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Take away the elements in order of apparent non-importance'.",
+    "path": "ideas",
+    "game_type": "Doom",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Deep Current",
+    "game_id": "DeepCurrent_20250306214534",
+    "branding_data": {
+        "short_description": "Deep Current is a first-person shooter inspired by classic 'Doom' mechanics, set in an underwater world focused on fish-themed ethics and sustainability.",
+        "detailed_description": "Deep Current blends the fast-paced action of classic 'Doom' games with a unique underwater setting where ethical and sustainable practices are central to the narrative. As a deep-sea diver armed with specialized harpoons and eco-friendly gadgets, players navigate through submerged environments filled with mysterious marine life and ancient ruins. The goal is to protect the fragile aquatic ecosystems from invasive species threatening the balance. Strategic resource management is key, as players must carefully choose which elements to preserve and which to let go. The game's minimalist design supports the theme, removing unnecessary elements to focus on conservation and the impact of actions on the environment. Deep Current offers a compelling mix of action and thoughtful engagement with sustainability challenges.",
+        "tags": [
+            "First-Person Shooter",
+            "Underwater",
+            "Marine Life",
+            "Ethics",
+            "Sustainability",
+            "Action",
+            "Eco-Friendly",
+            "Resource Management",
+            "Marine Conservation",
+            "Minimalism"
+        ]
+    },
+    "strategy": "Take away the elements in order of apparent non-importance"
+}

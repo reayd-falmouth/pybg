@@ -1,0 +1,24 @@
+{
+    "random_game": false,
+    "oblique_strategy": true,
+    "branding": true,
+    "task": "Develop a basic Gomoku game. Modify it by applying the oblique strategy: 'A line has two sides'.",
+    "name": "Dual Axis Gomoku",
+    "path": "ideas",
+    "game_type": "Gomoku",
+    "model": "gpt-4o-mini",
+    "branding_data": {
+        "short_description": "Dual Axis Gomoku is an innovative twist on the classic strategy game, where players must think strategically in two dimensions.",
+        "detailed_description": "Dual Axis Gomoku modifies the traditional Gomoku experience by introducing the concept of 'A line has two sides.' In this version, players not only aim to connect five pieces in a row but must also consider their opponent's potential moves from both axes. The game features a clear grid where players can place their pieces to either build their own line or thwart their opponent's strategy. The dual-axis mechanic adds complexity and depth, forcing players to anticipate moves in both horizontal and vertical perspectives, engaging them in a rich tactical battle. Aimed at casual and competitive gamers alike, Dual Axis Gomoku challenges players to rethink their strategies and consider their opponent's options more critically.",
+        "tags": [
+            "Gomoku",
+            "Strategy",
+            "Board Game",
+            "Two Dimensions",
+            "Tactical",
+            "Multiplayer",
+            "Puzzle"
+        ]
+    },
+    "strategy": "A line has two sides"
+}

@@ -1,0 +1,32 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Side-to-Side Shooters' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Look closely at the most embarrassing details and amplify them'.",
+    "path": "ideas/aquatic",
+    "game_type": "Side-to-Side Shooters",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Current Sea Savers",
+    "game_id": "CurrentSeaSavers_20250307101858",
+    "branding_data": {
+        "short_description": "Current Sea Savers is a side-to-side shooter game with an aquatic theme, focusing on ocean conservation and sustainability, where players amplify embarrassing pollution issues to raise awareness.",
+        "detailed_description": "Current Sea Savers takes players on an engaging journey through various aquatic environments, including oceans, seas, and rivers. In this side-to-side shooter, players control marine conservationists piloting eco-friendly submarines. The unique twist is that players must highlight and amplify the most embarrassing details of pollution and environmental neglect, such as massive floating garbage islands and surreal plastic wildlife hybrids. The game encourages players to shoot these embarrassing elements with ethically-sourced cleaning technology and engage in mini-games that educate about sustainability. With a focus on ethics, players must make strategic choices about resource usage and cooperation with local communities to restore the aquatic ecosystems. The vibrant graphics and fun gameplay mechanics make it suitable for developers of all skill levels, while also imparting an important message about ocean conservation and sustainable practices.",
+        "tags": [
+            "side-to-side shooter",
+            "aquatic",
+            "ocean conservation",
+            "sustainability",
+            "environmental awareness",
+            "indie game",
+            "puzzle elements",
+            "eco-friendly",
+            "educational",
+            "game jam",
+            "action",
+            "adventure",
+            "strategy"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

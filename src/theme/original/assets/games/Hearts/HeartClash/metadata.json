@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Hearts' game. Modify it by applying the oblique strategy: 'Emphasize differences'.",
+    "path": "ideas",
+    "type": "Hearts",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Heart Clash",
+    "game_type": "Hearts",
+    "branding_data": {
+        "short_description": "Heart Clash is a unique twist on the classic card game 'Hearts' that emphasizes player differences.",
+        "detailed_description": "Heart Clash takes the traditional 'Hearts' card game and introduces an innovative twist by focusing on the concept of 'emphasizing differences.' In this version, each player is given a unique ability or trait that distinguishes them from the others, affecting gameplay strategy and outcomes. These differences can include special powers, unique card interactions, or individual goals that add layers of complexity and strategy to the game. The goal remains to avoid collecting hearts and the queen of spades, but players must navigate these additional elements to outwit their opponents. With its fresh take on a classic, Heart Clash offers both fans of the original game and newcomers a novel and engaging experience.",
+        "tags": [
+            "Card Game",
+            "Strategy",
+            "Hearts",
+            "Multiplayer",
+            "Unique Abilities",
+            "Classic",
+            "Innovative",
+            "Competitive"
+        ]
+    },
+    "strategy": "Emphasize differences"
+}

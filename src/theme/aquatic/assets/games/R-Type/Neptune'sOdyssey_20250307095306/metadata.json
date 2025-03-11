@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'R-Type' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'What would your closest friend do?'.",
+    "path": "ideas/aquatic",
+    "game_type": "R-Type",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Neptune's Odyssey",
+    "game_id": "Neptune'sOdyssey_20250307095306",
+    "branding_data": {
+        "short_description": "Embark on Neptune's Odyssey, an aquatic shooter game where you pilot submarines through ocean depths, battling pollution and conserving marine life.",
+        "detailed_description": "In Neptune's Odyssey, players dive into a vibrant underwater world brimming with adventure and mystery. As a skilled submersible pilot working for a marine conservation organization, your mission is to protect the ocean from destructive forces. Navigate beautifully rendered underwater landscapes inspired by the dynamic environments of oceans, seas, and rivers. The game combines innovative mechanics with classic side-scrolling shooter gameplay from the 'R-Type' series. Instead of traditional enemies, players confront pollution entities and rogue miners threatening the aquatic ecosystem. Completing missions involves strategic shooting, resource management, and ethical decision-making. Players must balance between combating threats and supporting sustainability efforts, such as cleaning polluted areas and rescuing endangered marine life. Through teamwork, players can team up online to tackle larger threats and unravel the aquatic world's deeper mysteries. The game not only provides thrilling gameplay but also raises awareness about ocean conservation and sustainable practices. By considering what a close friend immersed in environmental advocacy might do, the game integrates a thoughtful reflection on our connection with the ocean.",
+        "tags": [
+            "Shooter",
+            "Aquatic Theme",
+            "Ocean Conservation",
+            "Side-Scroller",
+            "Sustainability",
+            "Multiplayer",
+            "R-Type Inspired",
+            "Environmental Awareness",
+            "Adventure"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

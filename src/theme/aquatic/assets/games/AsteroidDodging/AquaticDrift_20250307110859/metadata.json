@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Asteroid Dodging' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Look at the order in which you do things'.",
+    "path": "ideas/aquatic",
+    "game_type": "Asteroid Dodging",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Aquatic Drift",
+    "game_id": "AquaticDrift_20250307110859",
+    "branding_data": {
+        "short_description": "Aquatic Drift: Navigate ocean currents and dodge marine debris in this sustainability-themed game.",
+        "detailed_description": "Aquatic Drift is an immersive, aquatic-themed game that challenges players to navigate the vast ocean currents while dodging marine debris and environmental hazards. Set in a vibrant underwater world, players take on the role of a skilled ocean navigator, piloting a sleek aquatic vessel. The core gameplay involves dodging various obstacles, including abandoned fishing nets, drifting plastics, and natural formations such as coral reefs and kelp forests. Unique mechanics are introduced by manipulating the sequence of environmental events, requiring players to strategize the order in which they tackle obstacles. Players also collect tokens representing sustainable practices, such as recycling and marine life conservation, which contribute to a higher score and improved abilities. The game highlights the importance of ocean ethics and sustainability, encouraging players to consider their impact on the marine ecosystem through a series of progressively challenging levels. Developers of all skill levels can contribute creative ideas and solutions, fostering an engaging experience for everyone involved in the Game Jam.",
+        "tags": [
+            "Aquatic",
+            "Dodging",
+            "Sustainability",
+            "Puzzle",
+            "Strategy",
+            "Underwater",
+            "Game Jam",
+            "Environmental Awareness"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

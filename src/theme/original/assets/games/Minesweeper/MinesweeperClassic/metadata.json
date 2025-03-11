@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Minesweeper' game. Modify it by applying the oblique strategy: 'Overtly resist change'.",
+    "path": "ideas",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Minesweeper Classic",
+    "game_type": "Minesweeper",
+    "branding_data": {
+        "short_description": "A classic Minesweeper game with a twist: embrace tradition and resist change.",
+        "detailed_description": "Minesweeper Classic takes the beloved puzzle game and reinforces its traditional roots. Players must navigate the familiar grid of hidden mines using logic and deduction. The twist lies in the game's philosophy of 'overtly resist change,' which means sticking closely to the original mechanics and aesthetics that made Minesweeper a timeless classic. While many games evolve with flashy updates, Minesweeper Classic proudly maintains its retro charm, offering pure, unaltered gameplay that fans have cherished for decades. It's a nostalgic journey back to the basics, where the challenge is as rewarding as ever.",
+        "tags": [
+            "Puzzle",
+            "Classic",
+            "Strategy",
+            "Retro",
+            "Single-player",
+            "Logic",
+            "Grid-based",
+            "Nostalgia"
+        ]
+    },
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "Overtly resist change"
+}

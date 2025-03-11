@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Clue' game. Modify it by applying the oblique strategy: 'Use an old idea'.",
+    "path": "ideas",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Mystery Mansion",
+    "game_type": "Clue",
+    "branding_data": {
+        "short_description": "Solve the mystery in the classic board game-inspired Mystery Mansion.",
+        "detailed_description": "Mystery Mansion is a modern take on the classic 'Clue' board game, where players must use deduction and strategy to solve a murder mystery. Set in a sprawling, enigmatic mansion, players take on the roles of various characters, each with their own secrets and motives. As players move through different rooms, they gather clues, question suspects, and piece together the puzzle to identify the murderer, the weapon used, and the location of the crime. By employing the oblique strategy of 'Use an old idea,' Mystery Mansion revitalizes the beloved gameplay mechanics of traditional board games with fresh twists and engaging narratives, encouraging players to think outside the box and consider new possibilities within a familiar framework.",
+        "tags": [
+            "board game",
+            "mystery",
+            "strategy",
+            "deduction",
+            "multiplayer",
+            "classic",
+            "whodunit",
+            "puzzle",
+            "crime"
+        ]
+    },
+    "errors": null,
+    "strategy": "Use an old idea"
+}

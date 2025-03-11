@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Word Games' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Use an unacceptable color'.",
+    "path": "ideas/aquatic",
+    "game_type": "Word Games",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Celestial Abyss",
+    "game_id": "CelestialAbyss_20250307102440",
+    "branding_data": {
+        "short_description": "Develop an aquatic-themed word game, Celestial Abyss, inspired by the ocean depths with sustainability and ethics integrated, featuring obscure colors like 'impossible blue'.",
+        "detailed_description": "Celestial Abyss is an innovative word game set against an enchanting aquatic backdrop where players are tasked with conceptualizing game jams with oceanic themes. The challenge is amplified by setting the environment in mystical underwater realms enhanced by the use of 'impossible blue', a color that defies conventional palettes to symbolize the unknown depths. Players must string together words that pertain to the ocean, seas, and rivers while weaving in themes of environmental sustainability and ethical considerations. This adds a layer of complexity as players incorporate responsible practices in their game concepts. Suitable for developers of all levels, the game encourages creativity and critical thinking, emphasizing the impact of human activities on aquatic ecosystems.",
+        "tags": [
+            "Word Game",
+            "Aquatic Theme",
+            "Ocean",
+            "Sustainability",
+            "Ethics",
+            "Game Jam",
+            "Creative Thinking",
+            "Educational",
+            "Puzzle",
+            "Color Theory"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

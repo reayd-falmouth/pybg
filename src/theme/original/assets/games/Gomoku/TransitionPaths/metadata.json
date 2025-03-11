@@ -1,0 +1,30 @@
+{
+    "config": "Default",
+    "org": "DefaultOrganization",
+    "task": "Develop a basic Gomoku game. Modify it by applying the oblique strategy: 'Are there sections? Consider transitions'.",
+    "name": "Transition Paths",
+    "model": "GPT_3_5_TURBO",
+    "path": "",
+    "game_type": "Gomoku",
+    "random_game": false,
+    "oblique_strategy": true,
+    "dry_run": true,
+    "branding": true,
+    "branding_data": {
+        "short_description": "A strategic twist on the classic Gomoku with unique transition mechanics.",
+        "detailed_description": "Transition Paths takes the traditional Gomoku game and introduces an innovative mechanic inspired by the oblique strategy 'Are there sections? Consider transitions'. Players must navigate through different sections of the board, each with unique properties and rules. As the game progresses, players strategically plan their moves not only to align five stones in a row but also to exploit the transitions between different board sections. This added layer of complexity challenges players to think several steps ahead, making every match a new strategic puzzle.",
+        "tags": [
+            "Strategy",
+            "Board Game",
+            "Puzzle",
+            "Gomoku",
+            "Innovative Mechanics",
+            "Turn-Based",
+            "Abstract",
+            "Classic",
+            "Sections",
+            "Transitions"
+        ]
+    },
+    "strategy": "Are there sections? Consider transitions"
+}

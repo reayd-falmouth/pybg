@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Missile Command' game with the theme Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.. Modify it by applying the oblique strategy: 'Use an old idea'.",
+    "path": "ideas/aquatic",
+    "game_type": "Missile Command",
+    "model": "gpt-4o",
+    "count": 5,
+    "name": "Tide Guardians",
+    "game_id": "TideGuardians_20250307073046",
+    "branding_data": {
+        "short_description": "Defend underwater cities from pollutant missiles as Tide Guardians using old arcane ocean technology.",
+        "detailed_description": "Tide Guardians is a unique twist on the classic 'Missile Command' game set in an aquatic world. Players assume the role of ancient oceanic protectors tasked with defending underwater cities from an onslaught of pollutant-laden missiles threatening marine life. Using arcane technologies inherited from the sea's olden eras, players strategically deploy barriers, counter-missiles, and magical sea creatures to ensure the city's sustainability and balance are maintained. The game promotes awareness about ocean conservation, encouraging players to think about ethical actions and sustainable practices. By drawing on old ideas such as traditional defense mechanics and blending them with creative aquatic elements, 'Tide Guardians' offers an engaging experience suitable for game developers of all skill levels seeking to integrate theme-based strategies from game jams.",
+        "tags": [
+            "Action",
+            "Strategy",
+            "Arcade",
+            "Aquatic",
+            "Sustainability",
+            "Ocean Conservation",
+            "Environmental",
+            "Missile Defense",
+            "Game Jam",
+            "Ethics"
+        ]
+    },
+    "strategy": "Use an old idea"
+}

@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Mancala' game with the theme Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.. Modify it by applying the oblique strategy: 'Fill every beat with something'.",
+    "path": "ideas",
+    "game_type": "Mancala",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "AquaBeat Quest",
+    "game_id": "AquaBeatQuest_20250307060048",
+    "branding_data": {
+        "short_description": "An engaging aquatic-themed Mancala game, AquaBeat Quest integrates oceanic elements with ethical and sustainable gameplay, ensuring every moment is filled with engaging content.",
+        "detailed_description": "AquaBeat Quest is a unique spin on the classic Mancala game set in an aquatic world. Embrace the theme of the oceans, seas, and rivers as you strategically drop shells, pearls, and colorful sea stones into underwater pits. Each pit represents a vibrant underwater ecosystem teeming with life and each turn presents a chance to influence its balance. The game introduces elements of ethics and sustainability, encouraging players to maintain the health of these ecosystems. The oblique strategy 'Fill every beat with something' ensures that every move and turn is packed with vibrant interactions, colorful animations of aquatic life, and eco-friendly challenges. Engage in mini-challenges to restore coral reefs, clean plastic, and save endangered species, making your path to victory not just strategic but beneficial for the in-game marine environment. This game is designed to be accessible for developers of all skill levels, inviting creativity and novel features in a Game Jam setting.",
+        "tags": [
+            "strategy",
+            "puzzle",
+            "aquatic",
+            "ethical gaming",
+            "sustainability",
+            "Mancala",
+            "ocean",
+            "environmental",
+            "engaging",
+            "creative"
+        ]
+    },
+    "strategy": "Fill every beat with something"
+}

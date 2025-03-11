@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Joust' game. Modify it by applying the oblique strategy: 'Assemble some of the instruments in a group and treat the group'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Skybound Clash",
+    "game_type": "Joust",
+    "branding_data": {
+        "short_description": "Skybound Clash is a modern take on the classic Joust game, featuring unique group dynamics and strategic aerial combat.",
+        "detailed_description": "Skybound Clash reinvents the classic Joust gameplay by introducing a novel strategic element inspired by the oblique strategy: 'Assemble some of the instruments in a group and treat the group.' In this game, players control knights mounted on flying creatures, competing in aerial duels. The twist is that players can form temporary alliances with other knights to gain strategic advantages. These groups can execute coordinated attacks or defensive maneuvers, adding a layer of strategy to the fast-paced combat. The game features a variety of environments, each with its own challenges and opportunities for creative group strategies. Players must decide when to form alliances and when to rely on individual skill to outmaneuver opponents and emerge victorious in the skybound arena.",
+        "tags": [
+            "action",
+            "strategy",
+            "aerial combat",
+            "multiplayer",
+            "retro-inspired",
+            "alliances",
+            "competitive",
+            "arcade"
+        ]
+    },
+    "strategy": "Assemble some of the instruments in a group and treat the group"
+}

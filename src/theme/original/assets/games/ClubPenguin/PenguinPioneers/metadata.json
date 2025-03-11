@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Club Penguin' game. Modify it by applying the oblique strategy: 'Courage!'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Penguin Pioneers",
+    "game_type": "ClubPenguin",
+    "branding_data": {
+        "short_description": "Embark on daring adventures with your penguin in Penguin Pioneers, a courageous twist on the classic social game.",
+        "detailed_description": "Penguin Pioneers is a vibrant, social multiplayer game where players take on the role of adventurous penguins in a bustling arctic community. Unlike traditional social games, Penguin Pioneers emphasizes bravery and exploration. Players are encouraged to step out of their comfort zones, undertake daring quests, and explore uncharted territories. The game features a variety of mini-games, challenges, and missions that require players to demonstrate courage, from navigating treacherous icebergs to rescuing fellow penguins in distress. With a rich, interactive environment and a focus on building a supportive community, Penguin Pioneers inspires players to be bold and adventurous while fostering friendship and teamwork.",
+        "tags": [
+            "Multiplayer",
+            "Social",
+            "Adventure",
+            "Exploration",
+            "Courage",
+            "Community",
+            "Mini-games"
+        ]
+    },
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "Courage!"
+}

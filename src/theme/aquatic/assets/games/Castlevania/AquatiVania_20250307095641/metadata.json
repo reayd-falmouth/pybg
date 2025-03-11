@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Castlevania' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Use fewer notes'.",
+    "path": "ideas/aquatic",
+    "game_type": "Castlevania",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "AquatiVania",
+    "game_id": "AquatiVania_20250307095641",
+    "branding_data": {
+        "short_description": "Embark on an aquatic Castlevania-inspired journey, exploring oceanic realms while confronting ethical and sustainable challenges.",
+        "detailed_description": "AquatiVania reimagines the classic Castlevania formula in a vibrant underwater setting. As a guardian of the aquatic world, players traverse various oceanic domains, battling marine creatures corrupted by human pollution. The game emphasizes simplicity and minimalism in gameplay design, focusing on fewer but impactful elements. Players wield an ancient trident infused with ocean magic to cleanse the waters and restore its natural balance. Ethically themed puzzles encourage players to make sustainable choices, such as reducing waste and protecting endangered marine life. The minimalist approach in design ensures accessibility for developers of all skill levels, promoting creativity and experimentation within a supportive community.",
+        "tags": [
+            "Metroidvania",
+            "Aquatic",
+            "Adventure",
+            "Puzzle",
+            "Sustainability",
+            "Ethical",
+            "Minimalist",
+            "Game Jam",
+            "Creative",
+            "Beginner Friendly"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

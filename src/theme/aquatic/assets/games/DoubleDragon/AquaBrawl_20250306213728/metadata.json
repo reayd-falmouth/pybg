@@ -1,0 +1,30 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Double Dragon' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Change nothing and continue with immaculate consistency'.",
+    "path": "ideas",
+    "game_type": "Double Dragon",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Aqua Brawl",
+    "game_id": "AquaBrawl_20250306213728",
+    "branding_data": {
+        "short_description": "A beat 'em up game with fish-themed characters, focusing on ethics and sustainability.",
+        "detailed_description": "Aqua Brawl is a classic side-scrolling beat 'em up inspired by 'Double Dragon'. Dive into the vibrant underwater world and follow the journey of Gill and Coral, two fish warriors on a mission to restore balance and sustainability to the oceans. As they brawl through various aquatic-themed levels like Coral Canyons, Pollution Depths, and the Reef Sanctuary, they encounter a variety of marine adversaries and face the relentless adversities caused by pollution and overfishing. Armed with unique aquatic abilities and a commitment to protecting their home, players will learn about the importance of environmental ethics while facing immersive challenges. Despite the escalating threats, maintain impeccable consistency and purity in your mission through stylized combat and narrative-driven progression.",
+        "tags": [
+            "Beat 'Em Up",
+            "Side-Scrolling",
+            "Fish Theme",
+            "Aquatic",
+            "Ethics",
+            "Sustainability",
+            "Environmental",
+            "Adventure",
+            "Narrative-Driven",
+            "Pollution",
+            "Marine Life"
+        ]
+    },
+    "strategy": "Change nothing and continue with immaculate consistency"
+}

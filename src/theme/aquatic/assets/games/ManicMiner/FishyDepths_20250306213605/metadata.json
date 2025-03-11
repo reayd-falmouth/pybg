@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Manic Miner' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Use 'unqualified' people'.",
+    "path": "ideas",
+    "game_type": "Manic Miner",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Fishy Depths",
+    "game_id": "FishyDepths_20250306213605",
+    "branding_data": {
+        "short_description": "Embark on an underwater adventure in Fishy Depths, navigating treacherous caverns while promoting marine sustainability.",
+        "detailed_description": "Fishy Depths is a retro-inspired platformer where players take on the role of an unqualified marine enthusiast exploring underwater caves to collect treasures and save endangered fish species. The game challenges players to balance resource collection with environmental preservation, avoiding harmful practices. Each level presents unique obstacles and puzzles needing creative solutions that reflect ethical and sustainable choices. Players must interact with various marine inhabitants, learning about sustainability and making choices that impact the game's environment. The quirky and fun art style highlights the ocean's beauty while subtly educating players on marine conservation. The game jam project emphasizes involving non-experts in game creation to bring fresh perspectives and compelling narratives.",
+        "tags": [
+            "retro",
+            "platformer",
+            "underwater",
+            "sustainability",
+            "puzzle",
+            "educational",
+            "ethics",
+            "marine conservation",
+            "game jam",
+            "indie"
+        ]
+    },
+    "strategy": "Use "
+}

@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Paperboy' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Mute and continue'.",
+    "path": "ideas/aquatic",
+    "game_type": "Paperboy",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Currents Courier",
+    "game_id": "CurrentsCourier_20250307095928",
+    "branding_data": {
+        "short_description": "Deliver messages across aquatic environments, promoting ethical and sustainable interaction with marine life.",
+        "detailed_description": "Currents Courier is an innovative reimagining of the classic arcade game, Paperboy, set in a vibrant aquatic world. Players take on the role of an aquatic messenger tasked with delivering messages and packages across various watery landscapes such as oceans, seas, and rivers. As they navigate through the water currents, players must skillfully maneuver around marine life and obstacles, maintaining a silent approach to avoid disturbing the natural habitat. The game features an engaging narrative promoting ethical and sustainable practices in aquatic environments, emphasizing the importance of conserving marine life and respecting the delicate ecosystems within. The soothing sound design and minimalistic approach provide an immersive experience, encouraging players to reflect on their impact and role within marine ecosystems.",
+        "tags": [
+            "Aquatic",
+            "Messenger",
+            "Sustainability",
+            "Marine Life",
+            "Ecosystem",
+            "Ethical",
+            "Arcade",
+            "Adventure",
+            "Single-player",
+            "Strategy"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

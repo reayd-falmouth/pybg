@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Hex-Based Army Strategy' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Breathe more deeply'.",
+    "path": "ideas/aquatic",
+    "game_type": "Hex-Based Army Strategy",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Abyssal Conquest",
+    "game_id": "AbyssalConquest_20250307111628",
+    "branding_data": {
+        "short_description": "Abyssal Conquest is a strategy game set on a hexagonal map where players command aquatic-themed armies to conquer underwater territories while promoting ocean sustainability.",
+        "detailed_description": "Abyssal Conquest invites players into the depths of the ocean to engage in strategic underwater warfare on a hex-based map. Players command unique aquatic units like sea-serpent cavalry, coral fortress defenders, and schools of tactical fish to claim and control critical underwater hexes. Incorporating nature's nuances, each hex might have special ecosystems that players must protect to maintain balance and earn sustainability points. With an emphasis on ethical engagement, strategies must consider the health of the aquatic environment, rewarding players who prevent pollution and over-exploitation. The unique 'breathe more deeply' mechanic allows players to pause and regenerate their resources sustainably by appreciating the surrounding biodiversity and ecosystems, introducing an innovative twist to traditional turn-based strategy gameplay. Perfect for game developers of all levels, Abyssal Conquest offers both creative engagement and a meaningful discourse on oceanic conservation, encapsulating an impactful game jam experience.",
+        "tags": [
+            "strategy",
+            "hex-based",
+            "aquatic",
+            "sustainability",
+            "ethics",
+            "ocean",
+            "environmental",
+            "game jam",
+            "turn-based",
+            "underwater"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

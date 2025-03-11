@@ -1,0 +1,14 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Missile Command' game with the theme Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.. Modify it by applying the oblique strategy: 'Look at a very small object; look at its center'.",
+    "path": "ideas/aquatic",
+    "game_type": "Missile Command",
+    "model": "gpt-4o",
+    "count": 5,
+    "name": "Coral Defense",
+    "game_id": "CoralDefense_20250307073015",
+    "branding_data": "{\n  'short_description': 'Defend underwater realms from encroaching threats in a sustainable and ethical aquatic-themed missile defense game.',\n  'detailed_description': 'Coral Defense is an engaging underwater-themed game where players must protect vibrant coral reefs from invading threats. Taking inspiration from classic missile command-style gameplay, players control a line of sustainable defenses on the ocean floor. Enemies come in the form of pollutants and destructive forces traveling with the currents, which players must intercept before they reach and damage the precious reef ecosystem. Each successful defense bolsters the reef's health, and players can upgrade their abilities using resources generated from healthy marine life. The game introduces an ethical layer by encouraging players to protect marine environments, highlighting the importance of maintaining biodiversity and the impact of pollution. Applying the \"Look at a very small object; look at its center\" strategy, the game zooms in on individual coral polyps as a means to view the broader ecosystem's health, asking players to focus on micro-level interactions to strategize effectively.',\n  'tags': ['aquatic', 'strategy', 'missile command', 'sustainability', 'ethical', 'ocean', 'environmental awareness', 'marine life', 'underwater', 'game jam']\n}",
+    "strategy": "Look at a very small object; look at its center"
+}

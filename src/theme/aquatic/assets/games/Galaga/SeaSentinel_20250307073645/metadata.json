@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Galaga' game with the theme Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.. Modify it by applying the oblique strategy: 'Turn it upside down'.",
+    "path": "ideas/aquatic",
+    "game_type": "Galaga",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Sea Sentinel",
+    "game_id": "SeaSentinel_20250307073645",
+    "branding_data": {
+        "short_description": "Sea Sentinel: Protect the ocean depths from inverted aquatic invaders.",
+        "detailed_description": "In 'Sea Sentinel', players engage in a creative twist on the classic arcade shooter 'Galaga', reimagined with an aquatic theme. Set in the depths of the ocean, players control a guardian sentry to defend the marine sanctuary from an invasion of upside-down aquatic creatures. Instead of shooting at invaders from above, players face threats rising from the ocean floor. \nAs the challenges increase, players must consider ethical approaches to their defense, choosing sustainable methods to neutralize threats without harming the delicate ocean ecosystem. Power-ups include eco-friendly upgrades like biodegradable nets and environmental shields, ensuring that the ocean remains unharmed while repelling the invaders. The game incorporates themes of conservation and sustainability, urging players to balance defense with care for the marine life. \nWith its simple yet engaging mechanics, 'Sea Sentinel' invites developers of all skill levels to explore creative solutions in strategy and ethical gameplay.",
+        "tags": [
+            "Arcade",
+            "Shooter",
+            "Aquatic",
+            "Ocean",
+            "Sustainability",
+            "Ethics",
+            "Game Jam",
+            "Creative",
+            "Engaging",
+            "Environmental"
+        ]
+    },
+    "strategy": "Turn it upside down"
+}

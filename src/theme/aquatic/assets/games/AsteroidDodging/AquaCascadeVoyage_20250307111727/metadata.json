@@ -1,0 +1,30 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Asteroid Dodging' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Cascades'.",
+    "path": "ideas/aquatic",
+    "game_type": "Asteroid Dodging",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Aqua Cascade Voyage",
+    "game_id": "AquaCascadeVoyage_20250307111727",
+    "branding_data": {
+        "short_description": "Navigate the ocean's depths, dodging environmental hazards while promoting sustainability in Aqua Cascade Voyage.",
+        "detailed_description": "Aqua Cascade Voyage is an innovative twist on the classic asteroid dodging game, set against an aquatic backdrop. Players control a small submersible in a vibrant underwater world, filled with cascading water currents that introduce unpredictable movement challenges. The aim is to navigate through these dynamic challenges, represented by debris, rocks, and ocean fauna, ethically collecting resources and avoiding harm to the marine ecosystem. Inspired by concepts of sustainable interaction with nature, players must make thoughtful decisions to balance their progress with the impact on the aquatic environment. Fun and engaging for developers and players of all skill levels, it emphasizes ethical gameplay by rewarding choices that promote ocean health and sustainable practices.",
+        "tags": [
+            "underwater",
+            "sustainability",
+            "dodge",
+            "game jam",
+            "educational",
+            "environment",
+            "ethics",
+            "casual",
+            "nature",
+            "aquatic",
+            "cascade"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

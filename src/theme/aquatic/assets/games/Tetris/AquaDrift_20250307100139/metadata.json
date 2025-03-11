@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Tetris' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Distorting time'.",
+    "path": "ideas/aquatic",
+    "game_type": "Tetris",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Aqua Drift",
+    "game_id": "AquaDrift_20250307100139",
+    "branding_data": {
+        "short_description": "A creative twist on Tetris with an aquatic theme that explores ocean sustainability and distorts time.",
+        "detailed_description": "Aqua Drift reimagines the classic mechanics of Tetris with a fresh, aquatic twist. Players are tasked with clearing lines in an underwater world where tetrominoes are made of oceanic elements such as coral blocks, seaweed, and fish species, each representing parts of the ecosystem. The game introduces the unique mechanic of 'time distortion,' allowing players to slow down or speed up time to create strategic advantages, encouraging careful and ethical decision-making about how resources are used and managed. The theme of ocean sustainability is woven throughout the gameplay, as players must manage the growth of marine life and balance it with removing harmful pollutants. Special power-ups can clean sections of the ocean or promote biodiversity, while threats like rising sea levels introduce challenges that mirror real-world environmental concerns. Aqua Drift offers an engaging and educational experience for players of all skill levels, inspiring a deeper understanding of aquatic ecosystems and the importance of sustainability.",
+        "tags": [
+            "Tetris",
+            "Aquatic",
+            "Ocean",
+            "Sustainability",
+            "Time manipulation",
+            "Puzzle",
+            "Educational",
+            "Strategy",
+            "Casual"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

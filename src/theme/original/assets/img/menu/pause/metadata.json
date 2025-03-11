@@ -1,0 +1,28 @@
+{
+    "randomize": false,
+    "oblique_strategy": false,
+    "cover": true,
+    "task": "Swirling black and white vortex",
+    "path": "ideas",
+    "type": "Menu",
+    "model": "reay-dpt-1o",
+    "count": 1,
+    "name": "Pause Menu",
+    "game_type": "Menu",
+    "branding_data": {
+        "short_description": "Controls\n\nP: Pause\nLeft/Right Keys: Change channel\n?: Buzz",
+        "detailed_description": "PauseMenu is an abstract puzzle game that challenges players to navigate a swirling black and white vortex. The game offers a unique experience where time and movement are interconnected. Players must strategically pause the vortex to solve puzzles, avoid obstacles, and unlock new paths. The minimalist art style and hypnotic visuals create an immersive environment, while the dynamic soundtrack adapts to the player's actions. Master the art of timing and precision to progress through increasingly complex levels in this mesmerizing adventure.",
+        "tags": [
+            "Menu",
+            "Abstract",
+            "Trippy",
+            "UI",
+            "Elevator",
+            "Single Player",
+            "Atmospheric",
+            "Music",
+            "Black and White"
+        ]
+    },
+    "errors": null
+}

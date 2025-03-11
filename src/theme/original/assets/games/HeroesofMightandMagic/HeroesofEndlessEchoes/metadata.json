@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Heroes of Might and Magic' game. Modify it by applying the oblique strategy: 'Repetition is a form of change'.",
+    "path": "ideas",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Heroes of Endless Echoes",
+    "game_type": "HeroesofMightandMagic",
+    "branding_data": {
+        "short_description": "A strategic fantasy game where repetition transforms the battlefield.",
+        "detailed_description": "Heroes of Endless Echoes is a strategic turn-based fantasy game inspired by the classic 'Heroes of Might and Magic' series. In this game, players lead armies composed of mythical creatures and heroes across a richly detailed map. The twist is the innovative use of repetition as a strategic tool: actions and events can be echoed, allowing players to repeat certain moves or battles, creating dynamic changes in the gameplay. This mechanic encourages players to think creatively about how repetition can alter the course of their campaigns, offering a fresh take on tactical warfare.",
+        "tags": [
+            "strategy",
+            "fantasy",
+            "turn-based",
+            "tactical",
+            "mythical",
+            "heroes",
+            "repetition",
+            "innovative gameplay",
+            "strategic depth"
+        ]
+    },
+    "errors": null,
+    "strategy": "Repetition is a form of change"
+}

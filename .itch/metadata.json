@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Backgammon' game with the theme Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.. Modify it by applying the oblique strategy: 'The inconsistency principle'.",
+    "path": "ideas/aquatic",
+    "game_type": "Backgammon",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "AquaGammon",
+    "game_id": "AquaGammon_20250307073431",
+    "branding_data": {
+        "short_description": "AquaGammon combines traditional Backgammon with aquatic themes and sustainable gaming practices.",
+        "detailed_description": "AquaGammon is an innovative twist on the classic game of Backgammon, set in a vibrant underwater world. Players move their pieces, depicted as sea creatures, across a board styled like a coral reef. The game introduces the inconsistency principle, with shifting currents that alter the game board unpredictably. These environmental changes force players to adapt their strategies mid-game, simulating the dynamic nature of ocean ecosystems. The game encourages players to consider ethical and sustainable practices by integrating elements such as plastic waste prevention and marine conservation. AquaGammon is designed to be engaging for all skill levels, offering a blend of traditional gameplay with modern environmental themes.",
+        "tags": [
+            "Backgammon",
+            "Underwater",
+            "Aquatic",
+            "Sustainability",
+            "Ethical Gaming",
+            "Ocean",
+            "Strategy",
+            "Game Jam",
+            "Board Game",
+            "Inconsistency Principle"
+        ]
+    },
+    "strategy": "The inconsistency principle"
+}

@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Parcheesi' game. Modify it by applying the oblique strategy: 'Use fewer notes'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Streamlined Parcheesi",
+    "game_type": "Parcheesi",
+    "branding_data": {
+        "short_description": "A minimalist take on the classic Parcheesi board game.",
+        "detailed_description": "Streamlined Parcheesi is a modern reinterpretation of the traditional Parcheesi board game, inspired by the oblique strategy 'Use fewer notes.' This version strips down the complexity to deliver a minimalist experience while maintaining the core mechanics. Players race their pieces around a simplified board, aiming to be the first to get all their tokens to the home area. The game focuses on strategic movement and decision-making with fewer components and rules, offering a fresh and accessible take on a beloved classic.",
+        "tags": [
+            "Board Game",
+            "Strategy",
+            "Minimalist",
+            "Family",
+            "Casual",
+            "Classic",
+            "Turn-Based"
+        ]
+    },
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "Use fewer notes"
+}

@@ -1,0 +1,32 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Isometric Arcade Action' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Abandon normal instruments'.",
+    "path": "ideas/aquatic",
+    "game_type": "Isometric Arcade Action",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Waterborne Shapeshifters",
+    "game_id": "WaterborneShapeshifters_20250307110751",
+    "branding_data": {
+        "short_description": "An isometric arcade action game set in a dynamic aquatic world, where players transform to overcome challenges and promote sustainability.",
+        "detailed_description": "Waterborne Shapeshifters is an isometric arcade action game designed for a game jam. Set in a vibrant aquatic world, players assume the role of mystical beings capable of shapeshifting. As these characters, players explore diverse underwater environments, navigate complex river currents, and uncover hidden secrets of the ocean floor. Embrace the 'Abandon normal instruments' strategy by using unusual morphing abilities to solve puzzles, overcome obstacles, and influence the environment creatively. Players are encouraged to think outside the box to promote ethical interactions with the aquatic ecosystem and contribute to sustainability efforts, such as cleaning polluted areas or restoring coral reefs. The game is crafted to be inclusive of developers at all skill levels, focusing on imaginative gameplay and meaningful environmental messages.",
+        "tags": [
+            "Isometric",
+            "Arcade",
+            "Action",
+            "Shapeshifting",
+            "Aquatic",
+            "Ocean",
+            "Rivers",
+            "Ethics",
+            "Sustainability",
+            "Puzzle-solving",
+            "Game Jam",
+            "Creative",
+            "Environments"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

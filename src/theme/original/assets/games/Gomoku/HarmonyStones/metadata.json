@@ -1,0 +1,29 @@
+{
+    "randomise": false,
+    "oblique_strategy": true,
+    "branding": true,
+    "task": "Develop a basic Gomoku game. Modify it by applying the oblique strategy: 'Children's voices - speaking - singing'.",
+    "path": "ideas",
+    "game_type": "Gomoku",
+    "model": "gpt-4o",
+    "name": "Harmony Stones",
+    "branding_data": {
+        "short_description": "Experience a whimsical twist on the classic Gomoku with playful melodies and vibrant voices.",
+        "detailed_description": "Harmony Stones is an enchanting take on the timeless Gomoku game, infused with the magic of childhood wonder. As players strategically place their stones to align five in a row, the game springs to life with the joyful sounds of children's voices. Each move prompts a delightful melody or a snippet of song, encouraging players to think creatively and embrace the spontaneity and joy found in youthful expression. The board is brought to life with colorful animations, making each turn an adventure filled with laughter and harmony. Whether playing against a friend or an AI, experience the playful spirit of a traditional game reimagined through the charming lens of children's voices, inviting a symphony of strategy and serendipity.",
+        "tags": [
+            "Gomoku",
+            "Strategy",
+            "Puzzle",
+            "Family-Friendly",
+            "Music",
+            "Children's Voices",
+            "Casual",
+            "Board Game",
+            "Creative",
+            "Multiplayer",
+            "AI Opponents",
+            "Colorful"
+        ]
+    },
+    "strategy": "Children"
+}

@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Soul Calibur' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Look at the order in which you do things'.",
+    "path": "ideas",
+    "game_type": "Soul Calibur",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Aqua Duel",
+    "game_id": "AquaDuel_20250306215148",
+    "branding_data": {
+        "short_description": "Aqua Duel is a fish-themed fighting game merging ethics and sustainability, inspired by the mechanics of 'Soul Calibur'. Players engage in underwater battles while learning about marine conservation.",
+        "detailed_description": "Aqua Duel is an innovative fighting game inspired by 'Soul Calibur', centered around a fish and underwater theme with a strong emphasis on ethics and sustainability. Players control marine creatures, each with unique abilities and styles, to engage in intense underwater duels. The game stands out by reshaping traditional progression: instead of focusing solely on defeating opponents, players must also consider the environmental impact of their actions. Success in battles involves strategically prioritizing moves and combos that promote sustainable practices, highlighting the importance of marine conservation. The order of actions takes precedence, encouraging players to align their strategies with ethical choices. Through immersive gameplay, Aqua Duel educates players about the delicate balance of ocean ecosystems, making each move count beyond the fight.",
+        "tags": [
+            "fighting game",
+            "fish theme",
+            "marine life",
+            "sustainability",
+            "ethics",
+            "underwater",
+            "strategy",
+            "innovative mechanics"
+        ]
+    },
+    "strategy": "Look at the order in which you do things"
+}

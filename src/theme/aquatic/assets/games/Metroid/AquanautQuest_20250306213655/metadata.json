@@ -1,0 +1,30 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Metroid' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Use 'unqualified' people'.",
+    "path": "ideas",
+    "game_type": "Metroid",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Aquanaut Quest",
+    "game_id": "AquanautQuest_20250306213655",
+    "branding_data": {
+        "short_description": "Aquanaut Quest is a metroidvania-style game where players explore an underwater world, focusing on themes of ethics and sustainability.",
+        "detailed_description": "In Aquanaut Quest, players assume the role of an unexperienced adventurer sent to explore a vast and mysterious underwater world. The game adopts a metroidvania style, challenging players to navigate a labyrinthine series of underwater caverns and coral reefs, utilizing new abilities and equipment to access previously unreachable areas. The narrative centers on themes of ocean ethics and sustainability, as players uncover secrets about the underwater ecosystem and strive to restore balance to damaged environments. An important game mechanic involves working with unqualified or amateur allies, who provide unique but unconventional solutions to problems, underlining the game's message that everyone can contribute to environmental stewardship in their own way.",
+        "tags": [
+            "metroidvania",
+            "underwater",
+            "ethics",
+            "sustainability",
+            "exploration",
+            "environment",
+            "adventure",
+            "amateur",
+            "unqualified",
+            "puzzle",
+            "platformer"
+        ]
+    },
+    "strategy": "Use "
+}

@@ -1,0 +1,30 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Deduction & Guessing Games' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Do the words need changing?'.",
+    "path": "ideas/aquatic",
+    "game_type": "Deduction & Guessing Games",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Tide Whispers",
+    "game_id": "TideWhispers_20250307110346",
+    "branding_data": {
+        "short_description": "A deduction and guessing game set in aquatic environments, focusing on unique concepts for a Game Jam that integrates ethics and sustainability.",
+        "detailed_description": "Tide Whispers invites players into the mystical depths of the ocean to develop innovative concepts for a Game Jam with a focus on aquatic themes. In this deduction and guessing game, players delve into the mysteries of the ocean, exploring themes of sustainability and ethics. They must uncover clues hidden in seas, rivers, and oceanic environments to craft unique game ideas. The twist lies in constantly re-evaluating the \"words\" or \"concepts\" being used, pushing players to adapt and refine their ideas dynamically. Each session challenges players to think critically about the impact of human activity on marine life while promoting creative thinking and teamwork. This game is perfect for developers at all skill levels, offering a platform to learn, engage, and collaborate.",
+        "tags": [
+            "Deduction",
+            "Guessing Game",
+            "Aquatic",
+            "Ocean",
+            "Seas",
+            "Rivers",
+            "Sustainability",
+            "Ethics",
+            "Game Jam",
+            "Creativity",
+            "Strategy"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

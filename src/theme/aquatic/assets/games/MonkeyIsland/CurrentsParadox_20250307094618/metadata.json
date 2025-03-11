@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Monkey Island' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Turn it upside down'.",
+    "path": "ideas/aquatic",
+    "game_type": "Monkey Island",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Currents Paradox",
+    "game_id": "CurrentsParadox_20250307094618",
+    "branding_data": {
+        "short_description": "Explore inverted watery worlds and navigate ethical dilemmas in 'Currents Paradox'.",
+        "detailed_description": "In 'Currents Paradox', players embark on an oceanic adventure where the laws of nature and morality have been inverted. Set against the backdrop of a mysterious, upside-down aquatic universe, players must solve puzzles and make decisions that not only affect their journey but also the delicate balance of this surreal marine ecosystem. As they traverse through inverted seas and rivers, players encounter unique sea creatures, each adapting to the reversed environment, reflecting on themes of ethics and sustainability along the way. The game challenges players to think critically about their impact on the ecosystem, prompting them to reconsider conventional ethics and explore new forms of sustainable coexistence within the game's aquatic realms.",
+        "tags": [
+            "adventure",
+            "puzzle",
+            "aquatic",
+            "ethics",
+            "sustainability",
+            "upside-down",
+            "ecosystem",
+            "ocean"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

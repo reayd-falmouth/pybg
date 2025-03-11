@@ -1,0 +1,30 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Run-and-Gun Shooters' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Humanize something free of error'.",
+    "path": "ideas/aquatic",
+    "game_type": "Run-and-Gun Shooters",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Nautical Havoc",
+    "game_id": "NauticalHavoc_20250307083044",
+    "branding_data": {
+        "short_description": "Engage in thrilling run-and-gun action in 'Nautical Havoc', set in vibrant aquatic environments where ethical decisions impact the seas.",
+        "detailed_description": "'Nautical Havoc' is a run-and-gun shooter game set in mesmerizing aquatic environments, featuring oceans, seas, and rivers. Players navigate through beautifully rendered underwater ecosystems, battling rogue machines designed to clean and restore the marine world but which have turned hostile. What sets 'Nautical Havoc' apart is the integration of ethical choices, challenging players to restore harmony by deciding whether to disable or reprogram the machines, urging them to reflect on sustainability and the humanization of technology. This invigorating game jam concept blends fast-paced action with thought-provoking content, suitable for developers of all backgrounds seeking to explore themes of ecology and technological empathy.",
+        "tags": [
+            "Run-and-Gun",
+            "Shooter",
+            "Aquatic",
+            "Ocean",
+            "Game Jam",
+            "Sustainability",
+            "Ethics",
+            "Ecology",
+            "Technology",
+            "Action",
+            "Indie"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

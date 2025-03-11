@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Neverwinter Nights' game. Modify it by applying the oblique strategy: 'Infinitesimal gradations'.",
+    "path": "../oblique-games/ideas/",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Eternal Realms",
+    "game_type": "NeverwinterNights",
+    "branding_data": {
+        "short_description": "Eternal Realms is a role-playing game inspired by 'Neverwinter Nights' with a focus on subtle, continuous character development and world interaction.",
+        "detailed_description": "Eternal Realms is a fantasy role-playing game that builds upon the foundational elements of 'Neverwinter Nights'. It introduces the concept of 'infinitesimal gradations', where character development and world changes occur in subtle, continuous increments. Players explore a richly detailed world, where their actions and decisions gradually influence their character's skills, abilities, and relationships. The game emphasizes a seamless and immersive experience, where small choices can lead to significant long-term impacts. The world of Eternal Realms is dynamic, with environments and storylines that evolve in response to the player's journey, offering a unique experience with each playthrough.",
+        "tags": [
+            "RPG",
+            "Fantasy",
+            "Character Development",
+            "Dynamic World",
+            "Immersive",
+            "Story-Driven",
+            "Adventure"
+        ]
+    },
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "Infinitesimal gradations"
+}

@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Sonic the Hedgehog' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Do something boring'.",
+    "path": "ideas",
+    "game_type": "Sonic the Hedgehog",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Eco Wave Adventures",
+    "game_id": "EcoWaveAdventures_20250306214341",
+    "branding_data": {
+        "short_description": "Eco Wave Adventures is a side-scrolling platformer where players guide a fish through ocean environments, focusing on sustainability and preserving the underwater ecosystem.",
+        "detailed_description": "Eco Wave Adventures combines classic platforming mechanics inspired by 'Sonic the Hedgehog' with a unique fish-themed twist. Players take control of a vibrant fish protagonist navigating various oceanic levels while avoiding pollution and rescuing marine life. The gameplay includes a 'boredom meter' that challenges players to engage in mundane activities like cleaning the ocean floor and sorting debris, which are crucial for maintaining balance in the ecosystem. The game's narrative emphasizes ethics and sustainability, encouraging players to reflect on their impact on the environment and promoting conservation awareness. With an aesthetic that highlights vivid aquatic environments and a serene soundtrack, Eco Wave Adventures offers a thought-provoking take on traditional platformers, blending excitement with an important environmental message.",
+        "tags": [
+            "platformer",
+            "environmental",
+            "sustainability",
+            "marine life",
+            "eco-friendly",
+            "2D game",
+            "adventure",
+            "ocean",
+            "ethics",
+            "conservation"
+        ]
+    },
+    "strategy": "Do something boring"
+}

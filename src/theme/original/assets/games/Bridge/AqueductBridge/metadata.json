@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Bridge' game. Modify it by applying the oblique strategy: 'Water'.",
+    "path": "ideas",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Aqueduct Bridge",
+    "game_type": "Bridge",
+    "branding_data": {
+        "short_description": "Aqueduct Bridge is a unique twist on the classic card game 'Bridge', incorporating elements of water strategy.",
+        "detailed_description": "Aqueduct Bridge takes the traditional mechanics of the classic card game 'Bridge' and infuses them with innovative water-themed strategies. Players must navigate the familiar territory of Bridge while integrating new rules that involve building and managing aqueducts. These aqueducts influence the flow of the game, affecting card play and strategies. The game introduces special water cards that can alter the course of a hand, requiring players to adapt their tactics to manage resources effectively. This fresh take on Bridge challenges players to think creatively and strategically as they balance traditional card play with the dynamic element of water management.",
+        "tags": [
+            "Card Game",
+            "Strategy",
+            "Bridge",
+            "Water",
+            "Innovative",
+            "Puzzle",
+            "Resource Management"
+        ]
+    },
+    "errors": null,
+    "strategy": "Water"
+}

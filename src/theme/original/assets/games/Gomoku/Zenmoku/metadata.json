@@ -1,0 +1,28 @@
+{
+    "config": "Default",
+    "org": "DefaultOrganization",
+    "task": "Develop a basic Gomoku game. Modify it by applying the oblique strategy: 'Get a neck massage'.",
+    "name": "Zenmoku",
+    "model": "GPT_3_5_TURBO",
+    "path": "",
+    "game_type": "Gomoku",
+    "random_game": false,
+    "oblique_strategy": true,
+    "dry_run": true,
+    "branding": true,
+    "branding_data": {
+        "short_description": "A mindful twist on Gomoku where strategy meets relaxation.",
+        "detailed_description": "Zenmoku is a unique take on the classic Gomoku, blending strategic gameplay with moments of mindfulness. Every five moves, players are prompted to take a brief relaxation pause, encouraging a calm and focused approach to victory. With soothing visuals and a tranquil ambiance, Zenmoku transforms a competitive board game into a meditative experience.",
+        "tags": [
+            "Board Game",
+            "Strategy",
+            "Relaxing",
+            "Mindfulness",
+            "Turn-Based",
+            "Casual",
+            "Minimalist",
+            "Multiplayer"
+        ]
+    },
+    "strategy": "Get a neck massage"
+}

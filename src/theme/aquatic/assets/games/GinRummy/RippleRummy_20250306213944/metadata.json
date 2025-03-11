@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Gin Rummy' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Lowest common denominator check - single beat - single note - single riff'.",
+    "path": "ideas",
+    "game_type": "Gin Rummy",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Ripple Rummy",
+    "game_id": "RippleRummy_20250306213944",
+    "branding_data": {
+        "short_description": "Ripple Rummy is a unique twist on classic Gin Rummy, set in an underwater world that emphasizes sustainability and ethics through gameplay inspired by marine life.",
+        "detailed_description": "Ripple Rummy is a card game that brings a fresh perspective to the traditional Gin Rummy format by introducing a vibrant fish-themed twist. Set in a lush underwater environment, the game focuses on creating \"riffs\" of cards symbolizing different marine species. These riffs represent the harmony and balance needed to maintain oceanic ecosystems. Players collect and meld sets of cards depicting various fish and underwater flora, with each turn representing a \"single beat\" or decision point that affects the larger ecosystem. Strategic thinking is required to sustain and ethically manage the collection of marine resources in this captivating card game, encouraging players to reflect on the impact of their actions in a fragile environment.",
+        "tags": [
+            "Card Game",
+            "Gin Rummy",
+            "Strategy",
+            "Fish Theme",
+            "Underwater",
+            "Ethics",
+            "Sustainability",
+            "Marine Life",
+            "Ecology",
+            "Game Jam"
+        ]
+    },
+    "strategy": "Lowest common denominator check - single beat - single note - single riff"
+}

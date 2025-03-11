@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Castlevania' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Take away the elements in order of apparent non-importance'.",
+    "path": "ideas/aquatic",
+    "game_type": "Castlevania",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Tidemaster's Legacy",
+    "game_id": "Tidemaster'sLegacy_20250307095707",
+    "branding_data": {
+        "short_description": "Explore an underwater realm in Tidemaster's Legacy, a Castlevania-inspired game with aquatic themes focusing on sustainability and ethics.",
+        "detailed_description": "Tidemaster's Legacy invites players to delve into a rich, aquatic world influenced by the classic mechanics of Castlevania. As the heir to the Tidemaster, players navigate crumbling underwater ruins and submerged landscapes filled with mysterious sea creatures and ancient guardians. With a distinct focus on sustainability, players will interact with the ocean's complex ecosystems, learning the importance of preserving aquatic life and combating pollution. Ethical choices play a significant role, affecting the game's story and your interaction with its aquatic inhabitants. The minimalist design ensures accessibility for developers of all skill levels, focusing on core combat mechanics and environmental exploration. Strategic removal of superfluous elements emphasizes the importance of key gameplay aspects, creating an engaging and streamlined experience.",
+        "tags": [
+            "Metroidvania",
+            "Underwater",
+            "Ethics",
+            "Sustainability",
+            "Adventure",
+            "Puzzle",
+            "Exploration",
+            "Indie",
+            "2D Platformer",
+            "Environment"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

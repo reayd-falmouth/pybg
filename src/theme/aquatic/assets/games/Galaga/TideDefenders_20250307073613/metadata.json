@@ -1,0 +1,30 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Galaga' game with the theme Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.. Modify it by applying the oblique strategy: 'Mechanicalize something idiosyncratic'.",
+    "path": "ideas/aquatic",
+    "game_type": "Galaga",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Tide Defenders",
+    "game_id": "TideDefenders_20250307073613",
+    "branding_data": {
+        "short_description": "Defend the ocean from invading forces in Tide Defenders, an aquatic-themed arcade shooter with a twist on sustainability.",
+        "detailed_description": "In Tide Defenders, players take on the role of ocean guardians piloting unique underwater vessels tasked with defending marine life from mechanical invaders. Set in a vibrant, dynamic underwater world, this arcade shooter is inspired by the classic 'Galaga' with a twist: it'll integrate elements of ethical sustainability and highlight the importance of conservation.\n\nThe game encourages players to strategize by utilizing special abilities derived from oceanic elements, such as harnessing tidal waves or calling upon schools of fish for assistance. As part of the game's mechanics, players will encounter underwater challenges where they must protect endangered species from harm, clean up pollution, and sometimes make difficult decisions that affect the ecosystem.\n\nBy mechanicalizing the idiosyncratic harmony of the ocean, Tide Defenders transforms aquatic environments into strategic battlegrounds where every action has a consequence, fostering awareness about the importance of sustainable practices within marine ecosystems. The game's art style is colorful and whimsical, drawing inspiration from various sea creatures and coral formations to create an engaging visual experience suitable for players of all ages and skill levels.",
+        "tags": [
+            "Arcade",
+            "Shooter",
+            "Aquatic",
+            "Sustainability",
+            "Ocean",
+            "Eco-friendly",
+            "Strategy",
+            "Action",
+            "Indie",
+            "Marine Conservation",
+            "Game Jam"
+        ]
+    },
+    "strategy": "Mechanicalize something idiosyncratic"
+}

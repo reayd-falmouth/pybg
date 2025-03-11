@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Double Dragon' game. Modify it by applying the oblique strategy: 'Discard an axiom'.",
+    "path": "../oblique-games/ideas/",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Dragon Without Rivalry",
+    "game_type": "DoubleDragon",
+    "branding_data": {
+        "short_description": "A reimagined beat 'em up where cooperation replaces rivalry.",
+        "detailed_description": "Dragon Without Rivalry is a fresh take on the classic beat 'em up genre inspired by 'Double Dragon'. In this game, the core axiom of competition is discarded, and players must work together to overcome challenges. Instead of battling each other, players form alliances to defeat enemies and solve cooperative puzzles. The game features a vibrant urban landscape filled with dynamic characters and engaging combat mechanics that encourage teamwork. With an emphasis on unity, players can combine their abilities to perform powerful combo attacks and unlock new pathways, creating a unique and harmonious gameplay experience.",
+        "tags": [
+            "Beat 'em up",
+            "Cooperative",
+            "Action",
+            "Retro",
+            "Teamwork",
+            "Puzzle",
+            "Urban",
+            "Dynamic",
+            "Combo Attacks"
+        ]
+    },
+    "errors": null,
+    "strategy": "Discard an axiom"
+}

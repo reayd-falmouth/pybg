@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Space Survival Strategy' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Imagine the music as a set of disconnected events'.",
+    "path": "ideas/aquatic",
+    "game_type": "Space Survival Strategy",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Celestial Tide",
+    "game_id": "CelestialTide_20250307111141",
+    "branding_data": {
+        "short_description": "Survive and strategize in a space setting inspired by water on different celestial bodies.",
+        "detailed_description": "Celestial Tide is a unique space survival strategy game that transports players into an aquatic-themed universe among the stars. Players will explore, colonize, and manage resources on planets with vast seas, rivers, and oceans. They will navigate through the challenges of space by incorporating ethical decisions and sustainability practices to ensure the survival of their colonies. The game introduces an innovative approach to music, where the soundtrack is experienced as a series of disconnected events, creating a dynamic and unpredictable audio landscape that mirrors the challenges of surviving in a vast, yet isolated universe. As players manage their cosmic aquatic realms, they'll face decisions that involve balancing technological advancement with environmental impact, fostering a deeper understanding of sustainability. The game is designed to be engaging for developers and players of all skill levels, offering a rich strategic experience with a creative twist.",
+        "tags": [
+            "strategy",
+            "survival",
+            "space",
+            "aquatic",
+            "sustainability",
+            "ethics",
+            "game jam",
+            "dynamic music"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Grid Movement Chase' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'What would your closest friend do?'.",
+    "path": "ideas/aquatic",
+    "game_type": "Grid Movement Chase",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Tide Pursuit",
+    "game_id": "TidePursuit_20250307102208",
+    "branding_data": {
+        "short_description": "Tide Pursuit is a grid-based chase game set in an aquatic world, where players navigate sea creatures to maintain ecological balance while escaping from human threats.",
+        "detailed_description": "In Tide Pursuit, players controls a team of marine creatures such as a dolphin, sea turtle, and jellyfish, navigating a complex grid system. The objective is to collect sustainable resources and avoid capture by fishermen who threaten the marine ecosystem. Players must strategically move their creatures across rivers, seas, and parts of the ocean, each with unique challenges. With an emphasis on ecological sustainability, the game challenges players to practice ethical decisions by balancing resource collection with conservation. Strategic thinking is encouraged by outsmarting human threats, similar to how a friend might encourage creative solutions in challenging situations. The aquatic theme is strengthened with vibrant ocean graphics, dynamic music, and educational elements about marine life and the importance of sustainability.",
+        "tags": [
+            "Grid Movement",
+            "Chase",
+            "Aquatic Theme",
+            "Strategy",
+            "Sustainability",
+            "Educational",
+            "Marine Life",
+            "Ethical Choices",
+            "Ocean Conservation",
+            "Game Jam"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

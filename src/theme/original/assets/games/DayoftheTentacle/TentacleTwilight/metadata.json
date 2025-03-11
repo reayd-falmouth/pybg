@@ -1,0 +1,30 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Day of the Tentacle' game. Modify it by applying the oblique strategy: 'Remember those quiet evenings'.",
+    "path": "../oblique-games/ideas/",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Tentacle Twilight",
+    "game_type": "DayoftheTentacle",
+    "branding_data": {
+        "short_description": "Embark on a time-traveling adventure in Tentacle Twilight, where the quietude of evening holds the key to saving the world from a tentacled menace.",
+        "detailed_description": "Tentacle Twilight is a point-and-click adventure game inspired by the classic 'Day of the Tentacle.' Players must navigate through a whimsical narrative filled with eccentric characters and mind-bending puzzles. Set during the serene hours of twilight, the game introduces a unique twist on time travel, where players must harness the tranquility of evening to manipulate events across different eras. Solve puzzles, explore richly detailed environments, and interact with a quirky cast to prevent the rise of a tentacled overlord. The game's atmospheric setting and clever dialogue provide a nostalgic yet fresh experience for fans of the genre.",
+        "tags": [
+            "Point-and-Click",
+            "Adventure",
+            "Puzzle",
+            "Time Travel",
+            "Quirky",
+            "Humor",
+            "Retro",
+            "Single Player",
+            "Narrative",
+            "Atmospheric"
+        ]
+    },
+    "errors": null,
+    "strategy": "Remember those quiet evenings"
+}

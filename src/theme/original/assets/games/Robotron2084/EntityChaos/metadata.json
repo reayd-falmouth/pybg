@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Robotron: 2084' game. Modify it by applying the oblique strategy: 'Remove specifics and convert to ambiguities'.",
+    "path": "ideas",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Entity: Chaos",
+    "game_type": "Robotron:2084",
+    "branding_data": {
+        "short_description": "Entity: Chaos is a reimagined arcade shooter where clarity gives way to abstraction in a dynamic, unpredictable world.",
+        "detailed_description": "Entity: Chaos takes inspiration from the classic arcade game 'Robotron: 2084', but introduces a twist by embracing ambiguity. Players navigate a surreal, ever-shifting landscape, where both allies and adversaries are indistinct, challenging players to adapt to constant uncertainty. The game's aesthetics are deliberately abstract, with visuals and soundscapes that blur the line between friend and foe, creating a unique experience that requires players to rely on intuition and reflexes. The aim is to survive waves of enigmatic entities that morph and blend into the environment, presenting a continuous test of perception and reaction.",
+        "tags": [
+            "Arcade",
+            "Shooter",
+            "Abstract",
+            "Surreal",
+            "Action",
+            "Retro-inspired",
+            "Dynamic"
+        ]
+    },
+    "errors": null,
+    "strategy": "Remove specifics and convert to ambiguities"
+}

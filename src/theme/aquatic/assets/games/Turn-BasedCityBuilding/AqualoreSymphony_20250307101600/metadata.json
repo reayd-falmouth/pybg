@@ -1,0 +1,31 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Turn-Based City Building' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Children's voices - speaking - singing'.",
+    "path": "ideas/aquatic",
+    "game_type": "Turn-Based City Building",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Aqualore Symphony",
+    "game_id": "AqualoreSymphony_20250307101600",
+    "branding_data": {
+        "short_description": "A turn-based city building game with an aquatic theme, where players harness children's voices to harmonize with underwater environments, while promoting ethics and sustainability.",
+        "detailed_description": "In Aqualore Symphony, players embark on a journey to create a thriving underwater civilization. This turn-based city building game challenges individuals to construct and manage a city beneath the waves while incorporating the enchanting sounds of children's voices as an integral game mechanic. Set in a beautifully crafted aquatic world, elements like ocean currents, marine flora, and fauna play critical roles in resource management and sustainability. Players must balance growth with ethical practices, ensuring the preservation of the ocean’s ecosystems. Additionally, each level presents a puzzle where players use children's choral voices to influence sea creatures, advance technologies, and maintain harmony with the natural environment. This innovative use of sound not only engages players but also teaches important lessons about sustainability and respect for the ocean.",
+        "tags": [
+            "Turn-Based",
+            "City Building",
+            "Aquatic",
+            "Ocean",
+            "Ethics",
+            "Sustainability",
+            "Puzzle",
+            "Children",
+            "Soundscape",
+            "Nature",
+            "Strategy",
+            "Environmental"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

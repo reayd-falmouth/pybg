@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Multi-Level Climbing' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Accept advice'.",
+    "path": "ideas/aquatic",
+    "game_type": "Multi-Level Climbing",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Ocean Ascent",
+    "game_id": "OceanAscent_20250307101816",
+    "branding_data": {
+        "short_description": "Ocean Ascent is a multi-level climbing game with an aquatic theme, focusing on ocean preservation and sustainability.",
+        "detailed_description": "Ocean Ascent challenges players to scale aquatic-themed environments, from serene underwater vistas to towering coral reefs. Players take on the role of a marine biologist adventurer, using climbing skills and tools to ascend each level. The game emphasizes the ocean's beauty and fragility, featuring levels where players must navigate through vibrant, living ecosystems that react dynamically to their interactions. Throughout their journey, players receive advice from a wise turtle guide, emphasizing the importance of ocean conservation. Gameplay integrates choices impacting sustainability, such as cleaning up microplastics or protecting vulnerable species. These decisions affect the environment and challenge players to think about their real-world impact. The innovative blend of ethical guidance and captivating adventure ensures that 'Ocean Ascent' is engaging for developers and gamers alike.",
+        "tags": [
+            "Aquatic",
+            "Climbing",
+            "Sustainability",
+            "Environmental",
+            "Adventure",
+            "Ethical Choices",
+            "Ocean",
+            "Game Jam",
+            "Dynamic Ecosystems"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

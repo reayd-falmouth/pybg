@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Chutes and Ladders' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Do nothing for as long as possible'.",
+    "path": "ideas",
+    "game_type": "Chutes and Ladders",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Current Quarters",
+    "game_id": "CurrentQuarters_20250306214736",
+    "branding_data": {
+        "short_description": "Current Quarters is a fish-themed Chutes and Ladders-inspired game focused on ethical fishing and sustainability, where patience is key.",
+        "detailed_description": "In 'Current Quarters', players navigate an underwater board reminiscent of Chutes and Ladders, aiming to reach the sanctuary while promoting sustainable fishing practices. Set in a vibrant oceanic world, players advance by drawing sustainability cards that dictate their movement up ladders of ethical marine practices, or down chutes representing harmful environmental activities. Inspired by the oblique strategy 'Do nothing for as long as possible', players are encouraged to strategically skip turns or move slowly, emphasizing the importance of patience in ecological preservation. Educational elements are incorporated, teaching players about the positive effects of mindfulness and environmental stewardship, as they aim to protect their aquatic community.",
+        "tags": [
+            "board game",
+            "fish",
+            "sustainability",
+            "environmental education",
+            "strategy",
+            "patience",
+            "ethical action",
+            "underwater theme"
+        ]
+    },
+    "strategy": "Do nothing for as long as possible"
+}

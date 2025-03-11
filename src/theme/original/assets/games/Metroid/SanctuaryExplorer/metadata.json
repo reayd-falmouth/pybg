@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Metroid' game. Modify it by applying the oblique strategy: 'Define an area as 'safe' and use it as an anchor'.",
+    "path": "ideas",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Sanctuary Explorer",
+    "game_type": "Metroid",
+    "branding_data": {
+        "short_description": "Explore an alien world, find safe zones, and uncover hidden secrets in 'Sanctuary Explorer'.",
+        "detailed_description": "'Sanctuary Explorer' is an action-adventure game inspired by the classic 'Metroid' series. Players take on the role of an intrepid explorer on a mysterious alien planet filled with hostile creatures and ancient technology. The twist in this adventure is the concept of 'safe zones' - specific areas in the game world that provide safety and respite from the dangers outside. These sanctuaries serve as anchors, allowing players to plan their explorations, manage resources, and upgrade their abilities. The game features a sprawling, interconnected map with various biomes and environments to explore. Players must navigate treacherous terrain, solve puzzles, and defeat formidable bosses to unlock new abilities and areas. As they progress, the importance of finding and utilizing these safe zones becomes paramount, offering strategic depth and a unique twist on the classic formula.",
+        "tags": [
+            "Action",
+            "Adventure",
+            "Metroidvania",
+            "Exploration",
+            "Aliens",
+            "Safe Zones",
+            "Puzzle Solving",
+            "Boss Fights",
+            "Strategy"
+        ]
+    },
+    "errors": null,
+    "strategy": "Define an area as "
+}

@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Bubble Bobble' game with the theme Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.. Modify it by applying the oblique strategy: 'Be dirty'.",
+    "path": "ideas",
+    "game_type": "Bubble Bobble",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Bubble Tides",
+    "game_id": "BubbleTides_20250307060016",
+    "branding_data": {
+        "short_description": "Bubble Tides is a fast-paced aquatic-themed game inspired by Bubble Bobble, focused on sustainable ocean exploration with a twist of “be dirty” chaos.",
+        "detailed_description": "In Bubble Tides, players control a playful marine creature navigating through vibrant underwater levels filled with bubbles, treasures, and hazards. The game encourages players to explore the mysteries of the ocean's depths while capturing marine litter and pollution in bubbles to clean the environment. However, navigating these waters is tricky, as players must also contend with murky currents and muddy obstacles created by human activities. Success requires managing these elements, assembling clean-up tools, and finding innovative solutions while considering ethical and sustainable practices. Integrating the Oblique Strategy, 'Be dirty', the game challenges players by presenting scenarios where they must get their hands 'dirty' by tackling the tough situations caused by pollutants and learning to clean them effectively, transforming the dirt into valuable resources.",
+        "tags": [
+            "Aquatic",
+            "Puzzle",
+            "Platformer",
+            "Sustainability",
+            "Oblique Strategy",
+            "Creative",
+            "Engaging",
+            "Ocean Exploration",
+            "Game Jam",
+            "Environment"
+        ]
+    },
+    "strategy": "Be dirty"
+}

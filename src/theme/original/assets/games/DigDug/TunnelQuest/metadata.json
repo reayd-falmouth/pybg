@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Dig Dug' game. Modify it by applying the oblique strategy: 'Use an old idea'.",
+    "path": "../oblique-games/ideas/",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Tunnel Quest",
+    "game_type": "DigDug",
+    "branding_data": {
+        "short_description": "Tunnel Quest is a modern twist on the classic 'Dig Dug' game, where players navigate underground tunnels to defeat enemies and collect treasures.",
+        "detailed_description": "Tunnel Quest revitalizes the nostalgic gameplay of 'Dig Dug' by incorporating an old idea with a fresh perspective. Players control a character who must dig through subterranean levels, avoiding and defeating enemies to progress. Using strategic digging and timing, players can cause the tunnels to collapse on foes or use special tools to trap them. The game introduces new elements such as dynamic environments, power-ups, and hidden treasures that add layers of challenge and excitement. The graphics are updated with vibrant, modern aesthetics, while the sound design pays homage to the original's charming effects.",
+        "tags": [
+            "Arcade",
+            "Classic",
+            "Retro",
+            "Puzzle",
+            "Strategy",
+            "Action",
+            "Single Player",
+            "Indie"
+        ]
+    },
+    "errors": null,
+    "strategy": "Use an old idea"
+}

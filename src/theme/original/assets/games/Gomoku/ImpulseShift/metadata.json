@@ -1,0 +1,25 @@
+{
+    "random_game": false,
+    "oblique_strategy": true,
+    "branding": true,
+    "task": "Develop a basic Gomoku game. Modify it by applying the oblique strategy: 'Give way to your worst impulse'.",
+    "name": "Impulse Shift",
+    "path": "ideas",
+    "game_type": "Gomoku",
+    "model": "gpt-4o-mini",
+    "branding_data": {
+        "short_description": "Gomoku: Impulse Shift is a unique twist on the classic board game, encouraging players to embrace their worst impulses in strategic ways.",
+        "detailed_description": "Gomoku: Impulse Shift reimagines the traditional Gomoku game by introducing the oblique strategy 'Give way to your worst impulse.' Players compete to align five stones in a row while being encouraged to make unconventional and counterintuitive moves. This game challenges standard gameplay mechanics, inviting players to sometimes play recklessly or strategically sabotage their own winning chances to throw off opponents. With a minimalist design and intuitive controls, Gomoku: Impulse Shift combines classic gameplay with innovative twists that provoke creativity and unexpected strategies. Suitable for both casual and competitive play, it aims to stimulate thought and deliver a fresh perspective on a beloved classic.",
+        "tags": [
+            "Gomoku",
+            "board game",
+            "strategy",
+            "casual",
+            "multiplayer",
+            "oblique strategy",
+            "creative gameplay",
+            "puzzle"
+        ]
+    },
+    "strategy": "Give way to your worst impulse"
+}

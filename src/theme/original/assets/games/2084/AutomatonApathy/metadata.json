@@ -1,0 +1,15 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Robotron: 2084' game. Modify it by applying the oblique strategy: 'Disconnect from desire'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Automaton Apathy",
+    "game_type": "Robotron:2084",
+    "branding_data": "{'short_description': 'A fast-paced twin-stick shooter where players control an automaton navigating a dystopian world devoid of desire.', 'detailed_description': \"Automaton Apathy is a reimagined twin-stick shooter inspired by the classic 'Robotron: 2084'. Set in a dystopian future, players control a lone automaton navigating through chaotic levels filled with relentless enemies. Unlike traditional shooters, the game embraces the oblique strategy 'Disconnect from desire', resulting in a unique experience where players must strategically manage their detachment to survive. The game challenges players to maintain focus and precision while the world around them crumbles into apathy. Featuring minimalistic graphics and a haunting electronic soundtrack, Automaton Apathy offers a fresh take on the classic genre, encouraging players to find peace in the chaos.\", 'tags': ['twin-stick shooter', 'dystopian', 'strategy', 'minimalistic', 'arcade', 'retro-inspired', 'sci-fi']}",
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "Disconnect from desire"
+}

@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Joust' game with the theme Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.. Modify it by applying the oblique strategy: 'Courage!'.",
+    "path": "ideas/aquatic",
+    "game_type": "Joust",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Brave Tide",
+    "game_id": "BraveTide_20250307074046",
+    "branding_data": {
+        "short_description": "Brave Tide - an aquatic-themed jousting game with a focus on environmental ethics and sustainability.",
+        "detailed_description": "Brave Tide is a unique game that combines the thrill of classic jousting with the mysteries and beauty of aquatic environments. Set in a vibrant underwater world, players take on the roles of courageous sea creatures mounted on noble aquatic steeds. The aim is to engage in friendly jousting tournaments while exploring the ocean's depths. Players must balance skill, strategy, and courage as they navigate through coral reefs, avoid dangerous sea currents, and uncover the secrets of the deep blue. Brave Tide incorporates elements of environmental ethics by integrating gameplay mechanics that focus on the preservation of marine life and sustainable ocean practices. Players are encouraged to learn about and protect the diverse ecosystems they encounter, adding an educational layer to the adventure. The game's design is approachable for developers of all skill levels, making it an ideal project for Game Jams focused on creativity, courage, and sustainability.",
+        "tags": [
+            "Aquatic",
+            "Joust",
+            "Ocean",
+            "Environmental Ethics",
+            "Sustainability",
+            "Game Jam",
+            "Adventure",
+            "Courage"
+        ]
+    },
+    "strategy": "Courage!"
+}

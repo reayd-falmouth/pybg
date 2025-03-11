@@ -1,0 +1,30 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Qbert' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Give way to your worst impulse'.",
+    "path": "ideas",
+    "game_type": "Qbert",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Reckless Reefs",
+    "game_id": "RecklessReefs_20250306213755",
+    "branding_data": {
+        "short_description": "Navigate reef pyramids with a fish character, challenging ethics and sustainability in reckless ways.",
+        "detailed_description": "Reckless Reefs is a unique twist on the classic 'Qbert' game, set in a vibrant underwater world. Players control a fish navigating pyramid structures made of colorful coral. The goal is to change the coral's color while avoiding and dodging environmental hazards and invasive species. The ethics and sustainability theme is woven into gameplay, as players face decisions that impact the reef's health, often encouraged to act recklessly. The oblique strategy 'Give way to your worst impulse' is integrated, tempting players with short-term gains that can lead to long-term damage, prompting reflection on environmental consequences. As they progress, players unlock tools and allies that promote responsible behavior, adding depth and moral challenge to the puzzle mechanics.",
+        "tags": [
+            "Puzzle",
+            "Arcade",
+            "Ethics",
+            "Sustainability",
+            "Underwater",
+            "Coral Reef",
+            "Fish",
+            "Environmental Awareness",
+            "Strategy",
+            "Oblique Strategies",
+            "Impulse Control"
+        ]
+    },
+    "strategy": "Give way to your worst impulse"
+}

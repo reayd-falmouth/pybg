@@ -1,0 +1,31 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Boxing Reaction Game' game with the theme 'Generate a unique concept for a Game Jam with an Fish theme, incorporating elements related to the ocean, seas, , jellyfish, cephalopods, and all sea creatures, boats submarines etc. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Tape your mouth (given by Ritva Saarikko)'.",
+    "path": "ideas/aquatic",
+    "game_type": "Boxing Reaction Game",
+    "model": "gpt-4o",
+    "count": 7,
+    "name": "Silent Sea Showdown",
+    "game_id": "SilentSeaShowdown_20250307112327",
+    "branding_data": {
+        "short_description": "Silent Sea Showdown is a unique boxing reaction game set in a vibrant underwater world, where players engage in battles without words, relying on instincts and rhythm to conquer sea creatures.",
+        "detailed_description": "Silent Sea Showdown plunges you into the depths of an enchanting ocean world where battles are fought not with words, but with precise actions and quick reflexes. Inspired by game jam themes, the game revolves around the concept of an underwater boxing ring featuring sea creatures like jellyfish, cephalopods, and submarines as both settings and participants. The silent 'boxing' matches require players to react quickly to visual cues, engaging in rhythmic dodges and attacks. As you navigate this aquatic arena, you must also consider the impact of your actions on the ocean's ecology, promoting ethical interactions and sustainability. By harnessing the oblique strategy 'Tape your mouth' from Ritva Saarikko, the game creatively forbids verbal communication, encouraging players to rely on the rich sounds and visuals of the underwater world to guide their actions, making it accessible to developers and players of all skill levels.",
+        "tags": [
+            "Boxing",
+            "Reaction Game",
+            "Underwater",
+            "Sea Creatures",
+            "Sustainability",
+            "Ethical Gaming",
+            "Rhythm",
+            "Game Jam",
+            "Unique Concept",
+            "Submarines",
+            "Jellyfish",
+            "Creative"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Fish theme, incorporating elements related to the ocean, seas, , jellyfish, cephalopods, and all sea creatures, boats submarines etc. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

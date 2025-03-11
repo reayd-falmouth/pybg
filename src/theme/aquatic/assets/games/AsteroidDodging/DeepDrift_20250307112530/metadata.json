@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Asteroid Dodging' game with the theme 'Generate a unique concept for a Game Jam with an Fish theme, incorporating elements related to the ocean, seas, , jellyfish, cephalopods, and all sea creatures, boats submarines etc. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Honor thy error as a hidden intention'.",
+    "path": "ideas/aquatic",
+    "game_type": "Asteroid Dodging",
+    "model": "gpt-4o",
+    "count": 7,
+    "name": "Deep Drift",
+    "game_id": "DeepDrift_20250307112530",
+    "branding_data": {
+        "short_description": "Navigate treacherous ocean depths avoiding marine life in a mishap-induced adventure.",
+        "detailed_description": "In 'Deep Drift', players become adventurous submariners tasked with navigating the ocean's mysterious depths. Inspired by a game jam focused on sea themes, players encounter an array of colorful marine life, from jellyfish and cephalopods to bustling schools of fish, avoiding them as they journey deeper. The game takes a unique twist on traditional gameplay by embracing errors: instead of punishment, collisions create unpredictable and wild chain reactions, turning mistakes into engaging, unplanned experiences. Ethical themes of ocean conservation and sustainability are seamlessly integrated as players learn more about marine ecosystems, encountering both natural and human-made obstacles. The dynamic environment challenges players to adapt quickly, promoting awareness of fragile environments. 'Deep Drift' is accessible to players and developers of all skill levels, offering a creative and entertaining exploration of the deep blue sea.",
+        "tags": [
+            "Adventure",
+            "Ocean",
+            "Sea Creatures",
+            "Submarine",
+            "Game Jam",
+            "Sustainability",
+            "Unique Mechanics",
+            "Educational",
+            "Casual"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Fish theme, incorporating elements related to the ocean, seas, , jellyfish, cephalopods, and all sea creatures, boats submarines etc. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

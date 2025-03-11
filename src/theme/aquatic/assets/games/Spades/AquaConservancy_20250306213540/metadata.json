@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Spades' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Do the words need changing?'.",
+    "path": "ideas",
+    "game_type": "Spades",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Aqua Conservancy",
+    "game_id": "AquaConservancy_20250306213540",
+    "branding_data": {
+        "short_description": "Play a fish-themed card game inspired by Spades, focusing on ethical and sustainable fishing practices.",
+        "detailed_description": "Aqua Conservancy is a unique twist on the classic Spades card game, set in an underwater world where players are part of a fish community striving for ethical and sustainable practices. The game challenges players to work together while competing, as they manage resources and embark on missions to protect the ocean. Each card represents different fish species, with actions reflecting real-world environmental choices. Collaborate with other players to form alliances and ensure a balanced ecosystem, making strategic decisions that affect the health of the aquatic environment. Success in the game hinges on understanding the dynamics of ocean sustainability and navigating the complexities of ethical fishing, all wrapped in beautiful aquatic illustrations and immersive gameplay mechanics.",
+        "tags": [
+            "card game",
+            "strategy",
+            "multiplayer",
+            "environmental",
+            "sustainability",
+            "underwater",
+            "fish",
+            "collaborative",
+            "competitive"
+        ]
+    },
+    "strategy": "Do the words need changing?"
+}

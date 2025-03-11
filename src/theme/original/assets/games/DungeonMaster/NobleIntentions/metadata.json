@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Dungeon Master' game. Modify it by applying the oblique strategy: 'Intentions - credibility of - nobility of - humility of'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Noble Intentions",
+    "game_type": "DungeonMaster",
+    "branding_data": {
+        "short_description": "Experience the role of a Dungeon Master with a twist, where the focus is on the nobility, humility, and credibility of your intentions.",
+        "detailed_description": "Noble Intentions is a unique take on the classic 'Dungeon Master' genre, where players are challenged to create and manage a fantasy world. The twist lies in the emphasis on the moral and ethical aspects of being a Dungeon Master. As you craft dungeons and guide adventurers, your decisions will be influenced by the concepts of nobility, humility, and credibility. Each choice you make will affect the world and its inhabitants, testing your intentions and the impact they have on the game's narrative. Balance power with humility, and let your noble intentions guide you to create a world where every decision has weight and consequence.",
+        "tags": [
+            "Dungeon Master",
+            "Fantasy",
+            "Role-Playing",
+            "Ethical Decisions",
+            "Narrative-Driven",
+            "World Building",
+            "Strategy",
+            "Moral Choices"
+        ]
+    },
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "Intentions - credibility of - nobility of - humility of"
+}

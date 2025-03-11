@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Missile Command' game with the theme Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.. Modify it by applying the oblique strategy: 'Ask people to work against their better judgment'.",
+    "path": "ideas/aquatic",
+    "game_type": "Missile Command",
+    "model": "gpt-4o",
+    "count": 5,
+    "name": "Title: Aquatic Defense",
+    "game_id": "Title:AquaticDefense_20250307073111",
+    "branding_data": {
+        "short_description": "Aquatic Defense is a unique twist on the classic Missile Command, set in an underwater world where players defend marine habitats from pollution threats.",
+        "detailed_description": "Aquatic Defense transports players to a vibrant underwater world, where the goal is to protect marine environments from harmful pollutants and destructive debris. Players control various aquatic creatures, each with unique abilities, to intercept incoming threats, such as oil spills, plastic waste, and invasive species. The game encourages players to work counterintuitively by sometimes having them redirect threats to less critical areas, sacrificing short-term gains for long-term aquatic health. Emphasizing ethics and sustainability, Aquatic Defense challenges players to think critically about resource management, ecosystem balance, and the impact of their actions on oceanic habitats. Suitable for all skill levels, the game offers a rewarding experience that highlights the importance of protecting our marine environments.",
+        "tags": [
+            "Strategy",
+            "Arcade",
+            "Underwater",
+            "Environmental",
+            "Ethical",
+            "Sustainability",
+            "Puzzle",
+            "Eco-friendly",
+            "Simulation",
+            "Casual"
+        ]
+    },
+    "strategy": "Ask people to work against their better judgment"
+}

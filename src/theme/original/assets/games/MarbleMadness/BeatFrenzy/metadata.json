@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Marble Madness' game. Modify it by applying the oblique strategy: 'Fill every beat with something'.",
+    "path": "../oblique-games/ideas/",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Marble Mayhem: Beat Frenzy",
+    "game_type": "MarbleMadness",
+    "branding_data": {
+        "short_description": "Marble Mayhem: Beat Frenzy combines classic marble-rolling mechanics with rhythmic challenges, creating a unique and dynamic gameplay experience.",
+        "detailed_description": "In Marble Mayhem: Beat Frenzy, players navigate a marble through intricate courses filled with obstacles, traps, and rhythmic challenges. Inspired by the classic 'Marble Madness', this game adds a musical twist where every movement and action is accompanied by a beat. Players must roll their marble to the rhythm, timing their moves to avoid hazards and reach the goal. The levels are designed to keep players engaged, with each beat introducing a new element or challenge to overcome. The game features a variety of environments, each with its own musical theme, ensuring that no two levels are the same. The combination of precise marble control and rhythmic gameplay creates a fast-paced, engaging experience that challenges both reflexes and rhythm skills.",
+        "tags": [
+            "Marble",
+            "Rhythm",
+            "Puzzle",
+            "Action",
+            "Music",
+            "Challenge",
+            "Strategy",
+            "Arcade",
+            "Single-player"
+        ]
+    },
+    "errors": null,
+    "strategy": "Fill every beat with something"
+}

@@ -1,0 +1,30 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Jetpac' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'You are an engineer'.",
+    "path": "ideas/aquatic",
+    "game_type": "Jetpac",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Eco Diver",
+    "game_id": "EcoDiver_20250307094153",
+    "branding_data": {
+        "short_description": "Eco Diver is an aquatic-themed platformer where players engineer solutions to restore underwater ecosystems using sustainable technology.",
+        "detailed_description": "Eco Diver is an inventive blend of platforming and environmental engineering set beneath the waves. Players take on the role of a skilled engineer tasked with revitalizing underwater ecosystems that have been damaged by pollution and unsustainable practices. Using a jetpack for mobility, the game challenges players to explore vibrant aquatic environments, collect resources, and design innovative, sustainable solutions to repair coral reefs, clean up ocean debris, and protect marine life. The game emphasizes ethical considerations and sustainability, encouraging players to think critically about human impact on marine ecosystems while engaging them with creative problem-solving and action-packed gameplay.",
+        "tags": [
+            "Platformer",
+            "Aquatic",
+            "Environmental",
+            "Sustainability",
+            "Engineering",
+            "Puzzle",
+            "Adventure",
+            "Single-player",
+            "Exploration",
+            "Educational",
+            "Indie"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

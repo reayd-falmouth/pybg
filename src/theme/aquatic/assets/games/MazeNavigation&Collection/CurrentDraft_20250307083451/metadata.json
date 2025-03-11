@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Maze Navigation & Collection' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'You can only make one dot at a time'.",
+    "path": "ideas/aquatic",
+    "game_type": "Maze Navigation & Collection",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Current Draft",
+    "game_id": "CurrentDraft_20250307083451",
+    "branding_data": {
+        "short_description": "Navigate mazes in an oceanic world by placing one movement marker at a time to collect treasures while promoting sustainability.",
+        "detailed_description": "Current Draft is an innovative maze navigation game set against the backdrop of an underwater world filled with vibrant marine life and hidden treasures. Players can only advance by placing one marker at a time, carefully planning their route through intricate mazes in an oceanic environment. They collect unique trinkets and treasures while learning about oceanic biodiversity and environmental conservation. The game creatively integrates elements of ethical gameplay by including educational prompts on sustainable practices and the importance of ocean conservation. Suitable for game developers of all levels, Current Draft encourages players to explore the fascinating world beneath the waves while promoting awareness about preserving our marine ecosystems. Each maze presents a new aquatic challenge, where strategic thinking and foresight are the keys to success.",
+        "tags": [
+            "Puzzle",
+            "Maze Navigation",
+            "Aquatic Theme",
+            "Sustainability",
+            "Ocean Conservation",
+            "Strategy",
+            "Casual",
+            "Educational"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

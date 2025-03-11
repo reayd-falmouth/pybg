@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Word Games' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Are there sections? Consider transitions'.",
+    "path": "ideas/aquatic",
+    "game_type": "Word Games",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Title  \nAqua Threads",
+    "game_id": "Title\nAquaThreads_20250307101146",
+    "branding_data": {
+        "short_description": "Aqua Threads, a word game with an aquatic theme, encourages players to create unique concepts while integrating elements of ocean life, ethics, and sustainability.",
+        "detailed_description": "Aqua Threads is an innovative word game designed around the concept of generating new ideas with an aquatic theme. Players are challenged to develop game concepts that incorporate elements from the ocean, seas, and rivers. The unique twist is that the game is divided into sections, each representing a different aspect of aquatic life or a particular biome, such as coral reefs or deep sea abysses. As players progress through these sections, they encounter transitions that challenge them to integrate ethics and sustainability into their ideas. This could involve navigating the moral dilemmas of conserving marine life or the impact of pollution on aquatic environments. Aqua Threads is crafted to inspire creativity and is accessible to game developers of all skill levels, providing an engaging platform for idea generation while fostering awareness of environmental impacts.",
+        "tags": [
+            "Word Game",
+            "Aquatic Theme",
+            "Game Development",
+            "Creativity",
+            "Ethics",
+            "Sustainability",
+            "Ocean",
+            "Seas",
+            "Rivers",
+            "Educational"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

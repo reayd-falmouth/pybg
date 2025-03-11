@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Turn-Based City Building' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Listen in total darkness, or in a very large room, very quietly'.",
+    "path": "ideas/aquatic",
+    "game_type": "Turn-Based City Building",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Aqua Reverie",
+    "game_id": "AquaReverie_20250307111331",
+    "branding_data": {
+        "short_description": "A turn-based city building game with an aquatic theme, focusing on sustainable development and ethical choices beneath the waves.",
+        "detailed_description": "Aqua Reverie transports players into the depths of a vast ocean, where they are tasked with creating and managing a burgeoning underwater city. In this turn-based city building game, players must carefully plan and develop their city by constructing buildings, managing resources, and maintaining ecological balance. Inspired by the mysterious and silent depths of the ocean, players are encouraged to 'listen' to the environment and adapt their strategies accordingly, ensuring the sustainability of their aquatic world. With a focus on ethical decision-making, players will navigate challenges that arise from overfishing, pollution, and resource scarcity, all while working to create a harmonious and thriving underwater habitat.",
+        "tags": [
+            "City Building",
+            "Turn-Based",
+            "Aquatic",
+            "Sustainability",
+            "Ethics",
+            "Strategy",
+            "Resource Management",
+            "Ocean Theme",
+            "Underwater",
+            "Eco-Friendly"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

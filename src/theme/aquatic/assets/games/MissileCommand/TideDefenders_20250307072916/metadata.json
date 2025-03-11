@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Missile Command' game with the theme Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.. Modify it by applying the oblique strategy: 'Into the impossible'.",
+    "path": "ideas/aquatic",
+    "game_type": "Missile Command",
+    "model": "gpt-4o",
+    "count": 5,
+    "name": "Tide Defenders",
+    "game_id": "TideDefenders_20250307072916",
+    "branding_data": {
+        "short_description": "A unique aquatic-themed missile defense game with ethical and sustainable elements.",
+        "detailed_description": "Tide Defenders is an imaginative and engaging twist on the classic missile defense genre, set in a vibrant underwater world. Players assume the role of protectors of the ocean, defending coral reefs from a rain of toxic waste and pollutants falling from above. Leveraging their arsenal of eco-friendly defensive tools, players engage in strategic resource management and quick reflexes to purify the waters and neutralize threats. Incorporating elements of ethics and sustainability, the game forces players to carefully consider their environmental impact, using biodegradable projectiles and renewable resources. Each level introduces new challenges, like unpredictable tidal currents and the need to preserve aquatic life. The 'Into the impossible' strategy inspires creative and unexpected elements, such as mystical sea creatures providing unexpected aid and the discovery of futuristic, algae-based technology to enhance defenses. Tide Defenders encourages players to explore sustainable practices while immersing themselves in an impossible, mesmerizing ocean world.",
+        "tags": [
+            "missile defense",
+            "aquatic",
+            "sustainability",
+            "strategy",
+            "ocean",
+            "eco-friendly",
+            "resource management",
+            "game jam",
+            "environmental",
+            "underwater"
+        ]
+    },
+    "strategy": "Into the impossible"
+}

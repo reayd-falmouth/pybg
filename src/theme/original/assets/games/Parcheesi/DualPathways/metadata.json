@@ -1,0 +1,15 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Parcheesi' game. Modify it by applying the oblique strategy: 'Faced with a choice, do both (given by Dieter Roth)'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Dual Pathways",
+    "game_type": "Parcheesi",
+    "branding_data": "{'short_description': 'A unique twist on Parcheesi where players navigate dual paths with strategic choices.',\n 'detailed_description': \"Dual Pathways is a creative reinterpretation of the classic board game Parcheesi, enhanced by the innovative concept of dual decision-making. In this version, players must navigate two simultaneous pathways with their pieces, each presenting unique challenges and opportunities. The game introduces a strategic layer where players, when faced with a choice, must attempt to do both actions, as inspired by Dieter Roth's oblique strategy. This duality adds depth and complexity, requiring players to think ahead and adapt their strategies on the fly. The game maintains the original's competitive edge while offering new, exciting dynamics that challenge conventional gameplay.\",\n 'tags': ['Board Game', 'Strategy', 'Multiplayer', 'Parcheesi', 'Innovative', 'Dual Paths', 'Decision-Making', 'Adaptation', 'Family Game']}",
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "Faced with a choice, do both (given by Dieter Roth)"
+}

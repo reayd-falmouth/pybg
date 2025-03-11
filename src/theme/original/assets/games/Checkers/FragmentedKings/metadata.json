@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Checkers' game. Modify it by applying the oblique strategy: 'Imagine the music as a set of disconnected events'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Fragmented Kings",
+    "game_type": "Checkers",
+    "branding_data": {
+        "short_description": "Experience a unique twist on classic Checkers with Fragmented Kings, where strategy meets dissonance.",
+        "detailed_description": "Fragmented Kings takes the timeless game of Checkers and introduces an innovative twist inspired by the oblique strategy 'Imagine the music as a set of disconnected events.' In this game, players navigate a fragmented board where pieces move in unpredictable patterns, and every move is accompanied by a unique, dissonant soundscape. The objective remains to capture all of the opponent's pieces, but the path to victory is filled with unexpected challenges and auditory surprises. The game combines traditional strategic thinking with a dynamic, ever-changing environment that keeps players on their toes. Each match is a new symphony of strategic decisions and unexpected outcomes, challenging players to adapt to the disjointed rhythms of the board.",
+        "tags": [
+            "Checkers",
+            "Strategy",
+            "Board Game",
+            "Innovative",
+            "Music",
+            "Sound Design",
+            "Puzzle",
+            "Single Player",
+            "Multiplayer"
+        ]
+    },
+    "strategy": "Imagine the music as a set of disconnected events"
+}

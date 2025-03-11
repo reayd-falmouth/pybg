@@ -1,0 +1,15 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Yahtzee' game. Modify it by applying the oblique strategy: 'What is the reality of the situation?'.",
+    "path": "../oblique-games/ideas/",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Dice Truth",
+    "game_type": "Yahtzee",
+    "branding_data": "{'short_description': 'Dice Truth is a unique twist on the classic dice game, Yahtzee, where players must confront the reality of their rolls and make strategic decisions based on limited information.', 'detailed_description': \"Dice Truth takes the familiar mechanics of Yahtzee and adds a philosophical twist. In this game, players roll five dice and attempt to achieve various scoring combinations. However, the twist lies in the concept of 'truth'. After each roll, players are only shown partial information about their dice, requiring them to deduce the hidden results and make strategic choices based on incomplete data. The game challenges players to confront the reality of uncertainty and embrace risk-taking. It introduces new scoring categories that reward players for accurately predicting their hidden dice results, as well as for achieving traditional combinations. Dice Truth encourages players to think critically about the 'reality of the situation' and adapt their strategies accordingly, making for a compelling and thought-provoking gaming experience.\", 'tags': ['dice', 'strategy', 'board game', 'uncertainty', 'risk management', 'deduction', 'philosophical']}",
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "What is the reality of the situation?"
+}

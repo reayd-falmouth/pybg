@@ -1,0 +1,31 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Deduction & Guessing Games' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Make a blank valuable by putting it in an exquisite frame'.",
+    "path": "ideas/aquatic",
+    "game_type": "Deduction & Guessing Games",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Ocean Disguise",
+    "game_id": "OceanDisguise_20250307111601",
+    "branding_data": {
+        "short_description": "Unravel hidden marine mysteries through strategic deduction and ethical decisions in 'Ocean Disguise', an aquatic-themed guessing game.",
+        "detailed_description": "'Ocean Disguise' is a innovative deduction and guessing game set against the mysterious depths of the ocean. Players take on the role of detectives in an underwater city, where marine species have taken on alternative forms to protect themselves from human impact. The core gameplay mechanic involves uncovering clues and using strategic guesses to identify these disguised sea creatures. To integrate ethics and sustainability, players are periodically faced with decisions that impact marine preservation efforts, learning about the significance of each choice. The game challenges players creatively, encouraging them to frame seemingly insignificant clues within intricate and captivating narratives to piece together the hidden identities. Engage with immersive scenarios that blend puzzle-solving with educational insights about ocean conservation, making 'Ocean Disguise' both engaging and enlightening for developers and players of all skill levels.",
+        "tags": [
+            "Deduction",
+            "Guessing",
+            "Aquatic",
+            "Ocean",
+            "Game Jam",
+            "Creative",
+            "Ethics",
+            "Sustainability",
+            "Puzzle",
+            "Educational",
+            "Strategy",
+            "Marine Life"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

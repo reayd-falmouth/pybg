@@ -1,0 +1,26 @@
+{
+    "randomize": false,
+    "ideation_technique": null,
+    "cover": true,
+    "task": "A whirlpool in the ocean, devouring ships",
+    "path": "ideas",
+    "game_type": "Menu",
+    "model": "reay-dpt-1o",
+    "count": 1,
+    "name": "Pause Menu",
+    "game_id": "PauseMenu_20250307135013",
+    "branding_data": {
+        "short_description": "Controls\n\nP: Pause\nLeft/Right Keys: Change channel\nO: Ordering\n?: Buzz",
+        "description": "Navigate the treacherous waters of a whirlpool in the ocean while managing your ship's crew and resources in 'Pause Menu'.",
+        "detailed_description": "In 'Pause Menu', players take on the role of a ship captain navigating through a volatile ocean plagued by a mysterious whirlpool that devours anything in its path. As the captain, you must strategically manage your crew, resources, and ship to survive the perils of the sea. Players will face various challenges such as unpredictable weather, enemy ships, and the constant threat of the whirlpool. With a unique pausing mechanic, players can stop time to make tactical decisions, issue commands, and coordinate their crew's efforts to keep the ship afloat. Every decision matters as it could mean the difference between survival and being swallowed by the ocean's fury.",
+        "tags": [
+            "Strategy",
+            "Simulation",
+            "Survival",
+            "Adventure",
+            "Nautical",
+            "Single-player",
+            "Time Management"
+        ]
+    }
+}

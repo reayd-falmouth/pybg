@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Zelda' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Trust in the you of now'.",
+    "path": "ideas",
+    "game_type": "Zelda",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Aqua Quest",
+    "game_id": "AquaQuest_20250306215403",
+    "branding_data": {
+        "short_description": "Embark on Aqua Quest, a Zelda-inspired adventure in an enchanted aquatic world, focused on ethical choices and sustainability with a fish theme.",
+        "detailed_description": "Aqua Quest is an adventure game inspired by the classic 'Zelda' franchise, where players dive into a vibrant underwater realm filled with wonder and mystery. Embody the role of a young aquatic guardian on a mission to restore balance to the ocean by navigating shimmering coral reefs, sunken ruins, and mysterious caves. Guided by the theme 'Trust in the you of now,' players must rely on their instincts to make ethical decisions impacting the environment and the creatures within it. With a strong emphasis on sustainability, Aqua Quest challenges players to tackle dilemmas involving overfishing, pollution, and the delicate balance of marine ecosystems. The game combines engaging puzzles and combat with a thoughtful narrative about preserving the ocean's health, urging players to consider the consequences of their actions on the world around them.",
+        "tags": [
+            "Adventure",
+            "Puzzle",
+            "Zelda-like",
+            "Fish",
+            "Sustainability",
+            "Ethics",
+            "Fantasy",
+            "Underwater",
+            "Environmental",
+            "Exploration"
+        ]
+    },
+    "strategy": "Trust in the you of now"
+}

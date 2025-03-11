@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Doom' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Don't break the silence'.",
+    "path": "ideas",
+    "game_type": "Doom",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Echo of the Reef",
+    "game_id": "EchooftheReef_20250306215050",
+    "branding_data": {
+        "short_description": "Echo of the Reef is a first-person underwater adventure where silence and sustainability are key. Explore the ocean depths as a guardian of the reef, battling pollution, and protecting marine life without disturbing the aquatic tranquility.",
+        "detailed_description": "Echo of the Reef is an immersive first-person shooter game set in an expansive, vibrant underwater world. Players take on the role of a deep-sea guardian tasked with protecting the ocean's delicate ecosystems from the persistent threat of pollution and unethical fishing practices. Armed with eco-friendly tools and unique aquatic abilities, the player navigates coral-rich environments, confronting hostile forces that endanger marine life. The game profoundly emphasizes stealth and tactics, requiring players to minimize noise to preserve the ocean's serene atmosphere. The narrative explores the impact of human activities on marine habitats, encouraging sustainable practices through engaging gameplay and thought-provoking storytelling. As players progress, they'll unveil the mysteries of the ocean depths while forging alliances with a diverse array of sea creatures.",
+        "tags": [
+            "First-Person Shooter",
+            "Underwater Exploration",
+            "Environmental",
+            "Stealth",
+            "Sustainability",
+            "Adventure",
+            "Ethics",
+            "Marine Life",
+            "Mystery"
+        ]
+    },
+    "strategy": "Don"
+}

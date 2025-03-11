@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Neopets' game with the theme Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.. Modify it by applying the oblique strategy: 'Don't be afraid of things because they're easy to do'.",
+    "path": "ideas",
+    "game_type": "Neopets",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Aqua Pals Odyssey",
+    "game_id": "AquaPalsOdyssey_20250307055951",
+    "branding_data": {
+        "short_description": "Dive into Aqua Pals Odyssey, where players nurture and explore with virtual aquatic companions while promoting ocean conservation.",
+        "detailed_description": "Aqua Pals Odyssey immerses players in a vibrant underwater world where they adopt and care for virtual aquatic companions. The game combines pet simulation with exploration, offering mini-games and quests that teach about marine life and ecosystems. Players engage with their Aqua Pals, crafting sustainable habitats and completing ocean-themed challenges. The game emphasizes ethics and sustainability, encouraging players to learn and promote ocean conservation. Integrating straightforward mechanics, it allows developers of all skill levels to create engaging content, ensuring the game is both accessible and meaningful.",
+        "tags": [
+            "Simulation",
+            "Virtual Pet",
+            "Aquatic Theme",
+            "Exploration",
+            "Sustainability",
+            "Ocean Conservation",
+            "Ethical Gameplay",
+            "Casual Gaming",
+            "Educational"
+        ]
+    },
+    "strategy": "Don"
+}

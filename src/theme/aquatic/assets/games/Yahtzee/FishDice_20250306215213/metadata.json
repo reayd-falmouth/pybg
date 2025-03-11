@@ -1,0 +1,26 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Yahtzee' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Use an old idea'.",
+    "path": "ideas",
+    "game_type": "Yahtzee",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Fish Dice",
+    "game_id": "FishDice_20250306215213",
+    "branding_data": {
+        "short_description": "Fish Dice is a Yahtzee-inspired dice game that focuses on sustainable fishing practices.",
+        "detailed_description": "Fish Dice is a creative reimagining of the classic dice game Yahtzee, set in an aquatic world. Players take on the role of sustainable fishers, rolling dice to match various fish species and fulfill quota cards, representing responsible fishing practices. Each roll has environmental consequences, teaching players about the importance of sustainability. Watch out for pollutants and overfishing, which add a strategic element to the game. The aim is not just to score points by rolling valuable combinations, but to do so while maintaining ecological balance and ensuring the fish population thrives.",
+        "tags": [
+            "Dice Game",
+            "Yahtzee",
+            "Fish",
+            "Sustainability",
+            "Ethics",
+            "Board Game",
+            "Strategy"
+        ]
+    },
+    "strategy": "Use an old idea"
+}

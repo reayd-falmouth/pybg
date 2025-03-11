@@ -1,0 +1,26 @@
+{
+    "randomize": false,
+    "oblique_strategy": false,
+    "cover": true,
+    "path": "ideas",
+    "model": "brian-eno-1",
+    "count": 1,
+    "name": "Oblique Games",
+    "game_type": "Games Compendium",
+    "task": "A collection of experimental games inspired by Brian Enoâ€™s Oblique Strategies.",
+    "type": "GameCompendium",
+    "branding_data": {
+        "short_description": "Credits: Font by Daniel Linssen, Shader by  Blubberquark, Strategies by Brian Eno, SoundFX by NLM, Music by YellowTree",
+        "detailed_description": "Oblique Games is an innovative and thought-provoking compendium for game developers and enthusiasts. The game challenges players to create and modify game ideas using the oblique strategy of maintaining immaculate consistency without change. This approach fosters creativity by encouraging developers to explore depth within established parameters, pushing the boundaries of conventional game design. The compendium includes a collection of game concepts that serve as a springboard for inspiration, each adhering to the principle of consistency. Players can delve into these ideas, explore their nuances, and understand how small, consistent details can lead to profound gameplay experiences. Oblique Games is both a tool and a journey, offering insights into the art of game development with a twist of philosophical reflection.",
+        "tags": [
+            "game development",
+            "creativity",
+            "strategy",
+            "philosophical",
+            "design",
+            "innovation",
+            "compendium"
+        ]
+    },
+    "errors": null
+}

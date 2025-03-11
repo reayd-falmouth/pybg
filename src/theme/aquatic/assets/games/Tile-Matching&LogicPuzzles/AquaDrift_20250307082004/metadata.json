@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Tile-Matching & Logic Puzzles' game with the theme Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.. Modify it by applying the oblique strategy: 'Infinitesimal gradations'.",
+    "path": "ideas/aquatic",
+    "game_type": "Tile-Matching & Logic Puzzles",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Aqua Drift",
+    "game_id": "AquaDrift_20250307082004",
+    "branding_data": {
+        "short_description": "Aqua Drift is an aquatic-themed tile-matching puzzle game focusing on ethics and sustainability, with infinitesimal gradations offering a unique twist.",
+        "detailed_description": "Aqua Drift invites players into a serene underwater world where they embark on a journey to restore the balance of aquatic ecosystems. The game features tile-matching mechanics, where each matched set of tiles represents an effort to clean, restore, and sustain various water bodies like oceans, seas, and rivers. The unique aspect of Aqua Drift is its use of 'infinitesimal gradations,' where subtle changes in the environment occur with each player action, emphasizing the delicate nature of ecological sustainability. Players can learn about ethical ocean practices and the importance of conserving marine life as they progress through increasingly challenging levels. From rescuing stranded fish to restoring coral reefs, each puzzle solved makes a positive impact on the virtual world. The game's aesthetic, filled with vibrant underwater visuals and soothing soundscapes, ensures an immersive and relaxing experience. Designed to be accessible, Aqua Drift accommodates all skill levels, engaging players with its thoughtful blend of logic puzzles and sustainability themes.",
+        "tags": [
+            "Tile-Matching",
+            "Logic Puzzles",
+            "Aquatic Theme",
+            "Ocean",
+            "Sustainability",
+            "Puzzle",
+            "Casual",
+            "Educational",
+            "Environmental Awareness"
+        ]
+    },
+    "strategy": "Infinitesimal gradations"
+}

@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Ultima' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Only one element of each kind'.",
+    "path": "ideas",
+    "game_type": "Ultima",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Aqua Virtue",
+    "game_id": "AquaVirtue_20250306214105",
+    "branding_data": {
+        "short_description": "Aqua Virtue is an RPG where players explore an ocean world, balancing resource management with ethical choices to ensure marine sustainability.",
+        "detailed_description": "Aqua Virtue is a unique role-playing game inspired by classic 'Ultima' games. Set in a vast oceanic world, players assume the role of a guardian tasked with maintaining the balance of marine life. The twist comes with the adherence to a principle of 'Only one element of each kind,' leading to strategic gameplay where players must make thoughtful decisions. Interact with various marine species, each unique and crucial to the ecosystem, manage resources wisely, and face moral dilemmas that test your commitment to ethical sustainability. The game challenges players to explore how their actions impact the underwater world, explore the ethics of conservation, and innovate solutions to restore balance.",
+        "tags": [
+            "RPG",
+            "Ethics",
+            "Sustainability",
+            "Ocean",
+            "Marine",
+            "Resource Management",
+            "Strategy",
+            "Adventure",
+            "Environment",
+            "Single-player"
+        ]
+    },
+    "strategy": "Only one element of each kind"
+}

@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Tempest' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Consider different fading systems'.",
+    "path": "ideas",
+    "game_type": "Tempest",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Aqua Tempest",
+    "game_id": "AquaTempest_20250306213517",
+    "branding_data": {
+        "short_description": "A reimagined arcade shooter in a fish and oceanic sustainability theme.",
+        "detailed_description": "Aqua Tempest is a reimagining of the classic arcade shooter 'Tempest,' set within the vibrant undersea world. Players control a luminescent fish navigating through dynamic, geometric whirlpools that represent the ocean's challenges. With each level, these challenges become more complex, and players must innovate to maintain the balance of the ecosystem. The game focuses on ethics and sustainability as players must manage resources wisely, ensuring the survival of their fish while protecting the ocean. Leveraging the oblique strategy 'Consider different fading systems,' Aqua Tempest incorporates visual and mechanical fading effects to reflect the consequences of unsustainable practices, urging players to adopt ethical approaches to marine conservation.",
+        "tags": [
+            "Arcade",
+            "Shooter",
+            "Fish",
+            "Ocean",
+            "Sustainability",
+            "Ethics",
+            "Resource Management",
+            "Retro",
+            "Environmental"
+        ]
+    },
+    "strategy": "Consider different fading systems"
+}

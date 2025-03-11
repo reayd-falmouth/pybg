@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'X-COM' game. Modify it by applying the oblique strategy: 'Humanize something free of error'.",
+    "path": "../oblique-games/ideas/",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Flawed Guardians",
+    "game_type": "X-COM",
+    "branding_data": {
+        "short_description": "Flawed Guardians is a tactical strategy game where players lead a team of imperfect heroes against alien threats, embracing their human flaws as strengths.",
+        "detailed_description": "Flawed Guardians is a strategic turn-based game inspired by the classic 'X-COM' series. Players take command of a squad of diverse and uniquely flawed heroes tasked with defending Earth from alien invaders. Unlike traditional strategy games where perfection is key, Flawed Guardians emphasizes the human element, integrating characters' personal imperfections and quirks into gameplay mechanics. Each team member has distinct flaws that impact their abilities and decision-making processes, forcing players to adapt and strategize creatively. The game's narrative explores themes of humanity, resilience, and the power of imperfection, as players uncover the aliens' mysterious motives and the true potential of their flawed guardians.",
+        "tags": [
+            "strategy",
+            "turn-based",
+            "tactical",
+            "sci-fi",
+            "aliens",
+            "humanity",
+            "flaws",
+            "X-COM-inspired",
+            "narrative-driven"
+        ]
+    },
+    "errors": null,
+    "strategy": "Humanize something free of error"
+}

@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Euchre' game. Modify it by applying the oblique strategy: 'Don't be afraid of things because they're easy to do'.",
+    "path": "../oblique-games/ideas/",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Trump Triumph",
+    "game_type": "Euchre",
+    "branding_data": {
+        "short_description": "Trump Triumph is a unique twist on the classic card game Euchre, encouraging players to embrace simplicity and enjoy straightforward gameplay.",
+        "detailed_description": "Trump Triumph takes the beloved card game Euchre and simplifies its mechanics to make it more accessible and enjoyable for players of all skill levels. By applying the oblique strategy 'Don't be afraid of things because they're easy to do,' the game focuses on removing unnecessary complexities and highlights the core fun of Euchre. Players will engage in strategic trump card play, team coordination, and tactical decision-making in a streamlined format that retains the essence of traditional Euchre while making it easier for newcomers to pick up and play. The game features intuitive controls, a friendly user interface, and a variety of difficulty levels to suit both beginners and seasoned players.",
+        "tags": [
+            "Card Game",
+            "Euchre",
+            "Strategy",
+            "Multiplayer",
+            "Casual",
+            "Family Friendly",
+            "Simplified Gameplay",
+            "Easy to Learn"
+        ]
+    },
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "Don"
+}

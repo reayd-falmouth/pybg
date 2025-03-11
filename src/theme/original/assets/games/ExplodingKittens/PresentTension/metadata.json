@@ -1,0 +1,30 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Exploding Kittens' game. Modify it by applying the oblique strategy: 'Trust in the you of now'.",
+    "path": "../oblique-games/ideas/",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Present Tension",
+    "game_type": "ExplodingKittens",
+    "branding_data": {
+        "short_description": "A strategic card game where players navigate explosive situations, trusting their instincts in the moment.",
+        "detailed_description": "Present Tension is a card game inspired by the original 'Exploding Kittens' but with a unique twist based on the oblique strategy 'Trust in the you of now.' Players must rely on their immediate intuition and decision-making skills to avoid explosive outcomes. Each turn presents unpredictable challenges, requiring players to make quick, confident choices without overthinking. The game encourages spontaneity and trust in one's current self, creating dynamic and tension-filled gameplay as players try to outsmart each other and avoid drawing the dreaded 'Exploding Kitten' card.",
+        "tags": [
+            "Card Game",
+            "Strategy",
+            "Party Game",
+            "Exploding Kittens",
+            "Oblique Strategies",
+            "Intuition",
+            "Trust",
+            "Spontaneity",
+            "Tension",
+            "Multiplayer"
+        ]
+    },
+    "errors": null,
+    "strategy": "Trust in the you of now"
+}

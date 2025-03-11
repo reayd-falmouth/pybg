@@ -1,0 +1,32 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Turn-Based Tactics (Small-Scale)' game with the theme 'Generate a unique concept for a Game Jam with an Fish theme, incorporating elements related to the ocean, seas, , jellyfish, cephalopods, and all sea creatures, boats submarines etc. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Don't be frightened of cliches'.",
+    "path": "ideas/aquatic",
+    "game_type": "Turn-Based Tactics (Small-Scale)",
+    "model": "gpt-4o",
+    "count": 7,
+    "name": "Tides of Strategy",
+    "game_id": "TidesofStrategy_20250307112429",
+    "branding_data": {
+        "short_description": "Navigate aquatic battles in 'Tides of Strategy', a turn-based tactics game where sea creatures and submarines clash in a fight for ocean preservation.",
+        "detailed_description": "In 'Tides of Strategy', players are immersed in a vibrant underwater world where they command a diverse team of sea creatures, submarines, and boats to protect the ocean from pollution and overfishing. Each level presents a new challenge, requiring strategic positioning and clever use of unique abilities. From the stealthy approach of a jellyfish to the powerful strikes of a giant squid, each unit offers distinct tactical advantages. Players must balance their desire for victory with the ethics of ocean sustainability, managing resources carefully to avoid harmful impact on the marine environment. Embrace the timeless clash of good versus evil, brought to life in a colorful, engaging underwater battlefield.",
+        "tags": [
+            "Turn-Based Tactics",
+            "Strategy",
+            "Underwater",
+            "Marine Life",
+            "Ethics",
+            "Sustainability",
+            "Ocean",
+            "Sea Creatures",
+            "Submarines",
+            "Game Jam",
+            "Cliches",
+            "Creative",
+            "Engaging"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Fish theme, incorporating elements related to the ocean, seas, , jellyfish, cephalopods, and all sea creatures, boats submarines etc. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Snake' game. Modify it by applying the oblique strategy: 'Tape your mouth (given by Ritva Saarikko)'.",
+    "path": "ideas",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Silent Slither",
+    "game_type": "Snake",
+    "branding_data": {
+        "short_description": "Silent Slither is a unique twist on the classic Snake game where players must navigate without traditional cues.",
+        "detailed_description": "Silent Slither takes the classic Snake game and introduces a novel challenge inspired by the oblique strategy 'Tape your mouth'. In this game, players control a snake that moves silently through the grid, consuming food to grow longer. However, unlike traditional Snake games, Silent Slither removes all sound cues, requiring players to rely solely on visual feedback and intuition to guide their snake. This creates an intense, focused experience where players must adapt to the absence of audio signals, making each move more deliberate and strategic. The game's minimalist design and serene visuals enhance the silent theme, encouraging a meditative approach to gameplay.",
+        "tags": [
+            "Puzzle",
+            "Strategy",
+            "Minimalist",
+            "Silent",
+            "Snake",
+            "Oblique Strategies",
+            "Intuitive"
+        ]
+    },
+    "errors": null,
+    "strategy": "Tape your mouth (given by Ritva Saarikko)"
+}

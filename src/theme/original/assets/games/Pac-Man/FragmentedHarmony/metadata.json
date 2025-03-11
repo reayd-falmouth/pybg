@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Pac-Man' game. Modify it by applying the oblique strategy: 'Imagine the music as a set of disconnected events'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Fragmented Harmony",
+    "game_type": "Pac-Man",
+    "branding_data": {
+        "short_description": "Navigate mazes in Fragmented Harmony, a unique twist on the classic Pac-Man, where music becomes a disjointed guide.",
+        "detailed_description": "Fragmented Harmony reimagines the classic Pac-Man gameplay by integrating an innovative musical experience. As players navigate through intricate mazes, they must collect pellets and avoid ghosts, all while being guided by a soundtrack that consists of disconnected musical events. Each movement and action in the game triggers a different musical note or sound, creating a dynamic and fragmented auditory experience. This unique approach challenges players to not only focus on visual cues but also interpret the sporadic and eclectic sounds as part of their strategy. The game offers a fresh perspective on rhythm and timing, making each playthrough a distinct sensory adventure.",
+        "tags": [
+            "Arcade",
+            "Puzzle",
+            "Music",
+            "Retro",
+            "Strategy",
+            "Maze",
+            "Indie",
+            "Experimental",
+            "Soundtrack"
+        ]
+    },
+    "errors": null,
+    "strategy": "Imagine the music as a set of disconnected events"
+}

@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Mancala' game. Modify it by applying the oblique strategy: 'Mute and continue'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Silent Seeds",
+    "game_type": "Mancala",
+    "branding_data": {
+        "short_description": "Silent Seeds is a unique twist on the classic Mancala game, incorporating the 'Mute and continue' strategy for a serene gaming experience.",
+        "detailed_description": "Silent Seeds takes the traditional African board game Mancala and introduces a tranquil twist with the 'Mute and continue' oblique strategy. In this version, players engage in the strategic sowing and capturing of seeds across a series of pits on the board, but without the usual auditory feedback. The absence of sound encourages players to focus deeply on visual cues and strategic planning, enhancing mindfulness and concentration. The game offers a calming experience, emphasizing the flow of gameplay over auditory distractions. With serene visuals and a minimalist design, Silent Seeds provides a refreshing and meditative take on a classic game.",
+        "tags": [
+            "Mancala",
+            "Strategy",
+            "Board Game",
+            "Minimalist",
+            "Mindfulness",
+            "Tranquility",
+            "Puzzle",
+            "Silent Gameplay"
+        ]
+    },
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "Mute and continue"
+}

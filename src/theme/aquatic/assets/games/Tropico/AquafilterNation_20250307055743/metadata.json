@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Tropico' game with the theme Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.. Modify it by applying the oblique strategy: 'Use filters'.",
+    "path": "ideas",
+    "game_type": "Tropico",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Aquafilter Nation",
+    "game_id": "AquafilterNation_20250307055743",
+    "branding_data": {
+        "short_description": "Manage an underwater nation balancing resource use with ethical sustainability.",
+        "detailed_description": "Aquafilter Nation is a strategy and management simulation game where players assume the role of the leader of an underwater community. Set in a vibrant aquatic world filled with diverse marine life and mysterious underwater landscapes, players must develop their nation while using 'filters' - laws and technologies that help balance the extraction of resources with the preservation of the environment. Players will face challenges such as pollution, overfishing, and habitat destruction, and must make ethical decisions to ensure the prosperity of their aquatic society. By adhering to sustainable practices, players will encounter unique marine events and unlock special features that enhance the underwater experience. The game encourages creative thinking and strategic planning, making it accessible and engaging for developers and players of all skill levels.",
+        "tags": [
+            "Strategy",
+            "Simulation",
+            "Aquatic",
+            "Sustainability",
+            "Ethical Choices",
+            "Resource Management",
+            "Marine Life",
+            "Underwater",
+            "Game Jam",
+            "Creativity"
+        ]
+    },
+    "strategy": "Use filters"
+}

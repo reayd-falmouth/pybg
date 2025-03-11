@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Manic Miner' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'You don't have to be ashamed of using your own ideas'.",
+    "path": "ideas/aquatic",
+    "game_type": "Manic Miner",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "AquaEco Spelunker",
+    "game_id": "AquaEcoSpelunker_20250307094423",
+    "branding_data": {
+        "short_description": "A unique aquatic-themed platformer exploring underwater ecosystems with a focus on sustainability and ethics.",
+        "detailed_description": "AquaEco Spelunker is a captivating platformer inspired by retro classics like Manic Miner, set in vibrant underwater environments. Players navigate through intricate underwater caverns, collecting treasures and solving puzzles while mindful of the ecosystem. Each level is designed with unique marine biomes, from coral reefs to deep-sea trenches, featuring indigenous aquatic creatures and plants. The game encourages players to reflect on their impact on these fragile environments by integrating ethical choices and sustainable practices. Players might collect ocean litter, avoid disturbing habitats, or make decisions that protect endangered marine life. Engaging and suitable for all skill levels, AquaEco Spelunker is not only a platforming adventure but also a journey toward understanding and preserving our precious aquatic ecosystems.",
+        "tags": [
+            "Platformer",
+            "Aquatic",
+            "Eco-friendly",
+            "Puzzle",
+            "Adventure",
+            "Indie",
+            "Retro-inspired",
+            "Environmental",
+            "Sustainability",
+            "Exploration"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

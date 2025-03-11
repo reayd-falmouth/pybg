@@ -1,0 +1,15 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Persona' game. Modify it by applying the oblique strategy: 'Simple subtraction'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Persona: Essence",
+    "game_type": "Persona",
+    "branding_data": "{'short_description': 'Persona: Essence is a streamlined RPG focusing on character relationships and inner growth, with simplified mechanics.',\n 'detailed_description': 'In Persona: Essence, players dive into a rich narrative-driven RPG where the focus is on character development and emotional connections. By applying the oblique strategy of \"Simple subtraction,\" the game removes complex combat systems and intricate dungeons, instead centering on the core elements of the Persona series: building relationships, managing daily life, and exploring the inner psyche of characters. Players will navigate a vibrant world, engage in meaningful conversations, and make choices that shape their story, all while balancing their social and academic life. The game encourages introspection and personal growth, offering a unique experience that is both immersive and thought-provoking.',\n 'tags': ['RPG', 'Narrative', 'Character Development', 'Social Simulation', 'Emotional', 'Single Player', 'Story-Driven']}",
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "Simple subtraction"
+}

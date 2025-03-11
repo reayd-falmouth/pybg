@@ -1,0 +1,30 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Asteroids' game. Modify it by applying the oblique strategy: 'Do nothing for as long as possible'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Asteroids Drift",
+    "game_type": "Asteroids",
+    "branding_data": {
+        "short_description": "Asteroids Drift is a unique twist on the classic arcade game, where patience is key to survival.",
+        "detailed_description": "Asteroids Drift takes the classic arcade action of 'Asteroids' and introduces a strategic twist inspired by the oblique strategy 'Do nothing for as long as possible.' In this version, players navigate their spaceship through an asteroid field, but the goal is not to immediately destroy everything in sight. Instead, players must carefully time their movements and actions, conserving energy and resources, while avoiding collisions. The longer players can drift without firing, the more points they accumulate, encouraging a more strategic and patient approach to the classic space shooter. With minimalist graphics and a focus on strategic evasion, Asteroids Drift challenges players to rethink their approach to surviving in space.",
+        "tags": [
+            "Arcade",
+            "Strategy",
+            "Space",
+            "Minimalist",
+            "Retro",
+            "Action",
+            "Survival",
+            "Single-player",
+            "Indie",
+            "Skill-based"
+        ]
+    },
+    "errors": null,
+    "strategy": "Do nothing for as long as possible"
+}

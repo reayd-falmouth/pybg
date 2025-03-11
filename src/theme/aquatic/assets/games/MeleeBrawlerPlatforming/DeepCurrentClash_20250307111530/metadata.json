@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Melee Brawler Platforming' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Breathe more deeply'.",
+    "path": "ideas/aquatic",
+    "game_type": "Melee Brawler Platforming",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Deep Current Clash",
+    "game_id": "DeepCurrentClash_20250307111530",
+    "branding_data": {
+        "short_description": "Battle under the waves in a dynamic aquatic-themed brawler.",
+        "detailed_description": "Deep Current Clash is an engaging melee brawler platformer set in the mesmerizing underwater realms. Players embark on an adventure across vibrant oceanic levels, maneuvering through dynamic currents and overcoming aquatic obstacles. As they breathe deeply to conserve energy, the unique mechanic highlights the importance of lung capacity and breath management. Choose from a cast of diverse aquatic characters who champion oceanic sustainability, each with distinct abilities inspired by sea creatures. From coral reefs to deep-sea trenches, battle rival factions and preserve the delicate balance of marine ecosystems. The game emphasizes ethical choices, encouraging players to protect the environment and seek sustainable solutions as they progress through this creatively challenging Game Jam entry.",
+        "tags": [
+            "Platformer",
+            "Melee Brawler",
+            "Aquatic Theme",
+            "Ocean",
+            "Sea",
+            "Sustainability",
+            "Ethics",
+            "Creative",
+            "Game Jam",
+            "Indie"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

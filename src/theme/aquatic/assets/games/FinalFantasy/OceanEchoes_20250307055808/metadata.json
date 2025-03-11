@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Final Fantasy' game with the theme Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.. Modify it by applying the oblique strategy: 'Ghost echoes'.",
+    "path": "ideas",
+    "game_type": "Final Fantasy",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Ocean Echoes",
+    "game_id": "OceanEchoes_20250307055808",
+    "branding_data": {
+        "short_description": "Ocean Echoes is a whimsical RPG that blends aquatic exploration with ghostly mysteries, urging players to uncover spectral secrets beneath the waves.",
+        "detailed_description": "Ocean Echoes invites players to an underwater realm where they navigate shimmering seas, intricate river systems, and mysterious ocean depths in pursuit of ghostly echoes—residual specters of the past. This intriguing RPG employs a turn-based battle system akin to classic 'Final Fantasy' games, yet sets itself apart with an aquatic twist. Players will encounter various ghostly forms of sea creatures and marine spirits each holding stories of past ecological disruptions. As they journey, they must solve environmental puzzles, embark on quests to restore balance, and engage ethically by making decisions that impact marine sustainability. The game's hauntingly beautiful score and immersive sound design heighten the experience as players work to reveal the ocean's secrets and reconcile the present with the echoes of its past.",
+        "tags": [
+            "RPG",
+            "Aquatic",
+            "Turn-Based Combat",
+            "Fantasy",
+            "Puzzle",
+            "Sustainability",
+            "Ethics",
+            "Mystery",
+            "Exploration"
+        ]
+    },
+    "strategy": "Ghost echoes"
+}

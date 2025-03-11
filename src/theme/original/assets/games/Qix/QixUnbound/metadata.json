@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Qix' game. Modify it by applying the oblique strategy: 'Destroy - nothing - the most important thing'.",
+    "path": "ideas",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Qix Unbound",
+    "game_type": "Qix",
+    "branding_data": {
+        "short_description": "Qix Unbound is a reimagined version of the classic arcade game 'Qix', where players must rethink their strategies as key elements are intentionally removed.",
+        "detailed_description": "Qix Unbound challenges players to conquer territory by drawing lines and capturing sections of the playfield while avoiding enemies. In a twist inspired by the oblique strategy 'Destroy - nothing - the most important thing', the game removes key elements that players typically rely on. This forces players to adapt and develop new strategies to succeed. With minimalist visuals and an ambient soundtrack, Qix Unbound offers a fresh take on a classic formula, encouraging creativity and improvisation.",
+        "tags": [
+            "Arcade",
+            "Puzzle",
+            "Strategy",
+            "Minimalist",
+            "Retro",
+            "Creative",
+            "Experimental"
+        ]
+    },
+    "errors": null,
+    "strategy": "Destroy - nothing - the most important thing"
+}

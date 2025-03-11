@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Manic Miner' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Infinitesimal gradations'.",
+    "path": "ideas/aquatic",
+    "game_type": "Manic Miner",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Deep Voyage",
+    "game_id": "DeepVoyage_20250307094451",
+    "branding_data": {
+        "short_description": "Deep Voyage is an aquatic-themed platformer inspired by 'Manic Miner', where players navigate underwater caves collecting sustainable treasures while avoiding hazards.",
+        "detailed_description": "Deep Voyage is an engaging platformer set in the mysterious depths of the ocean. Inspired by classic 'Manic Miner' gameplay, players take on the role of a deep-sea explorer tasked with collecting unique treasures hidden in intricate underwater caverns. Each treasure represents a lesson in sustainability and ocean conservation. Players must avoid dangerous sea creatures and environmental hazards while navigating through the vibrant, procedurally-generated levels. The game incorporates the concept of 'infinitesimal gradations' by gradually introducing more intricate patterns of underwater flora and fauna, which require players to adapt their strategies subtly over time. The game's aesthetic captures the serene, yet enigmatic nature of the deep sea, and challenges players to think critically about their impact on the ocean ecosystem, emphasizing the importance of ethical exploration.",
+        "tags": [
+            "Platformer",
+            "Aquatic",
+            "Puzzle",
+            "Sustainability",
+            "Ocean",
+            "Exploration",
+            "Environmental Ethics",
+            "Procedural Generation"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

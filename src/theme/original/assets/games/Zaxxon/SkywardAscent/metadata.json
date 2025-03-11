@@ -1,0 +1,30 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Zaxxon' game. Modify it by applying the oblique strategy: 'Breathe more deeply'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Skyward Ascent",
+    "game_type": "Zaxxon",
+    "branding_data": {
+        "short_description": "Skyward Ascent is a modern take on the classic 'Zaxxon' game, incorporating deeper atmospheric elements and strategic gameplay inspired by the oblique strategy 'Breathe more deeply.'",
+        "detailed_description": "Skyward Ascent revitalizes the iconic isometric shooter 'Zaxxon' by immersing players in a dynamic aerial battlefield. The game challenges players to navigate intricate 3D environments, dodge obstacles, and defeat enemies while maintaining altitude and speed. Inspired by the oblique strategy 'Breathe more deeply,' Skyward Ascent emphasizes the importance of rhythm and pacing. Players must manage their craft's energy levels and breathing patterns to unlock special abilities and reach new heights. The game features lush, expansive sky landscapes with variable weather conditions that impact gameplay, requiring players to adapt their strategies in real-time. With a focus on atmospheric immersion, Skyward Ascent encourages players to engage deeply with the environment and their aircraft, creating a meditative yet thrilling experience.",
+        "tags": [
+            "Isometric Shooter",
+            "Arcade",
+            "Strategy",
+            "Atmospheric",
+            "3D",
+            "Action",
+            "Rhythm",
+            "Immersive",
+            "Flight",
+            "Retro-inspired"
+        ]
+    },
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "Breathe more deeply"
+}

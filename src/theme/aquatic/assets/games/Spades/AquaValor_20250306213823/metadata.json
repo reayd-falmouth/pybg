@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Spades' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Courage!'.",
+    "path": "ideas",
+    "game_type": "Spades",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Aqua Valor",
+    "game_id": "AquaValor_20250306213823",
+    "branding_data": {
+        "short_description": "Aqua Valor is a spades card game themed around marine life, focusing on ethics and sustainability in the ocean.",
+        "detailed_description": "Aqua Valor takes the classic card game of Spades and immerses it in a vibrant marine world. Players assume the roles of different sea creatures, each with unique abilities, in a quest to preserve their aquatic home. The game integrates themes of ethics and sustainability, urging players to make courageous decisions that impact the environment. With a blend of strategic gameplay and thematic storytelling, Aqua Valor challenges players to consider the balance between human activities and marine ecosystems. The game invites players to experience the beauty of the sea while making ethically-minded choices that reflect real-world sustainability issues.",
+        "tags": [
+            "Card Game",
+            "Spades",
+            "Marine Life",
+            "Sustainability",
+            "Ethics",
+            "Strategy",
+            "Courage",
+            "Fish Theme",
+            "Tabletop"
+        ]
+    },
+    "strategy": "Courage!"
+}

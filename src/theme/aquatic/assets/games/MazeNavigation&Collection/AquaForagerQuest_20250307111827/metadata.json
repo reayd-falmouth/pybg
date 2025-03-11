@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Maze Navigation & Collection' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Only one element of each kind'.",
+    "path": "ideas/aquatic",
+    "game_type": "Maze Navigation & Collection",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "AquaForagerQuest",
+    "game_id": "AquaForagerQuest_20250307111827",
+    "branding_data": {
+        "short_description": "Navigate an aquatic maze, collect ocean treasures, and promote sustainability in AquaForagerQuest.",
+        "detailed_description": "AquaForagerQuest is an immersive 'Maze Navigation & Collection' game set in a vibrant underwater world. Players take on the role of a young marine explorer tasked with navigating a series of challenging aquatic mazes. Each maze represents a different aquatic environment, such as oceans, seas, and rivers. True to the oblique strategy of 'Only one element of each kind,' the game features a minimalist approach where each maze contains a unique set of obstacles and collectible items. As players progress, they collect valuable treasures such as coral fragments, pearls, and ancient artifacts, each contributing to the understanding and preservation of oceanic cultures. The game encourages ethical decisions by integrating sustainability elements; players must choose actions that promote the health of the underwater ecosystem. Educational snippets inform players about the impact of their choices on marine life and the importance of conservation efforts. AquaForagerQuest is designed to be accessible to game developers of all skill levels, offering a balance of creativity, challenge, and educational value.",
+        "tags": [
+            "Adventure",
+            "Maze",
+            "Collect-a-thon",
+            "Aquatic",
+            "Sustainability",
+            "Educational",
+            "Puzzle",
+            "Exploration",
+            "Minimalist"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

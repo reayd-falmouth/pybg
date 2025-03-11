@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Space Survival Strategy' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Water'.",
+    "path": "ideas/aquatic",
+    "game_type": "Space Survival Strategy",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Stellar Tide",
+    "game_id": "StellarTide_20250307111303",
+    "branding_data": {
+        "short_description": "A strategic space survival game with an aquatic theme, focusing on sustainability and ethical choices in interstellar environments.",
+        "detailed_description": "Stellar Tide is a unique 'Space Survival Strategy' game that combines the vastness of space with the mystery and depth of aquatic environments. In this game, players are tasked with managing a space colony that relies on water from celestial bodies for survival and growth. The core objective is to explore new planets and moons, particularly focusing on those rich with oceans, seas, and rivers. Players must make crucial decisions about resource extraction, balancing the needs of their colony with the ethical and sustainable management of water. Ethical dilemmas arise as players encounter alien ecosystems and must decide how to interact without causing harm. The game encourages innovative thinking as players devise strategies to thrive in harmony with their environment, making it appealing for game developers of all skill levels. The water-centric theme is intricately woven into the gameplay, offering a refreshing take on traditional space strategy games.",
+        "tags": [
+            "Space Survival",
+            "Strategy",
+            "Aquatic Theme",
+            "Game Jam",
+            "Sustainability",
+            "Ethics",
+            "Exploration",
+            "Resource Management",
+            "Interstellar",
+            "Aliens"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

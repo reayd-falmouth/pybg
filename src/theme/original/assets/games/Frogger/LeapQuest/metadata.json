@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Frogger' game. Modify it by applying the oblique strategy: 'Look at the order in which you do things'.",
+    "path": "../oblique-games/ideas/",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "LeapQuest",
+    "game_type": "Frogger",
+    "branding_data": {
+        "short_description": "LeapQuest is a strategic twist on the classic 'Frogger' game, where the sequence of your moves is key to success.",
+        "detailed_description": "LeapQuest reimagines the classic 'Frogger' gameplay by challenging players to strategically plan the order of their moves. In this game, players guide a frog across a series of busy roads and treacherous rivers, aiming to reach the safety of the lily pads. However, unlike traditional 'Frogger', LeapQuest emphasizes the importance of sequencing actions. Players must carefully observe and decide the optimal order to leap over obstacles, taking into account the dynamic environment that changes with every move. The game tests not only reflexes but also strategic thinking, as players must anticipate future challenges and adapt their strategies to successfully navigate the frog to its destination.",
+        "tags": [
+            "Strategy",
+            "Puzzle",
+            "Classic",
+            "Retro",
+            "Single-player",
+            "Casual",
+            "Indie",
+            "Family-friendly"
+        ]
+    },
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "Look at the order in which you do things"
+}

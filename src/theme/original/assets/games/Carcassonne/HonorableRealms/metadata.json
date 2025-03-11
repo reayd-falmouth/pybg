@@ -1,0 +1,26 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Carcassonne' game. Modify it by applying the oblique strategy: 'Intentions - credibility of - nobility of - humility of'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Honorable Realms",
+    "game_type": "Carcassonne",
+    "branding_data": {
+        "short_description": "Honorable Realms is a strategic tile-placement game inspired by Carcassonne, focusing on intentions, credibility, nobility, and humility.",
+        "detailed_description": "Honorable Realms is a unique twist on the classic tile-placement game Carcassonne. Players take turns drawing and placing tiles to build a medieval landscape, featuring cities, roads, and fields. In this version, the game introduces a new layer of strategy with the themes of intentions, credibility, nobility, and humility. Players must balance their ambitions with their integrity, earning points not only for their tactical prowess but also for demonstrating noble intentions and humble actions. This adds a moral dimension to the gameplay, encouraging players to consider the ethical implications of their decisions as they strive to create the most honorable realm.",
+        "tags": [
+            "Strategy",
+            "Board Game",
+            "Tile Placement",
+            "Medieval",
+            "Ethics",
+            "Multiplayer",
+            "Turn-Based"
+        ]
+    },
+    "strategy": "Intentions - credibility of - nobility of - humility of"
+}

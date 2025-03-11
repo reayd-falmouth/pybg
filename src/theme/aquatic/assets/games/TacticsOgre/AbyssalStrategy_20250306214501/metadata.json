@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Tactics Ogre' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Go slowly all the way round the outside'.",
+    "path": "ideas",
+    "game_type": "Tactics Ogre",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Abyssal Strategy",
+    "game_id": "AbyssalStrategy_20250306214501",
+    "branding_data": {
+        "short_description": "A tactical game about managing underwater resources and alliances in a fish-themed world, focusing on ethics and sustainability.",
+        "detailed_description": "Abyssal Strategy is a tactical turn-based strategy game set in a richly detailed underwater world. Players take on the role of the leader of a fish civilization, navigating the challenges of ethical resource management and sustainable development. The game incorporates themes of environmental stewardship and social responsibility, encouraging players to consider the long-term impacts of their decisions on the underwater ecosystem. With a unique focus on careful planning and lateral thinking, players are encouraged to 'go slowly all the way round the outside', exploring different angles and approaches to achieve their objectives. The game offers a variety of scenarios where players must form alliances, manage resources, and engage in tactical battles while considering the ecological balance and the ethics of their actions.",
+        "tags": [
+            "Strategy",
+            "Turn-Based",
+            "Tactics",
+            "Fish",
+            "Ethics",
+            "Sustainability",
+            "Resource Management",
+            "Environmental",
+            "Underwater",
+            "Ecosystem"
+        ]
+    },
+    "strategy": "Go slowly all the way round the outside"
+}

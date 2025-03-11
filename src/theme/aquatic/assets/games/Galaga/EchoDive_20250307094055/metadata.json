@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Galaga' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Ghost echoes'.",
+    "path": "ideas/aquatic",
+    "game_type": "Galaga",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Echo Dive",
+    "game_id": "EchoDive_20250307094055",
+    "branding_data": {
+        "short_description": "Echo Dive is an aquatic-themed space shooter inspired by Galaga, featuring environmental ethics and ghost-like sea creatures.",
+        "detailed_description": "Echo Dive invites players to immerse themselves in an oceanic battlefield where ghostly sea creatures challenge their strategic skills. This underwater-themed reimagining of the classic arcade game Galaga focuses on sustainability and the environmental impact on aquatic ecosystems. Players must pilot their submarine through waves of enemies that echo the souls of extinct species, representing the consequences of environmental neglect. With each rescued creature, players contribute to the regeneration of their underwater world. The game encourages players to adopt sustainable tactics by introducing global and ethical decision-making mechanics, offering a reflective experience on humanity's relationship with the ocean.",
+        "tags": [
+            "Space Shooter",
+            "Aquatic Theme",
+            "Arcade",
+            "Environment",
+            "Sustainability",
+            "Strategy",
+            "Ethics",
+            "Ghostly Creatures"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

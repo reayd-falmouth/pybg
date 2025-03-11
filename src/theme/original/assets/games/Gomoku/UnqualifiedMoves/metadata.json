@@ -1,0 +1,25 @@
+{
+    "config": "Default",
+    "org": "DefaultOrganization",
+    "task": "Develop a basic Gomoku game. Modify it by applying the oblique strategy: 'Use 'unqualified' people'.",
+    "name": "Unqualified Moves",
+    "model": "GPT_3_5_TURBO",
+    "path": "",
+    "game_type": "Gomoku",
+    "random_game": false,
+    "oblique_strategy": true,
+    "dry_run": true,
+    "branding": true,
+    "branding_data": {
+        "short_description": "Unqualified Moves is a Gomoku game with a twist: implementing the strategy of using 'unqualified' people.",
+        "detailed_description": "Unqualified Moves is a unique take on the classic Gomoku game, where players must strategically place their pieces on a five-in-a-row grid to win. What sets Unqualified Moves apart is the implementation of the oblique strategy of 'Using unqualified people'. This can lead to unexpected and chaotic gameplay as the typical strategies of seasoned players are disrupted by unconventional moves. The game challenges players to adapt and think outside the box to outsmart their opponents and secure victory. With its quirky twist on the traditional Gomoku gameplay, Unqualified Moves offers a fresh and entertaining experience for players of all skill levels.",
+        "tags": [
+            "board game",
+            "strategy",
+            "Gomoku",
+            "unique gameplay",
+            "unqualified strategy"
+        ]
+    },
+    "strategy": " people"
+}

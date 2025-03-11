@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Darkest Dungeon' game. Modify it by applying the oblique strategy: 'Allow an easement (an easement is the abandonment of a stricture)'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Shadow's Respite",
+    "game_type": "DarkestDungeon",
+    "branding_data": {
+        "short_description": "Shadow's Respite is a strategic dungeon crawler where players manage a team of adventurers, embracing flexibility in tactics and character development.",
+        "detailed_description": "Shadow's Respite offers a unique take on the traditional dungeon crawling experience by incorporating the concept of 'easement.' In this game, players lead a group of adventurers through perilous dungeons filled with monstrous foes and insidious traps. Unlike typical roguelikes, Shadow's Respite allows players to abandon certain strict rules, giving them the freedom to adapt strategies on the fly. Characters can switch roles, skills, and equipment mid-dungeon, providing a dynamic and flexible gameplay experience. The game encourages experimentation and adaptability, rewarding players who think creatively under pressure. With a dark and atmospheric art style, Shadow's Respite challenges players to conquer their fears and find solace in the shadows.",
+        "tags": [
+            "dungeon crawler",
+            "strategy",
+            "roguelike",
+            "flexibility",
+            "adaptive gameplay",
+            "dark fantasy",
+            "turn-based",
+            "indie"
+        ]
+    },
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "Allow an easement (an easement is the abandonment of a stricture)"
+}

@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Galaga' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Listen in total darkness, or in a very large room, very quietly'.",
+    "path": "ideas/aquatic",
+    "game_type": "Galaga",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Abyssal Echoes",
+    "game_id": "AbyssalEchoes_20250307094118",
+    "branding_data": {
+        "short_description": "Abyssal Echoes is a captivating underwater shooter that explores the depths of the ocean, incorporating themes of sustainability and the hidden mysteries of aquatic ecosystems.",
+        "detailed_description": "Abyssal Echoes is an innovative twist on the classic 'Galaga' arcade shooter set deep within the uncharted waters of the ocean. Players pilot a submersible tasked with protecting marine life and ecosystems from invasive species and pollution threats. The game emphasizes the importance of listening to the subtle and often unnoticed sounds of the ocean, inspired by the oblique strategy 'Listen in total darkness, or in a very large room, very quietly.' The sound design plays a critical role, as players must rely on echolocation and subdued audio cues to navigate, detect threats, and become more attuned to the ocean's natural rhythms. The immersive experience is heightened by serene and haunting soundscapes, encouraging players to consider the impact of their actions on the environment. Ethical choices must be made with each level, challenging players to balance ecosystem integrity with their objectives. Abyssal Echoes serves as both a thrilling game and an educational journey promoting awareness of ocean sustainability.",
+        "tags": [
+            "arcade",
+            "shooter",
+            "underwater",
+            "sustainability",
+            "sound design",
+            "educational",
+            "eco-friendly",
+            "action",
+            "ocean",
+            "interactive"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

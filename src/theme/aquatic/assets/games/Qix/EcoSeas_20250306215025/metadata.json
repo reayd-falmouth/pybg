@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Qix' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'What would your closest friend do?'.",
+    "path": "ideas",
+    "game_type": "Qix",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Eco Seas",
+    "game_id": "EcoSeas_20250306215025",
+    "branding_data": {
+        "short_description": "Eco Seas is a unique take on the classic 'Qix' game, integrating a fish-themed environment with a focus on ethics and sustainability.",
+        "detailed_description": "Eco Seas challenges players to navigate the ocean as a guardian fish, tasked with restoring balance and protecting marine life. Inspired by a close friend's love for ocean conservation, players will section off portions of the sea to clean up pollution and encourage the growth of vibrant coral reefs while protecting fish from overfishing. The game incorporates real-world lessons on sustainability, urging players to manage resources wisely in their quest to save the seas. The balance of strategy and environmental awareness creates a compelling experience that educates while entertaining, perfect for a game jam focused on making an impact.",
+        "tags": [
+            "Puzzle",
+            "Arcade",
+            "Sustainability",
+            "Environment",
+            "Strategy",
+            "Ocean",
+            "Education",
+            "Casual"
+        ]
+    },
+    "strategy": "What would your closest friend do?"
+}

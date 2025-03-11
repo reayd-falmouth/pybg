@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Chess' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Do something boring'.",
+    "path": "ideas",
+    "game_type": "Chess",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Sustainable Catch",
+    "game_id": "SustainableCatch_20250306214010",
+    "branding_data": {
+        "short_description": "Sustainable Catch is a fish-themed chess game where ethical fishing strategies meet strategic gameplay.",
+        "detailed_description": "Sustainable Catch reimagines the classic game of Chess with a unique twist—set in an underwater world where pieces are marine creatures, players must employ strategic and ethical 'fishing' tactics. The game promotes sustainability by requiring players to maintain the balance of the ocean while achieving victory. Every move is a decision with consequences, emphasizing the importance of ethical choices in fishing and marine conservation. Boring moves contain deep educational messages about sustainability, inviting players to rethink traditional strategies in favor of ecological balance. This thought-provoking, strategic game encourages players to ponder their impacts on the oceans, all within the familiar yet innovative framework of Chess.",
+        "tags": [
+            "Chess",
+            "Fish Theme",
+            "Ethics",
+            "Sustainability",
+            "Strategy",
+            "Educational",
+            "Underwater",
+            "Board Game",
+            "Conservation",
+            "Oblique Strategies"
+        ]
+    },
+    "strategy": "Do something boring"
+}

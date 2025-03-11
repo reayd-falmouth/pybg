@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Wave-Based Shooters' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'The tape is now the music'.",
+    "path": "ideas/aquatic",
+    "game_type": "Wave-Based Shooters",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Current Symphony",
+    "game_id": "CurrentSymphony_20250307110638",
+    "branding_data": {
+        "short_description": "Current Symphony is a wave-based shooter set in an aquatic world, where music and marine ecosystems intertwine in a battle for sustainability.",
+        "detailed_description": "In Current Symphony, players dive into a vibrant oceanic realm where sound waves and aquatic life are interconnected. As the guardian of this underwater world, you must defend the marine environments from invasive mechanical entities that threaten to disrupt the harmony. Each enemy wave is synchronized with a dynamic soundtrack that represents the ocean's heartbeat. Players utilize unique aquatic-themed instruments as weapons, converting sonic energy into powerful attacks. Ethical choices impact the ecosystem, with sustainable actions rewarded by enhancing weapon harmonics. The stunning visuals of coral reefs and deep-sea trenches pulse with the rhythm of the soundscape, immersing players in an aquatic ballet of survival and music.",
+        "tags": [
+            "Wave-Based Shooter",
+            "Aquatic Theme",
+            "Music Integration",
+            "Sustainability",
+            "Ethics",
+            "Creative",
+            "Game Jam Friendly",
+            "Underwater",
+            "Puzzle Strategy",
+            "Environmental Awareness"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

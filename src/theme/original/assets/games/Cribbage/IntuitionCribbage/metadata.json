@@ -1,0 +1,26 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Cribbage' game. Modify it by applying the oblique strategy: 'Ask your body'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Intuition Cribbage",
+    "game_type": "Cribbage",
+    "branding_data": {
+        "short_description": "Intuition Cribbage blends classic card gameplay with intuitive decision-making prompts.",
+        "detailed_description": "Intuition Cribbage is a unique twist on the traditional card game of Cribbage, where players are encouraged to engage their instincts and bodily awareness in strategic decision-making. As you play, the game prompts you to 'ask your body' at critical moments, fostering a deeper connection between intuition and strategy. This innovative approach challenges players to not only rely on their mental skills but also to tune into their physical sensations and gut feelings to guide their gameplay. The game retains the classic elements of Cribbage, such as pegging, counting, and strategic card play, while introducing this novel layer of intuitive interaction.",
+        "tags": [
+            "Cribbage",
+            "Card Game",
+            "Strategy",
+            "Intuition",
+            "Innovative Gameplay",
+            "Mind-Body Connection",
+            "Board Game"
+        ]
+    },
+    "strategy": "Ask your body"
+}

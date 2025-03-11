@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Prince of Persia' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Breathe more deeply'.",
+    "path": "ideas",
+    "game_type": "Prince of Persia",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Tides of Balance",
+    "game_id": "TidesofBalance_20250306214936",
+    "branding_data": {
+        "short_description": "Tides of Balance is an action-adventure game that blends classic platforming with an aquatic twist, focusing on ethical interactions with marine life within a vibrant underwater world.",
+        "detailed_description": "Tides of Balance invites players into a mystical underwater realm where they take on the role of a guardian spirit tasked with preserving harmony within the marine ecosystem. Drawing inspiration from classic 'Prince of Persia' gameplay, you navigate through intricate levels filled with obstacles and puzzles that require agility and strategy. The game's unique twist, guided by the oblique strategy 'Breathe more deeply', allows players to harness breath control to affect their environment, solve puzzles, and interact ethically with diverse marine creatures. As players progress, they learn about sustainable practices and the importance of maintaining ecological balance. The game combines fast-paced platforming challenges with moments of serene exploration, emphasizing a thoughtful approach to marine conservation and the harmonization of life underwater.",
+        "tags": [
+            "Action",
+            "Adventure",
+            "Platformer",
+            "Underwater",
+            "Ethics",
+            "Sustainability",
+            "Puzzle",
+            "Marine Life",
+            "Exploration"
+        ]
+    },
+    "strategy": "Breathe more deeply"
+}

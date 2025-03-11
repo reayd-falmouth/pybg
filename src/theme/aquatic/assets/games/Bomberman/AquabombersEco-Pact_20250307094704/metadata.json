@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Bomberman' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Allow an easement (an easement is the abandonment of a stricture)'.",
+    "path": "ideas/aquatic",
+    "game_type": "Bomberman",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Aquabombers Eco-Pact",
+    "game_id": "AquabombersEco-Pact_20250307094704",
+    "branding_data": {
+        "short_description": "Aquabombers Eco-Pact is a Bomberman-style game set in vibrant aquatic environments where players detonate eco-friendly bombs to clean the ocean, promoting sustainability.",
+        "detailed_description": "Aquabombers Eco-Pact is a dynamic multiplayer game inspired by the classic Bomberman, with a unique twist. Set in lush, underwater arenas, players take on the roles of cute, aquatic creatures equipped with innovative 'eco-bombs'. The objective is to collaborate and use these eco-friendly explosions to clear polluted ocean areas, remove debris, and restore marine ecosystems. As players maneuver through coral reefs and ocean floors, they must also be wary of local marine life that might be sensitive to their actions, thus introducing a strategic element of careful planning and cooperation. The game incorporates ethical considerations by encouraging sustainable actions and teamwork to achieve common ecological goals. Following the oblique strategy, 'Allow an easement,' the game notably lacks restrictive competition, allowing players more freedom to explore creativity and cooperation, rather than being bound by strict rules or aggressive gameplay. This design choice eliminates traditional win-lose scenarios, fostering a more open-ended and relaxing yet engaging experience.",
+        "tags": [
+            "Bomberman",
+            "Aquatic",
+            "Multiplayer",
+            "Eco-friendly",
+            "Cooperative",
+            "Strategy",
+            "Casual",
+            "Indie",
+            "Sustainability",
+            "Underwater"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

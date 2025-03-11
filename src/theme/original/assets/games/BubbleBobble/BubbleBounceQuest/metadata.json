@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'BubbleBobble' game. Modify it by applying the oblique strategy: 'Faced with a choice, do both (given by Dieter Roth)'.",
+    "path": "ideas",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "BubbleBounce Quest",
+    "game_type": "BubbleBobble",
+    "branding_data": {
+        "short_description": "BubbleBounce Quest is a whimsical platformer where players navigate through colorful levels, capturing enemies in bubbles while exploring dual pathways.",
+        "detailed_description": "BubbleBounce Quest takes the classic 'BubbleBobble' formula and adds a unique twist by incorporating the oblique strategy: 'Faced with a choice, do both'. Players control adorable characters who traverse vibrant, multi-layered levels filled with challenges and enemies. The game introduces dual pathways in each level, allowing players to explore both routes simultaneously using a split-screen mechanic. Capture enemies in bubbles, bounce off walls, and collect power-ups as you embark on this colorful quest. The game's innovative dual-path system encourages players to strategize and multitask, providing a fresh take on the beloved platforming genre.",
+        "tags": [
+            "Platformer",
+            "Puzzle",
+            "Arcade",
+            "Multiplayer",
+            "Retro",
+            "Strategy",
+            "Colorful",
+            "Family-friendly"
+        ]
+    },
+    "errors": null,
+    "strategy": "Faced with a choice, do both (given by Dieter Roth)"
+}

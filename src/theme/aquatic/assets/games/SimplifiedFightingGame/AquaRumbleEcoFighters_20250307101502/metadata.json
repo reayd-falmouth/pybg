@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Simplified Fighting Game' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Assemble some of the instruments in a group and treat the group'.",
+    "path": "ideas/aquatic",
+    "game_type": "Simplified Fighting Game",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "AquaRumble EcoFighters",
+    "game_id": "AquaRumbleEcoFighters_20250307101502",
+    "branding_data": {
+        "short_description": "Engage in eco-friendly aquatic battles in AquaRumble EcoFighters, a simplified fighting game promoting ocean sustainability.",
+        "detailed_description": "AquaRumble EcoFighters is an innovative fighting game set in vibrant aquatic environments. Players choose from a roster of unique characters, each representing different marine life and eco-warriors. Armed with unique abilities inspired by the ocean, seas, and rivers, characters battle to raise awareness about aquatic conservation. The fighting arenas are beautifully rendered underwater locales, teeming with life and subtle environmental challenges. The game incorporates ethical gameplay mechanics where players can assemble teams of characters. During team battles, players must strategically use sustainable methods to defeat opponents, emphasizing ecological balance and resource management. AquaRumble EcoFighters encourages players to think creatively about sustainability while offering engaging, fast-paced combat suitable for all skill levels.",
+        "tags": [
+            "Fighting Game",
+            "Aquatic Theme",
+            "Eco-friendly",
+            "Sustainability",
+            "Ocean Conservation",
+            "Team Battles",
+            "Strategy",
+            "Underwater",
+            "Multiplayer",
+            "Game Jam"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

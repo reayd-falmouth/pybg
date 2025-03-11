@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Isometric Arcade Action' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Ghost echoes'.",
+    "path": "ideas/aquatic",
+    "game_type": "Isometric Arcade Action",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Aqua Echoes",
+    "game_id": "AquaEchoes_20250307102629",
+    "branding_data": {
+        "short_description": "A captivating isometric arcade action game set in an aquatic world, Aqua Echoes explores themes of sustainability and ethics as players navigate ghostly oceanic realms echoing past deeds.",
+        "detailed_description": "Aqua Echoes is a unique isometric arcade action game with an aquatic theme, designed for a Game Jam challenge. Players dive into the mysterious oceanic world where ghostly echoes of historical and ecological decisions reverberate through the waters. As players guide their character through vibrant underwater environments, they encounter spectral sea creatures and mythical challenges that reflect real-world oceanic issues like pollution and habitat destruction. To succeed, players need to make ethical choices, perform quick-action tasks, and harness abilities linked to sustaining life in the ocean. The game artfully combines engaging action with a meaningful narrative on preserving aquatic ecosystems, inviting players of all skill levels to reflect on their impact while enjoying dynamic gameplay.",
+        "tags": [
+            "Isometric",
+            "Arcade",
+            "Action",
+            "Aquatic",
+            "Ocean",
+            "Game Jam",
+            "Sustainability",
+            "Ethics",
+            "Puzzle",
+            "Environmental"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

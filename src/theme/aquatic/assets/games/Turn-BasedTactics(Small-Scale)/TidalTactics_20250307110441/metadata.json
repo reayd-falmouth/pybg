@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Turn-Based Tactics (Small-Scale)' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'The tape is now the music'.",
+    "path": "ideas/aquatic",
+    "game_type": "Turn-Based Tactics (Small-Scale)",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Tidal Tactics",
+    "game_id": "TidalTactics_20250307110441",
+    "branding_data": {
+        "short_description": "A unique turn-based tactics game with an aquatic theme, integrating sustainability and ethics into underwater skirmishes.",
+        "detailed_description": "Tidal Tactics is a turn-based tactics game set in a vibrant underwater world where players engage in strategic battles over resources critical to oceanic balance. The player's units, inspired by various marine creatures, must navigate reefs, kelp forests, and shipwrecks to outmaneuver rival factions. Each tactical decision addresses the balance of utilizing resources sustainably versus the immediate benefits of overconsumption. In a twist inspired by the oblique strategy 'The tape is now the music,' the natural rhythms and sounds of the ocean itself become a key gameplay mechanic, dictating the flow of actions and affecting strategies. Players must listen and adapt to these wave-like patterns to master the tide of battle, reflecting the harmony and dissonance of nature itself.",
+        "tags": [
+            "Turn-Based Tactics",
+            "Strategy",
+            "Aquatic",
+            "Ocean",
+            "Sustainability",
+            "Ethics",
+            "Creativity",
+            "Game Jam",
+            "Unique Mechanics"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

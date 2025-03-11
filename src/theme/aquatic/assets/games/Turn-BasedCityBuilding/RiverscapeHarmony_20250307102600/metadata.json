@@ -1,0 +1,32 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Turn-Based City Building' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Don't be afraid of things because they're easy to do'.",
+    "path": "ideas/aquatic",
+    "game_type": "Turn-Based City Building",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Riverscape Harmony",
+    "game_id": "RiverscapeHarmony_20250307102600",
+    "branding_data": {
+        "short_description": "Explore an aquatic world where sustainable city planning meets strategic turn-based gameplay in Riverscape Harmony.",
+        "detailed_description": "Riverscape Harmony is a turn-based city-building game set in a vibrant, aquatic-themed world where players must strategically expand and manage their cities along rivers, seas, and oceans. The game emphasizes ethical and sustainable development, encouraging players to harness renewable resources and protect aquatic ecosystems. Easily accessible for all skill levels, Riverscape Harmony incorporates unique aquatic elements like water currents and marine wildlife into the gameplay. Players make turn-based decisions on city growth, focusing on balance and harmony with nature, ensuring prosperity for their citizens while maintaining environmental sustainability. The game invites players not to shy away from simple solutions, showcasing that sometimes the easy path is both efficient and rewarding. As players progress, they tackle challenges related to climate change, pollution, and a growing population, urging them to create a thriving metropolis without compromising the oceanic beauty surrounding them.",
+        "tags": [
+            "city-building",
+            "turn-based",
+            "aquatic",
+            "sustainability",
+            "strategic",
+            "environmental",
+            "ethics",
+            "ocean",
+            "seas",
+            "rivers",
+            "eco-friendly",
+            "game jam",
+            "casual"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

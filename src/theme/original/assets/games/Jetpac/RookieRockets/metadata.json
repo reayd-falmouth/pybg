@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Jetpac' game. Modify it by applying the oblique strategy: 'Use 'unqualified' people'.",
+    "path": "ideas",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Rookie Rockets",
+    "game_type": "Jetpac",
+    "branding_data": {
+        "short_description": "Rookie Rockets is a unique twist on the classic 'Jetpac' gameplay, featuring inexperienced astronauts on a mission.",
+        "detailed_description": "Rookie Rockets reimagines the classic arcade game 'Jetpac' with a humorous and challenging twist. Players take control of 'unqualified' astronauts, who must navigate through various levels to collect rocket parts and fuel while avoiding obstacles and enemies. These rookie spacefarers bring their own set of unpredictable challenges, as their lack of experience leads to unexpected movements and comedic mishaps. The game emphasizes strategy and quick thinking as players must adapt to the quirky behavior of their characters to successfully complete each mission. With colorful graphics, engaging gameplay, and a light-hearted narrative, Rookie Rockets offers a fresh and entertaining experience for fans of retro-style games.",
+        "tags": [
+            "arcade",
+            "retro",
+            "strategy",
+            "humor",
+            "space",
+            "platformer",
+            "casual",
+            "indie"
+        ]
+    },
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "Use "
+}

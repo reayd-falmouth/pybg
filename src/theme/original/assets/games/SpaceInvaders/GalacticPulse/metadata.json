@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Space Invaders' game. Modify it by applying the oblique strategy: 'Fill every beat with something'.",
+    "path": "ideas",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Galactic Pulse",
+    "game_type": "SpaceInvaders",
+    "branding_data": {
+        "short_description": "Galactic Pulse is a reimagined 'Space Invaders' where every moment is filled with action and surprises.",
+        "detailed_description": "Galactic Pulse takes the classic 'Space Invaders' formula and infuses it with relentless energy and constant activity. In this version, players must defend Earth against waves of alien invaders, but with a twist: every beat of the game is filled with new elements, whether it's a sudden change in enemy patterns, power-ups, or environmental effects. The game challenges players to adapt quickly and stay on their toes as the battlefield evolves with each passing second. The rhythmic pacing and dynamic challenges ensure that no two moments are the same, providing a fresh and exhilarating experience with every playthrough.",
+        "tags": [
+            "Arcade",
+            "Shooter",
+            "Space",
+            "Aliens",
+            "Action",
+            "Rhythm",
+            "Retro",
+            "Dynamic Gameplay",
+            "Single-player"
+        ]
+    },
+    "errors": null,
+    "strategy": "Fill every beat with something"
+}

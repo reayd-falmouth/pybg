@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Word Games' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'What is the reality of the situation?'.",
+    "path": "ideas/aquatic",
+    "game_type": "Word Games",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Submersed Realities",
+    "game_id": "SubmersedRealities_20250307102235",
+    "branding_data": {
+        "short_description": "Submersed Realities: Dive into a world of words beneath the waves, exploring the depths of the ocean through creative and sustainable gameplay.",
+        "detailed_description": "Submersed Realities challenges players to embark on a linguistic adventure inspired by the mysterious and colossal world beneath the ocean's surface. The game is a word puzzle experience where players navigate through different aquatic environments, each filled with words that relate to oceanic life, sustainability, and the ethics of marine preservation. The reality of the situation is revealed as players confront real-world environmental issues via word challenges, unlocking new vocabulary related to marine biology and conservation. Developer-friendly features allow creators of every skill level to add their own unique twists, further immersing players in a sea of knowledge and discovery. Each puzzle solved highlights a deeper understanding of how words and actions impact our oceans, encouraging responsibility and awareness.",
+        "tags": [
+            "word games",
+            "puzzle",
+            "ocean",
+            "aquatic",
+            "sustainability",
+            "marine life",
+            "education",
+            "game jam",
+            "creative",
+            "engaging"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

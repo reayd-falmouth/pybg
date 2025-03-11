@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Tetris' game. Modify it by applying the oblique strategy: 'Is the tuning appropriate?'.",
+    "path": "../oblique-games/ideas/",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Tetrix Harmony",
+    "game_type": "Tetris",
+    "branding_data": {
+        "short_description": "Tetrix Harmony is a unique twist on the classic Tetris game, where players must ensure the blocks 'tune' harmoniously as they fall.",
+        "detailed_description": "Tetrix Harmony reinvents the classic Tetris experience by introducing an innovative mechanic where each block has a unique musical note. As blocks fall and lines clear, players must ensure the notes create a harmonious melody. The challenge lies not only in fitting the blocks but also in tuning them appropriately to maintain a pleasant auditory experience. This creative twist requires players to think about both spatial and auditory elements, offering a fresh and engaging puzzle experience.",
+        "tags": [
+            "Puzzle",
+            "Music",
+            "Strategy",
+            "Tetris",
+            "Casual",
+            "Indie",
+            "Innovative",
+            "Single-player"
+        ]
+    },
+    "errors": null,
+    "strategy": "Is the tuning appropriate?"
+}

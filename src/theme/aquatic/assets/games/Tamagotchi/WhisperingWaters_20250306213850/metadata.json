@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Tamagotchi' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Listen to the quiet voice'.",
+    "path": "ideas",
+    "game_type": "Tamagotchi",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Whispering Waters",
+    "game_id": "WhisperingWaters_20250306213850",
+    "branding_data": {
+        "short_description": "Whispering Waters is a Tamagotchi-style game where players care for a virtual fish, learning about ethics and sustainability in aquatic ecosystems through gentle guidance and whispered insights.",
+        "detailed_description": "Whispering Waters combines the simple, nurturing mechanics of classic Tamagotchi games with a deep, reflective exploration of ethical and sustainable interactions with aquatic life. Players take on the role of a caretaker for a unique, whispering fish that guides them through its needs and the underwater world's delicate balance. Through 'listening to the quiet voice,' players discover secrets of the ocean and are encouraged to make thoughtful decisions that impact the environment positively. The game challenges them to maintain the health of both their fish and its habitat, learning to value the subtleties of ecosystem interdependencies. Educational segments offer insights into sustainable practices and the importance of environmental ethics, woven naturally into the gameplay.",
+        "tags": [
+            "Tamagotchi",
+            "Fish",
+            "Ethics",
+            "Sustainability",
+            "Simulation",
+            "Educational",
+            "Eco-friendly",
+            "Whispering",
+            "Aquatic",
+            "Care"
+        ]
+    },
+    "strategy": "Listen to the quiet voice"
+}

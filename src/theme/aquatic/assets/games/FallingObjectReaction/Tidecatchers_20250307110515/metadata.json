@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Falling Object Reaction' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'You don't have to be ashamed of using your own ideas'.",
+    "path": "ideas/aquatic",
+    "game_type": "Falling Object Reaction",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Tidecatchers",
+    "game_id": "Tidecatchers_20250307110515",
+    "branding_data": {
+        "short_description": "Tidecatchers is a creative and engaging aquatic-themed 'Falling Object Reaction' game focused on oceanic sustainability and ethical fishing practices.",
+        "detailed_description": "Tidecatchers invites players to step into the shoes of a sustainable fisher in a vibrant underwater world. As fish and various oceanic treasures fall through the water column, players must react swiftly to catch only the approved species and items while avoiding endangered marine life and pollutants. The game emphasizes balance, as catching the wrong items will result in penalties, teaching players the importance of ethical fishing and ocean preservation. Featuring educational content about marine ecosystems and sustainable practices, Tidecatchers is accessible to developers of all skill levels and encourages them to incorporate their unique ideas and interpretations while contributing to environmental awareness.",
+        "tags": [
+            "Falling Object Reaction",
+            "Aquatic",
+            "Ocean",
+            "Sustainability",
+            "Education",
+            "Ethics",
+            "Fishing",
+            "Environmental Awareness",
+            "Indie",
+            "Game Jam"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

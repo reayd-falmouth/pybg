@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Falling Block Puzzle' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Honor thy error as a hidden intention'.",
+    "path": "ideas/aquatic",
+    "game_type": "Falling Block Puzzle",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Ocean Tides Tumble",
+    "game_id": "OceanTidesTumble_20250307111006",
+    "branding_data": {
+        "short_description": "Dive into an aquatic-themed falling block puzzle adventure with Ocean Tides Tumble, where unforeseen challenges become strategic opportunities in a sustainability-focused marine world.",
+        "detailed_description": "Ocean Tides Tumble transforms the classic falling block puzzle genre into an aquatic spectacle, where oceanic currents take on a life of their own. The blocks, designed to resemble various marine life and ecosystems, descend to create vibrant underwater landscapes. Inspired by the oblique strategy, 'Honor thy error as a hidden intention', players are encouraged to embrace unexpected moves as potential game-winning strategies. Environmental elements such as coral reefs, schools of fish, and oceanic currents act not only as interactive background visuals but also influence the blocks’ behavior, providing a dynamic challenge. The game incorporates themes of marine ethics and sustainability, featuring levels where players can 'clean up' oceanic debris blocks, promoting awareness of ocean health. Suitable for developers of all skill levels, the game features a 'tide twist' mechanic where random events reflect real-world scenarios, offering opportunities to turn accidental plays into strategic advantages.",
+        "tags": [
+            "puzzle",
+            "falling block",
+            "aquatic",
+            "marine",
+            "ocean",
+            "sustainability",
+            "strategy",
+            "game jam",
+            "ethics",
+            "environmental awareness"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

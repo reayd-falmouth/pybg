@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Pokémon' game. Modify it by applying the oblique strategy: 'Get your neck massaged'.",
+    "path": "../oblique-games/ideas/",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Pokémon: Relaxation Quest",
+    "game_type": "Pokémon",
+    "branding_data": {
+        "short_description": "Embark on a serene journey to become a Pokémon master while embracing relaxation and mindfulness.",
+        "detailed_description": "Pokémon: Relaxation Quest invites players to explore a tranquil world where the journey to becoming a Pokémon master is intertwined with relaxation and self-care. In this unique take on the Pokémon franchise, players will encounter a variety of Pokémon that embody calmness and serenity. The game encourages players to take breaks and engage in activities that promote mindfulness, such as guided meditation sessions with their Pokémon or visiting in-game spas for neck massages. As players progress, they will learn the importance of balance between adventure and relaxation, making it an ideal game for those seeking a peaceful escape while still enjoying the thrill of Pokémon battles and exploration.",
+        "tags": [
+            "Pokémon",
+            "Relaxation",
+            "Mindfulness",
+            "Adventure",
+            "RPG",
+            "Casual",
+            "Exploration",
+            "Self-Care"
+        ]
+    },
+    "errors": null,
+    "strategy": "Get your neck massaged"
+}

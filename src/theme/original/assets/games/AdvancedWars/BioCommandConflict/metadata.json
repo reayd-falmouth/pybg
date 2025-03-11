@@ -1,0 +1,30 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Advanced Wars' game. Modify it by applying the oblique strategy: '(Organic) machinery'.",
+    "path": "ideas",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "BioCommand Conflict",
+    "game_type": "AdvancedWars",
+    "branding_data": {
+        "short_description": "BioCommand Conflict is a tactical turn-based strategy game where players command organic machinery units in a futuristic battlefield.",
+        "detailed_description": "BioCommand Conflict takes the strategic gameplay of classic turn-based strategy games like Advanced Wars and introduces a unique twist with the concept of '(Organic) machinery.' Set in a future where biotechnology has advanced to the point where machines are grown rather than built, players must command a variety of bio-engineered units on the battlefield. Each unit, from infantry to tanks, is a living organism enhanced with mechanical abilities. Players must adapt their strategies to the strengths and weaknesses of these organic machines, leveraging their unique abilities to outmaneuver and outsmart opponents. The game features a campaign mode with a rich narrative, multiplayer battles, and a map editor for endless replayability.",
+        "tags": [
+            "Turn-Based Strategy",
+            "Tactical",
+            "Futuristic",
+            "Biotechnology",
+            "Organic Machinery",
+            "Single Player",
+            "Multiplayer",
+            "Map Editor",
+            "Strategy",
+            "Sci-Fi"
+        ]
+    },
+    "errors": null,
+    "strategy": "(Organic) machinery"
+}

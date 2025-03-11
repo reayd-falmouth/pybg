@@ -1,0 +1,58 @@
+[tool.poetry]
+name = "oblique-games"
+version = "0.1.0"
+description = ""
+authors = ["reayd-falmouth <dr323090@falmouth.ac.uk>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.14"
+pygame-gui = "^0.6.13"
+moderngl = "^5.12.0"
+pygame-ce = "^2.5.3"
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+pillow = "^11.1.0"
+pygbag = "^0.9.2"
+pyinstaller = "^6.12.0"
+pytest = "^8.3.4"
+pytest-cov = "^6.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.linting.dependencies]
+ruff = "^0.0.291"
+black = "^25.1.0"
+pylint = "==2.6.0"
+autopep8 = "^2.0.4"
+
+
+[tool.pytest.ini_options]
+log_cli = false
+log_cli_level = 0
+filterwarnings = [
+    "ignore::DeprecationWarning"
+]
+markers = [
+    "integration",
+    "unit"
+]
+
+# Configuration settings for the coverage tool to specify how code coverage is calculated
+[tool.coverage.run]
+# The 'source' list defines the directories or specific files to include when calculating code coverage.
+source = [
+    "*/lib/*.py",  # Include all Python files in any 'lib' directory at any depth
+    "*/bin/*.py",  # Include all Python files in any 'bin' directory at any depth
+]
+
+# The 'omit' list specifies files or directories to exclude from coverage calculations.
+omit = [
+    "*/tests/*",      # Exclude all files in any 'tests' directory at any depth
+    "*conftest.py*",  # Exclude all 'conftest.py' files, which are used by pytest for test configurations
+    "*setup.py*",     # Exclude 'setup.py', typically used for package and distribution management
+]

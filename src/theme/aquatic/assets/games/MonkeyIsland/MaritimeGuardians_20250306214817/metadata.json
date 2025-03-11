@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Monkey Island' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Do we need holes?'.",
+    "path": "ideas",
+    "game_type": "Monkey Island",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Maritime Guardians",
+    "game_id": "MaritimeGuardians_20250306214817",
+    "branding_data": {
+        "short_description": "Embark on a whimsical journey to explore the ethics of fishing in a vibrant island setting.",
+        "detailed_description": "Maritime Guardians is an adventure game set in a whimsical, island world inspired by classic 'Monkey Island' games. As the player, you take on the role of an aspiring maritime guardian tasked with exploring the ethical dimensions of fishing and sustainability. With the theme centered around a vibrant underwater ecosystem, players navigate through colorful coral reefs and bustling island marketplaces. Along the way, they must solve puzzles that explore the concept 'Do we need holes?', challenging players to reconsider traditional fishing methods that may disrupt the ocean's delicate balance. As you interact with quirky characters and uncover hidden secrets, the game invites introspection on how we can coexist with marine life responsibly.",
+        "tags": [
+            "Adventure",
+            "Puzzle",
+            "Point and Click",
+            "Sustainability",
+            "Ethics",
+            "Fishing",
+            "Island",
+            "Underwater",
+            "Humor",
+            "Exploration"
+        ]
+    },
+    "strategy": "Do we need holes?"
+}

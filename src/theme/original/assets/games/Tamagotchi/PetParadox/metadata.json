@@ -1,0 +1,15 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Tamagotchi' game. Modify it by applying the oblique strategy: 'The inconsistency principle'.",
+    "path": "ideas",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Pet Paradox",
+    "game_type": "Tamagotchi",
+    "branding_data": "{'short_description': 'Pet Paradox is a unique Tamagotchi-inspired game where your virtual pet behaves unpredictably, challenging you to adapt to its ever-changing needs and moods.', 'detailed_description': \"In Pet Paradox, players care for a virtual pet that defies expectations with its inconsistent behavior. Unlike traditional pet simulation games, where actions lead to predictable outcomes, Pet Paradox introduces the 'inconsistency principle', where the pet's reactions vary each time. Feeding your pet might make it happy one day and grumpy the next, and the same toy might be entertaining or boring depending on its mood. Players must adapt to these shifting dynamics, learning to read subtle cues and experimenting with different strategies to keep their pet healthy and content. This unpredictable environment creates a dynamic and engaging experience, as players never know exactly how their pet will respond, making each interaction a new challenge.\", 'tags': ['Tamagotchi', 'Virtual Pet', 'Simulation', 'Unpredictable', 'Dynamic Gameplay', 'Adaptation', 'Strategy', 'Casual']}",
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "The inconsistency principle"
+}

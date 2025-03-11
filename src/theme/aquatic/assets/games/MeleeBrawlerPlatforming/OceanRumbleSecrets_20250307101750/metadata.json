@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Melee Brawler Platforming' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Twist the spine'.",
+    "path": "ideas/aquatic",
+    "game_type": "Melee Brawler Platforming",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Ocean Rumble Secrets",
+    "game_id": "OceanRumbleSecrets_20250307101750",
+    "branding_data": {
+        "short_description": "Dive into Ocean Rumble Secrets, a melee brawler platformer where aquatic legends come to life.",
+        "detailed_description": "Ocean Rumble Secrets is a unique melee brawler platformer that transports players to vibrant underwater worlds teeming with life and mysteries. Set in a dynamic oceanic realm, players navigate through intricately designed levels filled with obstacles inspired by marine environments like coral labyrinths and sunken ship arenas. With the oblique strategy 'Twist the spine,' the game introduces a mechanic where the player's character adapts fluidly to environments, altering its spine to dodge threats or attack foes more efficiently.\n\nPlayers will embody amphibian warriors, each with distinct combat styles and abilities, emphasizing sustainable interactions with the environment. The narrative weaves a tale of preserving the secrets of the ocean, focusing on ethical choices where actions impact the ocean's health and harmony. Engaging in combat with sea creatures, players uncover the effects of pollution and overfishing, teaching the importance of protecting marine ecosystems through innovative gameplay mechanics.\n\nThe game is designed to be accessible for all skill levels, providing a robust experience with varying challenges, cooperative multiplayer options, and puzzles to solve, creating an engaging ecosystem for players to explore and learn about marine conservation.",
+        "tags": [
+            "Platformer",
+            "Melee Brawler",
+            "Aquatic",
+            "Ocean",
+            "Game Jam",
+            "Ethics",
+            "Sustainability",
+            "Adventure",
+            "Puzzle",
+            "Multiplayer"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

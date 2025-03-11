@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Shogi' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'What mistakes did you make last time?'.",
+    "path": "ideas",
+    "game_type": "Shogi",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Aqua Shogi Ethics",
+    "game_id": "AquaShogiEthics_20250306213631",
+    "branding_data": {
+        "short_description": "Aqua Shogi Ethics blends traditional Shogi with a fish-themed, ethical strategy twist, emphasizing sustainability.",
+        "detailed_description": "Aqua Shogi Ethics is a unique twist on the classic Japanese strategy game, Shogi, set in an underwater world filled with vibrant aquatic life. Players engage in tactical battles using pieces represented by various fish species, each with unique abilities and movement patterns. The game integrates a compelling theme of ethics and sustainability, where players must balance their strategies with ecological preservation. Actions may lead to ethical dilemmas - capture too many fish, and the underwater ecosystem suffers, affecting gameplay. Players are challenged to remember previous mistakes to avoid similar ethical pitfalls, encouraging reflection on past actions for sustainable success.",
+        "tags": [
+            "Strategy",
+            "Board Game",
+            "Shogi",
+            "Fish",
+            "Ethics",
+            "Sustainability",
+            "Puzzle",
+            "Nature",
+            "Educational",
+            "Japanese"
+        ]
+    },
+    "strategy": "What mistakes did you make last time?"
+}

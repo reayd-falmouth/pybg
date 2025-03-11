@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Centipede' game. Modify it by applying the oblique strategy: 'Abandon normal instruments'.",
+    "path": "../oblique-games/ideas/",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Chaos Crawl",
+    "game_type": "Centipede",
+    "branding_data": {
+        "short_description": "Experience a unique twist on the classic arcade shooter in Chaos Crawl, where conventional gameplay elements are replaced with chaotic mechanics.",
+        "detailed_description": "Chaos Crawl is a reimagined version of the classic 'Centipede' arcade game, inspired by the oblique strategy 'Abandon normal instruments.' In this game, players navigate a surreal, ever-changing landscape where traditional weapons are replaced by unpredictable, transformative tools. Instead of a typical shooter, players wield instruments that alter the environment and enemy behaviors in unexpected ways. Each playthrough offers a new set of challenges as the centipede and other creatures react dynamically to the player's unconventional methods. The game's visuals and sound design are equally erratic, creating an immersive and chaotic experience that keeps players on their toes.",
+        "tags": [
+            "Arcade",
+            "Shooter",
+            "Retro",
+            "Experimental",
+            "Strategy",
+            "Chaos",
+            "Dynamic Gameplay",
+            "Surreal"
+        ]
+    },
+    "errors": null,
+    "strategy": "Abandon normal instruments"
+}

@@ -1,0 +1,25 @@
+{
+    "config": "Default",
+    "org": "DefaultOrganization",
+    "task": "Develop a basic Gomoku game. Modify it by applying the oblique strategy: 'Turn it upside down'.",
+    "name": "Upside Down Gomoku",
+    "model": "GPT_3_5_TURBO",
+    "path": "",
+    "game_type": "Gomoku",
+    "random_game": false,
+    "oblique_strategy": true,
+    "dry_run": true,
+    "branding": true,
+    "branding_data": {
+        "short_description": "Upside Down Gomoku is a unique twist on the classic Gomoku game where players need to think and strategize differently by utilizing an upside-down approach.",
+        "detailed_description": "Upside Down Gomoku is a variation of the traditional Gomoku game where players place stones on a grid to try and get five in a row horizontally, vertically, or diagonally. However, in this version, the game board is flipped upside down, adding a new layer of complexity to the gameplay. Players must now think differently and strategize in unconventional ways to outsmart their opponents. Upside Down Gomoku offers a fresh challenge to fans of the original game, requiring them to adapt their tactics to succeed in this innovative twist.",
+        "tags": [
+            "Gomoku",
+            "strategy",
+            "puzzle",
+            "board game",
+            "variation"
+        ]
+    },
+    "strategy": "Turn it upside down"
+}

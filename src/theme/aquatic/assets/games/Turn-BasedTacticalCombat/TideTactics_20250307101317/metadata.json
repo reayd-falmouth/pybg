@@ -1,0 +1,31 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Turn-Based Tactical Combat' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Are there sections? Consider transitions'.",
+    "path": "ideas/aquatic",
+    "game_type": "Turn-Based Tactical Combat",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Tide Tactics",
+    "game_id": "TideTactics_20250307101317",
+    "branding_data": {
+        "short_description": "Tide Tactics is an aquatic-themed turn-based tactical combat game, focusing on ethical and sustainable oceanic warfare.",
+        "detailed_description": "Tide Tactics immerses players in a vibrant underwater world where they command a team of creatures adapted for oceanic combat. The gameplay spans different oceanic sections, transitioning seamlessly between coral reefs, deep-sea trenches, and vibrant river estuaries. As players plot their turn-based strategies, they must consider the environmental impact of their actions, aiming to maintain the delicate balance of these aquatic ecosystems. Ethical choices and sustainable tactics play a pivotal role, as players engage in combat scenarios that challenge them to protect marine life and ensure the health of their surroundings. The game encourages thoughtful decision-making, promoting the importance of conservation and mindful gaming tactics in an engaging and accessible format suitable for developers of all skills levels.",
+        "tags": [
+            "Turn-Based Strategy",
+            "Tactical Combat",
+            "Aquatic Theme",
+            "Ocean",
+            "Sustainability",
+            "Ethics",
+            "Game Jam",
+            "Marine Life",
+            "Strategy",
+            "Eco-friendly",
+            "Environmental Impact",
+            "Underwater Adventure"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

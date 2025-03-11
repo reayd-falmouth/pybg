@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Spades' game. Modify it by applying the oblique strategy: 'Put in earplugs'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Silent Spades",
+    "game_type": "Spades",
+    "branding_data": {
+        "short_description": "Silent Spades is a unique twist on the classic card game 'Spades', where players experience the challenge of playing without auditory cues.",
+        "detailed_description": "Silent Spades takes the traditional card game of 'Spades' and introduces a novel twist inspired by the oblique strategy 'Put in earplugs'. In this version, players must rely solely on visual cues and strategies, as all sound effects and voice communications are removed from the gameplay. This innovative approach tests players' ability to adapt and communicate using only visual signals and non-verbal strategies. The game retains the classic rules of 'Spades', where players bid and compete to win tricks, but the absence of sound adds a layer of complexity and requires heightened focus and teamwork.",
+        "tags": [
+            "Card Game",
+            "Strategy",
+            "Multiplayer",
+            "Silent",
+            "Adaptation",
+            "Visual Communication",
+            "Non-verbal",
+            "Classic",
+            "Innovative"
+        ]
+    },
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "Put in earplugs"
+}

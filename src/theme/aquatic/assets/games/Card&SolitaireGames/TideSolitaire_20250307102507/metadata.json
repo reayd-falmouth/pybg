@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Card & Solitaire Games' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Simple subtraction'.",
+    "path": "ideas/aquatic",
+    "game_type": "Card & Solitaire Games",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Tide Solitaire",
+    "game_id": "TideSolitaire_20250307102507",
+    "branding_data": {
+        "short_description": "Tide Solitaire is an aquatic-themed card game that subtracts traditional elements to focus on oceanic sustainability and ethics.",
+        "detailed_description": "Tide Solitaire is an innovative twist on classic card games, set against a mesmerizing aquatic backdrop. The gameplay emphasizes simplicity by removing traditional card suits and numbers, focusing instead on ocean creatures and habitats. Players build sequences by matching cards based on ocean ecosystems and their symbiotic relationships. The game introduces elements like tides and currents as gameplay mechanics, altering card availability and flow. Ethical choices are embedded in the game, requiring players to balance card usage to maintain sustainable ecosystems, reflecting real-world environmental challenges. The unique theme encourages players to think about the impact of human actions on marine life, promoting lessons on conservation and sustainability.",
+        "tags": [
+            "Card Games",
+            "Solitaire",
+            "Aquatic",
+            "Sustainability",
+            "Ethics",
+            "Ocean",
+            "Creative",
+            "Engaging",
+            "Game Jam",
+            "Environment"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Galaga' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Ask your body'.",
+    "path": "ideas/aquatic",
+    "game_type": "Galaga",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Sea Invaders",
+    "game_id": "SeaInvaders_20250307094028",
+    "branding_data": {
+        "short_description": "Sea Invaders is a retro-style shooter game that takes place in an underwater world, where players fend off alien aquatic creatures threatening the ocean's balance.",
+        "detailed_description": "In 'Sea Invaders', players dive into a hostile underwater environment, assuming control of a submarine equipped with sustainable weapons. The objective is to protect the oceans from an onslaught of alien sea creatures who disrupt marine life and ecosystems. By using intuitive controls inspired by natural body movements, players can navigate through coral reefs and deep-sea trenches, strategically targeting invaders. The game emphasizes the importance of ocean conservation, rewarding players for minimizing collateral damage and preserving marine habitats. Power-ups include biodegradable nets and eco-harpoons, promoting ethical gameplay and encouraging sustainable interactions with the environment. Designed for all skill levels, 'Sea Invaders' challenges players to critically think about the impact of technology on nature while enjoying fast-paced, retro-inspired action.",
+        "tags": [
+            "Retro",
+            "Shooter",
+            "Aquatic Theme",
+            "Sustainability",
+            "Conservation",
+            "Alien Invasion",
+            "Submarine",
+            "Body Movements",
+            "Eco-friendly",
+            "Arcade"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

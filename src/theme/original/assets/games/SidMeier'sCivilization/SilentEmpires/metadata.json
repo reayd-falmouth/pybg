@@ -1,0 +1,15 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Sid Meier's Civilization' game. Modify it by applying the oblique strategy: 'Tape your mouth (given by Ritva Saarikko)'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Silent Empires",
+    "game_type": "SidMeier'sCivilization",
+    "branding_data": "{'short_description': 'A strategic empire-building game where communication is limited.', 'detailed_description': 'Silent Empires is a unique twist on the classic empire-building strategy genre, inspired by Sid Meier\\'s Civilization. In this game, players must develop their civilizations from the ground up, advancing through different eras and making strategic decisions to outmaneuver opponents. However, the game introduces a challenging twist: communication is severely limited. Players must navigate diplomacy, trade, and alliances without the use of traditional dialogue options, relying on non-verbal cues and actions to convey intentions. This innovative mechanic requires players to think creatively and strategically, fostering a new level of immersion and challenge in the pursuit of building a thriving empire.', 'tags': ['strategy', 'empire-building', 'turn-based', 'diplomacy', 'non-verbal communication', 'civilization', 'innovation']}",
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": " game. Modify it by applying the oblique strategy: "
+}

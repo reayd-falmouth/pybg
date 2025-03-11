@@ -1,0 +1,30 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Paperboy' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Change instrument roles'.",
+    "path": "ideas/aquatic",
+    "game_type": "Paperboy",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Current Sail",
+    "game_id": "CurrentSail_20250307095956",
+    "branding_data": {
+        "short_description": "Deliver environmental messages through ocean currents in 'Current Sail', blending aquatic themes with elements of sustainability and ethics.",
+        "detailed_description": "Current Sail is a unique twist on the classic 'Paperboy' game, set in a vibrant aquatic world. Players take on the role of a young captain who navigates the ocean, seas, and rivers in a small sailing vessel. Instead of delivering newspapers, the captain releases bottles containing messages of sustainability and ethics to diverse aquatic communities. The game challenges players to use the natural behaviors of currents and tides to efficiently deliver messages to dolphins, turtles, and coral reefs, changing the traditional roles of newspapers to embrace the environment-centric themes. Along the way, players learn about the ecological balance and the impact of human activities on aquatic life. Slick controls and dynamically changing weather systems make navigation challenging and fun, while the engaging storyline enriches players' understanding of marine ethics and the importance of preserving oceanic health.",
+        "tags": [
+            "Aquatic",
+            "Sustainability",
+            "Eco-friendly",
+            "Adventure",
+            "Simulation",
+            "Strategy",
+            "Puzzle",
+            "Educational",
+            "Indie",
+            "Casual",
+            "Narrative"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

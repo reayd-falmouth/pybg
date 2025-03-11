@@ -1,0 +1,15 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Dungeon Keeper' game. Modify it by applying the oblique strategy: 'Don't stress one thing more than another'.",
+    "path": "ideas",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Balanced Realm",
+    "game_type": "DungeonKeeper",
+    "branding_data": "{'short_description': 'Balanced Realm is a strategic dungeon management game where you must maintain equilibrium among various elements to succeed.', 'detailed_description': 'Balanced Realm invites players to take on the role of a dungeon keeper tasked with constructing and managing a complex underground lair. Unlike traditional dungeon management games, the focus here is on maintaining a balance between resources, minion happiness, defense, and expansion. Inspired by the oblique strategy \"Don\\'t stress one thing more than another,\" players must ensure that no single aspect of their dungeon is neglected. Overemphasizing one area, such as resource gathering or defense, can lead to vulnerabilities in other areas, resulting in challenges that require strategic adjustments. Players will recruit and manage various creatures, build rooms, and set traps while keeping a close eye on the overall harmony of their realm. Success comes from a well-rounded approach, making sure that every element of the dungeon supports the others.', 'tags': ['strategy', 'dungeon management', 'balance', 'resource management', 'simulation', 'strategic planning', 'fantasy', 'base building']}",
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "Don"
+}

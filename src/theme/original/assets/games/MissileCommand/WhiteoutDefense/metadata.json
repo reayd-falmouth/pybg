@@ -1,0 +1,25 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Missile Command' game. Modify it by applying the oblique strategy: '[blank white card]'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Whiteout Defense",
+    "game_type": "MissileCommand",
+    "branding_data": {
+        "short_description": "Defend your cities from incoming missiles in a minimalist world of pure white.",
+        "detailed_description": "Whiteout Defense is a modern take on the classic 'Missile Command' game, set in a stark, minimalist environment. Players must protect their cities from waves of incoming missiles using anti-missile batteries. The twist lies in the 'blank white card' strategy: the entire game world is rendered in shades of white, challenging players to distinguish between threats and the environment. This unique visual style requires players to rely on sound cues and subtle visual differences to succeed. Strategic thinking and quick reflexes are essential as the difficulty escalates with each wave.",
+        "tags": [
+            "Arcade",
+            "Strategy",
+            "Minimalist",
+            "Action",
+            "Retro",
+            "Defense"
+        ]
+    },
+    "strategy": "[blank white card]"
+}

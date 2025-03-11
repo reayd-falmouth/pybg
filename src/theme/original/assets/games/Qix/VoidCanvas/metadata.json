@@ -1,0 +1,15 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Qix' game. Modify it by applying the oblique strategy: 'Do we need holes?'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Void Canvas",
+    "game_type": "Qix",
+    "branding_data": "{'short_description': 'A modern twist on the classic Qix game where players fill a canvas while avoiding dynamic obstacles and discovering hidden voids.',\n 'detailed_description': 'Void Canvas is an innovative reinterpretation of the classic arcade game Qix. In this game, players control a cursor to draw lines and capture sections of the screen, filling the canvas with color. However, unlike traditional Qix games, Void Canvas introduces the concept of \"voids\" - hidden areas that are only revealed once surrounded completely. These voids can either aid or hinder the player by providing power-ups or additional challenges. The game removes the traditional static holes and instead dynamically changes the playing field with these voids, encouraging strategic thinking and exploration. Players must navigate around moving enemies and strategically uncover voids to achieve the highest score possible.',\n 'tags': ['arcade', 'strategy', 'puzzle', 'retro', 'Qix', 'voids', 'dynamic gameplay', 'exploration', 'power-ups']}",
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "Do we need holes?"
+}

@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Backgammon' game with the theme Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.. Modify it by applying the oblique strategy: 'Get your neck massaged'.",
+    "path": "ideas/aquatic",
+    "game_type": "Backgammon",
+    "model": "gpt-4o",
+    "count": 5,
+    "name": "Aqua Drift",
+    "game_id": "AquaDrift_20250307073301",
+    "branding_data": {
+        "short_description": "Aqua Drift is a backgammon-inspired game with an aquatic theme, featuring ocean currents and marine life. It explores sustainability and ethics in a captivating underwater world.",
+        "detailed_description": "Aqua Drift invites players into a mystical underwater world, where traditional backgammon gameplay meets the rhythmic flow of ocean currents. The board is brought to life with vibrant corals and animated marine life, and players move their pieces along paths inspired by the sea's natural formations. As players drift across the board, they must navigate environmental challenges and ethical dilemmas, making choices that influence the health of the underwater ecosystem. Emphasizing relaxation and strategy, the game incorporates soothing soundscapes and tranquil visuals akin to receiving a gentle neck massage, promoting reflection on sustainability and harmony with nature. Ideal for game developers of all levels, Aqua Drift combines classic strategy with creative storytelling and ethical gameplay.",
+        "tags": [
+            "Board Game",
+            "Strategy",
+            "Aquatic Theme",
+            "Ocean",
+            "Sustainability",
+            "Ethics",
+            "Relaxation",
+            "Game Jam",
+            "Marine Life"
+        ]
+    },
+    "strategy": "Get your neck massaged"
+}

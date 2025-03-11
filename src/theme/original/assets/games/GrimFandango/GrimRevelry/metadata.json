@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Grim Fandango' game. Modify it by applying the oblique strategy: 'Decorate, decorate'.",
+    "path": "../oblique-games/ideas/",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Grim Revelry",
+    "game_type": "GrimFandango",
+    "branding_data": {
+        "short_description": "Grim Revelry is an adventure game set in the Land of the Dead, where players navigate a richly decorated underworld filled with puzzles and mysteries.",
+        "detailed_description": "In Grim Revelry, players step into the shoes of a charming skeletal travel agent navigating the intricately decorated Land of the Dead. Inspired by the classic 'Grim Fandango', this game takes you on a journey through a vibrant and ornate underworld, where every corner is filled with lavish details and hidden secrets. Players must solve puzzles and interact with a cast of eccentric characters, all while unraveling a plot of intrigue and adventure. The game emphasizes exploration and discovery in its beautifully crafted environments, where decoration and detail bring the world to life.",
+        "tags": [
+            "Adventure",
+            "Puzzle",
+            "Point-and-Click",
+            "Noir",
+            "Mystery",
+            "Decorative",
+            "Story-rich",
+            "Single-player",
+            "Fantasy"
+        ]
+    },
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "Decorate, decorate"
+}

@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Neverwinter Nights' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Mechanicalize something idiosyncratic'.",
+    "path": "ideas",
+    "game_type": "Neverwinter Nights",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Aqua Ethos",
+    "game_id": "AquaEthos_20250306214857",
+    "branding_data": {
+        "short_description": "Aqua Ethos is a fish-themed RPG that challenges players to maintain ethical and sustainable practices in an underwater world while navigating idiosyncratic rules around ecosystem management.",
+        "detailed_description": "Aqua Ethos immerses players in a vibrant underwater world teeming with life. As a guardian of this aquatic ecosystem, players are tasked with preserving the balance among various fish species while adhering to ethical and sustainable practices. The game's idiosyncratic mechanic lies in its unique approach to ecosystem management through a system of sustainable gears and technologies. These elements, originally individualistic traits, have been 'mechanicalized' to emphasize their importance in the underwater environment. Players must strategically deploy these technologies to monitor fish populations, ensure clean oceans, and mitigate human impact, all while dealing with challenges such as overfishing and pollution. Through engaging missions and interactive storytelling, Aqua Ethos encourages reflection on ethical considerations and the importance of sustainability in preserving marine biodiversity.",
+        "tags": [
+            "RPG",
+            "Underwater",
+            "Sustainability",
+            "Ethics",
+            "Ecosystem",
+            "Fishing",
+            "Environmental",
+            "Idiosyncratic",
+            "Resource Management"
+        ]
+    },
+    "strategy": "Mechanicalize something idiosyncratic"
+}

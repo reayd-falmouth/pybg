@@ -1,0 +1,19 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'SimCity' game. Modify it by applying the oblique strategy: 'Discard an axiom'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "City Unbound",
+    "game_type": "SimCity",
+    "branding_data": {
+        "short_description": "City Unbound is a unique city-building simulation where traditional urban planning rules are thrown out, allowing for unconventional growth and creativity.",
+       "detailed_description": "City Unbound reinvents the classic city-building genre by discarding the fundamental axiom of zoning laws. Players are given the freedom to construct their city without the typical restrictions, encouraging innovative layouts and unexpected cityscapes. The game challenges players to manage resources, balance citizen needs, and foster growth in an environment where the usual rules do not apply. From residential skyscrapers next to industrial parks to commercial hubs in the middle of green spaces, the possibilities are endless. This open-ended approach tests strategic thinking and adaptability as players navigate the consequences of their unorthodox urban designs.",
+        "tags": ["City-building", "Simulation", "Strategy", "Creative", "Sandbox", "Resource Management", "Urban Planning", "Innovative", "Non-linear"]
+    },
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "Discard an axiom"
+}

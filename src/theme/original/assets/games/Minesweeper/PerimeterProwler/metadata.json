@@ -1,0 +1,26 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Minesweeper' game. Modify it by applying the oblique strategy: 'Go slowly all the way round the outside'.",
+    "path": "../oblique-games/ideas/",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Perimeter Prowler",
+    "game_type": "Minesweeper",
+    "branding_data": {
+        "short_description": "Navigate the perimeter carefully to uncover mines in Perimeter Prowler.",
+        "detailed_description": "Perimeter Prowler is a unique twist on the classic Minesweeper game, incorporating the oblique strategy of 'Go slowly all the way round the outside.' Players must tactically navigate the perimeter of the grid to carefully reveal tiles and avoid triggering hidden mines. The game challenges players to think strategically about their movements, focusing on the edges of the grid before venturing inward. With each move, players must use logic and deduction to determine safe paths and uncover the entire grid without detonating a mine. Perimeter Prowler offers a fresh and intriguing take on the traditional puzzle, encouraging patience and careful planning.",
+        "tags": [
+            "Puzzle",
+            "Strategy",
+            "Minesweeper",
+            "Logic",
+            "Casual",
+            "Single-player"
+        ]
+    },
+    "errors": null,
+    "strategy": "Go slowly all the way round the outside"
+}

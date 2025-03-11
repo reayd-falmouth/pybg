@@ -1,0 +1,27 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Golden Axe' game. Modify it by applying the oblique strategy: 'Mechanicalize something idiosyncratic'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Axe Automata",
+    "game_type": "GoldenAxe",
+    "branding_data": {
+        "short_description": "A side-scrolling hack-and-slash adventure where players control mechanical warriors with unique, idiosyncratic abilities.",
+        "detailed_description": "Axe Automata reimagines the classic arcade experience of 'Golden Axe' by introducing a world where warriors are replaced by mechanical beings. Each character, while sharing the same mechanical core, possesses idiosyncratic traits that set them apart, such as eccentric attack patterns or unusual special abilities. Players embark on a journey through fantastical landscapes, battling hordes of enemies and giant bosses. The game features cooperative multiplayer, allowing players to combine their unique skills to overcome challenges. The mechanical theme is woven into the narrative, exploring a world where technology and tradition clash, leading to unexpected alliances and conflicts.",
+        "tags": [
+            "Action",
+            "Adventure",
+            "Hack and Slash",
+            "Co-op",
+            "Fantasy",
+            "Mechanical",
+            "Side-scrolling",
+            "Arcade"
+        ]
+    },
+    "strategy": "Mechanicalize something idiosyncratic"
+}

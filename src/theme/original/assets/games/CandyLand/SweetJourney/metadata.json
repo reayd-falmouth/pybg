@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Candy Land' game. Modify it by applying the oblique strategy: 'Change nothing and continue with immaculate consistency'.",
+    "path": "ideas",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Sweet Journey",
+    "game_type": "CandyLand",
+    "branding_data": {
+        "short_description": "Sweet Journey is a classic board game where players race to reach the Candy Castle by drawing cards and moving through a colorful path filled with sugary delights.",
+        "detailed_description": "Sweet Journey is an enchanting board game that invites players into a world of vibrant colors and delicious treats. Inspired by the beloved 'Candy Land', this game remains true to the traditional gameplay mechanics that have delighted generations. Players draw cards to navigate through a winding path of candy-themed locations, aiming to be the first to reach the Candy Castle. The game emphasizes simplicity and consistency, providing a familiar and timeless experience. With each turn, players encounter charming characters and obstacles that make the journey as sweet as the destination.",
+        "tags": [
+            "board game",
+            "family",
+            "classic",
+            "strategy",
+            "kids",
+            "colorful",
+            "race",
+            "candy",
+            "simple rules"
+        ]
+    },
+    "errors": null,
+    "strategy": "Change nothing and continue with immaculate consistency"
+}

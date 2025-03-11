@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Backgammon' game. Modify it by applying the oblique strategy: 'Mechanicalize something idiosyncratic'.",
+    "path": "ideas",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Clockwork Gammon",
+    "game_type": "Backgammon",
+    "branding_data": {
+        "short_description": "Experience the classic game of Backgammon with a mechanical twist in Clockwork Gammon.",
+        "detailed_description": "Clockwork Gammon is a unique take on the traditional board game Backgammon, where players navigate their pieces around the board to bear them off before their opponent. This version introduces a mechanical twist by 'mechanicalizing' the idiosyncratic elements of the game. The dice rolls and piece movements are automated with clockwork mechanisms, adding a layer of strategy as players must anticipate the mechanical patterns and time their moves accordingly. This blend of classic gameplay and mechanical innovation offers a fresh and engaging challenge for both Backgammon enthusiasts and newcomers.",
+        "tags": [
+            "Backgammon",
+            "Board Game",
+            "Strategy",
+            "Mechanical",
+            "Clockwork",
+            "Puzzle",
+            "Classic",
+            "Innovative"
+        ]
+    },
+    "errors": null,
+    "strategy": "Mechanicalize something idiosyncratic"
+}

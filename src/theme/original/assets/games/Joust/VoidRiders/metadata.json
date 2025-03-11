@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Joust' game. Modify it by applying the oblique strategy: '[blank white card]'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Void Riders",
+    "game_type": "Joust",
+    "branding_data": {
+        "short_description": "Void Riders is a reimagined version of the classic 'Joust' game, set in an abstract, minimalistic void where players battle on flying mounts.",
+        "detailed_description": "Void Riders takes the classic arcade action of 'Joust' and infuses it with an abstract twist. Set in a stark, minimalistic void, players mount their avian steeds and engage in aerial combat against other riders. The game's aesthetic is inspired by the concept of a 'blank white card', offering a visually clean and abstract environment that emphasizes the fluidity and precision of movement. Players must master the art of momentum and timing to outmaneuver their opponents and become the ultimate Void Rider. The game challenges players with increasingly difficult levels, each introducing new obstacles and enemy types, while maintaining a focus on strategic simplicity and elegance.",
+        "tags": [
+            "Arcade",
+            "Action",
+            "Retro",
+            "Minimalist",
+            "Aerial Combat",
+            "Strategy",
+            "Abstract",
+            "Single Player",
+            "Multiplayer"
+        ]
+    },
+    "strategy": "[blank white card]"
+}

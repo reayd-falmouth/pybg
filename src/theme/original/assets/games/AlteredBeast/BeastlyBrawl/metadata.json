@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Altered Beast' game. Modify it by applying the oblique strategy: 'Be dirty'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Beastly Brawl",
+    "game_type": "AlteredBeast",
+    "branding_data": {
+        "short_description": "Beastly Brawl is a gritty reimagining of the classic arcade beat 'em up, where players transform into powerful beasts to battle through filthy, monster-infested levels.",
+        "detailed_description": "In Beastly Brawl, players take on the role of a resurrected warrior on a mission to rescue a kidnapped goddess. Inspired by the classic 'Altered Beast', this version adds a unique twist with the oblique strategy 'Be dirty'. The game features grimy, polluted environments where players must fight through hordes of grotesque creatures. As they progress, players collect power-ups that allow them to transform into various beasts, each with their own special abilities and combat styles. The game emphasizes a raw, visceral combat experience with a focus on using the environment to your advantage. Players will navigate through sewers, junkyards, and other unclean settings, adding a layer of strategy as they balance their beastly powers with the need to adapt to the filthy surroundings.",
+        "tags": [
+            "action",
+            "beat 'em up",
+            "transformation",
+            "arcade",
+            "monsters",
+            "gritty",
+            "retro",
+            "single-player",
+            "side-scroller",
+            "fantasy"
+        ]
+    },
+    "strategy": "Be dirty"
+}

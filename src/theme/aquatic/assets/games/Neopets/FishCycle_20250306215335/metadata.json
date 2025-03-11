@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Neopets' game with the theme Create a game concept for a game jam with the theme Fish theme with an Ethics and Sustainibility. Modify it by applying the oblique strategy: 'Emphasize repetitions'.",
+    "path": "ideas",
+    "game_type": "Neopets",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Fish Cycle",
+    "game_id": "FishCycle_20250306215335",
+    "branding_data": {
+        "short_description": "Fish Cycle is a virtual pet game focusing on ethical fishing and sustainability, with repeated cycles emphasizing marine ecosystem balance.",
+        "detailed_description": "Fish Cycle is a virtual pet game where players take care of their fish in a simulated marine ecosystem. The game centers around sustainability and ethical interactions with marine life. Players must balance the ecosystem by managing resources, feeding fish, and maintaining water quality. The game emphasizes repetition in its cyclical gameplay, where players experience the consequence of their actions over repeated cycles of the ecosystem, highlighting the impact of sustainability. As players progress, they unlock educational content about marine sustainability and ethical fishing practices, encouraging real-world awareness and action.",
+        "tags": [
+            "virtual pet",
+            "sustainability",
+            "ethics",
+            "simulation",
+            "educational",
+            "marine life",
+            "ecosystem management",
+            "resource management",
+            "repetition",
+            "environmental awareness"
+        ]
+    },
+    "strategy": "Emphasize repetitions"
+}

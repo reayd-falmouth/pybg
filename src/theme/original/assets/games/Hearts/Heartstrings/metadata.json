@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Hearts' game. Modify it by applying the oblique strategy: 'Assemble some of the instruments in a group and treat the group'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Heartstrings",
+    "game_type": "Hearts",
+    "branding_data": {
+        "short_description": "Heartstrings: A unique twist on the classic card game 'Hearts', featuring collaborative group strategy elements.",
+        "detailed_description": "Heartstrings is an innovative adaptation of the traditional card game 'Hearts', where players are challenged to avoid collecting hearts and the queen of spades. This version introduces a creative twist inspired by the oblique strategy 'Assemble some of the instruments in a group and treat the group'. Players must form temporary alliances to manage their cards as a group, adding layers of strategic depth and collaboration. The game maintains the core mechanics of 'Hearts' while encouraging players to think collectively, fostering a unique social dynamic and making each round unpredictable and engaging.",
+        "tags": [
+            "Card Game",
+            "Strategy",
+            "Multiplayer",
+            "Collaboration",
+            "Classic",
+            "Board Game Adaptation",
+            "Innovative",
+            "Social"
+        ]
+    },
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "Assemble some of the instruments in a group and treat the group"
+}

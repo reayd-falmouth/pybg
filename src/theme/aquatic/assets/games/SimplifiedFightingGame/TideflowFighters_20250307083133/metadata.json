@@ -1,0 +1,30 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Simplified Fighting Game' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Accretion'.",
+    "path": "ideas/aquatic",
+    "game_type": "Simplified Fighting Game",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "Tideflow Fighters",
+    "game_id": "TideflowFighters_20250307083133",
+    "branding_data": {
+        "short_description": "Dive into Tideflow Fighters, a simplified fighting game themed around aquatic environments and sustainability.",
+        "detailed_description": "Tideflow Fighters is an innovative fighting game set in a vibrant and fluid aquatic world. Players choose from a roster of unique sea creatures, each representing an element of oceanic life, such as coral guardians, manta ray warriors, or octopus strategists. The game focuses on simplified mechanics, making it accessible to developers of all skill levels, while emphasizing strategic combat through environmental manipulation. As players progress, they must consider the ethics and sustainability of their actions, as over-exploitation of environmental resources can lead to negative outcomes. The oblique strategy 'accretion' is integrated into the gameplay as players build their power and capabilities slowly by collaborating with oceanic allies and conserving resources, rather than through rapid aggression. The immersive oceanic arenas are dynamic, influenced by the tides and currents, promoting a deeper understanding of ecological balance.",
+        "tags": [
+            "fighting",
+            "simplified mechanics",
+            "aquatic theme",
+            "ethical gameplay",
+            "sustainability",
+            "ocean",
+            "sea creatures",
+            "strategy",
+            "game jam",
+            "collaboration",
+            "environmental impact"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

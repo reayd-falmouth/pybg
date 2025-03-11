@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Tetris' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'How would you have done it?'.",
+    "path": "ideas/aquatic",
+    "game_type": "Tetris",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "BlockCurrents",
+    "game_id": "BlockCurrents_20250307100228",
+    "branding_data": {
+        "short_description": "BlockCurrents: A Tetris-inspired game with an aquatic twist focusing on sustainability and ethical themes in the ocean.",
+        "detailed_description": "BlockCurrents is a creative reimagining of the classic Tetris gameplay centered around an aquatic theme. Players must clear lines of blocks designed as various sea elements like coral reefs, fish, and waves, emphasizing the beauty and diversity of marine life. The game incorporates ethical and sustainability elements by introducing challenges such as avoiding overfishing or managing pollution, represented by special block types that can hinder progress if not strategically handled. With a serene underwater backdrop and calming ocean sounds, the game invites players to reflect on their impact on marine ecosystems through engaging and fun puzzles while developing solutions for sustainable living. BlockCurrents is accessible to developers of all skill levels and offers a platform for dialog on ocean conservation and ethical practices in gaming.",
+        "tags": [
+            "puzzle",
+            "Tetris",
+            "aquatic",
+            "sustainability",
+            "ethical",
+            "ocean",
+            "game jam",
+            "creative",
+            "engaging"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Turn-Based Tactics (Small-Scale)' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Imagine the music as a moving chain or caterpillar'.",
+    "path": "ideas/aquatic",
+    "game_type": "Turn-Based Tactics (Small-Scale)",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Ripplesong Quest",
+    "game_id": "RipplesongQuest_20250307101340",
+    "branding_data": {
+        "short_description": "Ripplesong Quest is a turn-based tactics game set in a vibrant aquatic world where players must strategize their movements like a flowing melody, promoting ocean sustainability and ethical choices.",
+        "detailed_description": "In Ripplesong Quest, players dive into an enchanting underwater realm where the music of the sea guides their tactical decisions. Each level represents a unique marine environment teeming with life and challenges. Players move their units through vibrant coral reefs, mysterious shipwrecks, and ancient underwater temples. With a focus on ethical and sustainable practices, players must make choices that ensure the health of the ocean and its inhabitants. Music in the game is a vital mechanic, with each tactical move akin to notes in a melody, creating a symphony of strategy as players progress. The dynamic soundtrack evolves as players advance, resembling a moving chain or caterpillar, reflecting the harmonious balance required to protect the seas.",
+        "tags": [
+            "Turn-Based Tactics",
+            "Aquatic Theme",
+            "Ethical Choices",
+            "Sustainability",
+            "Ocean",
+            "Music",
+            "Strategy",
+            "Game Jam",
+            "Creative",
+            "Engaging"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

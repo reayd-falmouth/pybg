@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Mahjong' game. Modify it by applying the oblique strategy: 'Bridges - build - burn'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Mahjong Bridges Burn",
+    "game_type": "Mahjong",
+    "branding_data": {
+        "short_description": "A unique twist on traditional Mahjong where players strategically build and burn bridges to influence gameplay.",
+        "detailed_description": "Mahjong Bridges Burn is an innovative take on the classic Mahjong game, incorporating strategic elements inspired by the oblique strategy 'Bridges - build - burn'. Players must not only match tiles to clear the board but also construct bridges to connect distant tiles, creating new pathways and opportunities. However, these bridges are temporary and can be burned to disrupt opponents or alter the board's layout. The game challenges players to think ahead and adapt their strategies, balancing between building connections and knowing when to sever them. This dynamic gameplay adds a layer of depth and complexity, making each session a unique experience.",
+        "tags": [
+            "Mahjong",
+            "Strategy",
+            "Puzzle",
+            "Board Game",
+            "Innovative Mechanics",
+            "Tile Matching",
+            "Multiplayer",
+            "Tactical"
+        ]
+    },
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "Bridges - build - burn"
+}

@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Bubble Bobble' game. Modify it by applying the oblique strategy: 'Consider different fading systems'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Bubble Fade Quest",
+    "game_type": "BubbleBobble",
+    "branding_data": {
+        "short_description": "Bubble Fade Quest is a reimagined version of the classic 'Bubble Bobble' game with unique fading mechanics.",
+        "detailed_description": "Bubble Fade Quest takes the classic arcade platforming action of 'Bubble Bobble' and introduces a new challenge with innovative fading systems. Players control adorable bubble-blowing dragons tasked with trapping enemies in bubbles. However, the twist in Bubble Fade Quest is the dynamic fading system that affects both the bubbles and the levels themselves. Bubbles fade at different rates, requiring strategic timing to capture and pop enemies. Additionally, parts of the level background fade in and out, creating a constantly shifting environment that demands quick reflexes and strategic planning. With cooperative multiplayer, players can team up to tackle increasingly difficult levels, each with unique fading challenges. Can you master the fading systems and complete the Bubble Fade Quest?",
+        "tags": [
+            "Arcade",
+            "Platformer",
+            "Puzzle",
+            "Co-op",
+            "Multiplayer",
+            "Retro",
+            "Strategy",
+            "Action",
+            "Bubble Bobble",
+            "Fading Mechanics"
+        ]
+    },
+    "strategy": "Consider different fading systems"
+}

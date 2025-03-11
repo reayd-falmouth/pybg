@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Classic Board Games' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Honor thy error as a hidden intention'.",
+    "path": "ideas/aquatic",
+    "game_type": "Classic Board Games",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Aqua Quest",
+    "game_id": "AquaQuest_20250307102104",
+    "branding_data": {
+        "short_description": "Embark on an aquatic journey in Aqua Quest, a collection of classic board games with a marine twist, where sustainability and creative errors shape your adventure.",
+        "detailed_description": "Aqua Quest invites players to dive into a unique gaming experience that blends beloved classic board games with the mysterious and wondrous aquatic world. As players navigate through seas and rivers, they must consider sustainability and ethical choices that impact the environment. Utilizing the oblique strategy 'Honor thy error as a hidden intention', mistakes within the game lead to unexpected, yet beneficial, outcomes that enhance gameplay and challenge players to rethink strategy. Each board is animated with vibrant marine life, and the rulebooks incorporate creative oceanic challenges that require innovative solutions. Aqua Quest is designed to engage gamers of all skill levels, providing a playful platform to explore eco-friendly practices and the beauty of the underwater world.",
+        "tags": [
+            "Board Game",
+            "Aquatic Theme",
+            "Ocean",
+            "Sustainability",
+            "Strategy",
+            "Creative Gameplay",
+            "Family Friendly",
+            "Educational",
+            "Ethics"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

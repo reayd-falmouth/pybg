@@ -1,0 +1,30 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Day of the Tentacle' game. Modify it by applying the oblique strategy: 'Left channel, right channel, center channel'.",
+    "path": "../oblique-games/ideas/",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Tentacle Triad Adventure",
+    "game_type": "DayoftheTentacle",
+    "branding_data": {
+        "short_description": "Embark on a zany time-traveling adventure in Tentacle Triad Adventure, where your decisions ripple across three channels of reality.",
+        "detailed_description": "Tentacle Triad Adventure is a whimsical point-and-click adventure game inspired by the classic 'Day of the Tentacle'. Players will journey through a quirky world where time travel and madcap puzzles are the norm. The game introduces a unique twist: the player's actions are split across three channels of reality - left, right, and center. Each channel represents a different timeline, and decisions made in one can affect the others. This innovative mechanic challenges players to think strategically as they solve puzzles, interact with eccentric characters, and attempt to thwart a nefarious tentacle villain bent on world domination. With its humor, clever gameplay, and distinctive art style, Tentacle Triad Adventure offers a fresh take on a beloved genre.",
+        "tags": [
+            "adventure",
+            "point-and-click",
+            "time travel",
+            "puzzle",
+            "humor",
+            "single-player",
+            "strategy",
+            "retro",
+            "indie",
+            "story-rich"
+        ]
+    },
+    "errors": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "strategy": "Left channel, right channel, center channel"
+}

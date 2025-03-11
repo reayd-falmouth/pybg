@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Prince of Persia' game. Modify it by applying the oblique strategy: 'Decorate, decorate'.",
+    "path": "ideas",
+    "type": "Gomoku",
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Ornate Odyssey",
+    "game_type": "PrinceofPersia",
+    "branding_data": {
+        "short_description": "Ornate Odyssey is a reimagined 'Prince of Persia' game with lavishly detailed environments and richly decorated levels.",
+        "detailed_description": "Ornate Odyssey takes the classic 'Prince of Persia' gameplay and infuses it with a focus on intricate aesthetics and elaborate design. Players navigate through a series of beautifully crafted levels, each filled with opulent decorations and detailed backgrounds that enhance the storytelling and atmosphere. The game retains the fluid platforming and acrobatic action of the original but adds a layer of visual richness that makes each area a feast for the eyes. As players journey through palaces, dungeons, and exotic landscapes, they will encounter puzzles and traps that require not only skill but also an appreciation for the elaborate beauty surrounding them.",
+        "tags": [
+            "Platformer",
+            "Action",
+            "Adventure",
+            "Puzzle",
+            "Fantasy",
+            "Decorative",
+            "Visuals",
+            "Classic",
+            "Remake"
+        ]
+    },
+    "strategy": "Decorate, decorate"
+}

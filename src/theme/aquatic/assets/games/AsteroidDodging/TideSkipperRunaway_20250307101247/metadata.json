@@ -1,0 +1,30 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Asteroid Dodging' game with the theme 'Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.'. Modify it by applying the oblique strategy: 'Give the game away'.",
+    "path": "ideas/aquatic",
+    "game_type": "Asteroid Dodging",
+    "model": "gpt-4o",
+    "count": 66,
+    "name": "Tide Skipper Runaway",
+    "game_id": "TideSkipperRunaway_20250307101247",
+    "branding_data": {
+        "short_description": "An engaging aquatic-themed game where players dodge obstacles as they navigate oceans and rivers, focusing on ethics and sustainability while being shared as a free experience.",
+        "detailed_description": "Tide Skipper Runaway is a unique take on the classic 'Asteroid Dodging' gameplay, set in a vibrant aquatic world filled with oceans, seas, and rivers. Players take on the role of a small, nimble sea creature tasked with navigating through treacherous waters while avoiding obstacles such as floating debris, natural formations, and the occasional predator. The game promotes themes of sustainability and ecological responsibility by incorporating challenges related to cleaning up ocean waste and promoting ethical interactions with the aquatic environment. In an innovative twist inspired by the oblique strategy 'Give the game away', Tide Skipper Runaway is designed to be shared freely with everyone, encouraging players of all skill levels to enjoy and learn from the experience. The game not only entertains but also educates players about the importance of preserving our water bodies and respecting marine life. With its engaging gameplay and meaningful message, Tide Skipper Runaway aims to leave a lasting impact on its audience.",
+        "tags": [
+            "aquatic",
+            "ocean",
+            "sustainability",
+            "arcade",
+            "free-to-play",
+            "educational",
+            "environmental",
+            "dodge",
+            "game jam",
+            "casual",
+            "skill-based"
+        ]
+    },
+    "strategy": "Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated."
+}

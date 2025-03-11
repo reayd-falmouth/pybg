@@ -1,0 +1,28 @@
+{
+    "randomize": true,
+    "oblique_strategy": true,
+    "cover": true,
+    "task": "Develop a basic 'Day of the Tentacle' game. Modify it by applying the oblique strategy: 'What would your closest friend do?'.",
+    "path": "ideas",
+    "type": null,
+    "model": "gpt-4o",
+    "count": 50,
+    "name": "Tentacle Teamwork",
+    "game_type": "DayoftheTentacle",
+    "branding_data": {
+        "short_description": "Tentacle Teamwork is a comedic point-and-click adventure inspired by 'Day of the Tentacle', where players solve puzzles by considering what their closest friend would do.",
+        "detailed_description": "Tentacle Teamwork is a whimsical and humorous point-and-click adventure game that draws inspiration from the classic 'Day of the Tentacle'. In this game, players embark on a zany journey filled with quirky characters and time-traveling escapades. The twist? Players must solve puzzles by considering the unique perspective of their closest friend, adding a layer of creativity and unpredictability to the gameplay. As players navigate through the game's colorful and cartoonish world, they'll encounter challenges that require them to think outside the box, leveraging the hypothetical advice and actions of their friend to progress. This mechanic not only deepens the narrative but also offers a fresh take on traditional adventure game puzzles, fostering a sense of collaboration and empathy.",
+        "tags": [
+            "Adventure",
+            "Point-and-Click",
+            "Puzzle",
+            "Comedy",
+            "Time Travel",
+            "Friendship",
+            "Narrative",
+            "Creative Thinking"
+        ]
+    },
+    "errors": null,
+    "strategy": "What would your closest friend do?"
+}
