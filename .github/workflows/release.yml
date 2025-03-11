@@ -89,9 +89,7 @@ jobs:
       - name: Set Itch.io Project Name
         run: |
           if [ "${{ matrix.theme }}" == "original" ]; then
-            echo "ITCH_PROJECT=backgammon" >> $GITHUB_ENV
-          else
-            echo "ITCH_PROJECT=backgammon-${{ matrix.theme }}" >> $GITHUB_ENV
+            echo "ITCH_PROJECT=aquagammon" >> $GITHUB_ENV
           fi
         shell: bash
 
