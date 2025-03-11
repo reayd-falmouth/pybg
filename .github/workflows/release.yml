@@ -86,6 +86,10 @@ jobs:
       - name: Download Artifacts
         uses: actions/download-artifact@v4
 
+      - name: Set Executable Name
+        run: echo "EXEC_NAME=backgammon" >> $GITHUB_ENV
+        shell: bash
+
       - name: Set Itch.io Project Name
         run: |
           if [ "${{ matrix.theme }}" == "aquatic" ]; then
@@ -98,7 +102,7 @@ jobs:
       - name: Deploy Windows Build to Itch.io
         uses: robpc/itchio-upload-action@v1
         with:
-          path: ${{ env.ITCH_PROJECT }}-windows-x86_64-${{ matrix.theme }}/${{ env.ITCH_PROJECT }}.exe
+          path: ${{ env.EXEC_NAME }}-windows-x86_64-${{ matrix.theme }}/${{ env.ITCH_PROJECT }}.exe
           project: ${{ env.ITCHIO_USER }}/${{ env.ITCH_PROJECT }}
           channel: windows
           version: ${{ github.ref_name }}
@@ -107,7 +111,7 @@ jobs:
       - name: Deploy Linux Build to Itch.io
         uses: robpc/itchio-upload-action@v1
         with:
-          path: ${{ env.ITCH_PROJECT }}-linux-x86_64-${{ matrix.theme }}/${{ env.ITCH_PROJECT }}
+          path: ${{ env.EXEC_NAME }}-linux-x86_64-${{ matrix.theme }}/${{ env.ITCH_PROJECT }}
           project: ${{ env.ITCHIO_USER }}/${{ env.ITCH_PROJECT }}
           channel: linux
           version: ${{ github.ref_name }}
@@ -116,7 +120,7 @@ jobs:
       - name: Deploy macOS ARM64 Build to Itch.io
         uses: robpc/itchio-upload-action@v1
         with:
-          path: ${{ env.ITCH_PROJECT }}-macOS-arm64-${{ matrix.theme }}/${{ env.ITCH_PROJECT }}
+          path: ${{ env.EXEC_NAME }}-macOS-arm64-${{ matrix.theme }}/${{ env.ITCH_PROJECT }}
           project: ${{ env.ITCHIO_USER }}/${{ env.ITCH_PROJECT }}
           channel: mac-arm64
           version: ${{ github.ref_name }}
@@ -125,7 +129,7 @@ jobs:
       - name: Deploy macOS x86_64 Build to Itch.io
         uses: robpc/itchio-upload-action@v1
         with:
-          path: ${{ env.ITCH_PROJECT }}-macOS-x86_64-${{ matrix.theme }}/${{ env.ITCH_PROJECT }}
+          path: ${{ env.EXEC_NAME }}-macOS-x86_64-${{ matrix.theme }}/${{ env.ITCH_PROJECT }}
           project: ${{ env.ITCHIO_USER }}/${{ env.ITCH_PROJECT }}
           channel: mac-x86_64
           version: ${{ github.ref_name }}
