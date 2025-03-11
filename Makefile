@@ -1,7 +1,7 @@
 SRC_DIR := src
-GAME_DIR := $(SRC_DIR)/oblique_games
+GAME_DIR := $(SRC_DIR)/backgammon
 ITCH_USER := reayd-falmouth
-ITCH_GAME := oblique-games
+ITCH_GAME := backgammon
 BUILD_DIR = $(GAME_DIR)/build
 ZIP_FILE=web.zip
 PYTHONPATH := $(PYTHONPATH):$(SRC_DIR)

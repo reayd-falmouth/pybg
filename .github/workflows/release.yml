@@ -29,7 +29,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          pip install -r src/oblique_games/requirements.txt
+          pip install -r src/backgammon/requirements.txt
           pip install pyinstaller pillow
 
       - name: Copy games into source
@@ -37,20 +37,20 @@ jobs:
           make copy_theme THEME=${{ matrix.theme }}
 
       - name: Set Executable Name
-        run: echo "EXEC_NAME=oblique-${{ (matrix.theme == 'aquatic') && 'aquatic-' || '' }}games" >> $GITHUB_ENV
+        run: echo "EXEC_NAME=backgammon-${{ matrix.theme }}" >> $GITHUB_ENV
         shell: bash
 
       - name: Build Executable (Windows)
         if: runner.os == 'Windows'
         run: |
-          cd src/oblique_games
+          cd src/backgammon
           pyinstaller --onefile --windowed --name ${{ env.EXEC_NAME }} --icon=assets/img/icon/icon_64x64.png --add-data "assets;assets" main.py
         shell: cmd
 
       - name: Build Executable (Linux/macOS)
         if: runner.os != 'Windows'
         run: |
-          cd src/oblique_games
+          cd src/backgammon
           pyinstaller --onefile --windowed --name ${{ env.EXEC_NAME }} --icon=assets/img/icon/icon_64x64.png --add-data "assets:assets" main.py
         shell: bash
 
@@ -73,7 +73,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ${{ env.EXEC_NAME }}-${{ env.OS_LABEL }}-${{ env.ARCH || 'x86_64' }}-${{ matrix.theme }}
-          path: src/oblique_games/dist/${{ env.EXEC_NAME }}${{ (runner.os == 'Windows') && '.exe' || '' }}
+          path: src/backgammon/dist/${{ env.EXEC_NAME }}${{ (runner.os == 'Windows') && '.exe' || '' }}
 
   release:
     name: Release to Itch.io
@@ -89,9 +89,9 @@ jobs:
       - name: Set Itch.io Project Name
         run: |
           if [ "${{ matrix.theme }}" == "original" ]; then
-            echo "ITCH_PROJECT=oblique-games" >> $GITHUB_ENV
+            echo "ITCH_PROJECT=backgammon" >> $GITHUB_ENV
           else
-            echo "ITCH_PROJECT=oblique-${{ matrix.theme }}-games" >> $GITHUB_ENV
+            echo "ITCH_PROJECT=backgammon-${{ matrix.theme }}" >> $GITHUB_ENV
           fi
         shell: bash
 

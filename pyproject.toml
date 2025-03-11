@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "oblique-games"
+name = "aquagammon"
 version = "0.1.0"
 description = ""
 authors = ["reayd-falmouth <dr323090@falmouth.ac.uk>"]
