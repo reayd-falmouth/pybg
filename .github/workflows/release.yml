@@ -131,6 +131,7 @@ jobs:
         uses: robpc/itchio-upload-action@v1
         with:
           path: backgammon-macOS-arm64-${{ matrix.theme }}/${{ env.EXEC_NAME }}
+          project: ${{ env.ITCHIO_USER }}/${{ env.ITCH_PROJECT }}
           channel: mac-arm64
           version: ${{ github.ref_name }}
           api-key: ${{ secrets.ITCHIO_API_KEY }}
