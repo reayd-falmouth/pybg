@@ -37,7 +37,7 @@ jobs:
           make copy_theme THEME=${{ matrix.theme }}
 
       - name: Set Executable Name
-        run: echo "EXEC_NAME=backgammon-${{ matrix.theme }}" >> $GITHUB_ENV
+        run: echo "EXEC_NAME=backgammon" >> $GITHUB_ENV
         shell: bash
 
       - name: Build Executable (Windows)

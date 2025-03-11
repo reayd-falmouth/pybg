@@ -1,7 +1,7 @@
 SRC_DIR := src
-GAME_DIR := $(SRC_DIR)/backgammon
+GAME_DIR := $(SRC_DIR)/aquagammon
 ITCH_USER := reayd-falmouth
-ITCH_GAME := backgammon
+ITCH_GAME := aquagammon
 BUILD_DIR = $(GAME_DIR)/build
 ZIP_FILE=web.zip
 PYTHONPATH := $(PYTHONPATH):$(SRC_DIR)

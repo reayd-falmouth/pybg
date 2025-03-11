@@ -37,7 +37,7 @@ jobs:
           make copy_theme THEME=${{ matrix.theme }}
 
       - name: Set Executable Name
-        run: echo "EXEC_NAME=backgammon-${{ matrix.theme }}" >> $GITHUB_ENV
+        run: echo "EXEC_NAME=backgammon" >> $GITHUB_ENV
         shell: bash
 
       - name: Build Executable (Windows)
@@ -88,8 +88,10 @@ jobs:
 
       - name: Set Itch.io Project Name
         run: |
-          if [ "${{ matrix.theme }}" == "original" ]; then
+          if [ "${{ matrix.theme }}" == "aquatic" ]; then
             echo "ITCH_PROJECT=aquagammon" >> $GITHUB_ENV
+          else
+            echo "ITCH_PROJECT=backgammon" >> $GITHUB_ENV
           fi
         shell: bash
 
