@@ -11,6 +11,7 @@ python = ">=3.10,<3.14"
 pygame-gui = "^0.6.13"
 moderngl = "^5.12.0"
 pygame-ce = "^2.5.3"
+numpy = "^2.2.3"
 
 [tool.poetry.group.dev.dependencies]
 black = "^25.1.0"
@@ -23,6 +24,7 @@ pytest-cov = "^6.0.0"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
 
 [tool.poetry.group.linting.dependencies]
 ruff = "^0.0.291"

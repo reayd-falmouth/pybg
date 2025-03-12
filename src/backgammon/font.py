@@ -1,5 +1,5 @@
 import pygame
-from oblique_games import (
+from backgammon import (
     ASSETS_DIR,
     TEXT_BOX_WIDTH,
     TEXT_BOX_PADDING,

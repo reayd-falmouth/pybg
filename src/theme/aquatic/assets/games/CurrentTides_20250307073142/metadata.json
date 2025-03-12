@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Backgammon' game with the theme Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.. Modify it by applying the oblique strategy: 'Trust in the you of now'.",
+    "path": "ideas/aquatic",
+    "game_type": "Backgammon",
+    "model": "gpt-4o",
+    "count": 5,
+    "name": "Current Tides",
+    "game_id": "CurrentTides_20250307073142",
+    "branding_data": {
+        "short_description": "Current Tides is an aquatic-themed backgammon game that emphasizes environmental sustainability and trust in present knowledge.",
+        "detailed_description": "Current Tides takes the classic strategy game of backgammon to an immersive underwater world. Players embark on a journey across the ocean floor, moving their pieces along coral reef pathways while encountering obstacles and opportunities based on the health of the marine environment. The game challenges players to trust their current instincts and decision-making abilities in navigating these waters. As they progress, they encounter various marine creatures and environmental challenges that require ethical decision-making, including choices that impact marine conservation and sustainability. Each game session influences the virtual environment's health, teaching players the importance of sustainable practices. With a focus on interactive gameplay and real-world ethical dilemmas, Current Tides is suitable for all game developers seeking an engaging and thoughtful project.",
+        "tags": [
+            "Backgammon",
+            "Aquatic Theme",
+            "Ocean",
+            "Strategy",
+            "Sustainability",
+            "Ethics",
+            "Game Jam",
+            "Marine Environment",
+            "Trust",
+            "Beginner-Friendly"
+        ]
+    },
+    "strategy": "Trust in the you of now"
+}

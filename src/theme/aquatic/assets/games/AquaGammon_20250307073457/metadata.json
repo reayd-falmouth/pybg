@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Backgammon' game with the theme Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.. Modify it by applying the oblique strategy: 'Tape your mouth (given by Ritva Saarikko)'.",
+    "path": "ideas/aquatic",
+    "game_type": "Backgammon",
+    "model": "gpt-4o",
+    "count": 3,
+    "name": "AquaGammon",
+    "game_id": "AquaGammon_20250307073457",
+    "branding_data": {
+        "short_description": "AquaGammon: An aquatic-themed variant of Backgammon where players navigate marine obstacles and embrace silence in gameplay strategies.",
+        "detailed_description": "AquaGammon is a unique twist on the classic board game Backgammon, infused with an aquatic theme. In this version, players roll ocean-themed dice and move their pieces across a board designed to resemble coral reefs and ocean currents. Challenges such as navigating around rocks, avoiding sea creatures, and aligning with sustainable currents offer new layers of strategy. Inspired by the oblique strategy 'Tape your mouth', players are encouraged to play in silence or use non-verbal cues to communicate intentions, fostering creativity and strategic thought. The game emphasizes ethics and sustainability by incorporating learning elements on marine conservation, encouraging players to make environmentally friendly choices throughout gameplay.",
+        "tags": [
+            "Board Game",
+            "Backgammon",
+            "Aquatic Theme",
+            "Ocean",
+            "Strategy",
+            "Silent Gameplay",
+            "Marine Conservation",
+            "Puzzle",
+            "Sustainability",
+            "Game Jam"
+        ]
+    },
+    "strategy": "Tape your mouth (given by Ritva Saarikko)"
+}

@@ -1,5 +1,5 @@
 SRC_DIR := src
-GAME_DIR := $(SRC_DIR)/aquagammon
+GAME_DIR := $(SRC_DIR)/backgammon
 ITCH_USER := reayd-falmouth
 ITCH_GAME := aquagammon
 BUILD_DIR = $(GAME_DIR)/build
@@ -45,7 +45,7 @@ clean:
 
 run:
 	@echo "Running game..."
-	@python -m src.oblique_games.main
+	@python -m src.backgammon.main
 
 black:
 	@echo "Formatting with black..."

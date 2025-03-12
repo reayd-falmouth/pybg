@@ -1,7 +1,8 @@
 import pygame
 import os
-from oblique_games.helpers import load_image
-from oblique_games import SCREEN_WIDTH, SCREEN_HEIGHT
+from backgammon.helpers import load_image
+from backgammon import SCREEN_WIDTH, SCREEN_HEIGHT
+from scripts.optimize_covers import ASSETS_DIR
 
 
 def resize_keep_width(background_image):
@@ -57,6 +58,7 @@ def update_ui(games: list, current_game_index: int, keep_width_mode=True):
     background_image = (
         load_image(game["cover"]) if os.path.exists(game["cover"]) else None
     )
+
     fade_alpha = 0  # Reset fade effect
 
     if not background_image:

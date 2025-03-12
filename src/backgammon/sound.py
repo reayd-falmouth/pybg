@@ -1,5 +1,5 @@
 import pygame
-from oblique_games import ASSETS_DIR
+from backgammon import ASSETS_DIR
 import time
 
 

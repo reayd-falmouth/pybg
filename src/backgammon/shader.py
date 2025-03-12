@@ -1,24 +1,18 @@
 import struct
-
 import moderngl
 import pygame
-
-from oblique_games import ASSETS_DIR
-
+from backgammon import ASSETS_DIR
 
 class ShaderRenderer:
     def __init__(self, screen, enabled=True):
         self.enabled = enabled
-        self.ctx = moderngl.create_context()
-
         if self.enabled:
-            # Load Shader
+            self.ctx = moderngl.create_context()
             self.prog = self.ctx.program(
                 vertex_shader=open(f"{ASSETS_DIR}/shaders/vertex.glsl").read(),
                 fragment_shader=open(f"{ASSETS_DIR}/shaders/fragment.glsl").read(),
             )
 
-            # Fullscreen Quad for Shader
             texture_coordinates = [0, 1, 1, 1, 0, 0, 1, 0]
             world_coordinates = [-1, -1, 1, -1, -1, 1, 1, 1]
             render_indices = [0, 1, 2, 1, 2, 3]
@@ -30,25 +24,31 @@ class ShaderRenderer:
             vao_content = [(self.vbo, "2f", "vert"), (self.uvmap, "2f", "in_text")]
             self.vao = self.ctx.vertex_array(self.prog, vao_content, self.ibo)
 
-            # Texture setup
-            self.screen_texture = self.ctx.texture(
-                screen.get_size(), 3, pygame.image.tostring(screen, "RGB", 1)
-            )
+            # Create initial texture using the passed screen's size.
+            self.screen_texture = self.ctx.texture(screen.get_size(), 3, pygame.image.tostring(screen, "RGB", 1))
             self.screen_texture.repeat_x = False
             self.screen_texture.repeat_y = False
+        else:
+            self.ctx = None
 
-    def render(self, screen):
-        """Renders the shader effect."""
+    def render(self, surface):
+        """Renders the shader effect using the given surface."""
         if not self.enabled:
             pygame.display.flip()
             return
 
-        # Flip the surface vertically before converting to texture
-        flipped_screen = pygame.transform.flip(screen, False, True)
+        # Flip the surface vertically before converting to texture.
+        flipped_surface = pygame.transform.flip(surface, False, True)
+        new_size = surface.get_size()
 
-        # Convert to RGB format and upload to texture
-        texture_data = pygame.image.tostring(flipped_screen, "RGB", 1)
-        self.screen_texture.write(texture_data)  # Write converted texture
+        # If the texture size doesn't match the new size, recreate it.
+        if self.screen_texture.size != new_size:
+            self.screen_texture = self.ctx.texture(new_size, 3, pygame.image.tostring(surface, "RGB", 1))
+            self.screen_texture.repeat_x = False
+            self.screen_texture.repeat_y = False
+
+        texture_data = pygame.image.tostring(flipped_surface, "RGB", 1)
+        self.screen_texture.write(texture_data)  # Update texture with new frame data.
 
         self.ctx.clear(14 / 255, 40 / 255, 66 / 255)
         self.screen_texture.use()
@@ -56,5 +56,5 @@ class ShaderRenderer:
         pygame.display.flip()
 
     def toggle(self):
-        """Toggles the shader on/off"""
+        """Toggles the shader on/off."""
         self.enabled = not self.enabled

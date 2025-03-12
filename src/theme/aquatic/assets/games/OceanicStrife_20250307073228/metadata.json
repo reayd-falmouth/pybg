@@ -1,0 +1,29 @@
+{
+    "randomize": true,
+    "ideation_technique": "oblique_strategy",
+    "cover": true,
+    "task": "Develop a basic 'Backgammon' game with the theme Generate a unique concept for a Game Jam with an Aquatic theme, incorporating elements related to the ocean, seas, and rivers. The concept should be creative, engaging, and suitable for game developers of all skill levels. Additionally, consider how ethics and sustainability could be integrated.. Modify it by applying the oblique strategy: 'Assemble some of the instruments in a group and treat the group'.",
+    "path": "ideas/aquatic",
+    "game_type": "Backgammon",
+    "model": "gpt-4o",
+    "count": 5,
+    "name": "Oceanic Strife",
+    "game_id": "OceanicStrife_20250307073228",
+    "branding_data": {
+        "short_description": "Oceanic Strife is a unique aquatic-themed backgammon game that incorporates elements of ocean ethics and sustainability, designed for a Game Jam setting.",
+        "detailed_description": "Oceanic Strife is an innovative adaptation of the traditional backgammon game, set in an engaging aquatic environment. Players will immerse themselves in a thematic world where the board represents an expansive ocean with interconnected seas and rivers. Utilizing an oblique strategy, players must \"assemble\" their game pieces mimicking marine instruments—such as turtles, dolphins, and crabs—into groups and treat these groups as units to move across the board. Each movement and decision is tied to underlying themes of ethics and environmental sustainability, encouraging players to engage with the concept of protecting marine ecosystems. The game challenges players to navigate these waters strategically, balancing their moves while considering the impact on the virtual marine habitat. Oceanic Strife offers an engaging and educational platform for developers of all skill levels to explore game development within an environmentally conscious framework.",
+        "tags": [
+            "backgammon",
+            "ocean",
+            "aquatic",
+            "game jam",
+            "sustainability",
+            "environment",
+            "strategy",
+            "board game",
+            "educational",
+            "ethics"
+        ]
+    },
+    "strategy": "Assemble some of the instruments in a group and treat the group"
+}
