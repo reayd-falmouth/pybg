@@ -13,6 +13,7 @@ from backgammon import (
     TRANSLUCENT,
     BACKGROUND_COLOUR,
     BOARD_POINTS_RELATIVE,
+    CHECKER_SIZE,
 )
 from backgammon.font import load_fonts, render_wrapped_text
 from backgammon.helpers import hex_to_rgb
@@ -23,7 +24,7 @@ from backgammon.sound import SoundManager  # Import the new class
 from backgammon.ui import update_ui
 
 # Import the CheckerPositions2D class from your checker_positions_2d file
-from backgammon.checker_positions_2d import CheckerPositions2D
+from backgammon.checker_positions import CheckerPositions
 
 class Game:
     """Encapsulates game state and rendering logic."""
@@ -56,9 +57,9 @@ class Game:
         # self.sound_manager.play_startup()  # Play game startup sound
 
         # Load assets
-        self.games = load_games(f"{ASSETS_DIR}/games", shuffle=True)
-        self.total_games = len(self.games)
-        self.current_game_index = 0
+        # self.games = load_games(f"{ASSETS_DIR}/games", shuffle=True)
+        # self.total_games = len(self.games)
+        # self.current_game_index = 0
         self.fonts = load_fonts()
 
         # Set initial ordering mode (True for random, False for lexographical)
@@ -68,9 +69,10 @@ class Game:
         # Coefficient values for destination offsets:
         self.offset_top_x_coeff = 0.2050000000000001
         self.offset_top_y_coeff = 0.07
-        self.offset_bottom_x_coeff = 0.16000000000000006
+        self.offset_bottom_x_coeff = 0.16250000000000006
         self.offset_bottom_y_coeff = 0.06499999999999999
 
+        # Sprites and images
         self.board_background = pygame.image.load(f"{ASSETS_DIR}/img/board/background.png")
         self.background_image = pygame.image.load(f"{ASSETS_DIR}/img/background/default.png")
         # Preload and scale checker images (adjust size as needed)
@@ -78,9 +80,20 @@ class Game:
             "white": pygame.image.load(os.path.join(CHECKER_DIR, "white.png")),
             "black": pygame.image.load(os.path.join(CHECKER_DIR, "black.png"))
         }
-        # For example, scale them to 30x30 pixels
-        self.checker_images["white"] = pygame.transform.smoothscale(self.checker_images["white"], (30, 30))
-        self.checker_images["black"] = pygame.transform.smoothscale(self.checker_images["black"], (30, 30))
+        self.original_checker_images = {
+            "white": pygame.image.load(os.path.join(CHECKER_DIR, "white.png")),
+            "black": pygame.image.load(os.path.join(CHECKER_DIR, "black.png"))
+        }
+        # Optionally, set an initial size:
+        self.checker_images = {
+            "white": self.original_checker_images["white"],
+            "black": self.original_checker_images["black"]
+        }
+
+        # Create our normalized positions manager
+        self.checker_positions = CheckerPositions()
+        self.reverse_direction = False
+        self.swap_colors = False
 
         # Load the icon image
         icon = pygame.image.load(f"{ASSETS_DIR}/img/icon/icon_64x64.png")
@@ -89,10 +102,6 @@ class Game:
 
         # Initialize ShaderRenderer
         self.shader = ShaderRenderer(self.screen, enabled=shader_enabled)
-
-        # --- Integration of CheckerPositions2D ---
-        # Create an instance of the 2D checker positions calculator.
-        self.checker_positions = CheckerPositions2D()
 
     def draw_background(self):
         # Fill the background with black
@@ -156,9 +165,33 @@ class Game:
         # Compute homography matrix for mapping logical board space to screen space.
         self.homography = self.compute_homography(self.src_points, self.dst_points)
 
+        # Determine a new size for the checkers relative to board dimensions.
+        # For example, use the board's height (or width) to compute a scale factor:
+        scale_factor = self.board_rect.height / SCREEN_HEIGHT  # 768 can be your original board height
+        new_checker_size = int(CHECKER_SIZE * scale_factor)
+
+        # Re-scale the checker images using the original images:
+        self.checker_images["white"] = pygame.transform.smoothscale(
+            self.original_checker_images["white"], (new_checker_size, new_checker_size)
+        )
+        self.checker_images["black"] = pygame.transform.smoothscale(
+            self.original_checker_images["black"], (new_checker_size, new_checker_size)
+        )
+
     def draw_checkers(self, position):
-        if not hasattr(self, "board_rect"):
-            return
+        # If checker colours are swapped, invert the mapping.
+        if self.swap_colors:
+            images = {"white": self.checker_images["black"], "black": self.checker_images["white"]}
+        else:
+            images = self.checker_images
+
+        self.checker_positions.draw(
+            screen=self.screen,
+            board_rect=self.board_rect,
+            position=position,
+            checker_images=images,
+            dst_points=self.dst_points,
+        )
 
     def draw_perspective_rect(self, color=(0, 255, 0), width=2):
         # self.dst_points contains the four corner points of the board in screen space.
@@ -171,10 +204,12 @@ class Game:
 
         # Offsets to adjust the quadrilaterals if they're slightly off
         # These values can be tweaked in debug mode or hard-coded initially.
-        adjust_top_x = 3  # positive values push to right, negative to left
+        adjust_top_x = 0  # positive values push to right, negative to left
         adjust_top_y = 0  # positive values push down, negative up
-        adjust_bottom_x = 3
+        adjust_bottom_x = 0
         adjust_bottom_y = 0
+
+        offset_x = 0
 
         for i in range(divisions):
             t_left = i / divisions
@@ -182,21 +217,21 @@ class Game:
 
             # Interpolate along the top edge:
             quad_top_left = (
-                top_left[0] + t_left * (top_right[0] - top_left[0]) + adjust_top_x,
+                top_left[0] + t_left * (top_right[0] - top_left[0]) + adjust_top_x  + offset_x,
                 top_left[1] + t_left * (top_right[1] - top_left[1]) + adjust_top_y
             )
             quad_top_right = (
-                top_left[0] + t_right * (top_right[0] - top_left[0]) + adjust_top_x,
+                top_left[0] + t_right * (top_right[0] - top_left[0]) + adjust_top_x  + offset_x,
                 top_left[1] + t_right * (top_right[1] - top_left[1]) + adjust_top_y
             )
 
             # Interpolate along the bottom edge:
             quad_bottom_left = (
-                bottom_left[0] + t_left * (bottom_right[0] - bottom_left[0]) + adjust_bottom_x,
+                bottom_left[0] + t_left * (bottom_right[0] - bottom_left[0]) + adjust_bottom_x  + offset_x,
                 bottom_left[1] + t_left * (bottom_right[1] - bottom_left[1]) + adjust_bottom_y
             )
             quad_bottom_right = (
-                bottom_left[0] + t_right * (bottom_right[0] - bottom_left[0]) + adjust_bottom_x,
+                bottom_left[0] + t_right * (bottom_right[0] - bottom_left[0]) + adjust_bottom_x  + offset_x,
                 bottom_left[1] + t_right * (bottom_right[1] - bottom_left[1]) + adjust_bottom_y
             )
 
@@ -214,81 +249,9 @@ class Game:
             label = font.render(str(idx), True, (255, 255, 255))
             self.screen.blit(label, (center[0] + 5, center[1] + 5))
 
-    def draw_game_info(self):
+    def pip_count(self, pip_count):
         """Renders game metadata and branding details dynamically aligning text with wrapping."""
-        if not self.games:
-            return
 
-        game = self.games[self.current_game_index]
-        if self.paused:
-            game = self.pause_menu[self.paused_page]
-
-        metadata = game["metadata"]
-        title = metadata.get("name", "Unknown Game")
-        game_type = f"Game Type: {game.get('type', 'Unknown')}"
-        model = f"Model: {game.get('model', 'Unknown')}"
-        prompt = f"Prompt: {metadata.get('task', 'Unknown')}"
-
-        branding_data = game.get("branding_data", {})
-        short_description = branding_data.get(
-            "short_description", "No description available"
-        )
-
-        game_info = [
-            ("title", title, False),
-            ("metadata", game_type, False),
-            ("metadata", model, False),
-            ("tags", prompt, False),
-            ("metadata", short_description, True),
-        ]
-
-        x_start = 50
-        y_start = 50
-        line_spacing = 10
-        extra_spacing = 40
-        max_width = SCREEN_WIDTH - 100
-
-        for font_key, text, extra_space in game_info:
-            font = self.fonts[font_key]
-            text_height = self.get_wrapped_text_height(text, font, max_width)
-
-            if extra_space:
-                y_start += extra_spacing
-
-            render_wrapped_text(
-                self.screen,
-                text,
-                (x_start, y_start),
-                font,
-                box_fill=TRANSLUCENT,
-                max_width=max_width,
-            )
-            y_start += text_height + line_spacing
-
-        tags_info = f"Tags: {', '.join(branding_data.get('tags', []))}"
-        tags_position = (50, SCREEN_HEIGHT - 100)
-        render_wrapped_text(
-            self.screen,
-            tags_info,
-            tags_position,
-            self.fonts["tags"],
-            box_fill=TRANSLUCENT,
-        )
-
-        page_info = f"{self.current_game_index + 1} of {self.total_games}"
-
-        # Pause menu hack
-        if self.paused:
-            page_info = f"? of ?"
-
-        page_position = (SCREEN_WIDTH - 150, SCREEN_HEIGHT - 50)
-        render_wrapped_text(
-            self.screen,
-            page_info,
-            page_position,
-            self.fonts["metadata"],
-            box_fill=TRANSLUCENT,
-        )
 
     @staticmethod
     def compute_homography(src, dst):
@@ -347,6 +310,18 @@ class Game:
             return False
 
         if event.type == pygame.KEYDOWN:
+            # Toggle board direction with the R key.
+            if event.key == pygame.K_r:
+                self.checker_positions.reverse_board = not self.checker_positions.reverse_board
+                print("Board direction reversed:", self.checker_positions.reverse_board)
+                self.sound_manager.play_click_sound()
+            # Toggle checker colours with the T key.
+            elif event.key == pygame.K_t:
+                self.swap_colors = not self.swap_colors
+                print("Checker colours swapped:", self.swap_colors)
+                self.sound_manager.play_click_sound()
+
+        if event.type == pygame.KEYDOWN:
             # --- Debug mode coefficient adjustments ---
             if self.debug:
                 increment = 0.005
@@ -398,159 +373,6 @@ class Game:
                         self.offset_bottom_y_coeff += increment
                         print("Vertical coefficients:", self.offset_top_y_coeff, self.offset_bottom_y_coeff)
 
-        if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_p:
-                self.paused = not self.paused  # Toggle pause state
-                self.paused_page = 1
-                self.sound_manager.play_click_sound()  # Play sound on button press
-                if self.paused:
-                    # Stop background music and play pause menu music
-                    self.sound_manager.play_pause_menu_music()
-                    (
-                        self.background_x,
-                        self.background_y,
-                        self.background_image,
-                        self.fade_alpha,
-                    ) = update_ui(self.pause_menu, 1)
-                    return True
-
-                else:
-                    self.sound_manager.mute_pause_menu_music()
-            elif event.key == pygame.K_c:
-                self.paused = not self.paused  # Toggle pause state
-                self.paused_page = 0
-                self.sound_manager.play_click_sound()  # Play sound on button press
-                if self.paused:
-                    # Stop background music and play pause menu music
-                    self.sound_manager.play_pause_menu_music()
-                    (
-                        self.background_x,
-                        self.background_y,
-                        self.background_image,
-                        self.fade_alpha,
-                    ) = update_ui(self.pause_menu, 0)
-                    return True
-
-                else:
-                    self.sound_manager.mute_pause_menu_music()
-            elif not self.paused:
-                # Check for Ctrl+Arrow events first
-                if event.key == pygame.K_RIGHT and (event.mod & pygame.KMOD_CTRL):
-                    if not self.random_ordering_enabled:
-                        current_name = self.games[self.current_game_index][
-                            "metadata"
-                        ].get(self.order_mode, "")
-                        if current_name:
-                            current_letter = current_name[0].lower()
-                            new_index = self.current_game_index
-                            # Iterate forward to find a game with a different starting letter
-                            for idx in range(
-                                self.current_game_index + 1, len(self.games)
-                            ):
-                                name = self.games[idx]["metadata"].get(
-                                    self.order_mode, ""
-                                )
-                                if name and name[0].lower() != current_letter:
-                                    new_index = idx
-                                    break
-                            else:
-                                # If not found, optionally wrap to the first game
-                                new_index = 0
-                            self.current_game_index = new_index
-                            self.sound_manager.play_button_sound()
-                            (
-                                self.background_x,
-                                self.background_y,
-                                self.background_image,
-                                self.fade_alpha,
-                            ) = update_ui(self.games, self.current_game_index)
-                            return True
-
-                elif event.key == pygame.K_LEFT and (event.mod & pygame.KMOD_CTRL):
-                    if not self.random_ordering_enabled:
-                        current_name = self.games[self.current_game_index][
-                            "metadata"
-                        ].get(self.order_mode, "")
-                        if current_name:
-                            current_letter = current_name[0].lower()
-                            new_index = self.current_game_index
-                            # Iterate backward to find a game with a different starting letter
-                            for idx in range(self.current_game_index - 1, -1, -1):
-                                name = self.games[idx]["metadata"].get(
-                                    self.order_mode, ""
-                                )
-                                if name and name[0].lower() != current_letter:
-                                    # Found a game with a different letter; now locate the first game of that letter group
-                                    target_letter = name[0].lower()
-                                    for start_idx, game in enumerate(self.games):
-                                        game_name = game["metadata"].get(
-                                            self.order_mode, ""
-                                        )
-                                        if (
-                                            game_name
-                                            and game_name[0].lower() == target_letter
-                                        ):
-                                            new_index = start_idx
-                                            break
-                                    break
-                            else:
-                                # If not found, optionally wrap-around to the last game
-                                new_index = len(self.games) - 1
-                            self.current_game_index = new_index
-                            self.sound_manager.play_button_sound()
-                            (
-                                self.background_x,
-                                self.background_y,
-                                self.background_image,
-                                self.fade_alpha,
-                            ) = update_ui(self.games, self.current_game_index)
-                            return True
-
-                if event.key == pygame.K_RIGHT:
-                    self.current_game_index = (self.current_game_index + 1) % len(
-                        self.games
-                    )
-                    self.sound_manager.play_button_sound()  # Play sound on button press
-                elif event.key == pygame.K_LEFT:
-                    self.current_game_index = (self.current_game_index - 1) % len(
-                        self.games
-                    )
-                    self.sound_manager.play_button_sound()  # Play sound on button press
-                elif event.key == pygame.K_o:
-                    # Cycle ordering mode: "random" -> "name" -> "type" -> "random"
-                    if self.order_mode == "random":
-                        self.order_mode = "name"
-                        self.random_ordering_enabled = False
-                        self.games.sort(
-                            key=lambda game: game["metadata"].get("name", "").lower()
-                        )
-                    elif self.order_mode == "name":
-                        self.order_mode = "game_type"
-                        self.random_ordering_enabled = False
-                        self.games.sort(
-                            key=lambda game: game["metadata"]
-                            .get("game_type", "")
-                            .lower()
-                        )
-                    else:  # self.order_mode == "type"
-                        self.order_mode = "random"
-                        self.random_ordering_enabled = True
-                        random.shuffle(self.games)
-                    self.current_game_index = 0
-                    self.total_games = len(self.games)
-                    self.sound_manager.play_click_sound()
-                else:
-                    # self.sound_manager.play_buzz_sound()
-                    return True
-            else:
-                return True
-            (
-                self.background_x,
-                self.background_y,
-                self.background_image,
-                self.fade_alpha,
-            ) = update_ui(self.games, self.current_game_index)
-
         return True
 
     def handle_events(self):
@@ -590,6 +412,15 @@ class GameLoop:
         # For demonstration, decode a sample Position.
         # (Replace the sample ID with your actual game position as needed.)
         dummy_position = Position.decode("4HPwATDgc/ABMA")
+        # dummy_position = Position(
+        #     board_points=[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+        #     # board_points=[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        #     player_bar=0,
+        #     player_off=0,
+        #     opponent_bar=0,
+        #     opponent_off=0,
+        # )
+        # pip_count = dummy_position.pip_count()
 
         while self.running:
             for event in pygame.event.get():
@@ -599,11 +430,12 @@ class GameLoop:
             self.game.handle_events()
             self.game.draw_background()
             self.game.draw_board()
-            self.game.draw_perspective_rect()
-            self.game.draw_board_quadrilaterals()
-            # self.game.draw_checkers(dummy_position)
-
-            # self.game.draw_game_info()
+            # DEBUG
+            if self.game.debug:
+                # self.game.draw_perspective_rect()
+                self.game.draw_board_quadrilaterals()
+            self.game.draw_checkers(dummy_position)
+            # self.game.pip_count(pip_count)
 
             # Render shader effect before flipping display
             self.game.shader.render(self.game.screen)

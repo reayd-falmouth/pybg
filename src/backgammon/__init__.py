@@ -19,34 +19,40 @@ TEXT_BOX_PADDING = 10
 TEXT_BOX_WIDTH = SCREEN_WIDTH - 100
 FPS = 30
 
+BOTTOM_RELATIVE_Y = 0.945
+TOP_RELATIVE_Y = 0.07
 BOARD_POINTS_RELATIVE = {
-    0: (0.21, 0.09),
-    1: (0.26, 0.09),
-    2: (0.30, 0.09),
-    3: (0.36, 0.09),
-    4: (0.41, 0.09),
-    5: (0.45, 0.09),
-    6: (0.54, 0.09),
-    7: (0.59, 0.09),
-    8: (0.64, 0.09),
-    9: (0.69, 0.09),
-    10: (0.74, 0.09),
-    11: (0.79, 0.09),
-    12: (0.84, 0.91),
-    13: (0.78, 0.91),
-    14: (0.72, 0.91),
-    15: (0.66, 0.91),
-    16: (0.60, 0.91),
-    17: (0.54, 0.91),
-    18: (0.45, 0.91),
-    19: (0.395, 0.91),
-    20: (0.335, 0.91),
-    21: (0.28, 0.91),
-    22: (0.22, 0.91),
-    23: (0.16, 0.91)
+    0: (0.838, BOTTOM_RELATIVE_Y),   # bottom-right
+    1: (0.7805, BOTTOM_RELATIVE_Y),
+    2: (0.7225, BOTTOM_RELATIVE_Y),
+    3: (0.6655, BOTTOM_RELATIVE_Y),
+    4: (0.6075, BOTTOM_RELATIVE_Y),
+    5: (0.5495, BOTTOM_RELATIVE_Y),
+
+    6: (0.453, BOTTOM_RELATIVE_Y),
+    7: (0.3946666667, BOTTOM_RELATIVE_Y),
+    8: (0.3366666667, BOTTOM_RELATIVE_Y),
+    9: (0.2796666667, BOTTOM_RELATIVE_Y),
+    10: (0.2216666667, BOTTOM_RELATIVE_Y),
+    11: (0.1646666667, BOTTOM_RELATIVE_Y),  # bottom-left
+
+    12: (0.208, TOP_RELATIVE_Y),     # top-left
+    13: (0.258, TOP_RELATIVE_Y),
+    14: (0.308, TOP_RELATIVE_Y),
+    15: (0.357, TOP_RELATIVE_Y),
+    16: (0.407, TOP_RELATIVE_Y),
+    17: (0.457, TOP_RELATIVE_Y),
+
+    18: (0.545, TOP_RELATIVE_Y),
+    19: (0.595, TOP_RELATIVE_Y),
+    20: (0.645, TOP_RELATIVE_Y),
+    21: (0.693, TOP_RELATIVE_Y),
+    22: (0.743, TOP_RELATIVE_Y),
+    23: (0.793, TOP_RELATIVE_Y),     # top-right
 }
 
 BACKGROUND_COLOUR = "3d4481"
+CHECKER_SIZE = 60
 
 # ✅ Define ASSETS_DIR for both Pygbag and PyInstaller compatibility
 def get_assets_dir():

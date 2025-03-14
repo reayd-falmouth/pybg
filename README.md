@@ -32,3 +32,9 @@
 
 ## License
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+
+## References
+* Shader: https://www.shadertoy.com/view/tt3yR2
+ * https://www.shadertoy.com/view/MdyyWt
+* www.gamasutra.com/blogs/KylePittman/20150420/241442/CRT_Simulation_in_Super_Win_the_Game.php
