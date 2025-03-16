@@ -160,13 +160,13 @@ class Game:
             (board_x + offset_bottom_x, board_y + board_height - offset_bottom_y)      # bottom-left
         ]
 
-        # Logical board corners (normalized coordinates)
-        self.src_points = [(0, 0), (1, 0), (1, 1), (0, 1)]
-        # Compute homography matrix for mapping logical board space to screen space.
-        self.homography = self.compute_homography(self.src_points, self.dst_points)
+    def draw_checkers(self, position):
+        # If checker colours are swapped, invert the mapping.
+        if self.swap_colors:
+            images = {"white": self.checker_images["black"], "black": self.checker_images["white"]}
+        else:
+            images = self.checker_images
 
-        # Determine a new size for the checkers relative to board dimensions.
-        # For example, use the board's height (or width) to compute a scale factor:
         scale_factor = self.board_rect.height / SCREEN_HEIGHT  # 768 can be your original board height
         new_checker_size = int(CHECKER_SIZE * scale_factor)
 
@@ -177,14 +177,13 @@ class Game:
         self.checker_images["black"] = pygame.transform.smoothscale(
             self.original_checker_images["black"], (new_checker_size, new_checker_size)
         )
+        # Define your normalized source points for the board:
+        src_points = [(0, 0), (1, 0), (1, 1), (0, 1)]
 
-    def draw_checkers(self, position):
-        # If checker colours are swapped, invert the mapping.
-        if self.swap_colors:
-            images = {"white": self.checker_images["black"], "black": self.checker_images["white"]}
-        else:
-            images = self.checker_images
+        # Compute the homography matrix using your board's destination points:
+        homography_matrix = Game.compute_homography(src_points, self.dst_points)
 
+        # Now draw the checkers using the homography:
         self.checker_positions.draw(
             screen=self.screen,
             board_rect=self.board_rect,
@@ -411,15 +410,15 @@ class GameLoop:
         """Executes the main loop."""
         # For demonstration, decode a sample Position.
         # (Replace the sample ID with your actual game position as needed.)
-        dummy_position = Position.decode("4HPwATDgc/ABMA")
-        # dummy_position = Position(
-        #     board_points=[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
-        #     # board_points=[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-        #     player_bar=0,
-        #     player_off=0,
-        #     opponent_bar=0,
-        #     opponent_off=0,
-        # )
+        # dummy_position = Position.decode("4HPwATDgc/ABMA")
+        dummy_position = Position(
+            # board_points=[6,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+            board_points=[1,2,3,4,5,6,7,8,9,10,15,15,-15,-15,-15,-15,-15,-15,-15,-15,-15,-15,-15,-15],
+            player_bar=15,
+            player_off=15,
+            opponent_bar=15,
+            opponent_off=15,
+        )
         # pip_count = dummy_position.pip_count()
 
         while self.running:
@@ -432,7 +431,7 @@ class GameLoop:
             self.game.draw_board()
             # DEBUG
             if self.game.debug:
-                # self.game.draw_perspective_rect()
+                self.game.draw_perspective_rect()
                 self.game.draw_board_quadrilaterals()
             self.game.draw_checkers(dummy_position)
             # self.game.pip_count(pip_count)

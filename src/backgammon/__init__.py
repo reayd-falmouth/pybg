@@ -49,6 +49,9 @@ BOARD_POINTS_RELATIVE = {
     21: (0.693, TOP_RELATIVE_Y),
     22: (0.743, TOP_RELATIVE_Y),
     23: (0.793, TOP_RELATIVE_Y),     # top-right
+
+    24: (0.5, TOP_RELATIVE_Y + 0.025),      # bar -top
+    25: (0.5, BOTTOM_RELATIVE_Y - 0.025), # bar -bottom
 }
 
 BACKGROUND_COLOUR = "3d4481"
