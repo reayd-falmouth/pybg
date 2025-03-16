@@ -28,7 +28,28 @@ class CheckerPositions:
         self.reverse_board = reverse_board
         self.top_row_scale = top_row_scale
         self.dst_points = None
+
+        # Preload fonts.
         self.all_fonts = load_fonts()
+
+        # Preload checker images.
+        # Assumes asset structure: ASSETS_DIR/img/checkers/{color}.png
+        self.checker_images = {
+            "white": pygame.image.load(os.path.join(ASSETS_DIR, "img", "board", "checkers", "white.png")).convert_alpha(),
+            "black": pygame.image.load(os.path.join(ASSETS_DIR, "img", "board", "checkers", "black.png")).convert_alpha()
+        }
+
+        # Preload tray images.
+        # Assumes tray images are named by the count (e.g., "1.png", "2.png", ..., "15.png")
+        self.tray_images = {"white": {}, "black": {}}
+        for color in ["white", "black"]:
+            tray_folder = os.path.join(ASSETS_DIR, "img", "board", "trays", color)
+            for count in range(1, 16):  # Adjust the range as needed
+                tray_path = os.path.join(tray_folder, f"{count}.png")
+                if os.path.exists(tray_path):
+                    self.tray_images[color][count] = pygame.image.load(tray_path).convert_alpha()
+                else:
+                    print(f"Tray image not found: {tray_path}")
 
     def get_mirrored_index(self, index):
         """
@@ -206,7 +227,7 @@ class CheckerPositions:
             )
             screen.blit(text_surface, text_rect)
 
-    def draw_quadreints(self, screen, board_rect, position, checker_images):
+    def draw_board_checkers(self, screen, board_rect, position, checker_images):
         """
         Draws the board checkers using the helper draw_checker() method.
         """
@@ -237,7 +258,109 @@ class CheckerPositions:
                 self.draw_checker_stack(screen, board_rect, 25, opponent_count, checker_img, spacing_scale=1.0,
                                         stack_direction="up")
 
+    def draw_tray(self, screen, board_rect, position):
+        """
+        Draws the trays (off-board checkers) using preloaded tray images and positions
+        determined by the BOARD_POINTS_RELATIVE dictionary.
+
+        When the board is not mirrored:
+          - The player's (white) tray is positioned using index 26.
+          - The opponent's (black) tray is positioned using index 27.
+
+        When the board is mirrored:
+          - The player's (white) tray is positioned using index 29.
+          - The opponent's (black) tray is positioned using index 28.
+        In addition, the tray image is flipped horizontally in the mirrored case.
+        """
+        # Retrieve the tray counts.
+        player_count = position.player_off
+        opponent_count = position.opponent_off
+
+        # Determine which BOARD_POINTS_RELATIVE indices to use.
+        if self.reverse_board:
+            white_index = 29  # top left
+            black_index = 28  # top right
+        else:
+            white_index = 26  # bottom right
+            black_index = 27  # bottom left
+
+        # Get relative tray positions.
+        white_rel = BOARD_POINTS_RELATIVE.get(white_index, (0.5, 0.5))
+        black_rel = BOARD_POINTS_RELATIVE.get(black_index, (0.5, 0.5))
+
+        # Convert relative coordinates into absolute coordinates.
+        white_center_x = board_rect.left + white_rel[0] * board_rect.width
+        white_center_y = board_rect.top + white_rel[1] * board_rect.height
+        black_center_x = board_rect.left + black_rel[0] * board_rect.width
+        black_center_y = board_rect.top + black_rel[1] * board_rect.height
+
+        # Define a relative size for the tray images (tray height is 28.5% of the board's height).
+        tray_height = board_rect.height * 0.285
+
+        # Draw player's tray (white).
+        if player_count > 0 and player_count in self.tray_images["white"]:
+            tray_image = self.tray_images["white"][player_count]
+            scale_factor = tray_height / tray_image.get_height()
+            tray_width = int(tray_image.get_width() * scale_factor)
+            scaled_tray = pygame.transform.smoothscale(tray_image, (tray_width, int(tray_height)))
+            # If the board is mirrored, flip the tray image horizontally.
+            if self.reverse_board:
+                scaled_tray = pygame.transform.flip(scaled_tray, True, False)
+            # Use calculated center coordinates; adjust so that the image is positioned correctly.
+            dest_x = white_center_x - tray_width
+            dest_y = white_center_y - int(tray_height)
+            screen.blit(scaled_tray, (dest_x, dest_y))
+
+        # Draw opponent's tray (black).
+        if opponent_count > 0 and opponent_count in self.tray_images["black"]:
+            tray_image = self.tray_images["black"][opponent_count]
+            scale_factor = tray_height / tray_image.get_height()
+            tray_width = int(tray_image.get_width() * scale_factor)
+            scaled_tray = pygame.transform.smoothscale(tray_image, (tray_width, int(tray_height)))
+            # Flip the image if the board is mirrored.
+            if self.reverse_board:
+                scaled_tray = pygame.transform.flip(scaled_tray, True, False)
+            dest_x = black_center_x - tray_width
+            dest_y = black_center_y - int(tray_height)
+            screen.blit(scaled_tray, (dest_x, dest_y))
+
+    def draw_pipcount(self, screen, board_rect, position: Position):
+        """
+        Draws the pip counts for both players.
+
+        - The player's pip count is drawn at the location specified by index 30 in BOARD_POINTS_RELATIVE.
+        - The opponent's pip count is drawn at the location specified by index 31 in BOARD_POINTS_RELATIVE.
+        """
+        # Retrieve the pip counts from the position object.
+        player_count, opponent_count = position.pip_count()
+
+        # Get the relative coordinates for each pip count display.
+        player_rel = BOARD_POINTS_RELATIVE.get(30, (0.5, 0.5))
+        opponent_rel = BOARD_POINTS_RELATIVE.get(31, (0.5, 0.5))
+
+        # Convert relative coordinates into absolute screen coordinates.
+        player_center_x = board_rect.left + player_rel[0] * board_rect.width
+        player_center_y = board_rect.top + player_rel[1] * board_rect.height
+        opponent_center_x = board_rect.left + opponent_rel[0] * board_rect.width
+        opponent_center_y = board_rect.top + opponent_rel[1] * board_rect.height
+
+        # Define a dynamic font size based on the board's height (e.g., 5% of board height).
+        pip_font_size = int(board_rect.height * 0.05)
+        pip_font = get_dynamic_font("Carton_Six", pip_font_size)
+
+        # Render and draw the player's pip count.
+        player_text_surface = pip_font.render(str(player_count), True, WHITE)
+        player_text_rect = player_text_surface.get_rect(center=(player_center_x, player_center_y))
+        screen.blit(player_text_surface, player_text_rect)
+
+        # Render and draw the opponent's pip count.
+        opponent_text_surface = pip_font.render(str(opponent_count), True, WHITE)
+        opponent_text_rect = opponent_text_surface.get_rect(center=(opponent_center_x, opponent_center_y))
+        screen.blit(opponent_text_surface, opponent_text_rect)
+
     def draw(self, screen, board_rect, position, checker_images, dst_points):
         self.dst_points = dst_points
-        self.draw_quadreints(screen, board_rect, position, checker_images)
+        self.draw_board_checkers (screen, board_rect, position, checker_images)
         self.draw_bar(screen, board_rect, position, checker_images)
+        self.draw_tray(screen, board_rect, position)
+        self.draw_pipcount(screen, board_rect, position)

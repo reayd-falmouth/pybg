@@ -410,16 +410,16 @@ class GameLoop:
         """Executes the main loop."""
         # For demonstration, decode a sample Position.
         # (Replace the sample ID with your actual game position as needed.)
-        # dummy_position = Position.decode("4HPwATDgc/ABMA")
-        dummy_position = Position(
-            # board_points=[6,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
-            board_points=[1,2,3,4,5,6,7,8,9,10,15,15,-15,-15,-15,-15,-15,-15,-15,-15,-15,-15,-15,-15],
-            player_bar=15,
-            player_off=15,
-            opponent_bar=15,
-            opponent_off=15,
-        )
-        # pip_count = dummy_position.pip_count()
+        dummy_position = Position.decode("4HPwATDgc/ABMA")
+        # dummy_position = Position(
+        #     # board_points=[6,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+        #     board_points=[1,2,3,4,5,6,7,8,9,10,15,15,-15,-15,-15,-15,-15,-15,-15,-15,-15,-15,-15,-15],
+        #     player_bar=15,
+        #     player_off=15,
+        #     opponent_bar=15,
+        #     opponent_off=15,
+        # )
+
 
         while self.running:
             for event in pygame.event.get():
