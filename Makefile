@@ -1,10 +1,12 @@
 SRC_DIR := src
-GAME_DIR := $(SRC_DIR)/backgammon
+GAME_DIR := $(SRC_DIR)/asciigammon
 ITCH_USER := reayd-falmouth
-ITCH_GAME := aquagammon
+ITCH_GAME := asciigammon
 BUILD_DIR = $(GAME_DIR)/build
 ZIP_FILE=web.zip
-PYTHONPATH := $(PYTHONPATH):$(SRC_DIR)
+
+export PYTHONPATH := $(PYTHONPATH):$(SRC_DIR)
+
 .PHONY: build deploy clean
 
 install:
@@ -43,9 +45,13 @@ clean:
 	@echo "Cleaning build artifacts..."
 	@rm -rf $(GAME_DIR)/build $(GAME_DIR)/$(ZIP_FILE)
 
+run_cartoon_board:
+	@echo "Running game..."
+	@python -m src.asciigammon.main
+
 run:
 	@echo "Running game..."
-	@python -m src.backgammon.main
+	@python src/asciigammon/main.py
 
 black:
 	@echo "Formatting with black..."
@@ -57,9 +63,10 @@ TESTS_SOURCE:=tests/
 # Detailed pytest target with coverage and cache clear
 test: ## Run pytest with coverage and clear cache
 	@echo "Running pytest with coverage and cache clear..."
-	@PYTHONPATH=$(GAME_DIR) poetry run pytest \
+	@poetry run pytest \
+		-v -s \
 		--cache-clear \
-		--cov=$(GAME_DIR) \
+		--cov=$(SRC_DIR) \
 		$(TESTS_SOURCE) \
 		--cov-report=term \
 		--cov-report=html

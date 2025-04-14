@@ -77,8 +77,8 @@ jobs:
       - name: Upload Executable
         uses: actions/upload-artifact@v4
         with:
-          name: backgammon-${{ env.OS_LABEL }}-${{ env.ARCH || 'x86_64' }}-${{ matrix.theme }}
-          path: src/backgammon/dist/${{ env.EXEC_NAME }}${{ (runner.os == 'Windows') && '.exe' || '' }}
+          name: asciigammon-${{ env.OS_LABEL }}-${{ env.ARCH || 'x86_64' }}-${{ matrix.theme }}
+          path: src/asciigammon/dist/${{ env.EXEC_NAME }}${{ (runner.os == 'Windows') && '.exe' || '' }}
 
   release:
     name: Release to Itch.io
@@ -112,7 +112,7 @@ jobs:
       - name: Deploy Windows Build to Itch.io
         uses: robpc/itchio-upload-action@v1
         with:
-          path: backgammon-windows-x86_64-${{ matrix.theme }}/${{ env.EXEC_NAME }}.exe
+          path: asciigammon-windows-x86_64-${{ matrix.theme }}/${{ env.EXEC_NAME }}.exe
           project: ${{ env.ITCHIO_USER }}/${{ env.ITCH_PROJECT }}
           channel: windows
           version: ${{ github.ref_name }}
@@ -121,7 +121,7 @@ jobs:
       - name: Deploy Linux Build to Itch.io
         uses: robpc/itchio-upload-action@v1
         with:
-          path: backgammon-linux-x86_64-${{ matrix.theme }}/${{ env.EXEC_NAME }}
+          path: asciigammon-linux-x86_64-${{ matrix.theme }}/${{ env.EXEC_NAME }}
           project: ${{ env.ITCHIO_USER }}/${{ env.ITCH_PROJECT }}
           channel: linux
           version: ${{ github.ref_name }}
@@ -130,7 +130,7 @@ jobs:
       - name: Deploy macOS ARM64 Build to Itch.io
         uses: robpc/itchio-upload-action@v1
         with:
-          path: backgammon-macOS-arm64-${{ matrix.theme }}/${{ env.EXEC_NAME }}
+          path: asciigammon-macOS-arm64-${{ matrix.theme }}/${{ env.EXEC_NAME }}
           project: ${{ env.ITCHIO_USER }}/${{ env.ITCH_PROJECT }}
           channel: mac-arm64
           version: ${{ github.ref_name }}
@@ -139,7 +139,7 @@ jobs:
       - name: Deploy macOS x86_64 Build to Itch.io
         uses: robpc/itchio-upload-action@v1
         with:
-          path: backgammon-macOS-x86_64-${{ matrix.theme }}/${{ env.EXEC_NAME }}
+          path: asciigammon-macOS-x86_64-${{ matrix.theme }}/${{ env.EXEC_NAME }}
           project: ${{ env.ITCHIO_USER }}/${{ env.ITCH_PROJECT }}
           channel: mac-x86_64
           version: ${{ github.ref_name }}

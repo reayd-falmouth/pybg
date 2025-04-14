@@ -77,5 +77,5 @@ jobs:
       - name: Upload Executable
         uses: actions/upload-artifact@v4
         with:
-          name: backgammon-${{ env.OS_LABEL }}-${{ env.ARCH || 'x86_64' }}-${{ matrix.theme }}
-          path: src/backgammon/dist/${{ env.EXEC_NAME }}${{ (runner.os == 'Windows') && '.exe' || '' }}
+          name: asciigammon-${{ env.OS_LABEL }}-${{ env.ARCH || 'x86_64' }}-${{ matrix.theme }}
+          path: src/asciigammon/dist/${{ env.EXEC_NAME }}${{ (runner.os == 'Windows') && '.exe' || '' }}

@@ -1,0 +1,86 @@
+{
+    "crawford": true,
+    "createdAt": "2021-05-17T10:30:22.609479",
+    "gameType": "Backgammon",
+    "history": [
+        "4HPwATDgc/ABMA:sIbmAAAAAAAA",
+        "4HPwATDgc/ABMA:sIbmAAAAAAAA"
+    ],
+    "id": "MATCH#21e328ca-b7a5-11eb-94e8-6f574bd21124",
+    "match": {
+        "crawford": true,
+        "cube_holder": 3,
+        "cube_value": 1,
+        "dice": [
+            5,
+            1
+        ],
+        "double": false,
+        "game_state": 6,
+        "length": 7,
+        "player": 0,
+        "player_0_score": 0,
+        "player_1_score": 0,
+        "resign": 0,
+        "turn": 0
+    },
+    "matchLength": 7,
+    "matchRef": "21e328ca-b7a5-11eb-94e8-6f574bd21124",
+    "messages": [
+
+    ],
+    "player0": {
+        "connectionId": "fnyYQfxEDoECIUw=",
+        "losses": null,
+        "money": null,
+        "playerId": "60f30207-33d0-4eac-85fc-a33da95da945",
+        "rank": null,
+        "rating": null,
+        "userName": "david.c.reay@gmail.com",
+        "wins": null
+    },
+    "player1": {
+        "connectionId": "fnyqocEqDoECHEw=",
+        "losses": null,
+        "money": null,
+        "playerId": "0caa33c3-8cc7-4742-96e7-2593f56594f0",
+        "rank": null,
+        "rating": null,
+        "userName": "david@awsbot.com",
+        "wins": null
+    },
+    "position": {
+        "board_points": [
+            -2,
+            0,
+            0,
+            0,
+            0,
+            5,
+            0,
+            3,
+            0,
+            0,
+            0,
+            -5,
+            5,
+            0,
+            0,
+            0,
+            -3,
+            0,
+            -5,
+            0,
+            0,
+            0,
+            0,
+            2
+        ],
+        "opponent_bar": 0,
+        "opponent_off": 0,
+        "player_bar": 0,
+        "player_off": 0
+    },
+    "gameId": "4HPwATDgc/ABMA:sIbmAAAAAAAA",
+    "sk": "MATCH#e2ae5ce1-b6fa-11eb-b24b-df63a062d6a5"
+}

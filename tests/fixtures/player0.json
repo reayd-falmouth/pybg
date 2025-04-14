@@ -1,0 +1,99 @@
+{
+  "apiRequest": {
+    "headers": {
+      "Host": "websocket.stonesandice.com",
+      "Origin": "http://websocket.stonesandice.com",
+      "Sec-WebSocket-Key": "nTEGODjTVDrCHaGdvmkcYw==",
+      "Sec-WebSocket-Version": "13",
+      "X-Amz-Date": "20210520T095057Z",
+      "X-Amz-Security-Token": "IQoJb3JpZ2luX2VjEPL//////////wEaCWV1LXdlc3QtMSJGMEQCIE74vP9RmBCSd1o566MAHnZDdg9lzNG/1fgy9w7JnMsrAiBPUNpANL8nSrUQAEEwWX29QnrrDy0iBa15NPZpIGmT1yrNBAiL//////////8BEAAaDDA5MzU4MTI5NzYzNSIMwSb08yElcqo7M5gjKqEEbr8lmdVyT1HZFs2E5jFtNOUyvPOv1iABAwMW4vRDM/nEIPx80EiB+G4+5n8UVbKSKsZQt0aZL3I2EgIRgSBnZPzQTLIgiSKU8iAX0Qb+w20513qTXkfk4UOyr5zqADYq30EGFhjZjEp60BVLIWLz12rIgO9zHIMV7llXdnRvjLiX09LG326LpUksgK3gklnQt04LbjRt6H9bxIq5W2zeCX/O/2SWw+L8wksVZMyTfOagw9TB9DfoVMDP+E4p9AszaTs+P4VJ+bqDkTDS27tGfjsJeJ4DJdncCZ0/N8GvS7YrS08hnsmIrDf/2ANkj1gJ/X/yiqFagdutcT7xwulPdKrrDWZy1Re7ZheBDYx3xhbbpyHvcd7Rl9mlVEU2pQBg0dfckwuQZWg86ckLDJZWTyx9tUlBwqDA7YGVsAPdj5nN8GarjTUWYzvvwNIbcw1pR7Lkyl/Rt7PkY259y/PO3VVCvW2ZxSmUCHq2fBG9LWG3dEHWS8hwT572i+pCouSAYzVgwwkQs4w/4kQxz+njIfYRn7EfhZI0yDBLUc35NKwK0rPrVo1UtJzqXFMEBzkf8cFLyn+cFBEwrwNRhcQedZvpW3h2CdbWhHw0G+B/F4d5MAR4DuioutzG2P+f/dwuftTY1BCJfyK18xoRS0j3GFyRP0zFx/gbZWY/FfMpbKpB/vwm61v1F+4ER8ygs/F+ZJpv/V30PPtPoIrEyAOMwfQwgeKYhQY6hgIL+WLi5sl2j2I6MAmU1Yzl1TAmEjKK7v/wutQp2ZtkaIpe9o4Xq2amb8MiZRDR0DWTC0O4/3Z13kIw2jpsbeesa3cNgmpysDdeajyiJ/3vBXxtw14k1bVB11KmLyuY9KRMlxeooR2lNpwhULtO/7K5bzcf6XGOYHab/+FnWrxq9FDz1kZAtZsi5UlsB7OLLFUXTTdCQSi9Qd72YCZl8GsH9/0rJbmUVC+Lwelz3mr5Q82R7JXJYR4sbOJ2H+58x1PS3KAtvnO0A2tqNEdKychqdRStRFKyZOti3XvHJADOAITKl8l8z7dilbCNCul7jmr4r0BurjK9w6uZMUIGsjqdwvDEFQhL",
+      "X-Amzn-Trace-Id": "Root=1-60a63101-2cf351b3565ddf1e133dc5e3",
+      "X-Cognito-Claims": "{\"sub\": \"60f30207-33d0-4eac-85fc-a33da95da945\", \"event_id\": \"652def35-fdc4-41df-8e17-8cb33ab1aeab\", \"token_use\": \"access\", \"scope\": \"aws.cognito.signin.user.admin\", \"auth_time\": 1621504256, \"iss\": \"https://cognito-idp.eu-west-1.amazonaws.com/eu-west-1_Od3gijlRY\", \"exp\": 1621507856, \"iat\": 1621504256, \"jti\": \"48a75f10-294b-465e-b853-b33914fd9a1f\", \"client_id\": \"3mner14d5rmtv9o5eoqio9dhnk\", \"username\": \"david.c.reay@gmail.com\"}",
+      "X-Forwarded-For": "82.22.180.82",
+      "X-Forwarded-Port": "443",
+      "X-Forwarded-Proto": "https"
+    },
+    "isBase64Encoded": false,
+    "multiValueHeaders": {
+      "Host": [
+        "websocket.stonesandice.com"
+      ],
+      "Origin": [
+        "http://websocket.stonesandice.com"
+      ],
+      "Sec-WebSocket-Key": [
+        "nTEGODjTVDrCHaGdvmkcYw=="
+      ],
+      "Sec-WebSocket-Version": [
+        "13"
+      ],
+      "X-Amz-Date": [
+        "20210520T095057Z"
+      ],
+      "X-Amz-Security-Token": [
+        "IQoJb3JpZ2luX2VjEPL//////////wEaCWV1LXdlc3QtMSJGMEQCIE74vP9RmBCSd1o566MAHnZDdg9lzNG/1fgy9w7JnMsrAiBPUNpANL8nSrUQAEEwWX29QnrrDy0iBa15NPZpIGmT1yrNBAiL//////////8BEAAaDDA5MzU4MTI5NzYzNSIMwSb08yElcqo7M5gjKqEEbr8lmdVyT1HZFs2E5jFtNOUyvPOv1iABAwMW4vRDM/nEIPx80EiB+G4+5n8UVbKSKsZQt0aZL3I2EgIRgSBnZPzQTLIgiSKU8iAX0Qb+w20513qTXkfk4UOyr5zqADYq30EGFhjZjEp60BVLIWLz12rIgO9zHIMV7llXdnRvjLiX09LG326LpUksgK3gklnQt04LbjRt6H9bxIq5W2zeCX/O/2SWw+L8wksVZMyTfOagw9TB9DfoVMDP+E4p9AszaTs+P4VJ+bqDkTDS27tGfjsJeJ4DJdncCZ0/N8GvS7YrS08hnsmIrDf/2ANkj1gJ/X/yiqFagdutcT7xwulPdKrrDWZy1Re7ZheBDYx3xhbbpyHvcd7Rl9mlVEU2pQBg0dfckwuQZWg86ckLDJZWTyx9tUlBwqDA7YGVsAPdj5nN8GarjTUWYzvvwNIbcw1pR7Lkyl/Rt7PkY259y/PO3VVCvW2ZxSmUCHq2fBG9LWG3dEHWS8hwT572i+pCouSAYzVgwwkQs4w/4kQxz+njIfYRn7EfhZI0yDBLUc35NKwK0rPrVo1UtJzqXFMEBzkf8cFLyn+cFBEwrwNRhcQedZvpW3h2CdbWhHw0G+B/F4d5MAR4DuioutzG2P+f/dwuftTY1BCJfyK18xoRS0j3GFyRP0zFx/gbZWY/FfMpbKpB/vwm61v1F+4ER8ygs/F+ZJpv/V30PPtPoIrEyAOMwfQwgeKYhQY6hgIL+WLi5sl2j2I6MAmU1Yzl1TAmEjKK7v/wutQp2ZtkaIpe9o4Xq2amb8MiZRDR0DWTC0O4/3Z13kIw2jpsbeesa3cNgmpysDdeajyiJ/3vBXxtw14k1bVB11KmLyuY9KRMlxeooR2lNpwhULtO/7K5bzcf6XGOYHab/+FnWrxq9FDz1kZAtZsi5UlsB7OLLFUXTTdCQSi9Qd72YCZl8GsH9/0rJbmUVC+Lwelz3mr5Q82R7JXJYR4sbOJ2H+58x1PS3KAtvnO0A2tqNEdKychqdRStRFKyZOti3XvHJADOAITKl8l8z7dilbCNCul7jmr4r0BurjK9w6uZMUIGsjqdwvDEFQhL"
+      ],
+      "X-Amzn-Trace-Id": [
+        "Root=1-60a63101-2cf351b3565ddf1e133dc5e3"
+      ],
+      "X-Cognito-Claims": [
+        "{\"sub\": \"60f30207-33d0-4eac-85fc-a33da95da945\", \"event_id\": \"652def35-fdc4-41df-8e17-8cb33ab1aeab\", \"token_use\": \"access\", \"scope\": \"aws.cognito.signin.user.admin\", \"auth_time\": 1621504256, \"iss\": \"https://cognito-idp.eu-west-1.amazonaws.com/eu-west-1_Od3gijlRY\", \"exp\": 1621507856, \"iat\": 1621504256, \"jti\": \"48a75f10-294b-465e-b853-b33914fd9a1f\", \"client_id\": \"3mner14d5rmtv9o5eoqio9dhnk\", \"username\": \"david.c.reay@gmail.com\"}"
+      ],
+      "X-Forwarded-For": [
+        "82.22.180.82"
+      ],
+      "X-Forwarded-Port": [
+        "443"
+      ],
+      "X-Forwarded-Proto": [
+        "https"
+      ]
+    },
+    "requestContext": {
+      "apiId": "5x9mwf0pmi",
+      "connectedAt": 1621504257503,
+      "connectionId": "fnyYQfxEDoECIUw=",
+      "domainName": "websocket.stonesandice.com",
+      "eventType": "CONNECT",
+      "extendedRequestId": "fnyYQFaIjoEF8aA=",
+      "identity": {
+        "accessKey": "ASIARLSPBI7R5BRA6WMW",
+        "accountId": "093581297635",
+        "caller": "AROARLSPBI7R4KGYNR3Q5:CognitoIdentityCredentials",
+        "cognitoAuthenticationProvider": "cognito-idp.eu-west-1.amazonaws.com/eu-west-1_Od3gijlRY,cognito-idp.eu-west-1.amazonaws.com/eu-west-1_Od3gijlRY:CognitoSignIn:60f30207-33d0-4eac-85fc-a33da95da945",
+        "cognitoAuthenticationType": "authenticated",
+        "cognitoIdentityId": "eu-west-1:cfc3ae31-5024-42e2-98fe-e00bd1e2971f",
+        "cognitoIdentityPoolId": "eu-west-1:de8eae16-f6de-4459-ab44-d4fb3feb1d3d",
+        "principalOrgId": "o-fkr1sxtpcb",
+        "sourceIp": "82.22.180.82",
+        "user": "AROARLSPBI7R4KGYNR3Q5:CognitoIdentityCredentials",
+        "userArn": "arn:aws:sts::093581297635:assumed-role/infrastructure-prod-Cognito-PAZR1DDUPHMV-AuthRole-8W681PDTCTVR/CognitoIdentityCredentials"
+      },
+      "messageDirection": "IN",
+      "requestId": "fnyYQFaIjoEF8aA=",
+      "requestTime": "20/May/2021:09:50:57 +0000",
+      "requestTimeEpoch": 1621504257503,
+      "routeKey": "$connect",
+      "stage": "prod"
+    }
+  },
+  "cognitoIdentity": {
+    "auth_time": 1621504256,
+    "client_id": "3mner14d5rmtv9o5eoqio9dhnk",
+    "event_id": "652def35-fdc4-41df-8e17-8cb33ab1aeab",
+    "exp": 1621507856,
+    "iat": 1621504256,
+    "iss": "https://cognito-idp.eu-west-1.amazonaws.com/eu-west-1_Od3gijlRY",
+    "jti": "48a75f10-294b-465e-b853-b33914fd9a1f",
+    "scope": "aws.cognito.signin.user.admin",
+    "sub": "60f30207-33d0-4eac-85fc-a33da95da945",
+    "token_use": "access",
+    "username": "david.c.reay@gmail.com"
+  },
+  "connectionId": "fnyYQfxEDoECIUw=",
+  "createdAt": "2021-05-20T09:50:58.653995",
+  "id": "CONNECTION#fnyYQfxEDoECIUw=",
+  "playerId": "60f30207-33d0-4eac-85fc-a33da95da945",
+  "nickname": "david.c.reay@gmail.com",
+  "sk": "BACKGAMMON#7#CRAWFORD:TRUE"
+}
