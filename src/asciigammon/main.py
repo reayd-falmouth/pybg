@@ -154,7 +154,7 @@ class GameShell:
 
 dirname = os.path.dirname(__file__)
 
-opponent_agent = PolicyAgent("ppo", f"{dirname}/rl/amca/models/maskable_ppo_backgammon.zip")  # Update path if needed
+opponent_agent = PolicyAgent("ppo", f"{dirname}/rl/models/maskable_ppo_backgammon.zip")  # Update path if needed
 
 pygame.init()
 

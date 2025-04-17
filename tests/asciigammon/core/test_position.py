@@ -4,7 +4,9 @@ from asciigammon.core.position import Position
 from asciigammon.variants.backgammon import (
     STARTING_POSITION_ID as BACKGAMMON_STARTING_POSITION_ID,
 )
+import pytest
 
+pytestmark = pytest.mark.unit
 
 def test_position():
     # Creates a new asciigammon starting position

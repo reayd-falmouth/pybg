@@ -19,9 +19,9 @@ import gymnasium as gym
 import numpy as np
 from gymnasium import spaces
 
-from asciigammon.rl.amca.agents import RandomAgent, PolicyAgent, HumanAgent
-from asciigammon.rl.amca.game import ALL_ACTIONS
-from asciigammon.rl.amca.game import Game
+from asciigammon.rl.agents import RandomAgent, PolicyAgent, HumanAgent
+from asciigammon.rl.game import ALL_ACTIONS
+from asciigammon.rl.game import Game
 
 ObsType = TypeVar("ObsType")
 
@@ -145,7 +145,7 @@ class BackgammonRandomEnv(BackgammonEnv):
 
 
 class BackgammonPolicyEnv(BackgammonEnv):
-    def __init__(self, opponent=PolicyAgent('ppo', 'amca/models/amca.zip')):
+    def __init__(self, opponent=PolicyAgent('ppo', 'models/amca.zip')):
         super().__init__(opponent)
 
 
@@ -160,7 +160,7 @@ class BackgammonPolicyContinuousEnv(BackgammonEnv):
 
 
 class BackgammonRandomContinuousEnv(BackgammonEnv):
-    def __init__(self, opponent=PolicyAgent('ppo', 'amca/models/amca.zip')):
+    def __init__(self, opponent=PolicyAgent('ppo', 'models/amca.zip')):
         super().__init__(opponent, cont=True)
 
 

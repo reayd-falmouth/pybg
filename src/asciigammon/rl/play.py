@@ -20,7 +20,7 @@ from stable_baselines3 import A2C, DDPG, DQN, PPO, SAC
 
 register(
     id="BackgammonHumanEnv-v0",
-    entry_point="amca.envs.backgammon_envs:BackgammonHumanEnv"
+    entry_point="envs.backgammon_envs:BackgammonHumanEnv"
 )
 
 if __name__ == "__main__":
@@ -31,7 +31,7 @@ if __name__ == "__main__":
                         type=str)
     PARSER.add_argument('--model', '-m',
                         help='Path to model',
-                        default='amca/models/default',
+                        default='models/default',
                         type=str)
 
     ARGS = PARSER.parse_args()

@@ -4,7 +4,7 @@ from sb3_contrib import MaskablePPO
 # Correct import path
 from sb3_contrib.common.wrappers import ActionMasker
 from stable_baselines3.common.env_checker import check_env
-from asciigammon.neuralnet.backgammon_env import BackgammonEnv
+from asciigammon.rl.envs.backgammon_envs import BackgammonEnv
 
 
 # This function extracts the action mask from the environment

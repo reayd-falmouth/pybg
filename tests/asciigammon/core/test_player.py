@@ -1,5 +1,7 @@
 """test_player.py"""
+import pytest
 
+pytestmark = pytest.mark.unit
 
 def test_player(player0):
     """Tests the player class"""

@@ -1,23 +1,28 @@
 import itertools
+import time
 
 import enum
+import gymnasium as gym
 import json
 import logging
+import numpy as np
 import operator
 import random
 from copy import deepcopy
+from gymnasium import spaces
+from typing import Any, TypeVar
 from typing import List, NamedTuple, Optional, Tuple
 
+from asciigammon.core.helpers import all_possible_actions
 from asciigammon.core.match import GameState, Match, Resign
 from asciigammon.core.player import Player, PlayerType
 from asciigammon.core.position import Position
-
-import gymnasium as gym
-import numpy as np
-from gymnasium import spaces
-
-from asciigammon.rl.agents.policy import PolicyAgent
+from asciigammon.rl.agents import PolicyAgent
 from asciigammon.rl.agents.agent import Agent
+from asciigammon.rl.game import ALL_ACTIONS
+from asciigammon.rl.game import Game
+
+ObsType = TypeVar("ObsType")
 
 # Set up logging (you can configure the level to DEBUG)
 logging.basicConfig(level=logging.DEBUG)
@@ -92,23 +97,28 @@ class Board(gym.Env):
         self.beavers = beavers
         self.jacoby = jacoby
 
+        # Reinforcement learning
         lower_bound = np.array([1, ]*2 + [0, ]*52)
         upper_bound = np.array([6, ]*2 + [15, ]*4 + [
             item for sublist in [[2, 15], ]*24 for item in sublist])
-        self.observation_space = spaces.Box(low=lower_bound, high=upper_bound,
-                                            dtype=np.float32)
-
+        self.observation_space = spaces.Box(
+            low=lower_bound,
+            high=upper_bound,
+            dtype=np.float32,
+        )
+        self.action_count = len(all_possible_actions())
         if cont:
-            self.action_space = spaces.Box(low=np.array([-int((len(ALL_ACTIONS)/2)-1)]),
-                                           high=np.array(
-                                               [int((len(ALL_ACTIONS)/2)-1)]),
-                                           dtype=np.float32)
+            self.action_space = spaces.Box(
+                low=np.array([-int((self.action_count/2)-1)]),
+                high=np.array([int((self.action_count/2)-1)]),
+                dtype=np.float32,
+            )
         else:
-            self.action_space = spaces.Discrete(len(ALL_ACTIONS))
+            self.action_space = spaces.Discrete(self.action_count)
 
         # Debug info.
-        self.__invalid_actions_taken = 0
-        self.__time_elapsed = 0
+        self.invalid_actions_taken = 0
+        self.time_elapsed = 0
 
         # Game initialization.
         self.opponent = opponent
@@ -457,7 +467,7 @@ class Board(gym.Env):
             self.match.swap_players()
         else:
             raise BoardError(
-                "You must specify resignation: single, gammon or asciigammon..."
+                "You must specify resignation: single, gammon or backgammon..."
             )
 
     def end_game(self) -> None:
@@ -519,7 +529,7 @@ class Board(gym.Env):
         # and requires the player to concede a multiplier.
         else:
             raise BoardError(
-                "Checkers are still on the board, what do you resign, single, gammon or asciigammon?"
+                "Checkers are still on the board, what do you resign, single, gammon or backgammon?"
             )
 
     @staticmethod
@@ -662,6 +672,79 @@ class Board(gym.Env):
         obs = obs.reshape(1, -1)
 
         return obs
+
+    def render(self, mode='human'):
+        """Renders the board. 'w' is player1 and 'b' is player2."""
+        if mode == 'human':
+            print(str(self))
+
+    def reset(
+            self,
+            *,
+            seed: int | None = None,
+            options: dict[str, Any] | None = None,
+    ) -> tuple[ObsType, dict[str, Any]]:
+        """Restarts the game."""
+
+        self._game: Game = Game(self, self.__opponent)
+
+        return np.array(self._game.get_observation(), dtype=np.float32), {}
+
+    def step(self, actionint):
+        """Run one timestep of the environment's dynamics. When end of
+        episode is reached, you are responsible for calling `reset()`
+        to reset this environment's state. Accepts an action and returns a tuple
+        (observation, reward, done, info).
+        Args:
+            action (int): an action provided by the environment
+        Returns:
+            observation (list): state of the current environment
+            reward (float) : amount of reward returned after previous action
+            done (boolean): whether the episode has ended, in which case further
+            step() calls will return undefined results
+            info (dict): contains auxiliary diagnostic information (helpful for
+            debugging, and sometimes learning)
+        """
+
+        if isinstance(self.action_space, spaces.Box):
+            actionint += int(len(ALL_ACTIONS)/2)
+            actionint = int(actionint)
+
+        reward = self._game.player_turn(actionint)
+        observation = self._game.get_observation()
+        done = self._game.get_done()
+        info = self.get_info()
+
+        terminated = done
+        truncated = False  # You could make this configurable if needed
+
+        return np.array(observation, dtype=np.float32), reward, terminated, truncated, info
+
+    def get_info(self):
+        """Returns useful info for debugging, etc."""
+
+        return {'time elapsed': time.time() - self.time_elapsed,
+                'invalid actions taken': self.invalid_actions_taken}
+
+    def get_action_mask(self):
+        """
+        Returns a boolean array of length len(ALL_ACTIONS),
+        where each True means the action is currently legal.
+        """
+        legal_action_mask = np.zeros(self.action_count, dtype=bool)
+
+        valid_action_sets, _ = self._game.get_valid_actions()
+
+        flattened_valid_actions = [a for s in valid_action_sets for a in s]
+
+        for action in flattened_valid_actions:
+            try:
+                idx = ALL_ACTIONS.index(action)
+                legal_action_mask[idx] = True
+            except ValueError:
+                pass
+
+        return legal_action_mask
 
     def __repr__(self):
         """

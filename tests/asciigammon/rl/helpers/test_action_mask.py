@@ -2,11 +2,9 @@ import gymnasium as gym
 import numpy as np
 import pytest
 
-from asciigammon.rl.amca.agents.random import RandomAgent
-from asciigammon.rl.envs import BackgammonMaskableEnv
-from asciigammon.rl.amca.game import ALL_ACTIONS
-
-
+from asciigammon.rl.agents.random import RandomAgent
+from asciigammon.rl.envs.backgammon_envs import BackgammonMaskableEnv
+from asciigammon.rl.game import ALL_ACTIONS
 
 pytestmark = pytest.mark.unit
 

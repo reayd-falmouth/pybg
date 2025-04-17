@@ -58,12 +58,12 @@ class Board:
     def get_bourne_off(self):
         """Get method for the checkers bourne off."""
 
-        return self.__hit
+        return self.__bourne_off
 
-    def set_bourne_off(self, hit):
+    def set_bourne_off(self, bourne_off):
         """Set method for the checkers bourne off."""
 
-        self.__hit = hit
+        self.__bourne_off = bourne_off  # ✅ Not __hit
 
     def update_move(self, color, source_point_index, target_point_index):
         """Moves a single checker from one point to another. This action is only

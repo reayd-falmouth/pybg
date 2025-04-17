@@ -18,12 +18,12 @@ from stable_baselines3.sac import policies as sac_policies
 # Manual registration
 register(
     id="BackgammonRandomEnv-v0",
-    entry_point="amca.envs.backgammon_envs:BackgammonRandomEnv",
+    entry_point="envs.backgammon_envs:BackgammonRandomEnv",
 )
 
 register(
     id="BackgammonRandomContinuousEnv-v0",
-    entry_point="amca.envs.backgammon_envs:BackgammonRandomContinuousEnv",
+    entry_point="envs.backgammon_envs:BackgammonRandomContinuousEnv",
 )
 
 class EpisodeLimitCallback(BaseCallback):
@@ -70,8 +70,8 @@ def plot_results(logdir, title, window):
 
 if __name__ == "__main__":
     PARSER = argparse.ArgumentParser(description='Train an agent using RL')
-    PARSER.add_argument('--name', '-n', default='amca/models/default.zip')
-    PARSER.add_argument('--cont', '-c', default='amca/models/default.zip')
+    PARSER.add_argument('--name', '-n', default='models/default.zip')
+    PARSER.add_argument('--cont', '-c', default='models/default.zip')
     PARSER.add_argument('--log_directory', '-l', default='logs/')
     PARSER.add_argument('--policy', '-p', default='MLP')
     PARSER.add_argument('--algorithm', '-a', default='DQN')

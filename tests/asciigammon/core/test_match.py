@@ -2,7 +2,9 @@
 
 from asciigammon.core.match import STARTING_MATCH_ID, Match
 from asciigammon.core.player import Player, PlayerType
+import pytest
 
+pytestmark = pytest.mark.unit
 
 def test_match():
     # Test making the match

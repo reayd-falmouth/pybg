@@ -1,25 +1,22 @@
-"""Unit tests for asciigammon.py"""
+"""Unit tests for backgammon.py"""
 
-import pytest
 import re
+from json import loads
 from typing import List, Optional, Tuple, cast
 
-from asciigammon.core.board import (
-    BACKGAMMON_STARTING_POSITION_ID,
-    Board,
-    BoardError,
-    GameState,
-    Resign,
-)
+import pytest
+from asciigammon.core.board import BoardError, GameState, Resign
 from asciigammon.core.player import Player, PlayerType
 from asciigammon.core.position import Position
+from asciigammon.variants.backgammon import Backgammon
+import pytest
+
+pytestmark = pytest.mark.unit
 
 
 def test_backgammon(player0, player1):
     # class Backgammon
-    bg = Board(
-        position_id=BACKGAMMON_STARTING_POSITION_ID,
-    )
+    bg = Backgammon()
     assert bg
 
     bg.player0 = Player(
@@ -61,9 +58,7 @@ def test_backgammon(player0, player1):
 
 def test_generate():
     """Tests the skip function"""
-    bg = Board(
-        position_id=BACKGAMMON_STARTING_POSITION_ID,
-    )
+    bg = Backgammon()
     bg.match.player = PlayerType.ZERO
     bg.position = Position(
         board_points=(
@@ -103,18 +98,14 @@ def test_generate():
 
 def test_encode():
     """Tests the encode function"""
-    bg = Board(
-        position_id=BACKGAMMON_STARTING_POSITION_ID,
-    )
+    bg = Backgammon()
     encoded_string = bg.encode()
-    assert encoded_string == "4HPwATDgc/ABMA:MAAAAAAAAAAA"
+    assert encoded_string == "4HPwATDgc/ABMA:cAgAAAAAAAAA"
 
 
 def test_start():
     """Tests the start function"""
-    bg = Board(
-        position_id=BACKGAMMON_STARTING_POSITION_ID,
-    )
+    bg = Backgammon()
     bg.start()
 
     assert bg.match.game_state == GameState.ROLLED
@@ -124,9 +115,7 @@ def test_start():
 
 def test_roll():
     """Tests roll"""
-    bg = Board(
-        position_id=BACKGAMMON_STARTING_POSITION_ID,
-    )
+    bg = Backgammon()
     bg.roll()
     assert bg.match.game_state == GameState.ROLLED
     assert bg.match.dice != (0, 0)
@@ -139,48 +128,37 @@ def test_roll():
 
 def test_calculate_score():
     """Tests the caluclate score function"""
-    bg = Board(
-        position_id=BACKGAMMON_STARTING_POSITION_ID,
-    )
+    bg = Backgammon()
     score = bg.calculate_score(3, 3)
     assert score == 9
 
 
 def test_update_score():
     """Tests the update score function"""
-    bg = Board(
-        position_id=BACKGAMMON_STARTING_POSITION_ID,
-    )
+    bg = Backgammon()
     bg.update_score(2, 3, PlayerType.ZERO)
     assert bg.match.player_0_score == 6
-
     bg.update_score(2, 3, PlayerType.ONE)
     assert bg.match.player_1_score == 6
 
 
 def test_end_game(capfd):
     """Tests the update score function"""
-    bg = Board(
-        position_id=BACKGAMMON_STARTING_POSITION_ID,
-    )
+    bg = Backgammon()
     bg.match.length = 1
     bg.update_score(2, 3, PlayerType.ZERO)
     bg.end_game()
     out, err = capfd.readouterr()
     # assert out == "Player 0 wins the match!\n"
 
-    bg = Board(
-        position_id=BACKGAMMON_STARTING_POSITION_ID,
-    )
+    bg = Backgammon()
     bg.match.length = 1
     bg.update_score(2, 3, PlayerType.ONE)
     bg.end_game()
     out, err = capfd.readouterr()
     # assert out == "Player 1 wins the match!\n"
 
-    bg = Board(
-        position_id=BACKGAMMON_STARTING_POSITION_ID,
-    )
+    bg = Backgammon()
     bg.match.length = 1
     bg.end_game()
     assert bg.position.encode() == "4HPwATDgc/ABMA"
@@ -190,12 +168,10 @@ def test_end_game(capfd):
 
 def test_resign():
     """Tests the resign function"""
-    bg = Board(
-        position_id=BACKGAMMON_STARTING_POSITION_ID,
-    )
+    bg = Backgammon()
     bg.match.dice = bg.first_roll()
     with pytest.raises(
-        BoardError, match="You must specify resignation: single, gammon or asciigammon"
+        BoardError, match="You must specify resignation: single, gammon or backgammon"
     ):
         bg.resign(None)
 
@@ -214,9 +190,7 @@ def test_end_turn():
 
     # Test an immediate resignation
     # With a match of length of 1 this should end the match completly
-    bg = Board(
-        position_id=BACKGAMMON_STARTING_POSITION_ID,
-    )
+    bg = Backgammon()
     bg.match.length = 1
     player = bg.match.player
     bg.end_turn()
@@ -229,11 +203,44 @@ def test_end_turn():
         assert bg.match.player == PlayerType.ONE
 
 
+# def test_skip():
+#     """Tests the skip function"""
+#     bg = Backgammon()
+#     player = bg.match.player
+#     bg.position = Position(
+#         board_points=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1),
+#         player_bar=0,
+#         player_off=0,
+#         opponent_bar=0,
+#         opponent_off=0
+#     )
+#     bg.roll()
+#     with pytest.raises(BoardError, match="Cannot skip turn: \d+ possible plays"):
+#         bg.skip()
+#
+#     # TODO: ValueError: max() arg is an empty sequence
+#     bg = Backgammon()
+#     player = bg.match.player
+#     bg.position = Position(
+#         board_points=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2, -2, -2, -2, -2),
+#         player_bar=1,
+#         player_off=14,
+#         opponent_bar=0,
+#         opponent_off=3
+#     )
+#     bg.roll()
+#     bg.skip()
+#     assert bg.match.dice == (0, 0)
+#     assert bg.match.game_state == GameState.ON_ROLL
+#     if player == PlayerType.ONE:
+#         assert bg.match.player == PlayerType.ZERO
+#     else:
+#         assert bg.match.player == PlayerType.ONE
+
+
 def test_take():
     """Tests the take method"""
-    bg = Board(
-        position_id=BACKGAMMON_STARTING_POSITION_ID,
-    )
+    bg = Backgammon()
     bg.match.game_state = GameState.DOUBLED
     bg.match.turn = PlayerType.ONE
     bg.match.player = PlayerType.ONE
@@ -244,26 +251,20 @@ def test_take():
         assert bg.match.cube_holder == PlayerType.ONE
     assert bg.match.dice != (0, 0)
 
-    bg = Board(
-        position_id=BACKGAMMON_STARTING_POSITION_ID,
-    )
+    bg = Backgammon()
     with pytest.raises(BoardError, match="No double to take"):
         bg.take()
 
 
 def test_reject():
     """Test reject method"""
-    bg = Board(
-        position_id=BACKGAMMON_STARTING_POSITION_ID,
-    )
+    bg = Backgammon()
     bg.match.player = PlayerType.ZERO
     bg.match.turn = PlayerType.ZERO
     bg.resign(Resign.SINGLE_GAME)
     bg.reject()
 
-    bg = Board(
-        position_id=BACKGAMMON_STARTING_POSITION_ID,
-    )
+    bg = Backgammon()
     bg.match.player = PlayerType.ZERO
     bg.match.turn = PlayerType.ZERO
     with pytest.raises(BoardError, match="No resignation to reject"):
@@ -272,17 +273,13 @@ def test_reject():
 
 def test_accept():
     """Test reject method"""
-    bg = Board(
-        position_id=BACKGAMMON_STARTING_POSITION_ID,
-    )
+    bg = Backgammon()
     bg.match.player = PlayerType.ZERO
     bg.match.turn = PlayerType.ZERO
     bg.resign(Resign.SINGLE_GAME)
     bg.accept()
 
-    bg = Board(
-        position_id=BACKGAMMON_STARTING_POSITION_ID,
-    )
+    bg = Backgammon()
     bg.match.player = PlayerType.ZERO
     bg.match.turn = PlayerType.ZERO
     with pytest.raises(BoardError, match="No resignation to accept"):
@@ -291,9 +288,7 @@ def test_accept():
 
 def test_double():
     """Test double method"""
-    bg = Board(
-        position_id=BACKGAMMON_STARTING_POSITION_ID,
-    )
+    bg = Backgammon()
     bg.match.player = PlayerType.ZERO
     bg.match.turn = PlayerType.ZERO
 
@@ -317,9 +312,7 @@ def test_double():
 
 def test_redouble():
     """Test redouble method"""
-    bg = Board(
-        position_id=BACKGAMMON_STARTING_POSITION_ID,
-    )
+    bg = Backgammon()
     bg.match.player = PlayerType.ZERO
     bg.match.turn = PlayerType.ZERO
 
@@ -341,9 +334,7 @@ def test_redouble():
 
 def test_drop():
     """Test redouble method"""
-    bg = Board(
-        position_id=BACKGAMMON_STARTING_POSITION_ID,
-    )
+    bg = Backgammon()
     bg.match.length = 9
     bg.match.player = PlayerType.ZERO
     bg.match.turn = PlayerType.ZERO
@@ -369,8 +360,8 @@ def test_drop():
 def test_plays():
     """Tests the play method"""
 
-    def do_move(bg: Board, arg: str) -> Board:
-        """Make a asciigammon move: move <from> <to> ..."""
+    def do_move(bg: Backgammon, arg: str) -> Backgammon:
+        """Make a backgammon move: move <from> <to> ..."""
         Moves = Tuple[Tuple[Optional[int], Optional[int]], ...]
 
         def parse_arg(arg: str) -> Moves:
@@ -394,9 +385,7 @@ def test_plays():
 
         return bg
 
-    bg = Board(
-        position_id=BACKGAMMON_STARTING_POSITION_ID,
-    )
+    bg = Backgammon()
 
     bg.match.length = 1
     bg.match.dice = (1, 2)
@@ -404,7 +393,7 @@ def test_plays():
     with pytest.raises(
         BoardError,
         match=re.escape(
-            "Invalid move: 4HPwATDgc/ABMA:MIAoAAAAAAAA ((22, 21), (22, 20))"
+            "Invalid move: 4HPwATDgc/ABMA:cIgoAAAAAAAA ((22, 21), (22, 20))"
         ),
     ):
         do_move(bg, "23 22 23 21")
@@ -447,13 +436,11 @@ def test_plays():
 
 def test_multiplier():
     """Tests the multiplier methoc"""
-    bg = Board(
-        position_id=BACKGAMMON_STARTING_POSITION_ID,
-    )
+    bg = Backgammon()
 
     with pytest.raises(
         BoardError,
-        match="Checkers are still on the board, what do you resign, single, gammon or asciigammon?",
+        match="Checkers are still on the board, what do you resign, single, gammon or backgammon?",
     ):
         bg.multiplier()
 
@@ -601,9 +588,7 @@ def test_multiplier():
 def test_set_player_score(capfd, player0, player1):
     """test the set player sore method"""
 
-    bg = Board(
-        position_id=BACKGAMMON_STARTING_POSITION_ID,
-    )
+    bg = Backgammon()
     bg.player0 = Player(PlayerType.ZERO, player0)
     bg.player1 = Player(PlayerType.ONE, player1)
     bg.match.player_0_score = 5
@@ -612,7 +597,7 @@ def test_set_player_score(capfd, player0, player1):
     bg.match.player = PlayerType.ZERO
     bg.player = bg.player0
     board = """ Stones+Dice     Position ID: 4HPwATDgc/ABMA
-                 Match ID   : MAAAAFAAOAAA
+                 Match ID   : MAgAAFAAOAAA
  +13-14-15-16-17-18------19-20-21-22-23-24-+     X: 
  | O           X    |   | X              O |     7 points
  | O           X    |   | X              O |
@@ -772,341 +757,24 @@ v|                  |BAR|                  |     $0 money game (Cube: 1)
 #             0,
 #         ),
 #         player_bar=0,
-#         player_off=9,
+#         player_off=0,
 #         opponent_bar=0,
-#         opponent_off=15,
+#         opponent_off=0,
 #     )
 #     board = """ Stones+Dice     Position ID: AAAAfgAAAAAAAA
 #                  Match ID   : EKUEAFAAOAAA
-#  +13-14-15-16-17-18------19-20-21-22-23-24-+     X: player1 (Cube: 1)
-#  |                  |   |                  |     7 points
-#  |                  |   |                  |
-#  |                  |   |                  |
-#  |                  |   |                  |     pips: 0, rolls: 0.0
-#  |                  |   |                  |
-# v|                  |BAR|                  |     $0 money game (Cube: 1)
-#  |                  |   |                6 |
-#  |                  |   |                O |     pips: 6, rolls: 2.69
-#  |                  |   |                O |
-#  |                  |   |                O |     On roll
+#  +12-11-10--9--8--7-------6--5--4--3--2--1-+     O:
 #  |                  |   |                O |     5 points
-#  +12-11-10--9--8--7-------6--5--4--3--2--1-+     O: player0"""
+#  |                  |   |                O |     On roll
+#  |                  |   |                O |
+#  |                  |   |                O |     pips: 6
+#  |                  |   |                6 |
+# ^|                  |BAR|                  |     $0 money game (Cube: 1)
+#  |                  |   |                  |
+#  |                  |   |                  |     pips: 0
+#  |                  |   |                  |
+#  |                  |   |                  |
+#  |                  |   |                  |     7 points
+#  +13-14-15-16-17-18------19-20-21-22-23-24-+     X:  (Cube: 1)"""
 #
 #     assert str(board) == bg.__str__()
-
-
-def test_is_player_home(capfd, player0, player1):
-    bg = Board(
-        position_id=BACKGAMMON_STARTING_POSITION_ID,
-    )
-    bg.player0 = Player(PlayerType.ZERO, player0)
-    bg.player1 = Player(PlayerType.ONE, player1)
-    bg.match.player_0_score = 5
-    bg.match.player_1_score = 7
-
-    bg.match.player = PlayerType.ZERO
-    bg.player = bg.player0
-    bg.position = Position(
-        board_points=(
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-        ),
-        player_bar=0,
-        player_off=15,
-        opponent_bar=0,
-        opponent_off=15,
-    )
-    assert bg.is_player_home()
-
-    bg.position = Position(
-        board_points=(
-            2,
-            2,
-            2,
-            2,
-            2,
-            2,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            -2,
-            -2,
-            -2,
-            -2,
-            -2,
-            -2,
-        ),
-        player_bar=0,
-        player_off=3,
-        opponent_bar=0,
-        opponent_off=3,
-    )
-    assert bg.is_player_home()
-
-    bg.position = Position(
-        board_points=(
-            2,
-            2,
-            2,
-            2,
-            2,
-            2,
-            -3,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            3,
-            -2,
-            -2,
-            -2,
-            -2,
-            -2,
-            -2,
-        ),
-        player_bar=0,
-        player_off=0,
-        opponent_bar=0,
-        opponent_off=0,
-    )
-    assert not bg.is_player_home()
-
-    bg.position = Position(
-        board_points=(
-            -2,
-            2,
-            2,
-            2,
-            2,
-            2,
-            -2,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            2,
-            -2,
-            -2,
-            -2,
-            -2,
-            -2,
-            2,
-        ),
-        player_bar=0,
-        player_off=1,
-        opponent_bar=0,
-        opponent_off=1,
-    )
-    assert not bg.is_player_home()
-
-
-def test_is_opponent_home(capfd, player0, player1):
-    bg = Board(
-        position_id=BACKGAMMON_STARTING_POSITION_ID,
-    )
-    bg.player0 = Player(PlayerType.ZERO, player0)
-    bg.player1 = Player(PlayerType.ONE, player1)
-    bg.match.player_0_score = 5
-    bg.match.player_1_score = 7
-
-    bg.match.player = PlayerType.ZERO
-    bg.player = bg.player0
-    bg.position = Position(
-        board_points=(
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-        ),
-        player_bar=0,
-        player_off=15,
-        opponent_bar=0,
-        opponent_off=15,
-    )
-    assert bg.is_opponent_home()
-
-    bg.position = Position(
-        board_points=(
-            2,
-            2,
-            2,
-            2,
-            2,
-            2,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            -2,
-            -2,
-            -2,
-            -2,
-            -2,
-            -2,
-        ),
-        player_bar=0,
-        player_off=3,
-        opponent_bar=0,
-        opponent_off=3,
-    )
-    assert bg.is_opponent_home()
-
-    bg.position = Position(
-        board_points=(
-            2,
-            2,
-            2,
-            2,
-            2,
-            2,
-            -3,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            3,
-            -2,
-            -2,
-            -2,
-            -2,
-            -2,
-            -2,
-        ),
-        player_bar=0,
-        player_off=0,
-        opponent_bar=0,
-        opponent_off=0,
-    )
-    assert not bg.is_opponent_home()
-
-    bg.position = Position(
-        board_points=(
-            -2,
-            2,
-            2,
-            2,
-            2,
-            2,
-            -2,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            2,
-            -2,
-            -2,
-            -2,
-            -2,
-            -2,
-            2,
-        ),
-        player_bar=0,
-        player_off=1,
-        opponent_bar=0,
-        opponent_off=1,
-    )
-    assert not bg.is_opponent_home()
-
-
-def test_checkers_on_bar(capfd, player0, player1):
-    position_id = "/wEAAO4/AADAAQ"
-    bg = Board(position_id=position_id, match_id="MAAAAAAAAAAA")
-    board = """ Stones+Dice     Position ID: /wEAAO4/AADAAQ
-                 Match ID   : MAAAAAAAAAAA
- +13-14-15-16-17-18------19-20-21-22-23-24-+     X: player1
- |                  | O |                X |     0 points
- |                  | O |                X |
- |                  | O |                X |
- |                  |   |                X |     pips: 84
- |                  |   |                9 |
-v|                  |BAR|                  |     $0 money game (Cube: 1)
- |                  |   |                9 |
- |                  |   |                O |     pips: 84
- |                  | X |                O |
- |                  | X |                O |     
- |                  | X |                O |     0 points
- +12-11-10--9--8--7-------6--5--4--3--2--1-+     O: player0"""
-    assert str(board) == bg.__str__()

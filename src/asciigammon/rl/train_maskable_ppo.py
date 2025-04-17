@@ -1,11 +1,13 @@
+import gymnasium as gym
 from sb3_contrib import MaskablePPO
 from sb3_contrib.common.maskable.policies import MaskableActorCriticPolicy
-from asciigammon.rl.envs.backgammon_envs import BackgammonMaskableEnv
-from asciigammon.rl.agents.random import RandomAgent
-from asciigammon.rl.game.game import ALL_ACTIONS
-import gymnasium as gym
-from stable_baselines3.common.vec_env import DummyVecEnv
 from sb3_contrib.common.wrappers import ActionMasker
+from stable_baselines3.common.vec_env import DummyVecEnv
+
+from asciigammon.rl.agents.random import RandomAgent
+from asciigammon.rl.envs.backgammon_envs import BackgammonMaskableEnv
+from asciigammon.rl.game.game import ALL_ACTIONS
+
 
 def mask_fn(env):
     return env.get_action_mask()
@@ -35,6 +37,6 @@ if __name__ == "__main__":
     )
 
     model.learn(total_timesteps=1_000_000)
-    model.save("amca/models/maskable_ppo_backgammon")
+    model.save("models/maskable_ppo_backgammon")
 
     print("✅ Training complete and saved.")

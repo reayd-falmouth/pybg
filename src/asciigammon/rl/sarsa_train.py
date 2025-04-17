@@ -1,17 +1,3 @@
-# -*- coding: utf-8 -*-
-#!/usr/bin/env python3
-"""
-    Amca: The RL-Based Backgammon Agent
-    https://github.com/ardabbour/amca/
-
-    Abdul Rahman Dabbour, Omid Khorsand Kazemy, Yusuf Izmirlioglu
-    Cognitive Robotics Laboratory
-    Faculty of Engineering and Natural Sciences
-    Sabanci University
-
-    This script allows us to train a Backgammon agent using the SARSA algorithm.
-"""
-
 import argparse
 import pickle
 
@@ -71,7 +57,7 @@ if __name__ == "__main__":
     PARSER = argparse.ArgumentParser(description='Train an agent using RL')
     PARSER.add_argument('--name', '-n',
                         help='Name of the agent to be trained.',
-                        default='amca/models/sarsa-vs_random-1M.pkl',
+                        default='models/sarsa-vs_random-1M.pkl',
                         type=str)
     PARSER.add_argument('--maxmove', '-m',
                         help='Maximum number of moves per game.',

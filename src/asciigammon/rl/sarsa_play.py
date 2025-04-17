@@ -21,7 +21,7 @@ if __name__ == "__main__":
     PARSER = argparse.ArgumentParser(description='Train an agent using RL')
     PARSER.add_argument('--name', '-n',
                         help='Name of the agent to play againts.',
-                        default='amca/models/sarsa-vs_random-1M.pkl',
+                        default='models/sarsa-vs_random-1M.pkl',
                         type=str)
     PARSER.add_argument('--games', '-g',
                         help='Number of games to play.',

@@ -34,12 +34,6 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 
-
-
-
-
-
-
 [tool.poetry.group.linting.dependencies]
 ruff = "^0.0.291"
 black = "^25.1.0"
@@ -73,4 +67,5 @@ omit = [
     "*/tests/*",      # Exclude all files in any 'tests' directory at any depth
     "*conftest.py*",  # Exclude all 'conftest.py' files, which are used by pytest for test configurations
     "*setup.py*",     # Exclude 'setup.py', typically used for package and distribution management
+    "*/scripts/*",
 ]

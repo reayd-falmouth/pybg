@@ -1,5 +1,7 @@
 from asciigammon.core.math_utils import *
+import pytest
 
+pytestmark = pytest.mark.unit
 
 def test_random_die():
     for i in range(35):
