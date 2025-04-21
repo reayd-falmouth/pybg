@@ -77,7 +77,7 @@ class Resign(enum.IntEnum):
     NONE = 0b00
     SINGLE_GAME = 0b01, "single", "a single multiplier"
     GAMMON = 0b10, "gammon", "a double multiplier"
-    BACKGAMMON = 0b11, "asciigammon", "a triple multiplier"
+    BACKGAMMON = 0b11, "backgammon", "a triple multiplier"
 
 
 @dataclasses.dataclass

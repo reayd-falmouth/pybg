@@ -9,7 +9,7 @@
     Faculty of Engineering and Natural Sciences
     Sabanci University
 
-    This script allows us to play asciigammon with the RL-trained agent, amca.
+    This script allows us to play backgammon with the RL-trained agent, amca.
 """
 
 import argparse

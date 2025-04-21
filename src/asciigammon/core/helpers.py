@@ -84,37 +84,3 @@ def hex_to_rgb(hex_color):
 def rgb_to_hex(r, g, b):
     return "#{:02x}{:02x}{:02x}".format(r, g, b)
 
-
-def all_possible_actions():
-    actions = []
-    sources = list(range(0, 24))
-    targets = list(range(0, 24))
-    homes = list(range(0, 6)) + list(range(18, 24))
-
-    # 'move's and 'hit's
-    for i in sources:
-        for j in targets:
-            if (j - i) <= 6:
-                actions.append(('move', i, j))
-                actions.append(('move', j, i))
-                actions.append(('hit', i, j))
-                actions.append(('hit', j, i))
-
-    # 'reenter's, 'reenter_hit's and 'bearoff's
-    for j in homes:
-        actions.append(('reenter', j))
-        actions.append(('reenter_hit', j))
-        actions.append(('bearoff', j))
-
-    # for r in ["single", "gammon", "backgammon"]:
-    #     actions.append(('accept', r))
-    #     actions.append(('reject', r))
-    #     actions.append(('resign', r))
-    #
-    # actions.append(('roll'))
-    # actions.append(('double'))
-    # actions.append(('redouble'))
-    # actions.append(('take'))
-    # actions.append(('drop'))
-
-    return actions

@@ -265,7 +265,7 @@ class GnubgEvaluator:
         Compute cubeless equity from evaluation output.
 
         GNUBG-style linear equity (no cube):
-          Equity = win * (1 + gammon + 2×asciigammon)
+          Equity = win * (1 + gammon + 2×backgammon)
                    - (1 - win) * (loss_gammon + 2×loss_backgammon)
 
         Parameters:

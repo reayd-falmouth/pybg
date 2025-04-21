@@ -13,7 +13,7 @@ from asciigammon.core.position import Position
 
 class CheckerPositions:
     """
-    A class responsible for positioning and drawing asciigammon checkers.
+    A class responsible for positioning and drawing backgammon checkers.
     """
 
     def __init__(self, offset_ratio=0.3, reverse_board=False, top_row_scale=0.8):

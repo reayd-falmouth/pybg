@@ -136,7 +136,7 @@ def convert_board_to_bearoff_index(board, player):
 
 def find_best_move(board, dice, player, bearoff_file):
     """
-    Finds the best move in a asciigammon position given a dice roll.
+    Finds the best move in a backgammon position given a dice roll.
 
     Parameters:
         board (list): The current board position.

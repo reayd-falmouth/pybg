@@ -9,7 +9,7 @@
     Faculty of Engineering and Natural Sciences
     Sabanci University
 
-    This script contains the classes required to play asciigammon.
+    This script contains the classes required to play backgammon.
 """
 
 import random
@@ -18,7 +18,7 @@ from asciigammon.rl.game import Board
 
 
 class SarsaGame:
-    """Defines a asciigammon game object."""
+    """Defines a backgammon game object."""
 
     def __init__(self, w_player, b_player):
         self.__w_player = w_player

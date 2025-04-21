@@ -6,7 +6,7 @@ SCM - Single Checker Model
 def WP(x: int, y: int) -> float:
     Let WP(x, n) denote the probability that a player with count x gets off in exactly n rolls.
     Let f(y) denote the probability that a player’s total in one roll is y.
-    In asciigammon, the minimum roll is 3 and the maximum roll is 24.
+    In backgammon, the minimum roll is 3 and the maximum roll is 24.
 
     Args:
         x:
@@ -164,7 +164,7 @@ def average_pips_in_a_roll(rolls: tuple) -> float:
         rolls: list: A list of the 36 possible rolls.
 
     Returns:
-        float: 8.166666666666666 for a standard asciigammon match with 2 dice and doubles.
+        float: 8.166666666666666 for a standard backgammon match with 2 dice and doubles.
     """
     z: int = 0
     for roll in rolls:
@@ -186,7 +186,7 @@ def roll_variance(rolls: tuple) -> float:
 
     Returns: float
         A float of the variance of the roll set.
-        For a asciigammon roll set this should be 18.47222222222222
+        For a backgammon roll set this should be 18.47222222222222
 
     """
     mean: float = average_pips_in_a_roll(rolls)
@@ -204,7 +204,7 @@ def roll_standard_deviation(rolls: tuple) -> float:
 
     Returns: float
         A float representing the standard deviation.
-        For a asciigammon roll set this should be 4.297932319409209.
+        For a backgammon roll set this should be 4.297932319409209.
     """
     return roll_variance(rolls) ** 0.5
 

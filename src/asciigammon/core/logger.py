@@ -1,9 +1,8 @@
-"""logger.py"""
-
+from aws_lambda_powertools import Logger
 from os import getenv
 
-import logging
+# Initialize the Powertools Logger
+logger = Logger(service=getenv("POWERTOOLS_SERVICE_NAME", "asciigammon"))
 
-logger = logging.getLogger(__name__)
-logger.propagate = True
+# Set the log level from the environment variable, default to INFO if not set
 logger.setLevel(level=getenv("LOG_LEVEL", "DEBUG"))

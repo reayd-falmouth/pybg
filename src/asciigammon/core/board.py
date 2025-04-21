@@ -1,31 +1,22 @@
-import itertools
 import time
 
 import enum
 import gymnasium as gym
 import json
-import logging
 import numpy as np
-import operator
 import random
 from copy import deepcopy
 from gymnasium import spaces
 from typing import Any, TypeVar
 from typing import List, NamedTuple, Optional, Tuple
 
-from asciigammon.core.helpers import all_possible_actions
+from asciigammon.core.logger import logger
 from asciigammon.core.match import GameState, Match, Resign
 from asciigammon.core.player import Player, PlayerType
 from asciigammon.core.position import Position
-from asciigammon.rl.agents import PolicyAgent
-from asciigammon.rl.agents.agent import Agent
-from asciigammon.rl.game import ALL_ACTIONS
-from asciigammon.rl.game import Game
 
 ObsType = TypeVar("ObsType")
 
-# Set up logging (you can configure the level to DEBUG)
-logging.basicConfig(level=logging.DEBUG)
 
 POINTS = 24
 POINTS_PER_QUADRANT = int(POINTS / 4)
@@ -71,7 +62,7 @@ class Play(NamedTuple):
     moves: Tuple[Move, ...]
     position: Position
 
-
+# gym.Env
 class Board(gym.Env):
     checkers: int = CHECKERS
     player: Player = Player.ZERO
@@ -87,7 +78,6 @@ class Board(gym.Env):
         beavers: bool = False,
         jacoby: bool = False,
         cont: bool = False,
-        opponent: Agent = PolicyAgent,
     ):
         self.position: Position = Position.decode(position_id)
         self.match: Match = Match.decode(match_id)
@@ -106,7 +96,8 @@ class Board(gym.Env):
             high=upper_bound,
             dtype=np.float32,
         )
-        self.action_count = len(all_possible_actions())
+        self.actions = self.all_actions()
+        self.action_count = len(self.actions)
         if cont:
             self.action_space = spaces.Box(
                 low=np.array([-int((self.action_count/2)-1)]),
@@ -120,26 +111,20 @@ class Board(gym.Env):
         self.invalid_actions_taken = 0
         self.time_elapsed = 0
 
-        # Game initialization.
-        self.opponent = opponent
+    def generate_plays(self, partial: bool = False) -> List[Play]:
+        """
+        Generate and return legal plays.
 
-    def generate_plays(self) -> List[Play]:
-        """Generate and return legal plays."""
+        If `partial` is True, return all partial plays too (not just max-length).
+        """
 
         def generate(
-            position: Position,
-            dice: Tuple[int, ...],
-            die: int = 0,
-            moves: Tuple[Move, ...] = (),
-            plays: List[Play] = [],
+                position: Position,
+                dice: Tuple[int, ...],
+                die: int = 0,
+                moves: Tuple[Move, ...] = (),
+                plays: List[Play] = [],
         ) -> List[Play]:
-            """Generate and return all plays."""
-            new_position: Optional[Position]
-            destination: Optional[int]
-            point: int
-            num_checkers: int
-            pips: int
-
             if die < len(dice):
                 pips = dice[die]
 
@@ -154,9 +139,7 @@ class Board(gym.Env):
                             plays,
                         )
                 elif sum(position.player_home()) + position.player_off == self.checkers:
-                    for point, num_checkers in enumerate(
-                        position.board_points[:POINTS_PER_QUADRANT]
-                    ):
+                    for point in range(POINTS_PER_QUADRANT):
                         new_position, destination = position.off(point, pips)
                         if new_position:
                             generate(
@@ -167,7 +150,7 @@ class Board(gym.Env):
                                 plays,
                             )
                 else:
-                    for point, num_checkers in enumerate(position.board_points):
+                    for point in range(len(position.board_points)):
                         new_position, destination = position.move(point, pips)
                         if new_position:
                             generate(
@@ -178,53 +161,33 @@ class Board(gym.Env):
                                 plays,
                             )
 
-            if len(moves) > 0:
-                plays.append(Play(moves, position))
-
+            plays.append(Play(moves, position))
             return plays
 
-        # If the dice are 0, i.e. reset return an empty list.
         if not any(d > 0 for d in self.match.dice):
             return []
 
-        # Check whether the doubles rule applies
-        doubles: bool = self.match.dice[0] == self.match.dice[1]
+        doubles = self.match.dice[0] == self.match.dice[1]
+        dice = self.match.dice * 2 if doubles else self.match.dice
 
-        # If so double the value of the dice
-        dice: Tuple[int, ...] = self.match.dice * 2 if doubles else self.match.dice
-
-        # Create a list of possible moves.
-        plays: List[Play] = generate(self.position, dice)
-
-        # If the dice are not doubles, calculate the plays with the other dice.
+        plays = generate(self.position, dice)
         if not doubles:
             plays += generate(self.position, dice[::-1])
 
-        if len(plays) > 0:
-            # Calculate the maximum number of moves
-            max_moves: int = max(len(p.moves) for p in plays)
-            if max_moves == 1:
-                max_pips: int = max(dice)
-                higher_plays: List[Play] = list(
-                    filter(lambda p: p.moves[0].pips == max_pips, plays)
-                )
-                if higher_plays:
-                    plays = higher_plays
-            else:
-                plays = list(filter(lambda p: len(p.moves) == max_moves, plays))
+        if not partial and len(plays) > 0:
+            max_moves = max(len(p.moves) for p in plays)
+            plays = [p for p in plays if len(p.moves) == max_moves]
 
-        def key_func(p):
-            return hash(p.position)
+        # Deduplicate by final position
+        seen = set()
+        unique_plays = []
+        for play in sorted(plays, key=lambda p: hash(p.position)):
+            h = hash(play.position)
+            if h not in seen:
+                seen.add(h)
+                unique_plays.append(play)
 
-        plays = sorted(plays, key=key_func)
-        plays = list(
-            map(
-                next,
-                map(operator.itemgetter(1), itertools.groupby(plays, key_func)),
-            )
-        )
-
-        return plays
+        return unique_plays
 
     def start(self, length: int = 3) -> None:
         """
@@ -282,33 +245,46 @@ class Board(gym.Env):
 
     def play(self, moves: Tuple[Tuple[Optional[int], Optional[int]], ...]) -> None:
         """
-        Execute a play i.e a sequence of moves.
+        Execute a partial or full play.
 
         Args:
-            moves
-        Returns:
-            None
-        """
-        legal_plays: List[Play] = self.generate_plays()
+            moves: sequence of (source, destination) tuples.
 
-        # If there are no legal plays then the player must skip their turn.
-        if len(legal_plays) == 0:
+        Raises:
+            BoardError: if the partial play is invalid.
+        """
+        legal_plays = self.generate_plays(partial=True)
+
+        if not legal_plays:
             self.end_turn()
             return
 
-        new_position: Position = self.position
-        for source, destination in moves:
-            new_position = new_position.apply_move(source, destination)
+        # Convert to Move objects to compare
+        def to_moves(seq):
+            return tuple(Move(abs(s - d) if s is not None and d is not None else 0, s, d) for s, d in seq)
 
-        if new_position in [play.position for play in legal_plays]:
+        requested_moves = to_moves(moves)
+
+        # Filter for any legal play that starts with this sequence
+        matching_play = next(
+            (play for play in legal_plays if play.moves[:len(requested_moves)] == requested_moves),
+            None
+        )
+
+        if matching_play:
+            # Apply each move in order to reach that intermediate position
+            new_position = self.position
+            for s, d in moves:
+                new_position = new_position.apply_move(s, d)
             self.position = new_position
-            if self.position.player_off == self.checkers:
-                self.match.game_state = GameState.GAME_OVER
-            self.end_turn()
+
+            # End the turn if it's a complete match
+            if len(requested_moves) == len(matching_play.moves):
+                if self.position.player_off == self.checkers:
+                    self.match.game_state = GameState.GAME_OVER
+                self.end_turn()
         else:
-            position_id: str = self.position.encode()
-            match_id: str = self.match.encode()
-            raise BoardError(f"Invalid move: {position_id}:{match_id} {moves}")
+            raise BoardError(f"Invalid move sequence: {moves}")
 
     def double(self) -> None:
         """
@@ -430,9 +406,6 @@ class Board(gym.Env):
             # TODO: somethings not right here? Why is match and position different?
             self.position = self.position.swap_players()
             self.match.swap_players()
-
-            # ...and roll the dice
-            self.roll()
         else:
             raise BoardError("No double to take")
 
@@ -484,12 +457,7 @@ class Board(gym.Env):
             # print(f"🏆 Winner: {'X' if self.match.player == 1 else 'O'}")
             self.match.game_state = GameState.GAME_OVER
         else:
-            self.position = Position.decode(self.starting_position_id)
-            self.first_roll()
-            self.match.game_state = GameState.ROLLED
-            self.match.cube_value = 1
-            self.match.cube_holder = PlayerType.CENTERED
-            self.match.double = False
+            self.reset()
 
     def update_score(self, cube: int, multiplier: int, winner: int) -> None:
         """
@@ -516,7 +484,7 @@ class Board(gym.Env):
             if self.position.opponent_off > 0:
                 multiplier = Resign.SINGLE_GAME
             # Otherwise if 0 checkers are borne off and there is one left
-            # in the home board it's a asciigammon (opponent is negative).
+            # in the home board it's a backgammon (opponent is negative).
             elif (
                 sum(self.position.opponent_home()) < 0 or self.position.opponent_bar > 0
             ):
@@ -606,38 +574,95 @@ class Board(gym.Env):
 
         return False
 
-    def get_valid_actions(self) -> Tuple[np.ndarray, np.ndarray]:
-        """
-        Returns actions and reward arrays for a Board object using generate_plays.
+    @staticmethod
+    def all_actions() -> List[Tuple[str, int, int]]:
+        actions = []
+        sources = list(range(0, 24))
+        targets = list(range(0, 24))
+        homes = list(range(0, 6))
 
+        # 'move's and 'hit's
+        for i in sources:
+            for j in targets:
+                if 6 >= (j - i) > 0:
+                    actions.append(('move', j, i))
+
+        # bar and off
+        for j in homes:
+            actions.append(('move', "bar", j))
+            actions.append(('move', j, "off"))
+
+        # Resign actions
+        for r in ["single", "gammon", "backgammon"]:
+            actions.append(('accept', r))
+            actions.append(('reject', r))
+            actions.append(('resign', r))
+
+        # Roll, or double actions
+        actions.append('roll')
+        actions.append('double')
+        actions.append('take')
+        actions.append('drop')
+        actions.append('redouble')
+
+        return actions
+
+    def valid_actions(self) -> List[Tuple[str, int, int]]:
+        """
         Returns:
-            actions_array: numpy array of tuples (source, dest)
-            rewards_array: numpy array of ints (reward heuristic, e.g., pip diff)
+            list: A list of all valid actions (tuples), no reward shaping applied.
         """
-        legal_plays = self.generate_plays()
+        actions = []
 
-        if not legal_plays:
-            return np.array([]), np.array([])
+        # A player is always allowed to resign at any time
+        for r in ["single", "gammon", "backgammon"]:
+            actions.append(('resign', r))
+            if self.match.game_state == GameState.RESIGNED:
+                actions.append(('accept', r))
+                actions.append(('reject', r))
 
-        actions_list = []
-        rewards_list = []
+        # If the Game state is on roll then they may roll the dice
+        if self.match.game_state == GameState.ON_ROLL:
+            actions.append('roll')
 
+            # ...if they own the cube, or it is centered they can double.
+            if self.match.cube_holder == self.match.turn or self.match.cube_holder == PlayerType.CENTERED:
+                actions.append('double')
+
+        # If a cube has been offered, they can take, drop or redouble (know as beaver)
+        if self.match.game_state == GameState.DOUBLED:
+            actions.append('take')
+            actions.append('drop')
+            actions.append('redouble')
+
+        # Check for the legal moves and append these to the actions.
+        legal_plays: List[Play] = self.generate_plays()
+
+        seen_moves = set()
         for play in legal_plays:
-            # Each play is a tuple of moves (source, destination) and the resulting position
-            move_sequence = []
-            reward = 0
             for move in play.moves:
-                move_sequence.append((move.source, move.destination))
-                # Simple reward heuristic: number of pips moved
-                if move.source is not None and move.destination is not None:
-                    reward += abs(move.source - move.destination)
-                else:
-                    reward += move.pips  # bar entries or bearoffs
+                action = ("move", move.source, move.destination)
+                if action not in seen_moves:
+                    seen_moves.add(action)
+                    actions.append(action)
 
-            actions_list.append(tuple(move_sequence))
-            rewards_list.append(reward)
+        return actions
 
-        return np.array(actions_list, dtype=object), np.array(rewards_list)
+    def action_mask(self):
+        """
+        Returns a boolean array of length len(ALL_ACTIONS),
+        where each True means the action is currently legal.
+        """
+        legal_action_mask = np.zeros(self.action_count, dtype=bool)
+
+        for action in self.valid_actions():
+            try:
+                idx = self.actions.index(action)
+                legal_action_mask[idx] = True
+            except ValueError:
+                pass
+
+        return legal_action_mask
 
     def get_observation(self):
         match = self.match
@@ -686,65 +711,103 @@ class Board(gym.Env):
     ) -> tuple[ObsType, dict[str, Any]]:
         """Restarts the game."""
 
-        self._game: Game = Game(self, self.__opponent)
+        self.position = Position.decode(self.starting_position_id)
+        self.first_roll()
+        self.match.game_state = GameState.ROLLED
+        self.match.cube_value = 1
+        self.match.cube_holder = PlayerType.CENTERED
+        self.match.double = False
 
-        return np.array(self._game.get_observation(), dtype=np.float32), {}
+        return np.array(self.get_observation(), dtype=np.float32), {}
 
-    def step(self, actionint):
-        """Run one timestep of the environment's dynamics. When end of
-        episode is reached, you are responsible for calling `reset()`
-        to reset this environment's state. Accepts an action and returns a tuple
-        (observation, reward, done, info).
-        Args:
-            action (int): an action provided by the environment
-        Returns:
-            observation (list): state of the current environment
-            reward (float) : amount of reward returned after previous action
-            done (boolean): whether the episode has ended, in which case further
-            step() calls will return undefined results
-            info (dict): contains auxiliary diagnostic information (helpful for
-            debugging, and sometimes learning)
+    def step(self, action_index):
         """
+        Executes the player's action, then gives the opponent their turn
+        if the game is not over.
+        """
+        # 🎯 Convert from Box space to Discrete index if needed
+        if isinstance(self.action_space, spaces.Box):
+            action_index += int(self.action_count / 2)
+            action_index = int(action_index)
+
+        # 🧠 Convert index to action tuple/string
+        action = self.actions[action_index]
+
+        # ⚙️ Apply the player's action
+        reward = self.apply_action(action)
+
+        # 🛑 If the move was illegal, do NOT proceed to opponent turn
+        if reward < 0:
+            return self.get_observation(), reward, False, False, self.get_info()
+
+        # 🏁 Check if game is over after player's move
+        done = self.match.game_state == GameState.GAME_OVER
+        if done:
+            return self.get_observation(), reward, True, False, self.get_info()
+
+        # 🔁 Switch to opponent
+        self.end_turn()
+
+        # 🎯 Opponent picks an action *appropriate to the game state*
+        opponent_action_index = self.opponent.make_decision(
+            self.get_observation(), self.action_mask()
+        )
 
         if isinstance(self.action_space, spaces.Box):
-            actionint += int(len(ALL_ACTIONS)/2)
-            actionint = int(actionint)
+            opponent_action_index += int(self.action_count / 2)
+            opponent_action_index = int(opponent_action_index)
 
-        reward = self._game.player_turn(actionint)
-        observation = self._game.get_observation()
-        done = self._game.get_done()
-        info = self.get_info()
+        opponent_action = self.actions[opponent_action_index]
 
-        terminated = done
-        truncated = False  # You could make this configurable if needed
+        # 🧠 Apply opponent's chosen action
+        self.apply_action(opponent_action)
 
-        return np.array(observation, dtype=np.float32), reward, terminated, truncated, info
+        # 🔚 Check again if the game has ended after opponent's move
+        done = self.match.game_state == GameState.GAME_OVER
+
+        return self.get_observation(), reward, done, False, self.get_info()
+
+    def apply_action(self, action):
+        """
+        Given a valid action tuple, applies it to the board.
+        Returns a reward (default: 0, or -10 for invalid moves).
+        """
+        try:
+            if isinstance(action, tuple):
+                if action[0] == "move":
+                    self.play(((action[1], action[2]),))
+                elif action[0] == "resign":
+                    self.resign(Resign[action[1].upper()])
+                elif action[0] == "accept":
+                    self.accept()
+                elif action[0] == "reject":
+                    self.reject()
+                else:
+                    raise BoardError(f"Unknown action: {action}")
+            elif isinstance(action, str):
+                if action == "roll":
+                    self.roll()
+                elif action == "double":
+                    self.double()
+                elif action == "take":
+                    self.take()
+                elif action == "drop":
+                    self.drop()
+                elif action == "redouble":
+                    self.redouble()
+                else:
+                    raise BoardError(f"Unknown string action: {action}")
+            return 0  # No shaped reward by default
+        except BoardError as e:
+            logger.warning(f"Invalid action attempted: {action} | {e}")
+            self.invalid_actions_taken += 1
+            return -10
 
     def get_info(self):
         """Returns useful info for debugging, etc."""
 
         return {'time elapsed': time.time() - self.time_elapsed,
                 'invalid actions taken': self.invalid_actions_taken}
-
-    def get_action_mask(self):
-        """
-        Returns a boolean array of length len(ALL_ACTIONS),
-        where each True means the action is currently legal.
-        """
-        legal_action_mask = np.zeros(self.action_count, dtype=bool)
-
-        valid_action_sets, _ = self._game.get_valid_actions()
-
-        flattened_valid_actions = [a for s in valid_action_sets for a in s]
-
-        for action in flattened_valid_actions:
-            try:
-                idx = ALL_ACTIONS.index(action)
-                legal_action_mask[idx] = True
-            except ValueError:
-                pass
-
-        return legal_action_mask
 
     def __repr__(self):
         """
@@ -1005,3 +1068,4 @@ class Board(gym.Env):
         ascii_board += player_text_bottom
 
         return ascii_board
+

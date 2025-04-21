@@ -9,7 +9,7 @@
     Faculty of Engineering and Natural Sciences
     Sabanci University
 
-    This file contains the classes required to play asciigammon.
+    This file contains the classes required to play backgammon.
 """
 
 import random

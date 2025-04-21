@@ -9,7 +9,7 @@
     Faculty of Engineering and Natural Sciences
     Sabanci University
 
-    The asciigammon board data structure is defined here. It is a list made of 24
+    The backgammon board data structure is defined here. It is a list made of 24
     Points, a class that is also defined here. A point can have a maximum of 15
     checkers in it. A point has two properties:
     1) 'color', which must be either 'w', 'b', or None

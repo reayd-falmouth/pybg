@@ -1,17 +1,3 @@
-# -*- coding: utf-8 -*-
-#!/usr/bin/env python3
-"""
-    Amca: The RL-Based Backgammon Agent
-    https://github.com/ardabbour/amca/
-
-    Abdul Rahman Dabbour, Omid Khorsand Kazemy, Yusuf Izmirlioglu
-    Cognitive Robotics Laboratory
-    Faculty of Engineering and Natural Sciences
-    Sabanci University
-
-    This file contains the classes required to play asciigammon.
-"""
-
 import time
 from typing import Any, TypeVar
 
@@ -133,37 +119,6 @@ class BackgammonEnv(gym.Env):
         return {'time elapsed': time.time() - self.__time_elapsed,
                 'invalid actions taken': self.__invalid_actions_taken}
 
-
-class BackgammonHumanEnv(BackgammonEnv):
-    def __init__(self, opponent=HumanAgent()):
-        super().__init__(opponent)
-
-
-class BackgammonRandomEnv(BackgammonEnv):
-    def __init__(self, opponent=RandomAgent(spaces.Discrete(len(ALL_ACTIONS)))):
-        super().__init__(opponent)
-
-
-class BackgammonPolicyEnv(BackgammonEnv):
-    def __init__(self, opponent=PolicyAgent('ppo', 'models/amca.zip')):
-        super().__init__(opponent)
-
-
-class BackgammonHumanContinuousEnv(BackgammonEnv):
-    def __init__(self, opponent=HumanAgent()):
-        super().__init__(opponent, cont=True)
-
-
-class BackgammonPolicyContinuousEnv(BackgammonEnv):
-    def __init__(self, opponent=RandomAgent(spaces.Discrete(len(ALL_ACTIONS)))):
-        super().__init__(opponent, cont=True)
-
-
-class BackgammonRandomContinuousEnv(BackgammonEnv):
-    def __init__(self, opponent=PolicyAgent('ppo', 'models/amca.zip')):
-        super().__init__(opponent, cont=True)
-
-
 # ✅ BACKGAMMON ENVIRONMENT WITH ACTION MASKING FOR MASKABLEPPO
 class BackgammonMaskableEnv(BackgammonEnv):
     def __init__(self, opponent):
@@ -188,3 +143,33 @@ class BackgammonMaskableEnv(BackgammonEnv):
                 pass
 
         return legal_action_mask
+
+class BackgammonHumanEnv(BackgammonEnv):
+    def __init__(self, opponent=HumanAgent()):
+        super().__init__(opponent)
+
+class BackgammonRandomEnv(BackgammonMaskableEnv):
+    def __init__(self, opponent=RandomAgent(spaces.Discrete(len(ALL_ACTIONS)))):
+        super().__init__(opponent)
+
+
+class BackgammonPolicyEnv(BackgammonEnv):
+    def __init__(self, opponent=PolicyAgent('ppo', 'models/amca.zip')):
+        super().__init__(opponent)
+
+
+class BackgammonHumanContinuousEnv(BackgammonEnv):
+    def __init__(self, opponent=HumanAgent()):
+        super().__init__(opponent, cont=True)
+
+
+class BackgammonPolicyContinuousEnv(BackgammonEnv):
+    def __init__(self, opponent=RandomAgent(spaces.Discrete(len(ALL_ACTIONS)))):
+        super().__init__(opponent, cont=True)
+
+
+class BackgammonRandomContinuousEnv(BackgammonEnv):
+    def __init__(self, opponent=PolicyAgent('ppo', 'models/amca.zip')):
+        super().__init__(opponent, cont=True)
+
+

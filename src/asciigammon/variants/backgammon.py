@@ -2,9 +2,9 @@
 
 from asciigammon.core.board import Board
 from asciigammon.core.match import STARTING_MATCH_ID
+from typing import List, Tuple
 
 STARTING_POSITION_ID = "4HPwATDgc/ABMA"
-# STARTING_POSITION_ID = "GwAAYAMAAAAAAA"
 
 
 class Backgammon(Board):

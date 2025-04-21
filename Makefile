@@ -4,8 +4,7 @@ ITCH_USER := reayd-falmouth
 ITCH_GAME := asciigammon
 BUILD_DIR = $(GAME_DIR)/build
 ZIP_FILE=web.zip
-
-export PYTHONPATH := $(PYTHONPATH):$(SRC_DIR)
+PYTHONPATH := $(PYTHONPATH):$(SRC_DIR)
 
 .PHONY: build deploy clean
 
@@ -51,7 +50,7 @@ run_cartoon_board:
 
 run:
 	@echo "Running game..."
-	@python src/asciigammon/main.py
+	@python -m src.asciigammon.main
 
 black:
 	@echo "Formatting with black..."
