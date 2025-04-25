@@ -16,13 +16,17 @@ def play_against_model(model_path="ppo_backgammon.zip"):
     print("\n🎮 Human (O) vs AI Model (X) — Backgammon Starts!\n")
 
     while not done:
-        print(f"\n🔁 Step {step} — Player: {'X (AI)' if env.board.match.player == 1 else 'O (You)'}")
+        print(
+            f"\n🔁 Step {step} — Player: {'X (AI)' if env.board.match.player == 1 else 'O (You)'}"
+        )
         print(env.board)
 
         legal_moves = env.legal_moves
         print(f"🎲 Legal Moves: {len(legal_moves)}")
         for i, play in enumerate(legal_moves):
-            move_str = " ".join(f"{m.source + 1}->{m.destination + 1}" for m in play.moves)
+            move_str = " ".join(
+                f"{m.source + 1}->{m.destination + 1}" for m in play.moves
+            )
             print(f"  {i}: {move_str}")
 
         if env.board.match.player == 1:
@@ -46,6 +50,7 @@ def play_against_model(model_path="ppo_backgammon.zip"):
 
     print("\n🏁 Game Over")
     print(f"🏆 Winner: {'X' if env.board.match.player == 1 else 'O'}")
+
 
 if __name__ == "__main__":
     play_against_model()

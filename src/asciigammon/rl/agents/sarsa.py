@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/env python3
 """
-    Amca: The RL-Based Backgammon Agent
-    https://github.com/ardabbour/amca/
+Amca: The RL-Based Backgammon Agent
+https://github.com/ardabbour/amca/
 
-    Abdul Rahman Dabbour, Omid Khorsand Kazemy, Yusuf Izmirlioglu
-    Cognitive Robotics Laboratory
-    Faculty of Engineering and Natural Sciences
-    Sabanci University
+Abdul Rahman Dabbour, Omid Khorsand Kazemy, Yusuf Izmirlioglu
+Cognitive Robotics Laboratory
+Faculty of Engineering and Natural Sciences
+Sabanci University
 
-    This script defines the sarsa algorithm. Modified significantly from
-    https://github.com/vmayoral/basic_reinforcement_learning/blob/master/tutorial2/sarsa.py
+This script defines the sarsa algorithm. Modified significantly from
+https://github.com/vmayoral/basic_reinforcement_learning/blob/master/tutorial2/sarsa.py
 """
 
 import random
@@ -51,7 +51,7 @@ class SarsaAgent:
                 count = q.count(maxQ)
             else:
                 count = 0
-                #maxQ = random.choice(range(0,len))
+                # maxQ = random.choice(range(0,len))
             if count >= 1:
                 best = [i for i in range(len(actions)) if q[i] == maxQ]
                 i = random.choice(best)

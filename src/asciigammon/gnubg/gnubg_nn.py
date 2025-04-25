@@ -39,12 +39,12 @@ def encode_board(position, cInput):
     # --- 1. Point features for both players (96 values: 2 per point × 2 players)
     for i in range(NUM_POINTS):
         p = board[i]
-        features.append(1 if p > 0 else 0)                  # Player occupies
+        features.append(1 if p > 0 else 0)  # Player occupies
         features.append(min(p - 1, 4) / 4.0 if p > 1 else 0.0)  # Extra checkers, capped
 
     for i in range(NUM_POINTS):
         o = board[i]
-        features.append(1 if o < 0 else 0)                      # Opponent occupies
+        features.append(1 if o < 0 else 0)  # Opponent occupies
         features.append(min(abs(o) - 1, 4) / 4.0 if o < -1 else 0.0)
 
     # --- 2. Bar and off checkers (4 values)
@@ -88,8 +88,19 @@ def encode_board(position, cInput):
 # This class holds the network parameters and implements evaluation.
 # ------------------------------------------------------------------------------
 class GnubgNetwork:
-    def __init__(self, cInput, cHidden, cOutput, nTrained,
-                 rBetaHidden, rBetaOutput, weights1, weights2, bias1, bias2):
+    def __init__(
+        self,
+        cInput,
+        cHidden,
+        cOutput,
+        nTrained,
+        rBetaHidden,
+        rBetaOutput,
+        weights1,
+        weights2,
+        bias1,
+        bias2,
+    ):
         """
         Initialize a single neural network using the provided parameters.
 
@@ -171,7 +182,6 @@ class GnubgEvaluator:
 
         # validate_network_structure(self.network_mapping[PositionClass.CONTACT])
 
-
     def load_all_networks(self, weights_file: str) -> dict[str, GnubgNetwork]:
         """
         Load all neural networks from a GNUBG-style multi-network weights file.
@@ -180,7 +190,7 @@ class GnubgEvaluator:
           A dictionary mapping network names like "contact", "race", etc. to GnubgNetwork objects.
         """
         networks = {}
-        with open(weights_file, 'r') as f:
+        with open(weights_file, "r") as f:
             version_line = f.readline().strip()
 
             while True:
@@ -214,13 +224,29 @@ class GnubgEvaluator:
                         weights2[i, j] = float(f.readline().strip())
 
                 # Load biases
-                bias1 = np.array([float(f.readline().strip()) for _ in range(cHidden)], dtype=float)
-                bias2 = np.array([float(f.readline().strip()) for _ in range(cOutput)], dtype=float)
+                bias1 = np.array(
+                    [float(f.readline().strip()) for _ in range(cHidden)], dtype=float
+                )
+                bias2 = np.array(
+                    [float(f.readline().strip()) for _ in range(cOutput)], dtype=float
+                )
 
-                net = GnubgNetwork(cInput, cHidden, cOutput, nTrained,
-                                   rBetaHidden, rBetaOutput, weights1, weights2, bias1, bias2)
+                net = GnubgNetwork(
+                    cInput,
+                    cHidden,
+                    cOutput,
+                    nTrained,
+                    rBetaHidden,
+                    rBetaOutput,
+                    weights1,
+                    weights2,
+                    bias1,
+                    bias2,
+                )
 
-                key = name.replace(" ", "_").lower()  # e.g., "prune contact" → "prune_contact"
+                key = name.replace(
+                    " ", "_"
+                ).lower()  # e.g., "prune contact" → "prune_contact"
                 networks[key] = net
 
         return networks
@@ -280,9 +306,8 @@ class GnubgEvaluator:
         losegammon = eval_out["losegammon"]
         losebackgammon = eval_out["losebackgammon"]
 
-        equity = (
-                win * (1 + wingammon + 2 * winbackgammon)
-                - (1 - win) * (losegammon + 2 * losebackgammon)
+        equity = win * (1 + wingammon + 2 * winbackgammon) - (1 - win) * (
+            losegammon + 2 * losebackgammon
         )
         return equity
 
@@ -324,10 +349,18 @@ class GnubgEvaluator:
         Returns the best Play object.
         """
         from asciigammon.core.match import GameState
-        from asciigammon.core.board import Board  # local import to avoid circular import
+        from asciigammon.core.board import (
+            Board,
+        )  # local import to avoid circular import
 
-        if board.match.game_state not in (GameState.ROLLED, GameState.ON_ROLL, GameState.PLAYING):
-            print(f"Game state is not valid for move selection: {board.match.game_state}")
+        if board.match.game_state not in (
+            GameState.ROLLED,
+            GameState.ON_ROLL,
+            GameState.PLAYING,
+        ):
+            print(
+                f"Game state is not valid for move selection: {board.match.game_state}"
+            )
             return None
 
         legal_plays = board.generate_plays()
@@ -339,7 +372,7 @@ class GnubgEvaluator:
             return [(i, j) for i in range(1, 7) for j in range(i, 7)]
 
         best_play = None
-        best_equity = -float('inf')
+        best_equity = -float("inf")
 
         for play in legal_plays:
             my_new_position = play.position
@@ -353,7 +386,9 @@ class GnubgEvaluator:
                 temp_match.turn = temp_match.player
                 temp_match.dice = dice
 
-                temp_board = Board(position_id=opponent_position.encode(), match_id=temp_match.encode())
+                temp_board = Board(
+                    position_id=opponent_position.encode(), match_id=temp_match.encode()
+                )
                 temp_board.match.dice = dice
                 opponent_plays = temp_board.generate_plays()
 
@@ -365,7 +400,10 @@ class GnubgEvaluator:
                     continue
 
                 for op_play in opponent_plays:
-                    op_board = Board(position_id=op_play.position.encode(), match_id=temp_match.encode())
+                    op_board = Board(
+                        position_id=op_play.position.encode(),
+                        match_id=temp_match.encode(),
+                    )
                     eval_result = self.evaluate_position(op_board)
                     equity = self.equity(eval_result)
                     equity_sum += -equity
@@ -381,7 +419,9 @@ class GnubgEvaluator:
 
         if best_play:
             best_moves = [self.move_to_str(m) for m in best_play.moves]
-            print(f"✅ Best move selected with 2-ply equity {best_equity:.3f}: {best_moves}")
+            print(
+                f"✅ Best move selected with 2-ply equity {best_equity:.3f}: {best_moves}"
+            )
         return best_play
 
 
@@ -402,4 +442,3 @@ if __name__ == "__main__":
     print(evaluator)
     print(eval_result)
     print(evaluator.best_move(board))
-

@@ -1,0 +1,2 @@
+class BaseModule:
+    category = "General"

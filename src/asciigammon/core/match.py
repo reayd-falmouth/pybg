@@ -1,17 +1,3 @@
-# Copyright 2020 Softwerks LLC
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
 import base64
 import dataclasses
 import enum
@@ -20,18 +6,19 @@ import struct
 from typing import Tuple
 
 from asciigammon.core.player import PlayerType
+from asciigammon.core.logger import logger
 
-# Default starting ID
+# # Default starting ID
 STARTING_MATCH_ID = "cAgAAAAAAAAA"
-
-# BackGammon starting ID
-BACKGAMMON_STARTING_MATCH_ID = "cAgAAAAAAAAA"
-
-# NackGammon starting ID
-NACKGAMMON_STARTING_MATCH_ID = "cAgAAAAAAAAA"
-
-# AceyDeucy starting ID
-ACEYDEUCY_STARTING_MATCH_ID = "cAgAAAAAAAAA"
+#
+# # BackGammon starting ID
+# BACKGAMMON_STARTING_MATCH_ID = "cAgAAAAAAAAA"
+#
+# # NackGammon starting ID
+# NACKGAMMON_STARTING_MATCH_ID = "cAgAAAAAAAAA"
+#
+# # AceyDeucy starting ID
+# ACEYDEUCY_STARTING_MATCH_ID = "cAgAAAAAAAAA"
 
 
 @enum.unique
@@ -102,11 +89,24 @@ class Match:
         Returns:
             None
         """
-        if self.player is PlayerType.ZERO:
+        self.swap_perspective()
+        self.swap_turn()
+
+    def swap_perspective(self):
+        if self.player == PlayerType.ZERO:
             self.player = PlayerType.ONE
-            self.turn = PlayerType.ONE
         else:
             self.player = PlayerType.ZERO
+
+    def swap_turn(self):
+        logger.debug(
+            f"Swap turn: self.turn == PlayerType.ZERO? {self.turn == PlayerType.ZERO}"
+        )
+        if self.turn == PlayerType.ZERO:
+            logger.debug("Swapping to ONE")
+            self.turn = PlayerType.ONE
+        else:
+            logger.debug("Swapping to ZERO")
             self.turn = PlayerType.ZERO
 
     def other_player(self) -> PlayerType:

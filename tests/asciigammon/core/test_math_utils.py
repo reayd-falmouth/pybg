@@ -3,6 +3,7 @@ import pytest
 
 pytestmark = pytest.mark.unit
 
+
 def test_random_die():
     for i in range(35):
         result = random_die()

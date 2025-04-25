@@ -1,4 +1,4 @@
-"""Unit tests for aceydeucy.py"""
+"""Unit tests for aceydeucey.py"""
 
 from json import loads
 
@@ -14,12 +14,8 @@ def test_aceydeucy(player0, player1):
     game = Aceydeucy()
     assert game
 
-    game.player0 = Player(
-        PlayerType.ZERO, player0
-    )
-    game.player1 = Player(
-        PlayerType.ONE, player1
-    )
+    game.player0 = Player(PlayerType.ZERO, player0)
+    game.player1 = Player(PlayerType.ONE, player1)
     game.player = game.player0
 
     # def first_roll()

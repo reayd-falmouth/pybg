@@ -34,10 +34,10 @@ class PlayerType(IntEnum):
     ONE = 0b01, "player1", "Player One", "X"
     CENTERED = 0b11, "player3?", "Neither player", "-"
 
-
     @property
     def player_type(self):
         return self.value
+
 
 @dataclass
 class Player:

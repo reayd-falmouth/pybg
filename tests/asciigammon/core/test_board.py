@@ -16,6 +16,7 @@ from asciigammon.core.position import Position
 
 pytestmark = pytest.mark.unit
 
+
 def test_backgammon(player0, player1):
     # class Backgammon
     bg = Board(
@@ -23,12 +24,8 @@ def test_backgammon(player0, player1):
     )
     assert bg
 
-    bg.player0 = Player(
-        PlayerType.ZERO, player0
-    )
-    bg.player1 = Player(
-        PlayerType.ONE, player1
-    )
+    bg.player0 = Player(PlayerType.ZERO, player0)
+    bg.player1 = Player(PlayerType.ONE, player1)
     bg.player = bg.player0
 
     # def first_roll()

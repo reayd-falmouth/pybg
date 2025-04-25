@@ -1,5 +1,10 @@
 import pytest
-from asciigammon.core.exceptions import BoardError, BackgammonError, PositionError, MatchError
+from asciigammon.core.exceptions import (
+    BoardError,
+    BackgammonError,
+    PositionError,
+    MatchError,
+)
 
 pytestmark = pytest.mark.unit
 

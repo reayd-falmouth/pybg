@@ -7,7 +7,9 @@ from asciigammon.core.match import STARTING_MATCH_ID
 STARTING_POSITION_ID = "AAAA/38AAAD/fw"
 
 
-class Aceydeucy(Board):
+class AceyDeucey(Board):
+    variant_name = "AceyDeucey"
+
     def __init__(
         self, position_id: str = STARTING_POSITION_ID, match_id: str = STARTING_MATCH_ID
     ):

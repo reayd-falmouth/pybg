@@ -1,19 +1,19 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/env python3
 """
-    Amca: The RL-Based Backgammon Agent
-    https://github.com/ardabbour/amca/
+Amca: The RL-Based Backgammon Agent
+https://github.com/ardabbour/amca/
 
-    Abdul Rahman Dabbour, Omid Khorsand Kazemy, Yusuf Izmirlioglu
-    Cognitive Robotics Laboratory
-    Faculty of Engineering and Natural Sciences
-    Sabanci University
+Abdul Rahman Dabbour, Omid Khorsand Kazemy, Yusuf Izmirlioglu
+Cognitive Robotics Laboratory
+Faculty of Engineering and Natural Sciences
+Sabanci University
 
-    The backgammon board data structure is defined here. It is a list made of 24
-    Points, a class that is also defined here. A point can have a maximum of 15
-    checkers in it. A point has two properties:
-    1) 'color', which must be either 'w', 'b', or None
-    2) 'count', which is an integer ranging from 0 to 15
+The backgammon board data structure is defined here. It is a list made of 24
+Points, a class that is also defined here. A point can have a maximum of 15
+checkers in it. A point has two properties:
+1) 'color', which must be either 'w', 'b', or None
+2) 'count', which is an integer ranging from 0 to 15
 """
 
 import warnings
@@ -23,17 +23,35 @@ class Board:
     """Defines a board."""
 
     def __init__(self):
-        self.__board = [Point('b', 2), Point(), Point(),
-                        Point(), Point(), Point('w', 5),
-                        Point(), Point('w', 3), Point(),
-                        Point(), Point(), Point('b', 5),
-                        Point('w', 5), Point(), Point(),
-                        Point(), Point('b', 3), Point(),
-                        Point('b', 5), Point(), Point(),
-                        Point(), Point(), Point('w', 2)]
+        self.__board = [
+            Point("b", 2),
+            Point(),
+            Point(),
+            Point(),
+            Point(),
+            Point("w", 5),
+            Point(),
+            Point("w", 3),
+            Point(),
+            Point(),
+            Point(),
+            Point("b", 5),
+            Point("w", 5),
+            Point(),
+            Point(),
+            Point(),
+            Point("b", 3),
+            Point(),
+            Point("b", 5),
+            Point(),
+            Point(),
+            Point(),
+            Point(),
+            Point("w", 2),
+        ]
 
-        self.__hit = {'w': 0, 'b': 0}
-        self.__bourne_off = {'w': 0, 'b': 0}
+        self.__hit = {"w": 0, "b": 0}
+        self.__bourne_off = {"w": 0, "b": 0}
 
     def get_board(self):
         """Get method for the board."""
@@ -89,7 +107,7 @@ class Board:
 
         source.remove_checker()
         target.add_firstchecker(color)
-        opponent = 'b' if color == 'w' else 'w'
+        opponent = "b" if color == "w" else "w"
         self.__hit[opponent] += 1
 
     def update_bearoff(self, color, source_point_index):
@@ -115,7 +133,7 @@ class Board:
         target = self.__board[target_index]
 
         target.add_firstchecker(color)
-        opponent = 'b' if color == 'w' else 'w'
+        opponent = "b" if color == "w" else "w"
         self.__hit[opponent] += 1
         self.__hit[color] -= 1
 
@@ -138,8 +156,10 @@ class Point:
     def set_count(self, count):
         """Sets the number of checkers in the point."""
 
-        warnings.warn('Setting count of point directly. Convention is to use\
-        add or remove method of point.')
+        warnings.warn(
+            "Setting count of point directly. Convention is to use\
+        add or remove method of point."
+        )
 
         self.__count = count
 
@@ -157,8 +177,10 @@ class Point:
         """Adds a single checker."""
 
         if self.__color is None:
-            warnings.warn('Adding checker to colorless point. Convention is to\
-            add checker after setting the color.')
+            warnings.warn(
+                "Adding checker to colorless point. Convention is to\
+            add checker after setting the color."
+            )
 
         self.__count += 1
 

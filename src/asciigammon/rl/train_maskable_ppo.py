@@ -12,6 +12,7 @@ from asciigammon.rl.game.game import ALL_ACTIONS
 def mask_fn(env):
     return env.get_action_mask()
 
+
 def make_env():
     action_space = gym.spaces.Discrete(len(ALL_ACTIONS))
     opponent = RandomAgent(action_space=action_space)
@@ -24,7 +25,6 @@ def make_env():
     return ActionMasker(env=env, action_mask_fn=mask_fn)
 
 
-
 if __name__ == "__main__":
     # ⚠️ Wrap in DummyVecEnv, but make sure get_action_mask is exposed
     vec_env = DummyVecEnv([make_env])
@@ -33,7 +33,7 @@ if __name__ == "__main__":
         policy=MaskableActorCriticPolicy,
         env=vec_env,
         verbose=1,
-        tensorboard_log="./tensorboard"
+        tensorboard_log="./tensorboard",
     )
 
     model.learn(total_timesteps=1_000_000)

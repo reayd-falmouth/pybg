@@ -2,6 +2,7 @@ from asciigammon.neuralnet.backgammon_env import BackgammonEnv
 import random
 import time
 
+
 def play_debug_game(render_delay=0):
     env = BackgammonEnv()
     obs, _ = env.reset()
@@ -31,6 +32,7 @@ def play_debug_game(render_delay=0):
 
         turn += 1
         time.sleep(render_delay)
+
 
 if __name__ == "__main__":
     play_debug_game()

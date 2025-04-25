@@ -24,13 +24,19 @@ def test_action_mask_consistency():
 
     # --- Assertions ---
     # 1. Action space should be Discrete and correct size
-    assert isinstance(env.action_space, gym.spaces.Discrete), "❌ Action space is not Discrete"
-    assert env.action_space.n == len(ALL_ACTIONS), f"❌ Action space length mismatch: expected {len(ALL_ACTIONS)}, got {env.action_space.n}"
+    assert isinstance(
+        env.action_space, gym.spaces.Discrete
+    ), "❌ Action space is not Discrete"
+    assert env.action_space.n == len(
+        ALL_ACTIONS
+    ), f"❌ Action space length mismatch: expected {len(ALL_ACTIONS)}, got {env.action_space.n}"
 
     # 2. Action mask should be a boolean array of same length
     assert isinstance(action_mask, np.ndarray), "❌ Action mask is not a numpy array"
     assert action_mask.dtype == bool, "❌ Action mask is not of boolean dtype"
-    assert len(action_mask) == env.action_space.n, f"❌ Action mask length mismatch: {len(action_mask)} != {env.action_space.n}"
+    assert (
+        len(action_mask) == env.action_space.n
+    ), f"❌ Action mask length mismatch: {len(action_mask)} != {env.action_space.n}"
 
     # 3. There should be at least one valid action
     assert np.any(action_mask), "❌ No valid actions in the mask"
@@ -41,4 +47,3 @@ def test_action_mask_consistency():
     print(f"✅ Valid actions: {np.count_nonzero(action_mask)} / {len(action_mask)}")
 
     print("✅ PASS: Action space and mask are consistent")
-

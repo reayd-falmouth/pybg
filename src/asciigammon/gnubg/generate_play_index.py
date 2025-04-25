@@ -4,8 +4,10 @@ from asciigammon.core.match import GameState
 from itertools import product
 import random
 
+
 def canonical_play_key(play):
     return tuple((m.source, m.destination) for m in play.moves)
+
 
 def generate_random_position():
     board = Board()
@@ -20,6 +22,7 @@ def generate_random_position():
         board.position.board_points[p] = count
         checkers -= count
     return board
+
 
 dice_rolls = {(a, b) if a >= b else (b, a) for a, b in product(range(1, 7), repeat=2)}
 play_key_set = set()

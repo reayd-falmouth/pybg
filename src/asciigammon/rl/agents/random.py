@@ -23,8 +23,12 @@ class RandomAgent(Agent):
 
         # ❌ Filter out resign actions
         non_resign_indices = [
-            idx for idx in valid_indices
-            if not (isinstance(self._action_list[idx], tuple) and self._action_list[idx][0] == "resign")
+            idx
+            for idx in valid_indices
+            if not (
+                isinstance(self._action_list[idx], tuple)
+                and self._action_list[idx][0] == "resign"
+            )
         ]
 
         # If no legal non-resign actions are available, return an empty list or a pass equivalent
@@ -36,7 +40,11 @@ class RandomAgent(Agent):
         chosen_action = self._action_list[chosen_index]
 
         # 🎯 If it's a move and full legal plays are known, return a full move sequence
-        if legal_plays and isinstance(chosen_action, tuple) and chosen_action[0] == "move":
+        if (
+            legal_plays
+            and isinstance(chosen_action, tuple)
+            and chosen_action[0] == "move"
+        ):
             play = random.choice(legal_plays)
             return [("move", m.source, m.destination) for m in play.moves]
 
@@ -53,7 +61,7 @@ class RandomSarsaAgent:
             actions = [("Nomove", 0, 0)]
             return ("Nomove", 0, 0), 0
 
-        i = random.choice(range(0, len(actions)))   # q.index(maxQ)
+        i = random.choice(range(0, len(actions)))  # q.index(maxQ)
 
         action = actions[i]
         return action, i

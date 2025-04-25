@@ -6,6 +6,7 @@ from gymnasium import spaces
 
 from asciigammon.core.board import Board
 from asciigammon.core.match import GameState
+
 # from asciigammon.neuralnet.gnubg_nn import GnubgEvaluator
 from asciigammon.neuralnet.helpers import encode_board_by_size
 
@@ -33,12 +34,15 @@ class BackgammonEnv(gym.Env):
       In the step() function if the provided action index is out of bounds,
       a random legal move will be taken.
     """
+
     metadata = {"render.modes": ["human"]}
 
     def __init__(self):
 
         # Define the observation space: 250-dimensional vector with values [0,1]
-        self.observation_space = spaces.Box(low=-1.0, high=1.0, shape=(250,), dtype=np.float32)
+        self.observation_space = spaces.Box(
+            low=-1.0, high=1.0, shape=(250,), dtype=np.float32
+        )
 
         # Define a discrete action space (we choose an upper bound; legal moves can vary)
         self.action_space: spaces.Discrete = spaces.Discrete(1157)
@@ -87,14 +91,22 @@ class BackgammonEnv(gym.Env):
             self.board.end_turn()
             self.legal_moves = self.board.generate_plays()
             self.state = self._get_state()
-            return self.state, 0.0, False, False, {
-                "legal_moves": self.legal_moves,
-                "action_mask": self._get_action_mask(),  # ← Add this
-            }
+            return (
+                self.state,
+                0.0,
+                False,
+                False,
+                {
+                    "legal_moves": self.legal_moves,
+                    "action_mask": self._get_action_mask(),  # ← Add this
+                },
+            )
 
         # ✅ Select and apply legal move
         if action >= len(self.legal_moves):
-            print(f"⚠️ Invalid action {action}, falling back to a legal random move during env check")
+            print(
+                f"⚠️ Invalid action {action}, falling back to a legal random move during env check"
+            )
             action = random.randint(0, len(self.legal_moves) - 1)
 
         chosen_play = self.legal_moves[action]
@@ -110,17 +122,27 @@ class BackgammonEnv(gym.Env):
         # 🏁 Check for game over
         if self.board.match.game_state == GameState.GAME_OVER:
             self.done = True
-            reward = 1.0 if self.board.match.player_0_score >= self.board.match.length else 0.0
+            reward = (
+                1.0
+                if self.board.match.player_0_score >= self.board.match.length
+                else 0.0
+            )
         else:
             reward = 0.0
 
         # 🔁 Update observation and legal moves
         self.state = self._get_state()
         self.legal_moves = self.board.generate_plays()
-        return self.state, reward, self.done, False, {
-            "legal_moves": self.legal_moves,
-            "action_mask": self._get_action_mask(),
-        }
+        return (
+            self.state,
+            reward,
+            self.done,
+            False,
+            {
+                "legal_moves": self.legal_moves,
+                "action_mask": self._get_action_mask(),
+            },
+        )
 
     def render(self, mode="human"):
         """Render the current board state."""

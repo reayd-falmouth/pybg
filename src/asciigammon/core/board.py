@@ -1,5 +1,5 @@
 import time
-
+from uuid import uuid4
 import enum
 import gymnasium as gym
 import json
@@ -62,6 +62,7 @@ class Play(NamedTuple):
     moves: Tuple[Move, ...]
     position: Position
 
+
 # gym.Env
 class Board(gym.Env):
     checkers: int = CHECKERS
@@ -78,7 +79,9 @@ class Board(gym.Env):
         beavers: bool = False,
         jacoby: bool = False,
         cont: bool = False,
+        ref: str = "",
     ):
+        self.ref = ref if not None else str(uuid4())
         self.position: Position = Position.decode(position_id)
         self.match: Match = Match.decode(match_id)
         self.starting_position_id: str = position_id
@@ -88,9 +91,34 @@ class Board(gym.Env):
         self.jacoby = jacoby
 
         # Reinforcement learning
-        lower_bound = np.array([1, ]*2 + [0, ]*52)
-        upper_bound = np.array([6, ]*2 + [15, ]*4 + [
-            item for sublist in [[2, 15], ]*24 for item in sublist])
+        lower_bound = np.array(
+            [
+                1,
+            ]
+            * 2
+            + [
+                0,
+            ]
+            * 52
+        )
+        upper_bound = np.array(
+            [
+                6,
+            ]
+            * 2
+            + [
+                15,
+            ]
+            * 4
+            + [
+                item
+                for sublist in [
+                    [2, 15],
+                ]
+                * 24
+                for item in sublist
+            ]
+        )
         self.observation_space = spaces.Box(
             low=lower_bound,
             high=upper_bound,
@@ -100,8 +128,8 @@ class Board(gym.Env):
         self.action_count = len(self.actions)
         if cont:
             self.action_space = spaces.Box(
-                low=np.array([-int((self.action_count/2)-1)]),
-                high=np.array([int((self.action_count/2)-1)]),
+                low=np.array([-int((self.action_count / 2) - 1)]),
+                high=np.array([int((self.action_count / 2) - 1)]),
                 dtype=np.float32,
             )
         else:
@@ -119,11 +147,11 @@ class Board(gym.Env):
         """
 
         def generate(
-                position: Position,
-                dice: Tuple[int, ...],
-                die: int = 0,
-                moves: Tuple[Move, ...] = (),
-                plays: List[Play] = [],
+            position: Position,
+            dice: Tuple[int, ...],
+            die: int = 0,
+            moves: Tuple[Move, ...] = (),
+            plays: List[Play] = [],
         ) -> List[Play]:
             if die < len(dice):
                 pips = dice[die]
@@ -261,14 +289,21 @@ class Board(gym.Env):
 
         # Convert to Move objects to compare
         def to_moves(seq):
-            return tuple(Move(abs(s - d) if s is not None and d is not None else 0, s, d) for s, d in seq)
+            return tuple(
+                Move(abs(s - d) if s is not None and d is not None else 0, s, d)
+                for s, d in seq
+            )
 
         requested_moves = to_moves(moves)
 
         # Filter for any legal play that starts with this sequence
         matching_play = next(
-            (play for play in legal_plays if play.moves[:len(requested_moves)] == requested_moves),
-            None
+            (
+                play
+                for play in legal_plays
+                if play.moves[: len(requested_moves)] == requested_moves
+            ),
+            None,
         )
 
         if matching_play:
@@ -287,12 +322,6 @@ class Board(gym.Env):
             raise BoardError(f"Invalid move sequence: {moves}")
 
     def double(self) -> None:
-        """
-        Offers a double.
-
-        Returns:
-            None
-        """
         if (
             self.match.player == self.match.turn
             and self.match.game_state == GameState.ON_ROLL
@@ -301,13 +330,15 @@ class Board(gym.Env):
                 or self.match.cube_holder == Player.CENTERED
             )
         ):
-            self.position = self.position.swap_players()
-            self.match.cube_holder = self.match.other_player()
             self.match.cube_value *= 2
             self.match.double = True
             self.match.game_state = GameState.DOUBLED
-            self.match.swap_players()
+            self.match.swap_turn()
+            logger.debug(
+                f"Double offered - new turn: {self.match.turn} {type(self.match.turn)} {self.match.turn == PlayerType.ZERO}"
+            )
         else:
+            logger.debug("Double failed validation")
             if self.match.cube_holder != self.match.player:
                 raise BoardError("You cannot double until you hold the cube.")
             else:
@@ -321,7 +352,7 @@ class Board(gym.Env):
             None
         """
         if (
-            self.match.player == self.match.turn
+            self.match.turn != self.match.cube_holder
             and self.match.game_state == GameState.DOUBLED
         ):
             self.match.cube_value = self.match.cube_value * 2
@@ -337,13 +368,13 @@ class Board(gym.Env):
             None
         """
         if (
-            self.match.player == self.match.turn
+            self.match.turn != self.match.cube_holder
             and self.match.game_state == GameState.DOUBLED
         ):
             self.update_score(
                 int(self.match.cube_value / 2),
                 int(Resign.SINGLE_GAME),
-                self.match.other_player(),
+                int(self.match.player),
             )
             self.end_game()
         else:
@@ -387,25 +418,21 @@ class Board(gym.Env):
             raise BoardError("No resignation to reject")
 
     def take(self) -> None:
-        """
-        Takes a double.
-
-        Returns:
-            None
-        """
-
-        # If it is the players turn, and the state is doubled...
+        logger.debug(
+            f"Taking - player: {self.match.player}, turn: {self.match.turn}, cube_holder: {self.match.cube_holder}"
+        )
         if (
-            self.match.player == self.match.turn
+            self.match.turn != self.match.cube_holder
             and self.match.game_state == GameState.DOUBLED
         ):
-            # ...Switch the cube holder to the player
-            self.match.cube_holder = self.match.player
 
-            # ...Swap the players
-            # TODO: somethings not right here? Why is match and position different?
-            self.position = self.position.swap_players()
-            self.match.swap_players()
+            self.match.cube_holder = self.match.turn
+            self.match.reset_dice()
+            self.match.game_state = GameState.ON_ROLL
+            logger.debug(
+                f"Double accepted - new turn: {self.match.turn}, cube_holder: {self.match.cube_holder}"
+            )
+            self.match.swap_turn()
         else:
             raise BoardError("No double to take")
 
@@ -472,6 +499,8 @@ class Board(gym.Env):
             self.match.player_0_score += score
         else:
             self.match.player_1_score += score
+
+        logger.debug(f"Player {winner} wins {score} points")
 
     def multiplier(self) -> Resign:
         """
@@ -585,25 +614,25 @@ class Board(gym.Env):
         for i in sources:
             for j in targets:
                 if 6 >= (j - i) > 0:
-                    actions.append(('move', j, i))
+                    actions.append(("move", j, i))
 
         # bar and off
         for j in homes:
-            actions.append(('move', "bar", j))
-            actions.append(('move', j, "off"))
+            actions.append(("move", "bar", j))
+            actions.append(("move", j, "off"))
 
         # Resign actions
         for r in ["single", "gammon", "backgammon"]:
-            actions.append(('accept', r))
-            actions.append(('reject', r))
-            actions.append(('resign', r))
+            actions.append(("accept", r))
+            actions.append(("reject", r))
+            actions.append(("resign", r))
 
         # Roll, or double actions
-        actions.append('roll')
-        actions.append('double')
-        actions.append('take')
-        actions.append('drop')
-        actions.append('redouble')
+        actions.append("roll")
+        actions.append("double")
+        actions.append("take")
+        actions.append("drop")
+        actions.append("redouble")
 
         return actions
 
@@ -616,24 +645,28 @@ class Board(gym.Env):
 
         # A player is always allowed to resign at any time
         for r in ["single", "gammon", "backgammon"]:
-            actions.append(('resign', r))
+            actions.append(("resign", r))
             if self.match.game_state == GameState.RESIGNED:
-                actions.append(('accept', r))
-                actions.append(('reject', r))
+                actions.append(("accept", r))
+                actions.append(("reject", r))
 
         # If the Game state is on roll then they may roll the dice
         if self.match.game_state == GameState.ON_ROLL:
-            actions.append('roll')
+            actions.append("roll")
 
             # ...if they own the cube, or it is centered they can double.
-            if self.match.cube_holder == self.match.turn or self.match.cube_holder == PlayerType.CENTERED:
-                actions.append('double')
+            if (
+                self.match.cube_holder == self.match.turn
+                or self.match.cube_holder == PlayerType.CENTERED
+            ):
+                actions.append("double")
 
         # If a cube has been offered, they can take, drop or redouble (know as beaver)
         if self.match.game_state == GameState.DOUBLED:
-            actions.append('take')
-            actions.append('drop')
-            actions.append('redouble')
+            actions.append("take")
+            actions.append("drop")
+            actions.append("redouble")
+            return actions  # ✅ ADD THIS EARLY RETURN
 
         # Check for the legal moves and append these to the actions.
         legal_plays: List[Play] = self.generate_plays()
@@ -698,16 +731,16 @@ class Board(gym.Env):
 
         return obs
 
-    def render(self, mode='human'):
+    def render(self, mode="human"):
         """Renders the board. 'w' is player1 and 'b' is player2."""
-        if mode == 'human':
+        if mode == "human":
             print(str(self))
 
     def reset(
-            self,
-            *,
-            seed: int | None = None,
-            options: dict[str, Any] | None = None,
+        self,
+        *,
+        seed: int | None = None,
+        options: dict[str, Any] | None = None,
     ) -> tuple[ObsType, dict[str, Any]]:
         """Restarts the game."""
 
@@ -775,6 +808,7 @@ class Board(gym.Env):
         try:
             if isinstance(action, tuple):
                 if action[0] == "move":
+                    logger.debug(f"action move tuple {action}")
                     self.play(((action[1], action[2]),))
                 elif action[0] == "resign":
                     self.resign(Resign[action[1].upper()])
@@ -795,6 +829,8 @@ class Board(gym.Env):
                     self.drop()
                 elif action == "redouble":
                     self.redouble()
+                elif action == "pass":
+                    self.end_turn()
                 else:
                     raise BoardError(f"Unknown string action: {action}")
             return 0  # No shaped reward by default
@@ -806,8 +842,10 @@ class Board(gym.Env):
     def get_info(self):
         """Returns useful info for debugging, etc."""
 
-        return {'time elapsed': time.time() - self.time_elapsed,
-                'invalid actions taken': self.invalid_actions_taken}
+        return {
+            "time elapsed": time.time() - self.time_elapsed,
+            "invalid actions taken": self.invalid_actions_taken,
+        }
 
     def __repr__(self):
         """
@@ -1013,21 +1051,27 @@ class Board(gym.Env):
 
         ascii_board: str = ""
         position_id: str = self.position.encode()
-        ascii_board += f" Stones+Dice     Position ID: {position_id}\n"
+        # Max length for variant name to align nicely with position ID
+        max_name_len = 15
+        name = getattr(self, "variant_name", self.__class__.__name__)
+        name = name[:max_name_len].ljust(max_name_len)
+        ascii_board += f" {name} Position ID: {position_id}\n"
         match_id: str = self.match.encode()
-        ascii_board += f"                 Match ID   : {match_id}\n"
+        match_ref = self.ref
+        match_ref = match_ref[:max_name_len].ljust(max_name_len)
+        ascii_board += f" {match_ref} Match ID   : {match_id}\n"
 
         # Top Player display
         ascii_board += " "
         ascii_board += (
-            ASCII_12_01 if int(self.match.player) != int(self.player) else ASCII_13_24
+            ASCII_12_01 if int(self.match.turn) != int(self.player) else ASCII_13_24
         )
         ascii_board += player_text_top
         ascii_board += "\n"
 
         for i in range(len(points)):
             ascii_board += (
-                ("^|" if int(self.match.player) != int(self.player) else "v|")
+                ("^|" if int(self.match.turn) != int(self.player) else "v|")
                 if i == int(ASCII_BOARD_HEIGHT / 2)
                 else " |"
             )
@@ -1040,7 +1084,7 @@ class Board(gym.Env):
 
             ascii_board += player_score_top if i == 0 else ""
             ascii_board += (
-                message if int(self.match.player) != int(self.player) and i == 1 else ""
+                message if int(self.match.turn) != int(self.player) and i == 1 else ""
             )
             ascii_board += player_pip_count_top if i == 3 else ""
             ascii_board += (
@@ -1050,7 +1094,7 @@ class Board(gym.Env):
             )
             ascii_board += (
                 message
-                if int(self.match.player) == int(self.player)
+                if int(self.match.turn) == int(self.player)
                 and i == int(ASCII_BOARD_HEIGHT) - 2
                 else ""
             )
@@ -1063,9 +1107,8 @@ class Board(gym.Env):
         # Bottom Player display
         ascii_board += " "
         ascii_board += (
-            ASCII_13_24 if int(self.match.player) != int(self.player) else ASCII_12_01
+            ASCII_13_24 if int(self.match.turn) != int(self.player) else ASCII_12_01
         )
         ascii_board += player_text_bottom
 
         return ascii_board
-

@@ -9,16 +9,13 @@ import pytest
 
 pytestmark = pytest.mark.unit
 
+
 def test_hypergammon(player0, player1):
     game = Hypergammon()
     assert game
 
-    game.player0 = Player(
-        PlayerType.ZERO, player0
-    )
-    game.player1 = Player(
-        PlayerType.ONE, player1
-    )
+    game.player0 = Player(PlayerType.ZERO, player0)
+    game.player1 = Player(PlayerType.ONE, player1)
     game.player = game.player0
 
     # def first_roll()

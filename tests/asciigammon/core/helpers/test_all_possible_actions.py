@@ -35,4 +35,6 @@ def test_all_possible_actions():
     # print(f"Action mask: {mask.tolist()}")
 
     # Check that masked actions exactly match valid_actions
-    assert set(masked_actions) == set(valid_actions), "Action mask does not match valid actions"
+    assert set(masked_actions) == set(
+        valid_actions
+    ), "Action mask does not match valid actions"

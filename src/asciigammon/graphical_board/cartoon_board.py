@@ -22,6 +22,7 @@ from asciigammon.core.sound import SoundManager  # Import the new class
 # Import the CheckerPositions2D class from your checker_positions_2d file
 from asciigammon.graphical_board.checker_positions import CheckerPositions
 
+
 class CartoonBoard:
     """Encapsulates game state and rendering logic."""
 
@@ -69,21 +70,25 @@ class CartoonBoard:
         self.offset_bottom_y_coeff = 0.06499999999999999
 
         # Sprites and images
-        self.board_background = pygame.image.load(f"{ASSETS_DIR}/img/board/background.png")
-        self.background_image = pygame.image.load(f"{ASSETS_DIR}/img/background/default.png")
+        self.board_background = pygame.image.load(
+            f"{ASSETS_DIR}/img/board/background.png"
+        )
+        self.background_image = pygame.image.load(
+            f"{ASSETS_DIR}/img/background/default.png"
+        )
         # Preload and scale checker images (adjust size as needed)
         self.checker_images = {
             "white": pygame.image.load(os.path.join(CHECKER_DIR, "white.png")),
-            "black": pygame.image.load(os.path.join(CHECKER_DIR, "black.png"))
+            "black": pygame.image.load(os.path.join(CHECKER_DIR, "black.png")),
         }
         self.original_checker_images = {
             "white": pygame.image.load(os.path.join(CHECKER_DIR, "white.png")),
-            "black": pygame.image.load(os.path.join(CHECKER_DIR, "black.png"))
+            "black": pygame.image.load(os.path.join(CHECKER_DIR, "black.png")),
         }
         # Optionally, set an initial size:
         self.checker_images = {
             "white": self.original_checker_images["white"],
-            "black": self.original_checker_images["black"]
+            "black": self.original_checker_images["black"],
         }
 
         # Create our normalized positions manager
@@ -117,14 +122,20 @@ class CartoonBoard:
             new_height = int(img_height * scale_factor)
 
             # Scale the image
-            scaled_image = pygame.transform.smoothscale(self.background_image, (new_width, new_height))
+            scaled_image = pygame.transform.smoothscale(
+                self.background_image, (new_width, new_height)
+            )
 
             # Calculate offsets to center the scaled image on the window
             x_offset = (new_width - current_width) // 2
             y_offset = (new_height - current_height) // 2
 
             # Blit the centered part of the scaled image onto the screen
-            self.screen.blit(scaled_image, (0, 0), (x_offset, y_offset, current_width, current_height))
+            self.screen.blit(
+                scaled_image,
+                (0, 0),
+                (x_offset, y_offset, current_width, current_height),
+            )
 
     def draw_board(self):
         # Compute board rectangle as before.
@@ -137,7 +148,9 @@ class CartoonBoard:
         board_x = (current_width - board_width) // 2
         board_y = 0
 
-        scaled_board_bg = pygame.transform.smoothscale(self.board_background, (board_width, board_height))
+        scaled_board_bg = pygame.transform.smoothscale(
+            self.board_background, (board_width, board_height)
+        )
         self.screen.blit(scaled_board_bg, (board_x, board_y))
 
         self.board_rect = pygame.Rect(board_x, board_y, board_width, board_height)
@@ -150,20 +163,31 @@ class CartoonBoard:
         offset_bottom_y = board_width * self.offset_bottom_y_coeff
 
         self.dst_points = [
-            (board_x + offset_top_x, board_y + offset_top_y),                       # top-left
-            (board_x + board_width - offset_top_x, board_y + offset_top_y),           # top-right
-            (board_x + board_width - offset_bottom_x, board_y + board_height - offset_bottom_y),  # bottom-right
-            (board_x + offset_bottom_x, board_y + board_height - offset_bottom_y)      # bottom-left
+            (board_x + offset_top_x, board_y + offset_top_y),  # top-left
+            (board_x + board_width - offset_top_x, board_y + offset_top_y),  # top-right
+            (
+                board_x + board_width - offset_bottom_x,
+                board_y + board_height - offset_bottom_y,
+            ),  # bottom-right
+            (
+                board_x + offset_bottom_x,
+                board_y + board_height - offset_bottom_y,
+            ),  # bottom-left
         ]
 
     def draw_checkers(self, position):
         # If checker colours are swapped, invert the mapping.
         if self.swap_colors:
-            images = {"white": self.checker_images["black"], "black": self.checker_images["white"]}
+            images = {
+                "white": self.checker_images["black"],
+                "black": self.checker_images["white"],
+            }
         else:
             images = self.checker_images
 
-        scale_factor = self.board_rect.height / SCREEN_HEIGHT  # 768 can be your original board height
+        scale_factor = (
+            self.board_rect.height / SCREEN_HEIGHT
+        )  # 768 can be your original board height
         new_checker_size = int(CHECKER_SIZE * scale_factor)
 
         # Re-scale the checker images using the original images:
@@ -212,33 +236,55 @@ class CartoonBoard:
 
             # Interpolate along the top edge:
             quad_top_left = (
-                top_left[0] + t_left * (top_right[0] - top_left[0]) + adjust_top_x  + offset_x,
-                top_left[1] + t_left * (top_right[1] - top_left[1]) + adjust_top_y
+                top_left[0]
+                + t_left * (top_right[0] - top_left[0])
+                + adjust_top_x
+                + offset_x,
+                top_left[1] + t_left * (top_right[1] - top_left[1]) + adjust_top_y,
             )
             quad_top_right = (
-                top_left[0] + t_right * (top_right[0] - top_left[0]) + adjust_top_x  + offset_x,
-                top_left[1] + t_right * (top_right[1] - top_left[1]) + adjust_top_y
+                top_left[0]
+                + t_right * (top_right[0] - top_left[0])
+                + adjust_top_x
+                + offset_x,
+                top_left[1] + t_right * (top_right[1] - top_left[1]) + adjust_top_y,
             )
 
             # Interpolate along the bottom edge:
             quad_bottom_left = (
-                bottom_left[0] + t_left * (bottom_right[0] - bottom_left[0]) + adjust_bottom_x  + offset_x,
-                bottom_left[1] + t_left * (bottom_right[1] - bottom_left[1]) + adjust_bottom_y
+                bottom_left[0]
+                + t_left * (bottom_right[0] - bottom_left[0])
+                + adjust_bottom_x
+                + offset_x,
+                bottom_left[1]
+                + t_left * (bottom_right[1] - bottom_left[1])
+                + adjust_bottom_y,
             )
             quad_bottom_right = (
-                bottom_left[0] + t_right * (bottom_right[0] - bottom_left[0]) + adjust_bottom_x  + offset_x,
-                bottom_left[1] + t_right * (bottom_right[1] - bottom_left[1]) + adjust_bottom_y
+                bottom_left[0]
+                + t_right * (bottom_right[0] - bottom_left[0])
+                + adjust_bottom_x
+                + offset_x,
+                bottom_left[1]
+                + t_right * (bottom_right[1] - bottom_left[1])
+                + adjust_bottom_y,
             )
 
             # Draw the quadrilateral for this point's area.
-            pygame.draw.polygon(self.screen, (0, 255, 0),
-                                [quad_top_left, quad_top_right, quad_bottom_right, quad_bottom_left], 2)
+            pygame.draw.polygon(
+                self.screen,
+                (0, 255, 0),
+                [quad_top_left, quad_top_right, quad_bottom_right, quad_bottom_left],
+                2,
+            )
 
     def draw_debug_points(self, checker_size):
         # Assuming self.board_rect is already set from draw_board()
         for idx in range(24):
             center = self.board_point_position(idx, checker_size)
-            pygame.draw.circle(self.screen, (0, 255, 0), (int(center[0]), int(center[1])), 5)
+            pygame.draw.circle(
+                self.screen, (0, 255, 0), (int(center[0]), int(center[1])), 5
+            )
             # Optionally, draw the index number
             font = pygame.font.SysFont(None, 20)
             label = font.render(str(idx), True, (255, 255, 255))
@@ -246,7 +292,6 @@ class CartoonBoard:
 
     def pip_count(self, pip_count):
         """Renders game metadata and branding details dynamically aligning text with wrapping."""
-
 
     @staticmethod
     def compute_homography(src, dst):
@@ -307,7 +352,9 @@ class CartoonBoard:
         if event.type == pygame.KEYDOWN:
             # Toggle board direction with the R key.
             if event.key == pygame.K_r:
-                self.checker_positions.reverse_board = not self.checker_positions.reverse_board
+                self.checker_positions.reverse_board = (
+                    not self.checker_positions.reverse_board
+                )
                 print("Board direction reversed:", self.checker_positions.reverse_board)
                 self.sound_manager.play_click_sound()
             # Toggle checker colours with the T key.
@@ -324,49 +371,89 @@ class CartoonBoard:
                 # For horizontal coefficients:
                 if event.key == pygame.K_LEFT:
                     if mod & pygame.KMOD_SHIFT:  # Adjust top only
-                        self.offset_top_x_coeff = max(0, self.offset_top_x_coeff - increment)
+                        self.offset_top_x_coeff = max(
+                            0, self.offset_top_x_coeff - increment
+                        )
                         print("Top horizontal coefficient:", self.offset_top_x_coeff)
                     elif mod & pygame.KMOD_CTRL:  # Adjust bottom only
-                        self.offset_bottom_x_coeff = max(0, self.offset_bottom_x_coeff - increment)
-                        print("Bottom horizontal coefficient:", self.offset_bottom_x_coeff)
+                        self.offset_bottom_x_coeff = max(
+                            0, self.offset_bottom_x_coeff - increment
+                        )
+                        print(
+                            "Bottom horizontal coefficient:", self.offset_bottom_x_coeff
+                        )
                     else:  # Adjust both
-                        self.offset_top_x_coeff = max(0, self.offset_top_x_coeff - increment)
-                        self.offset_bottom_x_coeff = max(0, self.offset_bottom_x_coeff - increment)
-                        print("Horizontal coefficients:", self.offset_top_x_coeff, self.offset_bottom_x_coeff)
+                        self.offset_top_x_coeff = max(
+                            0, self.offset_top_x_coeff - increment
+                        )
+                        self.offset_bottom_x_coeff = max(
+                            0, self.offset_bottom_x_coeff - increment
+                        )
+                        print(
+                            "Horizontal coefficients:",
+                            self.offset_top_x_coeff,
+                            self.offset_bottom_x_coeff,
+                        )
                 elif event.key == pygame.K_RIGHT:
                     if mod & pygame.KMOD_SHIFT:  # Adjust top only
                         self.offset_top_x_coeff += increment
                         print("Top horizontal coefficient:", self.offset_top_x_coeff)
                     elif mod & pygame.KMOD_CTRL:  # Adjust bottom only
                         self.offset_bottom_x_coeff += increment
-                        print("Bottom horizontal coefficient:", self.offset_bottom_x_coeff)
+                        print(
+                            "Bottom horizontal coefficient:", self.offset_bottom_x_coeff
+                        )
                     else:  # Adjust both
                         self.offset_top_x_coeff += increment
                         self.offset_bottom_x_coeff += increment
-                        print("Horizontal coefficients:", self.offset_top_x_coeff, self.offset_bottom_x_coeff)
+                        print(
+                            "Horizontal coefficients:",
+                            self.offset_top_x_coeff,
+                            self.offset_bottom_x_coeff,
+                        )
                 # For vertical coefficients:
                 elif event.key == pygame.K_UP:
                     if mod & pygame.KMOD_SHIFT:  # Adjust top only
-                        self.offset_top_y_coeff = max(0, self.offset_top_y_coeff - increment)
+                        self.offset_top_y_coeff = max(
+                            0, self.offset_top_y_coeff - increment
+                        )
                         print("Top vertical coefficient:", self.offset_top_y_coeff)
                     elif mod & pygame.KMOD_CTRL:  # Adjust bottom only
-                        self.offset_bottom_y_coeff = max(0, self.offset_bottom_y_coeff - increment)
-                        print("Bottom vertical coefficient:", self.offset_bottom_y_coeff)
+                        self.offset_bottom_y_coeff = max(
+                            0, self.offset_bottom_y_coeff - increment
+                        )
+                        print(
+                            "Bottom vertical coefficient:", self.offset_bottom_y_coeff
+                        )
                     else:  # Adjust both
-                        self.offset_top_y_coeff = max(0, self.offset_top_y_coeff - increment)
-                        self.offset_bottom_y_coeff = max(0, self.offset_bottom_y_coeff - increment)
-                        print("Vertical coefficients:", self.offset_top_y_coeff, self.offset_bottom_y_coeff)
+                        self.offset_top_y_coeff = max(
+                            0, self.offset_top_y_coeff - increment
+                        )
+                        self.offset_bottom_y_coeff = max(
+                            0, self.offset_bottom_y_coeff - increment
+                        )
+                        print(
+                            "Vertical coefficients:",
+                            self.offset_top_y_coeff,
+                            self.offset_bottom_y_coeff,
+                        )
                 elif event.key == pygame.K_DOWN:
                     if mod & pygame.KMOD_SHIFT:  # Adjust top only
                         self.offset_top_y_coeff += increment
                         print("Top vertical coefficient:", self.offset_top_y_coeff)
                     elif mod & pygame.KMOD_CTRL:  # Adjust bottom only
                         self.offset_bottom_y_coeff += increment
-                        print("Bottom vertical coefficient:", self.offset_bottom_y_coeff)
+                        print(
+                            "Bottom vertical coefficient:", self.offset_bottom_y_coeff
+                        )
                     else:  # Adjust both
                         self.offset_top_y_coeff += increment
                         self.offset_bottom_y_coeff += increment
-                        print("Vertical coefficients:", self.offset_top_y_coeff, self.offset_bottom_y_coeff)
+                        print(
+                            "Vertical coefficients:",
+                            self.offset_top_y_coeff,
+                            self.offset_bottom_y_coeff,
+                        )
 
         return True
 
@@ -376,7 +463,9 @@ class CartoonBoard:
                 self.running = False
             elif event.type == pygame.VIDEORESIZE:
                 # Update the screen size on resize
-                self.screen = pygame.display.set_mode(event.size, pygame.DOUBLEBUF | pygame.RESIZABLE)
+                self.screen = pygame.display.set_mode(
+                    event.size, pygame.DOUBLEBUF | pygame.RESIZABLE
+                )
             # (Include other event handling as needed)
 
     def handle_mouse_click(self, event):
@@ -393,4 +482,3 @@ class CartoonBoard:
         # Map the logical coordinate to screen coordinate using the homography.
         screen_x, screen_y = self.apply_homography(self.homography, rel[0], rel[1])
         return screen_x, screen_y
-

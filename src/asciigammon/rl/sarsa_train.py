@@ -16,21 +16,24 @@ def train(agent_train, opponent, maxmove):
         if not gamei.is_over():
             curstate = gamei.get_state3(gamei.get_dice(0))
             possible_actions, their_rewards = gamei.get_actions(
-                agent_train, gamei.get_dice(0))
+                agent_train, gamei.get_dice(0)
+            )
             curaction, action_index = agent_train.chooseAction(
-                curstate, possible_actions)
+                curstate, possible_actions
+            )
             gamei.update_board(agent_train, curaction)
             reward = their_rewards[action_index]
             nextstate = gamei.get_state3(gamei.get_dice(1))
         if not gamei.is_over():
             curstate = gamei.get_state3(gamei.get_dice(1))
             possible_actions, their_rewards = gamei.get_actions(
-                agent_train, gamei.get_dice(1))
+                agent_train, gamei.get_dice(1)
+            )
             nextaction, action_index = agent_train.chooseAction(
-                curstate, possible_actions)
+                curstate, possible_actions
+            )
             gamei.update_board(agent_train, nextaction)
-            agent_train.learn(curstate, curaction,
-                              reward, nextstate, nextaction)
+            agent_train.learn(curstate, curaction, reward, nextstate, nextaction)
             reward = their_rewards[action_index]
 
             # Opponent turn
@@ -39,14 +42,15 @@ def train(agent_train, opponent, maxmove):
                 if not gamei.is_over():
                     nextstate = gamei.get_dice(i)
                     possible_actions, their_rewards = gamei.get_actions(
-                        opponent, gamei.get_dice(i))
+                        opponent, gamei.get_dice(i)
+                    )
                     oppaction, action_index = opponent.chooseAction(
-                        nextstate, possible_actions)
+                        nextstate, possible_actions
+                    )
                     gamei.update_board(opponent, oppaction)
             gamei.roll_dice()
             nextstate = gamei.get_state3(gamei.get_dice(0))
-            agent_train.learn(curstate, curaction,
-                              reward, nextstate, nextaction)
+            agent_train.learn(curstate, curaction, reward, nextstate, nextaction)
 
         num_move += 1
 
@@ -54,44 +58,50 @@ def train(agent_train, opponent, maxmove):
 
 
 if __name__ == "__main__":
-    PARSER = argparse.ArgumentParser(description='Train an agent using RL')
-    PARSER.add_argument('--name', '-n',
-                        help='Name of the agent to be trained.',
-                        default='models/sarsa-vs_random-1M.pkl',
-                        type=str)
-    PARSER.add_argument('--maxmove', '-m',
-                        help='Maximum number of moves per game.',
-                        default=100)
-    PARSER.add_argument('--games', '-g',
-                        help='Number of games to play.',
-                        default=1000000)
-    PARSER.add_argument('--verbose', '-v',
-                        help='Toggle verbosity',
-                        default=1)
-    PARSER.add_argument('--continued', '-c',
-                        help='If the agent is saved, load it and continue training',
-                        default=0)
+    PARSER = argparse.ArgumentParser(description="Train an agent using RL")
+    PARSER.add_argument(
+        "--name",
+        "-n",
+        help="Name of the agent to be trained.",
+        default="models/sarsa-vs_random-1M.pkl",
+        type=str,
+    )
+    PARSER.add_argument(
+        "--maxmove", "-m", help="Maximum number of moves per game.", default=100
+    )
+    PARSER.add_argument(
+        "--games", "-g", help="Number of games to play.", default=1000000
+    )
+    PARSER.add_argument("--verbose", "-v", help="Toggle verbosity", default=1)
+    PARSER.add_argument(
+        "--continued",
+        "-c",
+        help="If the agent is saved, load it and continue training",
+        default=0,
+    )
 
     ARGS = PARSER.parse_args()
 
     if bool(int(ARGS.continued)):
         infilename = ARGS.name
-        with open(infilename, 'rb') as f:
+        with open(infilename, "rb") as f:
             agent = pickle.load(f)
     else:
         agent = SarsaAgent()
 
     for i in range(int(ARGS.games)):
         if int(ARGS.verbose):
-            print('Completed {} games'.format(i))
+            print("Completed {} games".format(i))
         try:
-            agent = train(agent, RandomSarsaAgent('opponent'), maxmove=int(ARGS.maxmove))
+            agent = train(
+                agent, RandomSarsaAgent("opponent"), maxmove=int(ARGS.maxmove)
+            )
         except:
             pass
 
     if bool(int(ARGS.continued)):
-        outfilename = '{}-updated.pkl'.format(ARGS.name)
+        outfilename = "{}-updated.pkl".format(ARGS.name)
     else:
         outfilename = ARGS.name
-    with open(outfilename, 'wb') as f:
+    with open(outfilename, "wb") as f:
         pickle.dump(agent, f)

@@ -3,6 +3,7 @@ from asciigammon.core.match import GameState
 import random
 import time
 
+
 def play_simple_game(max_steps=50, delay=1.0):
     board = Board()
     board.first_roll()
@@ -41,6 +42,7 @@ def play_simple_game(max_steps=50, delay=1.0):
 
         time.sleep(delay)
         step += 1
+
 
 if __name__ == "__main__":
     play_simple_game()

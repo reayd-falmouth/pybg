@@ -1,6 +1,8 @@
 import pygame
 
 from asciigammon.constants import ASSETS_DIR
+from asciigammon.core.logger import logger
+from typing import Union
 
 
 class SoundManager:
@@ -11,7 +13,9 @@ class SoundManager:
 
         # Load sounds from assets directory
         self.move_sound = pygame.mixer.Sound(f"{ASSETS_DIR}/audio/move.wav")
-        self.hit_sound = pygame.mixer.Sound(f"{ASSETS_DIR}/audio/drop.wav")  # Drop = hit
+        self.hit_sound = pygame.mixer.Sound(
+            f"{ASSETS_DIR}/audio/drop.wav"
+        )  # Drop = hit
         self.chequer_sound = pygame.mixer.Sound(f"{ASSETS_DIR}/audio/chequer.wav")
         self.roll_sound = pygame.mixer.Sound(f"{ASSETS_DIR}/audio/roll.wav")
         self.double_sound = pygame.mixer.Sound(f"{ASSETS_DIR}/audio/double.wav")
@@ -71,15 +75,19 @@ class SoundManager:
     def play_exit(self):
         self.exit_sound.play()
 
-    def play_sound(self, action: str):
+    def play_sound(self, action: Union[str, tuple]):
         """Plays a sound based on the action name."""
+        logger.debug(f"Sound play requested for action {action}")
+        if isinstance(action, tuple):
+            action = action[0]
+
         sound_map = {
             "new": self.fanfare_sound,
             "roll": self.roll_sound,
             "move": self.move_sound,
             "double": self.double_sound,
             "take": self.take_sound,
-            "drop": self.resign_sound,     # You might prefer a buzzer or alert sound
+            "drop": self.resign_sound,  # You might prefer a buzzer or alert sound
             "accept": self.chequer_sound,
             "reject": self.hit_sound,
             "resign": self.resign_sound,
@@ -87,6 +95,7 @@ class SoundManager:
 
         sound = sound_map.get(action)
         if sound:
+            logger.debug(f"Playing sound for {action}")
             sound.play()
 
     # def play_background_music(self):

@@ -8,6 +8,8 @@ STARTING_POSITION_ID = "4Dl4ADbgOXgANg"
 
 
 class Nackgammon(Board):
+    variant_name = "Nackgammon"
+
     def __init__(
         self, position_id: str = STARTING_POSITION_ID, match_id: str = STARTING_MATCH_ID
     ):

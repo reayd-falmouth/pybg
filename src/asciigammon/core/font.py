@@ -30,7 +30,7 @@ def load_fonts() -> dict:
     fonts_dir = os.path.join(ASSETS_DIR, "fonts")
 
     # List all .ttf files in the fonts directory
-    font_files = [f for f in os.listdir(fonts_dir) if f.lower().endswith('.ttf')]
+    font_files = [f for f in os.listdir(fonts_dir) if f.lower().endswith(".ttf")]
 
     # Define font sizes for different text roles
     sizes = {
@@ -106,7 +106,9 @@ def render_wrapped_text(
         pygame.SRCALPHA,
     )
     text_box.fill(box_fill)
-    surface.blit(text_box, (position[0] - TEXT_BOX_PADDING, position[1] - TEXT_BOX_PADDING))
+    surface.blit(
+        text_box, (position[0] - TEXT_BOX_PADDING, position[1] - TEXT_BOX_PADDING)
+    )
 
     # Render text line by line
     y_offset = 0

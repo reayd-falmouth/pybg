@@ -3,6 +3,7 @@ import moderngl
 import pygame
 from asciigammon.constants import ASSETS_DIR
 
+
 class ShaderRenderer:
     def __init__(self, screen, enabled=True):
         self.enabled = enabled
@@ -25,7 +26,9 @@ class ShaderRenderer:
             self.vao = self.ctx.vertex_array(self.prog, vao_content, self.ibo)
 
             # Create initial texture using the passed screen's size.
-            self.screen_texture = self.ctx.texture(screen.get_size(), 3, pygame.image.tostring(screen, "RGB", 1))
+            self.screen_texture = self.ctx.texture(
+                screen.get_size(), 3, pygame.image.tostring(screen, "RGB", 1)
+            )
             self.screen_texture.repeat_x = False
             self.screen_texture.repeat_y = False
         else:
@@ -43,7 +46,9 @@ class ShaderRenderer:
 
         # If the texture size doesn't match the new size, recreate it.
         if self.screen_texture.size != new_size:
-            self.screen_texture = self.ctx.texture(new_size, 3, pygame.image.tostring(surface, "RGB", 1))
+            self.screen_texture = self.ctx.texture(
+                new_size, 3, pygame.image.tostring(surface, "RGB", 1)
+            )
             self.screen_texture.repeat_x = False
             self.screen_texture.repeat_y = False
 

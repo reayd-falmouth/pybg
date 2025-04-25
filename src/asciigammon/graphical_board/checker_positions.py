@@ -35,8 +35,12 @@ class CheckerPositions:
         # Preload checker images.
         # Assumes asset structure: ASSETS_DIR/img/checkers/{color}.png
         self.checker_images = {
-            "white": pygame.image.load(os.path.join(ASSETS_DIR, "img", "board", "checkers", "white.png")).convert_alpha(),
-            "black": pygame.image.load(os.path.join(ASSETS_DIR, "img", "board", "checkers", "black.png")).convert_alpha()
+            "white": pygame.image.load(
+                os.path.join(ASSETS_DIR, "img", "board", "checkers", "white.png")
+            ).convert_alpha(),
+            "black": pygame.image.load(
+                os.path.join(ASSETS_DIR, "img", "board", "checkers", "black.png")
+            ).convert_alpha(),
         }
 
         # Preload tray images.
@@ -47,7 +51,9 @@ class CheckerPositions:
             for count in range(1, 16):  # Adjust the range as needed
                 tray_path = os.path.join(tray_folder, f"{count}.png")
                 if os.path.exists(tray_path):
-                    self.tray_images[color][count] = pygame.image.load(tray_path).convert_alpha()
+                    self.tray_images[color][count] = pygame.image.load(
+                        tray_path
+                    ).convert_alpha()
                 else:
                     print(f"Tray image not found: {tray_path}")
 
@@ -104,8 +110,16 @@ class CheckerPositions:
         final_x = left_x + u * (right_x - left_x)
         return final_x - (scaled_width // 2)
 
-    def draw_checker_stack(self, screen, board_rect, base_index, count, checker_img, spacing_scale=1.0,
-                           stack_direction="down"):
+    def draw_checker_stack(
+        self,
+        screen,
+        board_rect,
+        base_index,
+        count,
+        checker_img,
+        spacing_scale=1.0,
+        stack_direction="down",
+    ):
         """
         Draws a stack of checkers at the board coordinate given by base_index.
         Uses the same scaling/stacking logic as draw_checker(), so both board and bar stacks use consistent logic.
@@ -130,7 +144,9 @@ class CheckerPositions:
         # For upward stacks, adjust the initial starting point.
         if stack_direction == "up":
             relative_y = (base_y - img_size) / board_rect.height
-            _, first_scaled_height, _ = self.get_scaled_dimensions(checker_img, relative_y, spacing_scale)
+            _, first_scaled_height, _ = self.get_scaled_dimensions(
+                checker_img, relative_y, spacing_scale
+            )
             draw_y = base_y - first_scaled_height
         else:
             draw_y = base_y
@@ -142,8 +158,12 @@ class CheckerPositions:
                 # For upward stacks, use (i+1) so that the first checker is drawn at the adjusted starting point.
                 relative_y = (base_y - (i + 1) * img_size) / board_rect.height
 
-            scaled_width, scaled_height, _ = self.get_scaled_dimensions(checker_img, relative_y, spacing_scale)
-            scaled_checker_img = pygame.transform.smoothscale(checker_img, (scaled_width, scaled_height))
+            scaled_width, scaled_height, _ = self.get_scaled_dimensions(
+                checker_img, relative_y, spacing_scale
+            )
+            scaled_checker_img = pygame.transform.smoothscale(
+                checker_img, (scaled_width, scaled_height)
+            )
             draw_x = base_x - scaled_width // 2
             screen.blit(scaled_checker_img, (draw_x, draw_y))
             if stack_direction == "down":
@@ -159,10 +179,14 @@ class CheckerPositions:
             # For both directions, we center the overlay on the base_x and the final draw_y offset.
             # (For "up", draw_y is already above; for "down", it's below.)
             text_surface = number_font.render(number_text, True, WHITE)
-            text_rect = text_surface.get_rect(center=(base_x, draw_y + (scaled_height // 2)))
+            text_rect = text_surface.get_rect(
+                center=(base_x, draw_y + (scaled_height // 2))
+            )
             screen.blit(text_surface, text_rect)
 
-    def draw_checker(self, screen, board_rect, position, checker_images, index_to_use, point_index):
+    def draw_checker(
+        self, screen, board_rect, position, checker_images, index_to_use, point_index
+    ):
         """
         Draws a stack of checkers for a board point using the board's relative coordinate.
         """
@@ -175,7 +199,11 @@ class CheckerPositions:
             return
 
         abs_count = abs(checker_count)
-        checker_img = checker_images.get("white") if checker_count > 0 else checker_images.get("black")
+        checker_img = (
+            checker_images.get("white")
+            if checker_count > 0
+            else checker_images.get("black")
+        )
         if not checker_img:
             return
 
@@ -193,7 +221,9 @@ class CheckerPositions:
             current_scale = self.get_perspective_scale(relative_y)
             scaled_width = int(checker_img.get_width() * current_scale)
             scaled_height = int(checker_img.get_height() * current_scale)
-            scaled_checker_img = pygame.transform.smoothscale(checker_img, (scaled_width, scaled_height))
+            scaled_checker_img = pygame.transform.smoothscale(
+                checker_img, (scaled_width, scaled_height)
+            )
 
             if i == 0:
                 draw_y = base_y if point_index > 11 else base_y - scaled_height
@@ -202,7 +232,9 @@ class CheckerPositions:
             else:
                 draw_y -= scaled_height
 
-            draw_x = self.get_perspective_x_shift(index_to_use, base_x, draw_y, scaled_width)
+            draw_x = self.get_perspective_x_shift(
+                index_to_use, base_x, draw_y, scaled_width
+            )
             screen.blit(scaled_checker_img, (draw_x, draw_y))
 
         if abs_count > 5:
@@ -215,15 +247,24 @@ class CheckerPositions:
             scale_factor_6 = self.get_perspective_scale(relative_y_6)
             scaled_width_6 = int(checker_img.get_width() * scale_factor_6)
             scaled_height_6 = int(checker_img.get_height() * scale_factor_6)
-            next_draw_y = draw_y + scaled_height_6 if point_index > 11 else draw_y - scaled_height_6
-            next_draw_x = self.get_perspective_x_shift(index_to_use, base_x, next_draw_y, scaled_width_6)
+            next_draw_y = (
+                draw_y + scaled_height_6
+                if point_index > 11
+                else draw_y - scaled_height_6
+            )
+            next_draw_x = self.get_perspective_x_shift(
+                index_to_use, base_x, next_draw_y, scaled_width_6
+            )
 
             dynamic_font_size = int(scaled_height_6 * 0.5)
             number_font = get_dynamic_font("Carton_Six", dynamic_font_size)
             number_text = str(abs_count)
             text_surface = number_font.render(number_text, True, WHITE)
             text_rect = text_surface.get_rect(
-                center=(next_draw_x + scaled_width_6 // 2, next_draw_y + scaled_height_6 // 2)
+                center=(
+                    next_draw_x + scaled_width_6 // 2,
+                    next_draw_y + scaled_height_6 // 2,
+                )
             )
             screen.blit(text_surface, text_rect)
 
@@ -232,8 +273,14 @@ class CheckerPositions:
         Draws the board checkers using the helper draw_checker() method.
         """
         for point_index in range(24):
-            index_to_use = self.get_mirrored_index(point_index) if self.reverse_board else point_index
-            self.draw_checker(screen, board_rect, position, checker_images, index_to_use, point_index)
+            index_to_use = (
+                self.get_mirrored_index(point_index)
+                if self.reverse_board
+                else point_index
+            )
+            self.draw_checker(
+                screen, board_rect, position, checker_images, index_to_use, point_index
+            )
 
     def draw_bar(self, screen, board_rect, position: Position, checker_images):
         """
@@ -247,16 +294,30 @@ class CheckerPositions:
         if player_count:
             checker_img = checker_images.get("white")
             if checker_img:
-                self.draw_checker_stack(screen, board_rect, 24, player_count, checker_img, spacing_scale=1.0,
-                                        stack_direction="down")
+                self.draw_checker_stack(
+                    screen,
+                    board_rect,
+                    24,
+                    player_count,
+                    checker_img,
+                    spacing_scale=1.0,
+                    stack_direction="down",
+                )
 
         # Draw opponent's bar checkers (assumed black) using base index 25.
         opponent_count = position.opponent_bar
         if opponent_count:
             checker_img = checker_images.get("black")
             if checker_img:
-                self.draw_checker_stack(screen, board_rect, 25, opponent_count, checker_img, spacing_scale=1.0,
-                                        stack_direction="up")
+                self.draw_checker_stack(
+                    screen,
+                    board_rect,
+                    25,
+                    opponent_count,
+                    checker_img,
+                    spacing_scale=1.0,
+                    stack_direction="up",
+                )
 
     def draw_tray(self, screen, board_rect, position):
         """
@@ -302,7 +363,9 @@ class CheckerPositions:
             tray_image = self.tray_images["white"][player_count]
             scale_factor = tray_height / tray_image.get_height()
             tray_width = int(tray_image.get_width() * scale_factor)
-            scaled_tray = pygame.transform.smoothscale(tray_image, (tray_width, int(tray_height)))
+            scaled_tray = pygame.transform.smoothscale(
+                tray_image, (tray_width, int(tray_height))
+            )
             # If the board is mirrored, flip the tray image horizontally.
             if self.reverse_board:
                 scaled_tray = pygame.transform.flip(scaled_tray, True, False)
@@ -316,7 +379,9 @@ class CheckerPositions:
             tray_image = self.tray_images["black"][opponent_count]
             scale_factor = tray_height / tray_image.get_height()
             tray_width = int(tray_image.get_width() * scale_factor)
-            scaled_tray = pygame.transform.smoothscale(tray_image, (tray_width, int(tray_height)))
+            scaled_tray = pygame.transform.smoothscale(
+                tray_image, (tray_width, int(tray_height))
+            )
             # Flip the image if the board is mirrored.
             if self.reverse_board:
                 scaled_tray = pygame.transform.flip(scaled_tray, True, False)
@@ -350,17 +415,21 @@ class CheckerPositions:
 
         # Render and draw the player's pip count.
         player_text_surface = pip_font.render(str(player_count), True, WHITE)
-        player_text_rect = player_text_surface.get_rect(center=(player_center_x, player_center_y))
+        player_text_rect = player_text_surface.get_rect(
+            center=(player_center_x, player_center_y)
+        )
         screen.blit(player_text_surface, player_text_rect)
 
         # Render and draw the opponent's pip count.
         opponent_text_surface = pip_font.render(str(opponent_count), True, WHITE)
-        opponent_text_rect = opponent_text_surface.get_rect(center=(opponent_center_x, opponent_center_y))
+        opponent_text_rect = opponent_text_surface.get_rect(
+            center=(opponent_center_x, opponent_center_y)
+        )
         screen.blit(opponent_text_surface, opponent_text_rect)
 
     def draw(self, screen, board_rect, position, checker_images, dst_points):
         self.dst_points = dst_points
-        self.draw_board_checkers (screen, board_rect, position, checker_images)
+        self.draw_board_checkers(screen, board_rect, position, checker_images)
         self.draw_bar(screen, board_rect, position, checker_images)
         self.draw_tray(screen, board_rect, position)
         self.draw_pipcount(screen, board_rect, position)

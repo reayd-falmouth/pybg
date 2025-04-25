@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def sigmoid(x):
     # Clamp to avoid overflow in exp()
     x = np.clip(x, -60.0, 60.0)
@@ -32,12 +33,12 @@ def encode_board(position, cInput):
     # --- 1. Point features for both players (96 values: 2 per point × 2 players)
     for i in range(NUM_POINTS):
         p = board[i]
-        features.append(1 if p > 0 else 0)                  # Player occupies
+        features.append(1 if p > 0 else 0)  # Player occupies
         features.append(min(p - 1, 4) / 4.0 if p > 1 else 0.0)  # Extra checkers, capped
 
     for i in range(NUM_POINTS):
         o = board[i]
-        features.append(1 if o < 0 else 0)                      # Opponent occupies
+        features.append(1 if o < 0 else 0)  # Opponent occupies
         features.append(min(abs(o) - 1, 4) / 4.0 if o < -1 else 0.0)
 
     # --- 2. Bar and off checkers (4 values)
@@ -74,5 +75,3 @@ def encode_board(position, cInput):
         features = features[:cInput]
 
     return np.array(features, dtype=np.float32)
-
-

@@ -1,15 +1,15 @@
 """test_player.py"""
+
 import pytest
 
 pytestmark = pytest.mark.unit
+
 
 def test_player(player0):
     """Tests the player class"""
     from asciigammon.core.player import Player, PlayerType
 
-    player = Player(
-        PlayerType.ZERO, player0
-    )
+    player = Player(PlayerType.ZERO, player0)
     assert player.player_type == PlayerType.ZERO
     assert player.phrase == "player0"
     assert player.description == "Player Zero"
@@ -41,9 +41,7 @@ def test_player(player0):
         "userType": player.userType,
     }
 
-    player = Player(
-        PlayerType.ONE, player0
-    )
+    player = Player(PlayerType.ONE, player0)
     assert player.player_type == PlayerType.ONE
     assert player.phrase == "player1"
     assert player.description == "Player One"

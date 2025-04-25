@@ -8,6 +8,8 @@ STARTING_POSITION_ID = "AACgAgAAKgAAAA"
 
 
 class Hypergammon(Board):
+    variant_name = "Hypergammon"
+
     def __init__(
         self, position_id: str = STARTING_POSITION_ID, match_id: str = STARTING_MATCH_ID
     ):

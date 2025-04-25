@@ -7,9 +7,12 @@ BAR = 25
 OFF = 0
 
 # All distinct dice roll combinations (unordered)
-DICE_PAIRS = list(set((max(d1, d2), min(d1, d2)) for d1 in range(1, 7) for d2 in range(1, 7)))
+DICE_PAIRS = list(
+    set((max(d1, d2), min(d1, d2)) for d1 in range(1, 7) for d2 in range(1, 7))
+)
 
 CACHE_FILE = "all_actions_cache.pkl"
+
 
 def generate_play_patterns_for_dice(dice):
     is_double = dice[0] == dice[1]
@@ -23,6 +26,7 @@ def generate_play_patterns_for_dice(dice):
         dice_orders = list(set(itertools.permutations(dice)))
 
     for dice_order in dice_orders:
+
         def build_moves(remaining_dice, current_moves):
             if not remaining_dice:
                 move_sequences.add(tuple(current_moves))
@@ -34,9 +38,11 @@ def generate_play_patterns_for_dice(dice):
                     move = (from_point, to_point)
                     if move not in current_moves:
                         build_moves(remaining_dice[1:], current_moves + [move])
+
         build_moves(list(dice_order), [])
 
     return list(move_sequences)
+
 
 def build_all_play_patterns():
     if os.path.exists(CACHE_FILE):
@@ -57,6 +63,7 @@ def build_all_play_patterns():
         print(f"Saved {len(all_patterns)} play patterns to cache.")
 
     return all_patterns
+
 
 if __name__ == "__main__":
     all_actions = build_all_play_patterns()

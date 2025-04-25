@@ -6,6 +6,7 @@ import pytest
 
 pytestmark = pytest.mark.unit
 
+
 def test_match():
     # Test making the match
     match = Match.decode(STARTING_MATCH_ID)

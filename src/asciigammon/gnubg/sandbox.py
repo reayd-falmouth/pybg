@@ -7,11 +7,15 @@ def move_to_gnubg_str(m):
     dst = "off" if m.destination == -1 else str(m.destination + 1)
     return f"{src}/{dst}"
 
-def normalize_move(move_str):
-    parts = move_str.strip().replace('->', '/').split()
-    return " ".join(sorted(parts, key=lambda x: (x.split('/')[0], x.split('/')[1])))
 
-def debug_specific_move(board: Board, target_move_str: str, gnubg_df: pd.DataFrame = None):
+def normalize_move(move_str):
+    parts = move_str.strip().replace("->", "/").split()
+    return " ".join(sorted(parts, key=lambda x: (x.split("/")[0], x.split("/")[1])))
+
+
+def debug_specific_move(
+    board: Board, target_move_str: str, gnubg_df: pd.DataFrame = None
+):
     def normalize(move_str):
         return " ".join(sorted(move_str.strip().split()))
 
@@ -24,7 +28,9 @@ def debug_specific_move(board: Board, target_move_str: str, gnubg_df: pd.DataFra
         if normalize(move_str) == target_move_str_norm:
             print(f"\n🎯 Found move: {move_str}")
 
-            temp_board = Board(position_id=play.position.encode(), match_id=board.match.encode())
+            temp_board = Board(
+                position_id=play.position.encode(), match_id=board.match.encode()
+            )
             eval_out = evaluator.evaluate_position(temp_board)
             equity = evaluator.equity(eval_out)
 
@@ -34,10 +40,25 @@ def debug_specific_move(board: Board, target_move_str: str, gnubg_df: pd.DataFra
             print(f"\n💰 Calculated equity: {equity:.6f}")
 
             if gnubg_df is not None:
-                gnubg_row = gnubg_df[gnubg_df["normalized_move"] == target_move_str_norm]
+                gnubg_row = gnubg_df[
+                    gnubg_df["normalized_move"] == target_move_str_norm
+                ]
                 if not gnubg_row.empty:
                     print("\n📘 GNUBG reference:")
-                    print(gnubg_row[["move", "equity", "win", "wing", "winbg", "lose", "loseg", "losebg"]].to_string(index=False))
+                    print(
+                        gnubg_row[
+                            [
+                                "move",
+                                "equity",
+                                "win",
+                                "wing",
+                                "winbg",
+                                "lose",
+                                "loseg",
+                                "losebg",
+                            ]
+                        ].to_string(index=False)
+                    )
                 else:
                     print("⚠️  No matching GNUBG row found.")
             return
@@ -52,5 +73,3 @@ if __name__ == "__main__":
     print(board)
     position_class = board.position.classify()
     print(position_class)
-
-

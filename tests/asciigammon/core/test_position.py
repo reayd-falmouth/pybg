@@ -8,6 +8,7 @@ import pytest
 
 pytestmark = pytest.mark.unit
 
+
 def test_position():
     # Creates a new asciigammon starting position
     position = Position.decode(BACKGAMMON_STARTING_POSITION_ID)

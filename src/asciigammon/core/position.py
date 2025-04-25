@@ -11,13 +11,15 @@ dirname = os.path.dirname(__file__)
 POINTS = 24
 POINTS_PER_QUADRANT = int(POINTS / 4)
 
+
 class PositionClass(Enum):
-    OVER = 0        # Game is over (one side has no checkers on the board)
-    CRASHED = 1     # A very poor (or “crashed”) position
-    CONTACT = 2     # A contact position (both sides have heavy contact)
-    RACE = 3        # A pure race position (checkers are far advanced)
-    BEAROFF1 = 4    # Bearoff stage 1 (significant bearing off)
-    BEAROFF2 = 5    # Bearoff stage 2 (nearly finished bearing off)
+    OVER = 0  # Game is over (one side has no checkers on the board)
+    CRASHED = 1  # A very poor (or “crashed”) position
+    CONTACT = 2  # A contact position (both sides have heavy contact)
+    RACE = 3  # A pure race position (checkers are far advanced)
+    BEAROFF1 = 4  # Bearoff stage 1 (significant bearing off)
+    BEAROFF2 = 5  # Bearoff stage 2 (nearly finished bearing off)
+
 
 @dataclasses.dataclass(frozen=True)
 class Position:
@@ -330,7 +332,9 @@ class Position:
             return PositionClass.RACE
         # For bearoff, a simple threshold on borne-off checkers:
         if self.player_off >= 8 or self.opponent_off >= 8:
-            return PositionClass.BEAROFF2  # or BEAROFF_OS; you may distinguish by additional logic
+            return (
+                PositionClass.BEAROFF2
+            )  # or BEAROFF_OS; you may distinguish by additional logic
         return PositionClass.BEAROFF1
 
     def to_board_array(self) -> Tuple[list, list]:
@@ -381,4 +385,3 @@ class Position:
         board_opp.append(abs(self.opponent_bar))
 
         return board_opp, board_player
-

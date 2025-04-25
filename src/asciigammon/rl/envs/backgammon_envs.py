@@ -39,21 +39,48 @@ class BackgammonEnv(gym.Env):
          point24 count]
     """
 
-    metadata = {'render_modes': ['human'], 'render_fps': 4}
+    metadata = {"render_modes": ["human"], "render_fps": 4}
 
     def __init__(self, opponent, cont=False):
         # Action and observation spaces.
-        lower_bound = np.array([1, ]*2 + [0, ]*52)
-        upper_bound = np.array([6, ]*2 + [15, ]*4 + [
-            item for sublist in [[2, 15], ]*24 for item in sublist])
-        self.observation_space = spaces.Box(low=lower_bound, high=upper_bound,
-                                            dtype=np.float32)
+        lower_bound = np.array(
+            [
+                1,
+            ]
+            * 2
+            + [
+                0,
+            ]
+            * 52
+        )
+        upper_bound = np.array(
+            [
+                6,
+            ]
+            * 2
+            + [
+                15,
+            ]
+            * 4
+            + [
+                item
+                for sublist in [
+                    [2, 15],
+                ]
+                * 24
+                for item in sublist
+            ]
+        )
+        self.observation_space = spaces.Box(
+            low=lower_bound, high=upper_bound, dtype=np.float32
+        )
 
         if cont:
-            self.action_space = spaces.Box(low=np.array([-int((len(ALL_ACTIONS)/2)-1)]),
-                                           high=np.array(
-                                               [int((len(ALL_ACTIONS)/2)-1)]),
-                                           dtype=np.float32)
+            self.action_space = spaces.Box(
+                low=np.array([-int((len(ALL_ACTIONS) / 2) - 1)]),
+                high=np.array([int((len(ALL_ACTIONS) / 2) - 1)]),
+                dtype=np.float32,
+            )
         else:
             self.action_space = spaces.Discrete(len(ALL_ACTIONS))
 
@@ -63,19 +90,19 @@ class BackgammonEnv(gym.Env):
 
         # Game initialization.
         self.__opponent = opponent
-        self._game: Game = Game('amca', opponent)
+        self._game: Game = Game("amca", opponent)
 
-    def render(self, mode='human'):
+    def render(self, mode="human"):
         """Renders the board. 'w' is player1 and 'b' is player2."""
 
-        if mode == 'human':
+        if mode == "human":
             self._game.print_game()
 
     def reset(
-            self,
-            *,
-            seed: int | None = None,
-            options: dict[str, Any] | None = None,
+        self,
+        *,
+        seed: int | None = None,
+        options: dict[str, Any] | None = None,
     ) -> tuple[ObsType, dict[str, Any]]:
         """Restarts the game."""
 
@@ -100,7 +127,7 @@ class BackgammonEnv(gym.Env):
         """
 
         if isinstance(self.action_space, spaces.Box):
-            actionint += int(len(ALL_ACTIONS)/2)
+            actionint += int(len(ALL_ACTIONS) / 2)
             actionint = int(actionint)
 
         reward = self._game.player_turn(actionint)
@@ -111,13 +138,22 @@ class BackgammonEnv(gym.Env):
         terminated = done
         truncated = False  # You could make this configurable if needed
 
-        return np.array(observation, dtype=np.float32), reward, terminated, truncated, info
+        return (
+            np.array(observation, dtype=np.float32),
+            reward,
+            terminated,
+            truncated,
+            info,
+        )
 
     def get_info(self):
         """Returns useful info for debugging, etc."""
 
-        return {'time elapsed': time.time() - self.__time_elapsed,
-                'invalid actions taken': self.__invalid_actions_taken}
+        return {
+            "time elapsed": time.time() - self.__time_elapsed,
+            "invalid actions taken": self.__invalid_actions_taken,
+        }
+
 
 # ✅ BACKGAMMON ENVIRONMENT WITH ACTION MASKING FOR MASKABLEPPO
 class BackgammonMaskableEnv(BackgammonEnv):
@@ -144,9 +180,11 @@ class BackgammonMaskableEnv(BackgammonEnv):
 
         return legal_action_mask
 
+
 class BackgammonHumanEnv(BackgammonEnv):
     def __init__(self, opponent=HumanAgent()):
         super().__init__(opponent)
+
 
 class BackgammonRandomEnv(BackgammonMaskableEnv):
     def __init__(self, opponent=RandomAgent(spaces.Discrete(len(ALL_ACTIONS)))):
@@ -154,7 +192,7 @@ class BackgammonRandomEnv(BackgammonMaskableEnv):
 
 
 class BackgammonPolicyEnv(BackgammonEnv):
-    def __init__(self, opponent=PolicyAgent('ppo', 'models/amca.zip')):
+    def __init__(self, opponent=PolicyAgent("ppo", "models/amca.zip")):
         super().__init__(opponent)
 
 
@@ -169,7 +207,5 @@ class BackgammonPolicyContinuousEnv(BackgammonEnv):
 
 
 class BackgammonRandomContinuousEnv(BackgammonEnv):
-    def __init__(self, opponent=PolicyAgent('ppo', 'models/amca.zip')):
+    def __init__(self, opponent=PolicyAgent("ppo", "models/amca.zip")):
         super().__init__(opponent, cont=True)
-
-
