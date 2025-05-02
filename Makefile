@@ -83,9 +83,3 @@ pylint:  ## Runs pylint
 check-black: ## Check code formatting with Black
 	@echo "Checking code formatting with Black..."
 	@poetry run black --check .
-
-THEME := original
-copy_theme:
-	@echo "Copying games for $(VERSION)..."
-	@rm -rf $(GAME_DIR)/assets/games
-	@cp -rf $(SRC_DIR)/theme/$(THEME)/* $(GAME_DIR)/
