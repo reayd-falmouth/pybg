@@ -14,12 +14,15 @@ jobs:
     strategy:
       matrix:
         os: [windows-latest, macos-13, macos-14, ubuntu-latest]
-    name: Build on ${{ matrix.os }} with theme ${{ matrix.theme }}
+    name: Build on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+
+      - name: Install poetry
+        run: pipx install poetry
 
       - name: Set up python
         uses: actions/setup-python@v4.4.0
