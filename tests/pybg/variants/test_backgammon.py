@@ -5,10 +5,10 @@ from json import loads
 from typing import List, Optional, Tuple, cast
 
 import pytest
-from asciigammon.core.board import BoardError, GameState, Resign
-from asciigammon.core.player import Player, PlayerType
-from asciigammon.core.position import Position
-from asciigammon.variants.backgammon import Backgammon
+from pybg.core.board import BoardError, GameState, Resign
+from pybg.core.player import Player, PlayerType
+from pybg.core.position import Position
+from pybg.variants.backgammon import Backgammon
 import pytest
 
 pytestmark = pytest.mark.unit
