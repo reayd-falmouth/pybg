@@ -14,8 +14,7 @@ jobs:
     strategy:
       matrix:
         os: [windows-latest, macos-13, macos-14, ubuntu-latest]
-        theme: [original, aquatic]
-    name: Build on ${{ matrix.os }} with theme ${{ matrix.theme }}
+    name: Build on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
 
     steps:
@@ -29,33 +28,25 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          pip install -r src/backgammon/requirements.txt
+          pip install -r src/pybg/requirements.txt
           pip install pyinstaller pillow
-
-      - name: Copy games into source
-        run: |
-          make copy_theme THEME=${{ matrix.theme }}
 
       - name: Set Executable Name
         run: |
-          if [ "${{ matrix.theme }}" == "aquatic" ]; then
-            echo "EXEC_NAME=aquagammon" >> $GITHUB_ENV
-          else
-            echo "EXEC_NAME=backgammon" >> $GITHUB_ENV
-          fi
+          echo "EXEC_NAME=pybg" >> $GITHUB_ENV
         shell: bash
 
       - name: Build Executable (Windows)
         if: runner.os == 'Windows'
         run: |
-          cd src/backgammon
+          cd src/pybg
           pyinstaller --onefile --windowed --name ${{ env.EXEC_NAME }} --icon=assets/img/icon/icon_64x64.png --add-data "assets;assets" main.py
         shell: cmd
 
       - name: Build Executable (Linux/macOS)
         if: runner.os != 'Windows'
         run: |
-          cd src/backgammon
+          cd src/pybg
           pyinstaller --onefile --windowed --name ${{ env.EXEC_NAME }} --icon=assets/img/icon/icon_64x64.png --add-data "assets:assets" main.py
         shell: bash
 
@@ -77,42 +68,31 @@ jobs:
       - name: Upload Executable
         uses: actions/upload-artifact@v4
         with:
-          name: asciigammon-${{ env.OS_LABEL }}-${{ env.ARCH || 'x86_64' }}-${{ matrix.theme }}
-          path: src/asciigammon/dist/${{ env.EXEC_NAME }}${{ (runner.os == 'Windows') && '.exe' || '' }}
+          name: pybg-${{ env.OS_LABEL }}-${{ env.ARCH || 'x86_64' }}
+          path: src/pybg/dist/${{ env.EXEC_NAME }}${{ (runner.os == 'Windows') && '.exe' || '' }}
 
   release:
     name: Release to Itch.io
     needs: [ build ]
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        theme: [ original, aquatic ]
     steps:
       - name: Download Artifacts
         uses: actions/download-artifact@v4
 
       - name: Set Executable Name
         run: |
-          if [ "${{ matrix.theme }}" == "aquatic" ]; then
-            echo "EXEC_NAME=aquagammon" >> $GITHUB_ENV
-          else
-            echo "EXEC_NAME=backgammon" >> $GITHUB_ENV
-          fi
+          echo "EXEC_NAME=pybg" >> $GITHUB_ENV
         shell: bash
 
       - name: Set Itch.io Project Name
         run: |
-          if [ "${{ matrix.theme }}" == "aquatic" ]; then
-            echo "ITCH_PROJECT=aquagammon" >> $GITHUB_ENV
-          else
-            echo "ITCH_PROJECT=backgammon" >> $GITHUB_ENV
-          fi
+          echo "ITCH_PROJECT=pybg" >> $GITHUB_ENV
         shell: bash
 
       - name: Deploy Windows Build to Itch.io
         uses: robpc/itchio-upload-action@v1
         with:
-          path: asciigammon-windows-x86_64-${{ matrix.theme }}/${{ env.EXEC_NAME }}.exe
+          path: pybg-windows-x86_64/${{ env.EXEC_NAME }}.exe
           project: ${{ env.ITCHIO_USER }}/${{ env.ITCH_PROJECT }}
           channel: windows
           version: ${{ github.ref_name }}
@@ -121,7 +101,7 @@ jobs:
       - name: Deploy Linux Build to Itch.io
         uses: robpc/itchio-upload-action@v1
         with:
-          path: asciigammon-linux-x86_64-${{ matrix.theme }}/${{ env.EXEC_NAME }}
+          path: pybg-linux-x86_64/${{ env.EXEC_NAME }}
           project: ${{ env.ITCHIO_USER }}/${{ env.ITCH_PROJECT }}
           channel: linux
           version: ${{ github.ref_name }}
@@ -130,7 +110,7 @@ jobs:
       - name: Deploy macOS ARM64 Build to Itch.io
         uses: robpc/itchio-upload-action@v1
         with:
-          path: asciigammon-macOS-arm64-${{ matrix.theme }}/${{ env.EXEC_NAME }}
+          path: pybg-macOS-arm64/${{ env.EXEC_NAME }}
           project: ${{ env.ITCHIO_USER }}/${{ env.ITCH_PROJECT }}
           channel: mac-arm64
           version: ${{ github.ref_name }}
@@ -139,7 +119,7 @@ jobs:
       - name: Deploy macOS x86_64 Build to Itch.io
         uses: robpc/itchio-upload-action@v1
         with:
-          path: asciigammon-macOS-x86_64-${{ matrix.theme }}/${{ env.EXEC_NAME }}
+          path: pybg-macOS-x86_64/${{ env.EXEC_NAME }}
           project: ${{ env.ITCHIO_USER }}/${{ env.ITCH_PROJECT }}
           channel: mac-x86_64
           version: ${{ github.ref_name }}

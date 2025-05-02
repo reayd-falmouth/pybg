@@ -31,16 +31,16 @@ Requirements include:
 ## 🚀 Quick Start
 
 ```python
-from asciigammon.core.board import Board
+from pybg.core.board import Board
 
 env = Board()
 obs, info = env.reset()
 
 done = False
 while not done:
-    action = env.action_space.sample()
-    obs, reward, done, truncated, info = env.step(action)
-    env.render()
+   action = env.action_space.sample()
+   obs, reward, done, truncated, info = env.step(action)
+   env.render()
 ```
 
 ---
@@ -56,8 +56,8 @@ while not done:
 ## 🧪 Example Encodings
 
 ```python
-from asciigammon.core.match import Match
-from asciigammon.core.position import Position
+from pybg.core.match import Match
+from pybg.core.position import Position
 
 match = Match.decode("cAgAAAAAAAAA")
 position = Position.decode("4HPwATDgc/ABMA")

@@ -1,7 +1,7 @@
 SRC_DIR := src
-GAME_DIR := $(SRC_DIR)/asciigammon
+GAME_DIR := $(SRC_DIR)/pybg
 ITCH_USER := reayd-falmouth
-ITCH_GAME := asciigammon
+ITCH_GAME := pybg
 BUILD_DIR = $(GAME_DIR)/build
 ZIP_FILE=web.zip
 PYTHONPATH := $(PYTHONPATH):$(SRC_DIR)

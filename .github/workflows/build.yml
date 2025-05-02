@@ -28,7 +28,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          pip install -r src/asciigammon/requirements.txt
+          pip install -r src/pybg/requirements.txt
           pip install pyinstaller pillow
 
       - name: Set Executable Name
@@ -39,15 +39,15 @@ jobs:
       - name: Build Executable (Windows)
         if: runner.os == 'Windows'
         run: |
-          cd src/asciigammon
-          pyinstaller --onefile --windowed --name ${{ env.EXEC_NAME }} --icon=assets/img/icon/icon_64x64.png --add-data "assets;assets" -m asciigammon.main
+          cd src/pybg
+          pyinstaller --onefile --windowed --name ${{ env.EXEC_NAME }} --icon=assets/img/icon/icon_64x64.png --add-data "assets;assets" main.py
         shell: cmd
 
       - name: Build Executable (Linux/macOS)
         if: runner.os != 'Windows'
         run: |
-          cd src/asciigammon
-          pyinstaller --onefile --windowed --name ${{ env.EXEC_NAME }} --icon=assets/img/icon/icon_64x64.png --add-data "assets:assets" -m asciigammon.main
+          cd src/pybg
+          pyinstaller --onefile --windowed --name ${{ env.EXEC_NAME }} --icon=assets/img/icon/icon_64x64.png --add-data "assets:assets" main.py
         shell: bash
 
       - name: Determine Architecture (macOS/Linux)
@@ -69,4 +69,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: pybg-${{ env.OS_LABEL }}-${{ env.ARCH || 'x86_64' }}
-          path: src/asciigammon/dist/${{ env.EXEC_NAME }}${{ (runner.os == 'Windows') && '.exe' || '' }}
+          path: src/pybg/dist/${{ env.EXEC_NAME }}${{ (runner.os == 'Windows') && '.exe' || '' }}
