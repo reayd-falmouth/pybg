@@ -1,4 +1,4 @@
-from asciigammon.agents import BaseAgent
+from . import BaseAgent
 
 
 class HumanAgent(BaseAgent):

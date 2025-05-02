@@ -1,7 +1,7 @@
 import pygame
 
-from asciigammon.constants import ASSETS_DIR
-from asciigammon.core.logger import logger
+from ..constants import ASSETS_DIR
+from .logger import logger
 from typing import Union
 
 

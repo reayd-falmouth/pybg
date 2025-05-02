@@ -1,6 +1,6 @@
 import os
 import pygame
-from asciigammon.constants import (
+from ..constants import (
     ASSETS_DIR,
     TEXT_BOX_WIDTH,
     TEXT_BOX_PADDING,

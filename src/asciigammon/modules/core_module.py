@@ -3,15 +3,15 @@ import time
 import traceback
 from typing import Tuple
 
-from asciigammon.agents import HumanAgent
-from asciigammon.agents.factory import create_agent
-from asciigammon.core.board import BoardError
-from asciigammon.core.logger import logger
-from asciigammon.core.match import GameState
-from asciigammon.core.match import Resign
-from asciigammon.core.player import PlayerType
-from asciigammon.modules.base_module import BaseModule
-from asciigammon.variants import AceyDeucey, Backgammon, Hypergammon, Nackgammon
+from ..core.pub_eval import pubeval, pubeval_x
+from ..agents.factory import create_agent
+from ..core.board import BoardError
+from ..core.logger import logger
+from ..core.match import GameState
+from ..core.match import Resign
+from ..core.player import PlayerType
+from ..modules.base_module import BaseModule
+from ..variants import AceyDeucey, Backgammon, Hypergammon, Nackgammon
 
 
 class CoreModule(BaseModule):
@@ -174,6 +174,12 @@ class CoreModule(BaseModule):
     def cmd_hint(self, args):
         s = self.shell
 
+        # Check if user typed a number after "hint"
+        if args and args[0].isdigit():
+            max_hint_moves = int(args[0])
+        else:
+            max_hint_moves = s.settings.get("hint_top_n", 5)
+
         def format_point(point: int) -> str:
             if point == -1:
                 return "bar"
@@ -198,15 +204,47 @@ class CoreModule(BaseModule):
             if not plays:
                 return "No legal moves. Resign or end turn."
 
+            # 🧠 Evaluate each play
+            evaluated_plays = []
+            for play in plays:
+                position = play.position
+                pos_array = position.to_array()
+                is_race = position.classify().name == "RACE"
+                eval_score = pubeval_x(is_race, pos_array)
+                evaluated_plays.append((eval_score, play))
+
+            # 🔥 Sort plays by best evaluation
+            evaluated_plays.sort(reverse=True, key=lambda x: x[0])
+
+            # ✂️ Prune to top 5
+            evaluated_plays = evaluated_plays[:max_hint_moves]
+
             hint_lines = []
-            for index, play in enumerate(plays, start=1):
+
+            # First, find the maximum move string length
+            move_strings = []
+            for score, play in evaluated_plays:
                 move_str = ""
                 for m in play.moves:
                     src = format_point(m.source + 1)
                     dst = format_point(m.destination + 1)
                     move_str += f"{src}/{dst} "
-                hint_lines.append(f"{index}. {move_str.strip()}")
-            return "\n".join(hint_lines)
+                move_strings.append(move_str.strip())
+
+            max_move_length = max(len(ms) for ms in move_strings)
+
+            # Now, format nicely
+            for index, ((score, play), move_str) in enumerate(
+                zip(evaluated_plays, move_strings), start=1
+            ):
+                prefix = "> " if index == 1 else "  "  # Best move gets '>'
+                hint_lines.append(
+                    f"{prefix}{index:2d}. {move_str.ljust(max_move_length)}   {score:+.3f}"
+                )
+
+            return self.shell.update_output_text(
+                output_message="\n".join(hint_lines), show_board=True
+            )
 
         if match.game_state == GameState.DOUBLED:
             return f"Cube offered at {match.cube_value}, take, drop or redouble?"
@@ -216,6 +254,9 @@ class CoreModule(BaseModule):
             return "Double accepted, roll or resign?"
 
         return ""
+
+    def cmd_show(self, args):
+        return self.shell.update_output_text(show_board=True)
 
     def _basic(self, cmd):
         self.shell.guard_game()
@@ -237,6 +278,7 @@ class CoreModule(BaseModule):
                 "reject": self.cmd_reject,
                 "resign": self.cmd_resign,
                 "hint": self.cmd_hint,
+                "show": self.cmd_show,
             },
             {},
             {
@@ -251,83 +293,9 @@ class CoreModule(BaseModule):
                 "resign": "Resign (single, gammon, backgammon)",
                 "debug": "Debug current game state",
                 "hint": "Show your legal moves or advice",
+                "show": "Prints the board to screen",
             },
         )
-
-    def play_turn(self, delay: float = 1.0):
-        if not self.shell.history_module.is_viewing_latest_move():
-            return  # Prevent autoplay when browsing history
-
-        while True:
-            s = self.shell
-            agent = (
-                s.player1_agent
-                if s.game.match.turn == PlayerType.ONE
-                else s.player0_agent
-            )
-
-            if (
-                isinstance(agent, HumanAgent)
-                or s.game.match.game_state == GameState.GAME_OVER
-            ):
-                break
-
-            legal_plays = s.game.generate_plays()
-            action_sequence = agent.make_decision(
-                s.game.get_observation(), s.game.action_mask(), legal_plays=legal_plays
-            )
-
-            formatted_moves = [
-                self.format_move(a) for a in action_sequence if self.format_move(a)
-            ]
-            opponent_move_str = (
-                f"Opponent plays: {' '.join(formatted_moves)}"
-                if formatted_moves
-                else f"Opponent action: {', '.join(str(a) for a in action_sequence)}"
-            )
-
-            logger.debug(
-                f"GameId: {s.game.encode()}, Dice {s.game.match.dice}, Action sequence: {action_sequence}"
-            )
-
-            move_sequence = [
-                a for a in action_sequence if isinstance(a, tuple) and a[0] == "move"
-            ]
-            if move_sequence:
-                move_tuples = tuple((m[1], m[2]) for m in move_sequence)
-                logger.debug(f"Applying move sequence: {move_tuples}")
-                s.game.play(move_tuples)
-                for move in move_sequence:
-                    s.sound_manager.play_sound(move)
-                s.output_text = s.update_output_text(
-                    opponent_move_str=opponent_move_str
-                )
-                s.draw()
-                time.sleep(delay)
-            else:
-                for action in action_sequence:
-                    logger.debug(f"Applying action: {action}")
-                    s.game.apply_action(action)
-                    s.sound_manager.play_sound(action)
-                    s.output_text = s.update_output_text(
-                        opponent_move_str=opponent_move_str
-                    )
-                    s.draw()
-                    time.sleep(delay)
-
-            if (
-                isinstance(agent, HumanAgent)
-                or s.game.match.game_state == GameState.GAME_OVER
-            ):
-                break
-
-    @staticmethod
-    def format_move(action):
-        if isinstance(action, tuple) and action[0] == "move":
-            src = "bar" if action[1] == -1 else str(action[1] + 1)
-            dst = "off" if action[2] == -1 else str(action[2] + 1)
-            return f"{src}/{dst}"
-        return None
 
 
 def register(shell):

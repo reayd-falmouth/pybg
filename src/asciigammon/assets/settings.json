@@ -1,9 +1,0 @@
-{
-    "game_mode": "money",
-    "match_length": 5,
-    "variant": "backgammon",
-    "jacoby": false,
-    "autodoubles": false,
-    "player_agent": "human",
-    "opponent_agent": "random"
-}

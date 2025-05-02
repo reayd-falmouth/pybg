@@ -3,7 +3,7 @@ import os
 import pygame
 import random
 
-from asciigammon.constants import IMAGE_SIZE
+from ..constants import IMAGE_SIZE
 
 
 def load_image(path: str, size: tuple = IMAGE_SIZE) -> pygame.Surface | None:

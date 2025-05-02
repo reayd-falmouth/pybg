@@ -1,3 +1,5 @@
+from math import comb
+
 import base64
 import dataclasses
 import os
@@ -311,31 +313,70 @@ class Position:
 
     def classify(self) -> PositionClass:
         """
-        Classify the board:
-          - Use positive values from board_points for player and absolute values of negatives for opponent.
-          - Return OVER if one side has no checkers.
-          - If the “back” (highest-index nonzero point) for either side is high, return RACE.
-          - Otherwise, use thresholds to distinguish CRASHED, CONTACT, or bearoff.
+        GNUBG-style classification of the board position.
         """
+
+        def position_f(f_bits: int, n: int, r: int) -> int:
+            if n == r:
+                return 0
+            if f_bits & (1 << (n - 1)):
+                return comb(n - 1, r) + position_f(f_bits, n - 1, r - 1)
+            else:
+                return position_f(f_bits, n - 1, r)
+
+        # BEAROFF threshold: replicate PositionBearoff signature check
+        def compute_bearoff_signature(slots):
+            j = 5  # ← Start from 5, per GNUBG
+            for x in slots:
+                j += x
+            f_bits = 1 << j
+            for x in slots:
+                j -= x + 1
+                if j < 0:
+                    break  # Match GNUBG behavior: just skip invalid bits
+                f_bits |= 1 << j
+            return position_f(f_bits, 21, 6)
+
         # Extract player and opponent points:
         player_points = tuple(x if x > 0 else 0 for x in self.board_points)
-        opponent_points = tuple(abs(x) if x < 0 else 0 for x in self.board_points)
+        opponent_points = tuple(
+            abs(x) if x < 0 else 0 for x in reversed(self.board_points)
+        )
+        # Find furthest-back checker
         nBack = next((i for i in range(23, -1, -1) if player_points[i] > 0), -1)
         nOppBack = next((i for i in range(23, -1, -1) if opponent_points[i] > 0), -1)
-        if nBack == -1 or nOppBack == -1:
+
+        # OVER: One side has no checkers
+        if nBack < 0 or nOppBack < 0:
             return PositionClass.OVER
+
+        # CONTACT or CRASHED logic
         if nBack + nOppBack > 22:
-            if sum(player_points) <= 6 or sum(opponent_points) <= 6:
-                return PositionClass.CRASHED
+            for side in (player_points, opponent_points):
+                tot = sum(side)
+                if tot <= 6:
+                    return PositionClass.CRASHED
+                if side[0] > 1:
+                    if (tot - side[0]) <= 6:
+                        return PositionClass.CRASHED
+                    if side[1] > 1 and (1 + tot - (side[0] + side[1])) <= 6:
+                        return PositionClass.CRASHED
+                else:
+                    if (tot - (side[1] - 1)) <= 6:
+                        return PositionClass.CRASHED
             return PositionClass.CONTACT
-        elif nBack > 5 or nOppBack > 5:
+
+        # RACE: both sides are far advanced
+        if nBack > 5 or nOppBack > 5:
             return PositionClass.RACE
-        # For bearoff, a simple threshold on borne-off checkers:
-        if self.player_off >= 8 or self.opponent_off >= 8:
-            return (
-                PositionClass.BEAROFF2
-            )  # or BEAROFF_OS; you may distinguish by additional logic
-        return PositionClass.BEAROFF1
+
+        if (
+            compute_bearoff_signature(player_points[:6]) > 923
+            or compute_bearoff_signature(opponent_points[:6]) > 923
+        ):
+            return PositionClass.BEAROFF1
+
+        return PositionClass.BEAROFF2
 
     def to_board_array(self) -> Tuple[list, list]:
         """

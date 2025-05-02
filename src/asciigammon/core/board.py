@@ -10,10 +10,10 @@ from gymnasium import spaces
 from typing import Any, TypeVar
 from typing import List, NamedTuple, Optional, Tuple
 
-from asciigammon.core.logger import logger
-from asciigammon.core.match import GameState, Match, Resign
-from asciigammon.core.player import Player, PlayerType
-from asciigammon.core.position import Position
+from .logger import logger
+from .match import GameState, Match, Resign
+from .player import Player, PlayerType
+from .position import Position
 
 ObsType = TypeVar("ObsType")
 

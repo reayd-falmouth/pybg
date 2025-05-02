@@ -2,7 +2,7 @@ import json
 import os
 import uuid
 from typing import List, Dict, Tuple
-from asciigammon.modules.base_module import BaseModule
+from .base_module import BaseModule
 
 
 class HistoryManager(BaseModule):

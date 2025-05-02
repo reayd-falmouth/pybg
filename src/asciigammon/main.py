@@ -7,34 +7,39 @@ import pygame_gui
 import traceback
 from typing import Optional
 
-from asciigammon.agents import HumanAgent
-from asciigammon.constants import ASSETS_DIR, DEFAULT_SETTINGS, SETTINGS_PATH
-from asciigammon.core.board import Board, BoardError
-from asciigammon.core.command_router import CommandRouter
-from asciigammon.core.help import Help
-from asciigammon.core.logger import logger
-from asciigammon.core.match import GameState
-from asciigammon.core.match import Match
-from asciigammon.core.player import PlayerType
-from asciigammon.core.position import Position
-from asciigammon.core.sound import SoundManager
+from .agents import HumanAgent
+from .constants import ASSETS_DIR, DEFAULT_SETTINGS, SETTINGS_PATH
+from .core.board import Board
+from .core.board import BoardError
+from .core.command_router import CommandRouter
+from .core.help import Help
+from .core.logger import logger
+from .core.match import GameState
+from .core.match import Match
+from .core.player import PlayerType
+from .core.position import Position
+from .core.sound import SoundManager
+from .modules.history_manager import HistoryManager
+
 
 WIDTH, HEIGHT = 1000, 600
 TITLE_SCREEN = r"""
 
-            _____  _____ _____ _____ _____          __  __ __  __  ____  _   _ 
-     /\    / ____|/ ____|_   _|_   _/ ____|   /\   |  \/  |  \/  |/ __ \| \ | |
-    /  \  | (___ | |      | |   | || |  __   /  \  | \  / | \  / | |  | |  \| |
-   / /\ \  \___ \| |      | |   | || | |_ | / /\ \ | |\/| | |\/| | |  | | . ` |
-  / ____ \ ____) | |____ _| |_ _| || |__| |/ ____ \| |  | | |  | | |__| | |\  |
- /_/    \_\_____/ \_____|_____|_____\_____/_/    \_\_|  |_|_|  |_|\____/|_| \_|
-                                                                               
-                                                                               
- Welcome to ASCII Backgammon!
-     Press any key to begin...
 
-     Created by Stones+Dice
-     Inspired by GNU Backgammon and reinforcement learning.
+__/\\\\\\\\\\\\\____/\\\________/\\\__/\\\\\\\\\\\\\_______/\\\\\\\\\\\\_        
+ _\/\\\/////////\\\_\///\\\____/\\\/__\/\\\/////////\\\___/\\\//////////__       
+  _\/\\\_______\/\\\___\///\\\/\\\/____\/\\\_______\/\\\__/\\\_____________      
+   _\/\\\\\\\\\\\\\/______\///\\\/______\/\\\\\\\\\\\\\\__\/\\\____/\\\\\\\_     
+    _\/\\\/////////__________\/\\\_______\/\\\/////////\\\_\/\\\___\/////\\\_    
+     _\/\\\___________________\/\\\_______\/\\\_______\/\\\_\/\\\_______\/\\\_   
+      _\/\\\___________________\/\\\_______\/\\\_______\/\\\_\/\\\_______\/\\\_  
+       _\/\\\___________________\/\\\_______\/\\\\\\\\\\\\\/__\//\\\\\\\\\\\\/__ 
+        _\///____________________\///________\/////////////_____\////////////____
+                                                                              
+                                                                               
+    Python Backgammon
+    Press any key to begin...
+
 """
 
 
@@ -68,8 +73,12 @@ class GameShell:
         self.player0_agent = None
         self.player1_agent = None
 
+        # Sound manager
         self.sound_manager = SoundManager()
         self.sound_manager.play_sound("new")
+
+        # History manager
+        # self.history_manager = HistoryManager(self)
 
     def run(self):
         self.show_title_screen()
@@ -99,6 +108,7 @@ class GameShell:
                         self.opponent_playing = False
 
             self.draw()
+            self.play_turn()
             # self.history_manager.save_to_file(f"{ASSETS_DIR}/match_history.json")
 
         pygame.quit()
@@ -159,6 +169,7 @@ class GameShell:
         self.screen.fill((0, 0, 0))
         y = 10
 
+        # output text contains the text to display.
         for line in self.output_text.splitlines():
             text_surface = self.font.render(line, True, (255, 255, 255))
             self.screen.blit(text_surface, (10, y))
@@ -183,85 +194,6 @@ class GameShell:
         if not suppress_board:
             self.draw()
         return output
-
-    # def maybe_play_opponent_turn(self, delay: float = 1.0):
-    #     if not self.is_viewing_latest_move():
-    #         return  # Prevent autoplay on history view
-    #
-    #     while True:
-    #         agent = (
-    #             self.player1_agent
-    #             if self.game.match.turn == PlayerType.ONE
-    #             else self.player0_agent
-    #         )
-    #
-    #         if (
-    #             isinstance(agent, HumanAgent)
-    #             or self.game.match.game_state == GameState.GAME_OVER
-    #         ):
-    #             break
-    #
-    #         legal_plays = self.game.generate_plays()
-    #         action_sequence = agent.make_decision(
-    #             self.game.get_observation(),
-    #             self.game.action_mask(),
-    #             legal_plays=legal_plays,
-    #         )
-    #
-    #         # Format for display
-    #         def format_move(action):
-    #             if isinstance(action, tuple) and action[0] == "move":
-    #                 src = "bar" if action[1] == -1 else str(action[1] + 1)
-    #                 dst = "off" if action[2] == -1 else str(action[2] + 1)
-    #                 return f"{src}/{dst}"
-    #             return None
-    #
-    #         formatted_moves = [
-    #             format_move(a) for a in action_sequence if format_move(a)
-    #         ]
-    #         if formatted_moves:
-    #             opponent_move_str = f"Opponent plays: {' '.join(formatted_moves)}"
-    #         else:
-    #             opponent_move_str = (
-    #                 f"Opponent action: {', '.join(str(a) for a in action_sequence)}"
-    #             )
-    #
-    #         logger.debug(
-    #             f"GameId: {self.game.encode()}, Dice {self.game.match.dice}, Action sequence: {action_sequence}"
-    #         )
-    #
-    #         # If it's a sequence of moves, batch them and apply as a single play
-    #         move_sequence = [
-    #             a for a in action_sequence if isinstance(a, tuple) and a[0] == "move"
-    #         ]
-    #         if move_sequence:
-    #             move_tuples = tuple((m[1], m[2]) for m in move_sequence)
-    #             logger.debug(f"Applying move sequence: {move_tuples}")
-    #             self.game.play(move_tuples)
-    #             for move in move_sequence:
-    #                 self.sound_manager.play_sound(move)
-    #             self.output_text = self.update_output_text(
-    #                 opponent_move_str=opponent_move_str
-    #             )
-    #             self.draw()
-    #             time.sleep(delay)
-    #         else:
-    #             for action in action_sequence:
-    #                 logger.debug(f"Applying action: {action}")
-    #                 self.game.apply_action(action)
-    #                 self.sound_manager.play_sound(action)
-    #                 self.output_text = self.update_output_text(
-    #                     opponent_move_str=opponent_move_str
-    #                 )
-    #                 self.draw()
-    #                 time.sleep(delay)
-    #
-    #         # If it's now a human player's turn, or game is over, break out
-    #         if (
-    #             isinstance(agent, HumanAgent)
-    #             or self.game.match.game_state == GameState.GAME_OVER
-    #         ):
-    #             break
 
     def show_title_screen(self):
         self.screen.fill((0, 0, 0))
@@ -321,13 +253,14 @@ class GameShell:
         self.draw()
 
     def log_current_state(self, message: str = ""):
-        if self.game and self.current_match_ref:
-            self.history_manager.record_move(
-                self.current_match_ref,
-                self.game.position.encode(),
-                self.game.match.encode(),
-                message,
-            )
+        if not hasattr(self, "history_module"):
+            return
+        self.history_module.record_move(
+            match_ref=self.current_match_ref,
+            position_id=self.game.position.encode(),
+            match_id=self.game.match.encode(),
+            message=message,
+        )
 
     def is_viewing_latest_move(self) -> bool:
         ref = self.current_match_ref
@@ -336,6 +269,87 @@ class GameShell:
             and self.history_manager.current_move_index
             == len(self.history_manager.matches[ref]) - 1
         )
+
+    def guard_game(self):
+        if self.game is None:
+            raise ValueError("Start a game first with 'new'.")
+
+    def play_turn(self, delay: float = 1.0):
+        # return if no game has been started
+        if not self.game:
+            return
+
+        while True:
+            agent = (
+                self.player1_agent
+                if self.game.match.turn == PlayerType.ONE
+                else self.player0_agent
+            )
+
+            if (
+                isinstance(agent, HumanAgent)
+                or self.game.match.game_state == GameState.GAME_OVER
+            ):
+                break
+
+            legal_plays = self.game.generate_plays()
+            action_sequence = agent.make_decision(
+                self.game.get_observation(),
+                self.game.action_mask(),
+                legal_plays=legal_plays,
+            )
+
+            formatted_moves = [
+                self.format_move(a) for a in action_sequence if self.format_move(a)
+            ]
+            opponent_move_str = (
+                f"Opponent plays: {' '.join(formatted_moves)}"
+                if formatted_moves
+                else f"Opponent action: {', '.join(str(a) for a in action_sequence)}"
+            )
+
+            logger.debug(
+                f"GameId: {self.game.encode()}, Dice {self.game.match.dice}, Action sequence: {action_sequence}"
+            )
+
+            move_sequence = [
+                a for a in action_sequence if isinstance(a, tuple) and a[0] == "move"
+            ]
+            if move_sequence:
+                move_tuples = tuple((m[1], m[2]) for m in move_sequence)
+                logger.debug(f"Applying move sequence: {move_tuples}")
+                self.game.play(move_tuples)
+                for move in move_sequence:
+                    self.sound_manager.play_sound(move)
+                self.output_text = self.update_output_text(
+                    opponent_move_str=opponent_move_str
+                )
+                self.draw()
+                time.sleep(delay)
+            else:
+                for action in action_sequence:
+                    logger.debug(f"Applying action: {action}")
+                    self.game.apply_action(action)
+                    self.sound_manager.play_sound(action)
+                    self.output_text = self.update_output_text(
+                        opponent_move_str=opponent_move_str
+                    )
+                    self.draw()
+                    time.sleep(delay)
+
+            if (
+                isinstance(agent, HumanAgent)
+                or self.game.match.game_state == GameState.GAME_OVER
+            ):
+                break
+
+    @staticmethod
+    def format_move(action):
+        if isinstance(action, tuple) and action[0] == "move":
+            src = "bar" if action[1] == -1 else str(action[1] + 1)
+            dst = "off" if action[2] == -1 else str(action[2] + 1)
+            return f"{src}/{dst}"
+        return None
 
     def __str__(self):
         return str(self.game) if self.game else "No game started. Type `new`."

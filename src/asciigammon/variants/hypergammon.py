@@ -1,7 +1,7 @@
 """Nackgammon subclass"""
 
-from asciigammon.core.board import Board
-from asciigammon.core.match import STARTING_MATCH_ID
+from ..core.board import Board
+from ..core.match import STARTING_MATCH_ID
 
 # Hypergammon board settings
 STARTING_POSITION_ID = "AACgAgAAKgAAAA"

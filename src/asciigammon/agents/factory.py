@@ -1,6 +1,6 @@
 from gymnasium import spaces
 
-from asciigammon.agents import RandomAgent, HumanAgent, BaseAgent  # Example
+from . import RandomAgent, HumanAgent, BaseAgent  # Example
 
 
 def create_agent(agent_type: str, player_type, game) -> BaseAgent:

@@ -85,4 +85,5 @@ DEFAULT_SETTINGS = {
     "autodoubles": False,
     "player_agent": "human",  # Options: "human", "random", "rl", "gnubg", "online"
     "opponent_agent": "random",  # Same as above
+    "hint_top_n": 5,  # ← Add this!
 }

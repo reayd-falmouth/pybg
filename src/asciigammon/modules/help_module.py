@@ -1,5 +1,5 @@
 # asciigammon/modules/help_module.py
-from asciigammon.modules.base_module import BaseModule
+from .base_module import BaseModule
 
 
 class HelpModule(BaseModule):

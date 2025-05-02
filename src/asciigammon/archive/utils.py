@@ -5,7 +5,7 @@ utils.py
 
 import importlib
 
-from asciigammon.core.logger import logger as LOGGER
+from ..core.logger import logger as LOGGER
 
 
 def str_to_class(module_name: str, class_name: str):

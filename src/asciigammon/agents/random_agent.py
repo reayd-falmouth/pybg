@@ -1,8 +1,8 @@
 import numpy as np
 import random
 
-from asciigammon.core.logger import logger
-from asciigammon.agents import BaseAgent
+from ..core.logger import logger
+from ..agents import BaseAgent
 
 
 class RandomAgent(BaseAgent):

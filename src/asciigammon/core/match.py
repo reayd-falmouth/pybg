@@ -5,8 +5,8 @@ import math
 import struct
 from typing import Tuple
 
-from asciigammon.core.player import PlayerType
-from asciigammon.core.logger import logger
+from .player import PlayerType
+from .logger import logger
 
 # # Default starting ID
 STARTING_MATCH_ID = "cAgAAAAAAAAA"
