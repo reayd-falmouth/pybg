@@ -21,10 +21,11 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - name: Set up python
+        uses: actions/setup-python@v4.4.0
         with:
-          python-version: '3.x'
+          python-version-file: .python-version
+          cache: 'poetry'
 
       - name: Install Dependencies
         run: |
