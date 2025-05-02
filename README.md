@@ -1,40 +1,104 @@
-# Oblique Games
+# 🧠 PyBG
 
-## Overview
-**Oblique Games** is a compendium of unique game ideas inspired by Brian Eno's *Oblique Strategies*. Each game is a creative twist on a classic, leveraging computational creativity and unconventional constraints to encourage fresh, innovative gameplay experiences.
+**ASCIIGammon RL** is a feature-rich, gym-compatible Backgammon environment built for reinforcement learning, AI training, and human play. It includes complete implementations of match logic, game rules (Backgammon, Nackgammon, Acey-Deucy), and ASCII-based rendering.
 
-## Features
-- **Numerouse Unique Games**: Each game is a reinterpretation of a classic game with unexpected twists.
-- **Procedural Inspiration**: Uses *Oblique Strategies* to introduce creative constraints and mechanics.
-- **Itch.io Compatibility**: Designed for seamless upload to Itch.io, with included artwork, descriptions, and assets.
-- **Automated Prototyping**: Rapidly generates and iterates on game concepts using AI-assisted tools.
-- **Thematic Fusion**: Games blend different styles and genres, such as a *Zelda-style* adventure infused with *Indiana Jones* elements.
+---
 
-## How to Use
-1. **Browse the Collection**: Explore the available games and their unique design inspirations.
-2. **Play & Experiment**: Each game provides a fresh take on familiar mechanics, pushing the boundaries of conventional gameplay.
-3. **Modify & Expand**: Use the provided assets and concepts as a starting point for further development.
-4. **Upload to Itch.io**: Games come with prepackaged descriptions and visuals to facilitate smooth publishing.
+## 🎮 Features
 
-## Installation
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/yourrepo/oblique-games.git
-   ```
-2. Install dependencies:
-   ```sh
-   pip install -r requirements.txt
-   ```
-3. Run the game launcher:
-   ```sh
-   python main.py
-   ```
+- ✅ Full Backgammon match logic (dice, cube, doubling, resignations)
+- 🔁 Support for Backgammon, Nackgammon, and Acey-Deucy
+- 🧠 Gymnasium-compatible RL environment
+- 🧱 Board, Match, and Position encoded/decoded via GNUBG-compatible IDs
+- 📈 Observation and action spaces, valid action masks
+- ♻️ Swap perspective logic for self-play and evaluation
+- 🧾 ASCII-rendered board with rich game state info
 
-## License
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+---
 
+## 🛠️ Installation
 
-## References
-* Shader: https://www.shadertoy.com/view/tt3yR2
- * https://www.shadertoy.com/view/MdyyWt
-* www.gamasutra.com/blogs/KylePittman/20150420/241442/CRT_Simulation_in_Super_Win_the_Game.php
+```bash
+pip install -e .
+```
+
+Requirements include:
+- `gymnasium`
+- `numpy`
+
+---
+
+## 🚀 Quick Start
+
+```python
+from asciigammon.core.board import Board
+
+env = Board()
+obs, info = env.reset()
+
+done = False
+while not done:
+    action = env.action_space.sample()
+    obs, reward, done, truncated, info = env.step(action)
+    env.render()
+```
+
+---
+
+## 🔧 Components
+
+- `Board` – Main RL environment and gameplay engine.
+- `Match` – Encodes match state, cube value, scores, turn, and game progression.
+- `Position` – Encodes/decodes the board into a compact string ID and handles move logic.
+
+---
+
+## 🧪 Example Encodings
+
+```python
+from asciigammon.core.match import Match
+from asciigammon.core.position import Position
+
+match = Match.decode("cAgAAAAAAAAA")
+position = Position.decode("4HPwATDgc/ABMA")
+
+match_id = match.encode()
+position_id = position.encode()
+```
+
+---
+
+## 🧠 Observation Space
+
+The observation includes:
+- Dice values
+- Bar and borne-off counts
+- Encoded board points (player and opponent)
+
+## 🎯 Action Space
+
+Actions include:
+- Rolling, doubling, resigning, accepting/rejecting resignations
+- Legal moves derived from current dice roll
+- Action masking for invalid move pruning
+
+---
+
+## 📈 Rendering
+
+ASCII rendering provides a human-readable board with:
+- Checkers on points
+- Dice, cube, score, pip count
+- Player names and game status
+
+---
+
+## 🤖 Reinforcement Learning Ready
+
+The environment is compatible with common RL libraries like Stable-Baselines3 or CleanRL, using discrete or continuous action spaces and optional action masking.
+
+---
+
+## 📜 License
+
+MIT License.

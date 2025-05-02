@@ -142,7 +142,7 @@ class Eval:
             result = self._eval_static(position, pc)
 
         # 4. Sanity postprocessing
-        # result = self._sanity_check(position, result)
+        result = self._sanity_check(position, result)
 
         self.cache[key] = result
         return result
