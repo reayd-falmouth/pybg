@@ -14,7 +14,6 @@ jobs:
     strategy:
       matrix:
         os: [windows-latest, macos-13, macos-14, ubuntu-latest]
-        theme: [original]
     name: Build on ${{ matrix.os }} with theme ${{ matrix.theme }}
     runs-on: ${{ matrix.os }}
 
@@ -69,5 +68,5 @@ jobs:
       - name: Upload Executable
         uses: actions/upload-artifact@v4
         with:
-          name: pybg-${{ env.OS_LABEL }}-${{ env.ARCH || 'x86_64' }}-${{ matrix.theme }}
+          name: pybg-${{ env.OS_LABEL }}-${{ env.ARCH || 'x86_64' }}
           path: src/asciigammon/dist/${{ env.EXEC_NAME }}${{ (runner.os == 'Windows') && '.exe' || '' }}
