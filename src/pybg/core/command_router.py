@@ -15,7 +15,7 @@ class CommandRouter:
         import pybg.modules
 
         for _, modname, _ in pkgutil.iter_modules(pybg.modules.__path__):
-            module = importlib.import_module(f"asciigammon.modules.{modname}")
+            module = importlib.import_module(f"pybg.modules.{modname}")
             if hasattr(module, "register"):
                 instance = module.register(self.shell)
                 cmds, keys, help_entries = instance.register()

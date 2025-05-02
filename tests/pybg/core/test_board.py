@@ -629,22 +629,22 @@ v|                  |BAR|                  |     $0 money game (Cube: 1)
     bg.match.swap_players()
     bg.position.swap_players()
 
-#     board = """ Board           Position ID: 4HPwATDgc/ABMA
-#                  Match ID   : MAgAAFAAOAAA
-#  +13-14-15-16-17-18------19-20-21-22-23-24-+     O:
-#  | X           O    |   | O              X |     5 points
-#  | X           O    |   | O              X |
-#  | X           O    |   | O                |
-#  | X                |   | O                |     pips: 167
-#  | X                |   | O                |
-# v|                  |BAR|                  |     $0 money game (Cube: 1)
-#  | O                |   | X                |
-#  | O                |   | X                |     pips: 167
-#  | O           X    |   | X                |
-#  | O           X    |   | X              O |
-#  | O           X    |   | X              O |     7 points
-#  +12-11-10--9--8--7-------6--5--4--3--2--1-+     X: """
-#     assert str(board) == bg.__str__()
+    #     board = """ Board           Position ID: 4HPwATDgc/ABMA
+    #                  Match ID   : MAgAAFAAOAAA
+    #  +13-14-15-16-17-18------19-20-21-22-23-24-+     O:
+    #  | X           O    |   | O              X |     5 points
+    #  | X           O    |   | O              X |
+    #  | X           O    |   | O                |
+    #  | X                |   | O                |     pips: 167
+    #  | X                |   | O                |
+    # v|                  |BAR|                  |     $0 money game (Cube: 1)
+    #  | O                |   | X                |
+    #  | O                |   | X                |     pips: 167
+    #  | O           X    |   | X                |
+    #  | O           X    |   | X              O |
+    #  | O           X    |   | X              O |     7 points
+    #  +12-11-10--9--8--7-------6--5--4--3--2--1-+     X: """
+    #     assert str(board) == bg.__str__()
 
     bg.match.game_state = GameState.ON_ROLL
     board = """ Board           Position ID: 4HPwATDgc/ABMA
