@@ -40,14 +40,14 @@ jobs:
         if: runner.os == 'Windows'
         run: |
           cd src/asciigammon
-          pyinstaller --onefile --windowed --name ${{ env.EXEC_NAME }} --icon=assets/img/icon/icon_64x64.png --add-data "assets;assets" main.py
+          pyinstaller --onefile --windowed --name ${{ env.EXEC_NAME }} --icon=assets/img/icon/icon_64x64.png --add-data "assets;assets" -m asciigammon.main
         shell: cmd
 
       - name: Build Executable (Linux/macOS)
         if: runner.os != 'Windows'
         run: |
           cd src/asciigammon
-          pyinstaller --onefile --windowed --name ${{ env.EXEC_NAME }} --icon=assets/img/icon/icon_64x64.png --add-data "assets:assets" main.py
+          pyinstaller --onefile --windowed --name ${{ env.EXEC_NAME }} --icon=assets/img/icon/icon_64x64.png --add-data "assets:assets" -m asciigammon.main
         shell: bash
 
       - name: Determine Architecture (macOS/Linux)
