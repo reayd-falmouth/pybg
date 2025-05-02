@@ -63,7 +63,7 @@ TESTS_SOURCE:=tests/
 test: ## Run pytest with coverage and clear cache
 	@echo "Running pytest with coverage and cache clear..."
 	@poetry run pytest \
-		-v -s \
+		-vv -s \
 		-m unit \
 		--cache-clear \
 		--cov=$(SRC_DIR) \

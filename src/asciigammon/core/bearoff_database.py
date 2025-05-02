@@ -15,6 +15,7 @@ CACHE_FILE = f"{ASSETS_DIR}/bearoff_cache.json"
 OS_PATH = f"{ASSETS_DIR}/gnubg/gnubg_os0.bd"
 TS_PATH = f"{ASSETS_DIR}/gnubg/gnubg_ts0.bd"
 
+
 class _BearoffReader:
     POSITION_CACHE = {}
     MAX_PLY_DEPTH = 2  # default depth for n-ply evaluation
@@ -145,7 +146,11 @@ class _BearoffReader:
 
     def calculate_equity(self, win_prob, gammon_prob, lose_gammon_prob):
         """Approximate GNUBG 0-ply equity calculation."""
-        return (2 * win_prob - 1) + self.GAMMON_WEIGHT * gammon_prob - self.LOSE_GAMMON_WEIGHT * lose_gammon_prob
+        return (
+            (2 * win_prob - 1)
+            + self.GAMMON_WEIGHT * gammon_prob
+            - self.LOSE_GAMMON_WEIGHT * lose_gammon_prob
+        )
 
     def opponent_best_response(self, board):
         plays = board.generate_plays(partial=False)
@@ -214,7 +219,9 @@ class _BearoffReader:
             avg_eval = self.average_opponent_response(new_position)
 
             equity = self.calculate_equity(
-                avg_eval["win_prob"], avg_eval["gammon_prob"], avg_eval["lose_gammon_prob"]
+                avg_eval["win_prob"],
+                avg_eval["gammon_prob"],
+                avg_eval["lose_gammon_prob"],
             )
 
             evaluations.append((play, avg_eval, equity))

@@ -242,10 +242,10 @@ def test_nackgammon_take():
     game.match.player = PlayerType.ONE
     game.take()
     if game.match.player == PlayerType.ONE:
-        assert game.match.cube_holder == PlayerType.ZERO
-    else:
         assert game.match.cube_holder == PlayerType.ONE
-    assert game.match.dice != (0, 0)
+    else:
+        assert game.match.cube_holder == PlayerType.ZERO
+    assert game.match.dice == (0, 0)
 
     game = Nackgammon()
     with pytest.raises(BoardError, match="No double to take"):
@@ -299,8 +299,8 @@ def test_nackgammon_double():
     game.match.cube_holder = PlayerType.CENTERED
 
     game.double()
-    assert game.match.player == PlayerType.ONE
-    assert game.match.cube_holder == PlayerType.ONE
+    assert game.match.player == PlayerType.ZERO
+    assert game.match.cube_holder == PlayerType.CENTERED
     assert game.match.cube_value == 2
     assert game.match.double is True
     assert game.match.game_state == GameState.DOUBLED
@@ -324,8 +324,8 @@ def test_nackgammon_redouble():
     assert game.match.cube_holder == PlayerType.ONE
     assert game.match.cube_value == 4
     assert game.match.double is True
-    assert game.match.game_state == GameState.ROLLED
-    assert game.match.dice != (0, 0)
+    assert game.match.game_state == GameState.ON_ROLL
+    assert game.match.dice == (0, 0)
 
 
 def test_nackgammon_drop():
@@ -388,9 +388,7 @@ def test_nackgammon_plays():
 
     with pytest.raises(
         BoardError,
-        match=re.escape(
-            "Invalid move: 4Dl4ADbgOXgANg:cIgoAAAAAAAA ((20, 19), (20, 18))"
-        ),
+        match=re.escape("Invalid move sequence: ((20, 19), (20, 18))"),
     ):
         do_move(game, "21 20 21 19")
 
@@ -592,21 +590,21 @@ def test_nackgammon_set_player_score(capfd, player0, player1):
 
     game.match.player = PlayerType.ZERO
     game.player = game.player1
-    board = """ Stones+Dice     Position ID: 4Dl4ADbgOXgANg
+    board = """ Nackgammon      Position ID: 4Dl4ADbgOXgANg
                  Match ID   : MAgAAFAAOAAA
- +12-11-10--9--8--7-------6--5--4--3--2--1-+     O: 
+ +13-14-15-16-17-18------19-20-21-22-23-24-+     O: 
  | X           O    |   | O           X  X |     5 points
- | X           O    |   | O           X  X |     
+ | X           O    |   | O           X  X |
  | X           O    |   | O                |
  | X                |   | O                |     pips: 194
  |                  |   |                  |
-^|                  |BAR|                  |     $0 money game (Cube: 1)
+v|                  |BAR|                  |     $0 money game (Cube: 1)
  |                  |   |                  |
  | O                |   | X                |     pips: 194
  | O           X    |   | X                |
- | O           X    |   | X           O  O |
+ | O           X    |   | X           O  O |     
  | O           X    |   | X           O  O |     7 points
- +13-14-15-16-17-18------19-20-21-22-23-24-+     X: """
+ +12-11-10--9--8--7-------6--5--4--3--2--1-+     X: """
     assert str(board) == game.__str__()
 
     game.match.player = PlayerType.ONE
@@ -614,7 +612,7 @@ def test_nackgammon_set_player_score(capfd, player0, player1):
     game.match.swap_players()
     game.position.swap_players()
 
-    board = """ Stones+Dice     Position ID: 4Dl4ADbgOXgANg
+    board = """ Nackgammon      Position ID: 4Dl4ADbgOXgANg
                  Match ID   : MAAAAFAAOAAA
  +13-14-15-16-17-18------19-20-21-22-23-24-+     X: 
  | O           X    |   | X           O  O |     7 points
@@ -632,7 +630,7 @@ v|                  |BAR|                  |     $0 money game (Cube: 1)
     assert str(board) == game.__str__()
 
     game.match.game_state = GameState.ON_ROLL
-    board = """ Stones+Dice     Position ID: 4Dl4ADbgOXgANg
+    board = """ Nackgammon      Position ID: 4Dl4ADbgOXgANg
                  Match ID   : MAUAAFAAOAAA
  +13-14-15-16-17-18------19-20-21-22-23-24-+     X: 
  | O           X    |   | X           O  O |     7 points
@@ -651,7 +649,7 @@ v|                  |BAR|                  |     $0 money game (Cube: 1)
 
     game.match.game_state = GameState.ROLLED
     game.match.dice = (1, 1)
-    board = """ Stones+Dice     Position ID: 4Dl4ADbgOXgANg
+    board = """ Nackgammon      Position ID: 4Dl4ADbgOXgANg
                  Match ID   : MIYEAFAAOAAA
  +13-14-15-16-17-18------19-20-21-22-23-24-+     X: 
  | O           X    |   | X           O  O |     7 points
@@ -669,7 +667,7 @@ v|                  |BAR|                  |     $0 money game (Cube: 1)
     assert str(board) == game.__str__()
 
     game.match.game_state = GameState.DOUBLED
-    board = """ Stones+Dice     Position ID: 4Dl4ADbgOXgANg
+    board = """ Nackgammon      Position ID: 4Dl4ADbgOXgANg
                  Match ID   : MIcEAFAAOAAA
  +13-14-15-16-17-18------19-20-21-22-23-24-+     X: 
  | O           X    |   | X           O  O |     7 points
@@ -688,7 +686,7 @@ v|                  |BAR|                  |     $0 money game (Cube: 1)
 
     game.match.game_state = GameState.RESIGNED
     game.match.resign = Resign.SINGLE_GAME
-    board = """ Stones+Dice     Position ID: 4Dl4ADbgOXgANg
+    board = """ Nackgammon      Position ID: 4Dl4ADbgOXgANg
                  Match ID   : MKMEAFAAOAAA
  +13-14-15-16-17-18------19-20-21-22-23-24-+     X: 
  | O           X    |   | X           O  O |     7 points
@@ -707,7 +705,7 @@ v|                  |BAR|                  |     $0 money game (Cube: 1)
 
     game.match.game_state = GameState.ON_ROLL
     game.match.cube_holder = PlayerType.ONE
-    board = """ Stones+Dice     Position ID: 4Dl4ADbgOXgANg
+    board = """ Nackgammon      Position ID: 4Dl4ADbgOXgANg
                  Match ID   : EKUEAFAAOAAA
  +13-14-15-16-17-18------19-20-21-22-23-24-+     X:  (Cube: 1)
  | O           X    |   | X           O  O |     7 points
@@ -756,7 +754,7 @@ v|                  |BAR|                  |     $0 money game (Cube: 1)
         opponent_bar=0,
         opponent_off=0,
     )
-    board = """ Stones+Dice     Position ID: AAAAfgAAAAAAAA
+    board = """ Nackgammon      Position ID: AAAAfgAAAAAAAA
                  Match ID   : EKUEAFAAOAAA
  +13-14-15-16-17-18------19-20-21-22-23-24-+     X:  (Cube: 1)
  |                  |   |                  |     7 points

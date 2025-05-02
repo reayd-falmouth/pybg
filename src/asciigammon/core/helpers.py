@@ -1,8 +1,8 @@
-
 def format_move(move):
     src = "bar" if move.source == -1 else str(move.source + 1)
     dst = "off" if move.destination == -1 else str(move.destination + 1)
     return f"{src}/{dst}"
+
 
 def print_eval_results(results):
     for idx, (play, avg_eval, equity) in enumerate(results, start=1):

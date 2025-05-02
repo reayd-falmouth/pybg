@@ -4,6 +4,7 @@ from ..core.eval import Eval
 from ..core.position import Position
 from ..core.helpers import print_eval_results
 
+
 def main():
     bearoff = BearoffDatabase()
     eval = Eval(bearoff)
@@ -48,6 +49,7 @@ def main():
     print(board.position.classify())
     results = eval.evaluate(board, ply=2)
     print_eval_results(results)
+
 
 if __name__ == "__main__":
     main()

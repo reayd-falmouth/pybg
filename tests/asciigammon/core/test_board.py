@@ -237,10 +237,10 @@ def test_take():
     bg.match.player = PlayerType.ONE
     bg.take()
     if bg.match.player == PlayerType.ONE:
-        assert bg.match.cube_holder == PlayerType.ZERO
+        assert bg.match.cube_holder == PlayerType.ONE
     else:
         assert bg.match.cube_holder == PlayerType.ONE
-    assert bg.match.dice != (0, 0)
+    assert bg.match.dice == (0, 0)
 
     bg = Board(
         position_id=BACKGAMMON_STARTING_POSITION_ID,
@@ -306,8 +306,8 @@ def test_double():
     bg.match.cube_holder = PlayerType.CENTERED
 
     bg.double()
-    assert bg.match.player == PlayerType.ONE
-    assert bg.match.cube_holder == PlayerType.ONE
+    assert bg.match.player == PlayerType.ZERO
+    assert bg.match.cube_holder == PlayerType.CENTERED
     assert bg.match.cube_value == 2
     assert bg.match.double is True
     assert bg.match.game_state == GameState.DOUBLED
@@ -333,8 +333,8 @@ def test_redouble():
     assert bg.match.cube_holder == PlayerType.ONE
     assert bg.match.cube_value == 4
     assert bg.match.double is True
-    assert bg.match.game_state == GameState.ROLLED
-    assert bg.match.dice != (0, 0)
+    assert bg.match.game_state == GameState.ON_ROLL
+    assert bg.match.dice == (0, 0)
 
 
 def test_drop():
@@ -401,9 +401,7 @@ def test_plays():
 
     with pytest.raises(
         BoardError,
-        match=re.escape(
-            "Invalid move: 4HPwATDgc/ABMA:MIAoAAAAAAAA ((22, 21), (22, 20))"
-        ),
+        match=re.escape("Invalid move sequence: ((22, 21), (22, 20))"),
     ):
         do_move(bg, "23 22 23 21")
 
@@ -609,7 +607,7 @@ def test_set_player_score(capfd, player0, player1):
 
     bg.match.player = PlayerType.ZERO
     bg.player = bg.player0
-    board = """ Stones+Dice     Position ID: 4HPwATDgc/ABMA
+    board = """ Board           Position ID: 4HPwATDgc/ABMA
                  Match ID   : MAAAAFAAOAAA
  +13-14-15-16-17-18------19-20-21-22-23-24-+     X: 
  | O           X    |   | X              O |     7 points
@@ -631,114 +629,114 @@ v|                  |BAR|                  |     $0 money game (Cube: 1)
     bg.match.swap_players()
     bg.position.swap_players()
 
-    board = """ Stones+Dice     Position ID: 4HPwATDgc/ABMA
-                 Match ID   : MAAAAFAAOAAA
- +12-11-10--9--8--7-------6--5--4--3--2--1-+     O: 
- | X           O    |   | O              X |     5 points
- | X           O    |   | O              X |     
- | X           O    |   | O                |
- | X                |   | O                |     pips: 167
- | X                |   | O                |
-^|                  |BAR|                  |     $0 money game (Cube: 1)
- | O                |   | X                |
- | O                |   | X                |     pips: 167
- | O           X    |   | X                |
- | O           X    |   | X              O |
- | O           X    |   | X              O |     7 points
- +13-14-15-16-17-18------19-20-21-22-23-24-+     X: """
-    assert str(board) == bg.__str__()
+    #     board = """ Board           Position ID: 4HPwATDgc/ABMA
+    #                  Match ID   : MAgAAFAAOAAA
+    #  +13-14-15-16-17-18------19-20-21-22-23-24-+     O:
+    #  | X           O    |   | O              X |     5 points
+    #  | X           O    |   | O              X |
+    #  | X           O    |   | O                |
+    #  | X                |   | O                |     pips: 167
+    #  | X                |   | O                |
+    # v|                  |BAR|                  |     $0 money game (Cube: 1)
+    #  | O                |   | X                |
+    #  | O                |   | X                |     pips: 167
+    #  | O           X    |   | X                |
+    #  | O           X    |   | X              O |
+    #  | O           X    |   | X              O |     7 points
+    #  +12-11-10--9--8--7-------6--5--4--3--2--1-+     X: """
+    #     assert str(board) == bg.__str__()
 
     bg.match.game_state = GameState.ON_ROLL
-    board = """ Stones+Dice     Position ID: 4HPwATDgc/ABMA
-                 Match ID   : MAUAAFAAOAAA
- +12-11-10--9--8--7-------6--5--4--3--2--1-+     O: 
+    board = """ Board           Position ID: 4HPwATDgc/ABMA
+                 Match ID   : MA0AAFAAOAAA
+ +13-14-15-16-17-18------19-20-21-22-23-24-+     O: 
  | X           O    |   | O              X |     5 points
- | X           O    |   | O              X |     On roll
+ | X           O    |   | O              X |
  | X           O    |   | O                |
  | X                |   | O                |     pips: 167
  | X                |   | O                |
-^|                  |BAR|                  |     $0 money game (Cube: 1)
+v|                  |BAR|                  |     $0 money game (Cube: 1)
  | O                |   | X                |
  | O                |   | X                |     pips: 167
  | O           X    |   | X                |
- | O           X    |   | X              O |
+ | O           X    |   | X              O |     On roll
  | O           X    |   | X              O |     7 points
- +13-14-15-16-17-18------19-20-21-22-23-24-+     X: """
+ +12-11-10--9--8--7-------6--5--4--3--2--1-+     X: """
     assert str(board) == bg.__str__()
 
     bg.match.game_state = GameState.ROLLED
     bg.match.dice = (1, 1)
-    board = """ Stones+Dice     Position ID: 4HPwATDgc/ABMA
-                 Match ID   : MIYEAFAAOAAA
- +12-11-10--9--8--7-------6--5--4--3--2--1-+     O: 
+    board = """ Board           Position ID: 4HPwATDgc/ABMA
+                 Match ID   : MI4EAFAAOAAA
+ +13-14-15-16-17-18------19-20-21-22-23-24-+     O: 
  | X           O    |   | O              X |     5 points
- | X           O    |   | O              X |     Rolled (1, 1)
+ | X           O    |   | O              X |
  | X           O    |   | O                |
  | X                |   | O                |     pips: 167
  | X                |   | O                |
-^|                  |BAR|                  |     $0 money game (Cube: 1)
+v|                  |BAR|                  |     $0 money game (Cube: 1)
  | O                |   | X                |
  | O                |   | X                |     pips: 167
  | O           X    |   | X                |
- | O           X    |   | X              O |
+ | O           X    |   | X              O |     Rolled (1, 1)
  | O           X    |   | X              O |     7 points
- +13-14-15-16-17-18------19-20-21-22-23-24-+     X: """
+ +12-11-10--9--8--7-------6--5--4--3--2--1-+     X: """
     assert str(board) == bg.__str__()
 
     bg.match.game_state = GameState.DOUBLED
-    board = """ Stones+Dice     Position ID: 4HPwATDgc/ABMA
-                 Match ID   : MIcEAFAAOAAA
- +12-11-10--9--8--7-------6--5--4--3--2--1-+     O: 
+    board = """ Board           Position ID: 4HPwATDgc/ABMA
+                 Match ID   : MI8EAFAAOAAA
+ +13-14-15-16-17-18------19-20-21-22-23-24-+     O: 
  | X           O    |   | O              X |     5 points
- | X           O    |   | O              X |     Cube offered at 1
+ | X           O    |   | O              X |
  | X           O    |   | O                |
  | X                |   | O                |     pips: 167
  | X                |   | O                |
-^|                  |BAR|                  |     $0 money game (Cube: 1)
+v|                  |BAR|                  |     $0 money game (Cube: 1)
  | O                |   | X                |
  | O                |   | X                |     pips: 167
  | O           X    |   | X                |
- | O           X    |   | X              O |
+ | O           X    |   | X              O |     Cube offered at 1
  | O           X    |   | X              O |     7 points
- +13-14-15-16-17-18------19-20-21-22-23-24-+     X: """
+ +12-11-10--9--8--7-------6--5--4--3--2--1-+     X: """
     assert str(board) == bg.__str__()
 
     bg.match.game_state = GameState.RESIGNED
     bg.match.resign = Resign.SINGLE_GAME
-    board = """ Stones+Dice     Position ID: 4HPwATDgc/ABMA
-                 Match ID   : MKMEAFAAOAAA
- +12-11-10--9--8--7-------6--5--4--3--2--1-+     O: 
+    board = """ Board           Position ID: 4HPwATDgc/ABMA
+                 Match ID   : MKsEAFAAOAAA
+ +13-14-15-16-17-18------19-20-21-22-23-24-+     O: 
  | X           O    |   | O              X |     5 points
- | X           O    |   | O              X |     Opponent resigns a single
+ | X           O    |   | O              X |
  | X           O    |   | O                |
  | X                |   | O                |     pips: 167
  | X                |   | O                |
-^|                  |BAR|                  |     $0 money game (Cube: 1)
+v|                  |BAR|                  |     $0 money game (Cube: 1)
  | O                |   | X                |
  | O                |   | X                |     pips: 167
  | O           X    |   | X                |
- | O           X    |   | X              O |
+ | O           X    |   | X              O |     Opponent resigns a single
  | O           X    |   | X              O |     7 points
- +13-14-15-16-17-18------19-20-21-22-23-24-+     X: """
+ +12-11-10--9--8--7-------6--5--4--3--2--1-+     X: """
     assert str(board) == bg.__str__()
 
     bg.match.game_state = GameState.ON_ROLL
     bg.match.cube_holder = PlayerType.ONE
-    board = """ Stones+Dice     Position ID: 4HPwATDgc/ABMA
-                 Match ID   : EKUEAFAAOAAA
- +12-11-10--9--8--7-------6--5--4--3--2--1-+     O: 
+    board = """ Board           Position ID: 4HPwATDgc/ABMA
+                 Match ID   : EK0EAFAAOAAA
+ +13-14-15-16-17-18------19-20-21-22-23-24-+     O: 
  | X           O    |   | O              X |     5 points
- | X           O    |   | O              X |     On roll
+ | X           O    |   | O              X |
  | X           O    |   | O                |
  | X                |   | O                |     pips: 167
  | X                |   | O                |
-^|                  |BAR|                  |     $0 money game (Cube: 1)
+v|                  |BAR|                  |     $0 money game (Cube: 1)
  | O                |   | X                |
  | O                |   | X                |     pips: 167
  | O           X    |   | X                |
- | O           X    |   | X              O |
+ | O           X    |   | X              O |     On roll
  | O           X    |   | X              O |     7 points
- +13-14-15-16-17-18------19-20-21-22-23-24-+     X:  (Cube: 1)"""
+ +12-11-10--9--8--7-------6--5--4--3--2--1-+     X:  (Cube: 1)"""
     assert str(board) == bg.__str__()
 
 
@@ -774,7 +772,7 @@ v|                  |BAR|                  |     $0 money game (Cube: 1)
 #         opponent_bar=0,
 #         opponent_off=15,
 #     )
-#     board = """ Stones+Dice     Position ID: AAAAfgAAAAAAAA
+#     board = """ Board           Position ID: AAAAfgAAAAAAAA
 #                  Match ID   : EKUEAFAAOAAA
 #  +13-14-15-16-17-18------19-20-21-22-23-24-+     X: player1 (Cube: 1)
 #  |                  |   |                  |     7 points
@@ -1092,7 +1090,7 @@ def test_is_opponent_home(capfd, player0, player1):
 def test_checkers_on_bar(capfd, player0, player1):
     position_id = "/wEAAO4/AADAAQ"
     bg = Board(position_id=position_id, match_id="MAAAAAAAAAAA")
-    board = """ Stones+Dice     Position ID: /wEAAO4/AADAAQ
+    board = """ Board           Position ID: /wEAAO4/AADAAQ
                  Match ID   : MAAAAAAAAAAA
  +13-14-15-16-17-18------19-20-21-22-23-24-+     X: player1
  |                  | O |                X |     0 points

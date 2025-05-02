@@ -10,18 +10,45 @@ pytestmark = pytest.mark.unit
 def bearoff():
     return BearoffDatabase()
 
+
 def test_position_classification():
     position = Position(
-        board_points=(0, 0, 0, 0, 0, 3, 0, 3, 0, 0, 0, 0, 2, 0, 0, 0, 2, 0, -3, -3, -3, 0, 0, 0),
+        board_points=(
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            3,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            2,
+            0,
+            -3,
+            -3,
+            -3,
+            0,
+            0,
+            0,
+        ),
         player_off=7,
         opponent_off=0,
         player_bar=0,
         opponent_bar=0,
     )
-    assert position.classify() in (PositionClass.BEAROFF1, PositionClass.BEAROFF2)
+    assert position.classify() == PositionClass.RACE
+
 
 def test_basic_evaluation(bearoff):
-    board = Board(position_id="some_valid_bearoff_position_id")
+    board = Board(position_id="4HPwATDgc/ABMA")
     board.match.dice = (5, 3)
     result = bearoff.evaluate(board, PositionClass.BEAROFF1)
     assert isinstance(result, list)

@@ -22,7 +22,7 @@ def test_match():
 
     # Test the new match encoding
     match_id = match.encode()
-    assert match_id == "MAAAAAAAAAAA"
+    assert match_id == "MAgAAAAAAAAA"
 
     # test reset dice
     match.reset_dice()

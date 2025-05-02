@@ -2,7 +2,7 @@ import subprocess
 import random
 import time
 import re
-from asciigammon.modules.bearoffdb import BearoffDatabase
+from asciigammon.core.bearoff_database import BearoffDatabase
 from asciigammon.core.position import Position
 from asciigammon.constants import ASSETS_DIR
 

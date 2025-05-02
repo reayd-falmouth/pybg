@@ -4,14 +4,14 @@ from json import loads
 
 from asciigammon.core.board import GameState
 from asciigammon.core.player import Player, PlayerType
-from asciigammon.variants.aceydeucy import Aceydeucy
+from asciigammon.variants.aceydeucey import AceyDeucey
 import pytest
 
 pytestmark = pytest.mark.unit
 
 
-def test_aceydeucy(player0, player1):
-    game = Aceydeucy()
+def test_aceydeucey(player0, player1):
+    game = AceyDeucey()
     assert game
 
     game.player0 = Player(PlayerType.ZERO, player0)

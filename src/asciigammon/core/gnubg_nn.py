@@ -3,8 +3,11 @@ import os
 
 import numpy as np
 
-from asciigammon.core.board import Board
-from asciigammon.core.position import PositionClass
+from .board import Board
+from .position import PositionClass
+from ..constants import ASSETS_DIR
+
+WEIGHTS_FILE = f"{ASSETS_DIR}/gnubg/nngnubg.weights"
 
 
 def sigmoid(x):
@@ -160,29 +163,24 @@ class GnubgNetwork:
 # provides a simple evaluation interface.
 # ------------------------------------------------------------------------------
 class GnubgEvaluator:
-    def __init__(self, weights_file: str = None):
+    def __init__(self, weights_file: str = WEIGHTS_FILE):
         """
         Initialize the evaluator by automatically loading all networks from a weights file.
 
         Parameters:
           weights_file: path to the weights file (defaults to "gnubg.weights" in the same directory).
         """
-        if weights_file is None:
-            weights_file = os.path.join(os.path.dirname(__file__), "nngnubg.weights")
+        self.weights_file = WEIGHTS_FILE
         # Load all network objects from the file.
-        nets = self.load_all_networks(weights_file)
+        nets = self.load_all_networks()
         # Create a mapping from PositionClass to the appropriate network.
-        # (The mapping is determined by the order in which networks appear in the file.)
         self.network_mapping = {
-            PositionClass.CONTACT: nets["contact_contact250"],
-            PositionClass.RACE: nets["race"],
-            PositionClass.BEAROFF1: nets.get("bearoff", nets["race"]),  # fallback
-            PositionClass.CRASHED: nets["crashed"],
+            PositionClass.CONTACT: (nets["contact_contact250"], nets["prune_contact"]),
+            PositionClass.RACE: (nets["race"], nets["prune_race"]),
+            PositionClass.CRASHED: (nets["crashed"], nets["prune_crashed"]),
         }
 
-        # validate_network_structure(self.network_mapping[PositionClass.CONTACT])
-
-    def load_all_networks(self, weights_file: str) -> dict[str, GnubgNetwork]:
+    def load_all_networks(self) -> dict[str, GnubgNetwork]:
         """
         Load all neural networks from a GNUBG-style multi-network weights file.
 
@@ -190,7 +188,7 @@ class GnubgEvaluator:
           A dictionary mapping network names like "contact", "race", etc. to GnubgNetwork objects.
         """
         networks = {}
-        with open(weights_file, "r") as f:
+        with open(self.weights_file, "r") as f:
             version_line = f.readline().strip()
 
             while True:
@@ -269,14 +267,14 @@ class GnubgEvaluator:
         pos_class = position.classify()
         net = self.network_mapping[pos_class]
 
-        inp = encode_board(position, net.cInput)
+        inp = encode_board(position, net[0].cInput)
 
         # 🧠 Evaluate & peek at internal activations
-        hidden_activity = np.dot(inp, net.weights1) + net.bias1
-        hidden_output = sigmoid(-net.rBetaHidden * hidden_activity)
+        hidden_activity = np.dot(inp, net[0].weights1) + net[0].bias1
+        hidden_output = sigmoid(-net[0].rBetaHidden * hidden_activity)
 
-        output_activity = np.dot(hidden_output, net.weights2) + net.bias2
-        raw = sigmoid(-net.rBetaOutput * output_activity)
+        output_activity = np.dot(hidden_output, net[0].weights2) + net[0].bias2
+        raw = sigmoid(-net[0].rBetaOutput * output_activity)
 
         return {
             "win": raw[0],
@@ -285,22 +283,3 @@ class GnubgEvaluator:
             "losegammon": raw[3],
             "losebackgammon": raw[4],
         }
-
-
-if __name__ == "__main__":
-
-    evaluator = GnubgEvaluator()  # This automatically loads the networks.
-    board = Board(position_id="4HPwATDgc/ABMA", match_id="cA4RAAAAAAAA")
-    # Normalize the position for Player.ZERO
-    position = board.position
-    if board.match.player == 1:
-        board.match.swap_players()
-
-    print(board)
-    features = encode_board(board.position, 250)
-    print("Shape:", features.shape)
-    print("Min/Max/Mean:", features.min(), features.max(), features.mean())
-    eval_result = evaluator.evaluate_position(board)
-    print(evaluator)
-    print(eval_result)
-    print(evaluator.best_move(board))

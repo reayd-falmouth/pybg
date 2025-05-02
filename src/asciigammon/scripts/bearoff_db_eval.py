@@ -113,6 +113,7 @@ position_cache = {}
 #         )
 #         print(f"     2-ply cubeful prune [world class]")
 
+
 def main():
     bearoff = BearoffDatabase()
 
