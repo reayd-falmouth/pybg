@@ -1,104 +1,110 @@
 # 🧠 PyBG
 
-**ASCIIGammon RL** is a feature-rich, gym-compatible Backgammon environment built for reinforcement learning, AI training, and human play. It includes complete implementations of match logic, game rules (Backgammon, Nackgammon, Acey-Deucy), and ASCII-based rendering.
+**PyBG** is a modular framework for developing AI agents that play backgammon and backgammon-like games. It provides a complete environment with match rules, ASCII rendering, RL integration, neural net evaluation, supervised learning tools (GNUBG-compatible), and bearoff endgame databases.
+
+Whether you're building a bot, training reinforcement learning agents, or playing matches with friends, **PyBG** offers a complete, extensible foundation.
+
+---
+
+## ⚙️ Architecture Overview
+
+```
+PyBG/
+├── core/
+│   ├── board.py          # Main game engine (gym.Env compatible)
+│   ├── match.py          # Match logic (cube, scores, Crawford rule)
+│   ├── position.py       # Board representation and GNUBG-style ID handling
+│   ├── bearoff_database.py  # GNUBG one-sided and two-sided bearoff DB interface
+│   ├── pub_eval.py       # Fast linear evaluation (Tesauro-style)
+│   ├── gnubg_nn.py       # Neural net evaluation from GNUbg .weights
+│   ├── eval.py           # Unified evaluation engine with n-ply rollout
+│   └── ...
+├── assets/
+│   └── gnubg/            # Pretrained weights and bearoff files
+└── examples/
+```
 
 ---
 
 ## 🎮 Features
 
-- ✅ Full Backgammon match logic (dice, cube, doubling, resignations)
-- 🔁 Support for Backgammon, Nackgammon, and Acey-Deucy
-- 🧠 Gymnasium-compatible RL environment
-- 🧱 Board, Match, and Position encoded/decoded via GNUBG-compatible IDs
-- 📈 Observation and action spaces, valid action masks
-- ♻️ Swap perspective logic for self-play and evaluation
-- 🧾 ASCII-rendered board with rich game state info
+* ♟️ **Full Match Engine** — All rules including cube actions, doubling, resignation types, Crawford, Jacoby, and variants (Backgammon, Nackgammon, Acey-Deucy).
+* 🧱 **Modular Position & Match Representation** — GNUBG-compatible IDs allow replay, analysis, and supervised training from public data.
+* 🧠 **Multi-Modal Evaluation**:
+
+  * Fast **Tesauro-style pub\_eval**
+  * Deep **GNUBG neural nets** via `.weights` file
+  * **One-sided / two-sided bearoff DBs** for optimal endgame decisions
+  * **N-ply recursive evaluation** with opponent modeling
+* 🔁 **RL-Ready Environment** — Gymnasium-compatible interface with action masking, legal move sampling, and resettable games.
+* 📜 **ASCII UI** — Terminal-based rendering for simple human play.
+* 🧪 **Encodable Positions & Match States** — Supports loading/saving via position strings and match IDs.
+* 🌐 **(Planned) Online Play + Tutor Mode** — Future support for server play, match review, and explainable move guidance.
 
 ---
 
-## 🛠️ Installation
+Evaluation uses:
 
-```bash
-pip install -e .
-```
-
-Requirements include:
-- `gymnasium`
-- `numpy`
+* Position class (e.g., race/contact/bearoff)
+* PubEval or GNUBG neural nets
+* 0-ply, 1-ply, and multi-ply lookahead
 
 ---
 
-## 🚀 Quick Start
+## 🧠 Roadmap for AI Agent Development
 
-```python
-from pybg.core.board import Board
+> Based on [CompGammon: How to Build a Backgammon Bot](https://compgammon.blogspot.com/p/how-to-make-backgammon-bot.html)
 
-env = Board()
-obs, info = env.reset()
+### ✅ Stage 1: Core Framework
 
-done = False
-while not done:
-   action = env.action_space.sample()
-   obs, reward, done, truncated, info = env.step(action)
-   env.render()
-```
+* ✅ Build game logic with accurate rule handling
+* ✅ Support match progression and legal move generation
 
----
+### ✅ Stage 2: Position Evaluation
 
-## 🔧 Components
+* ✅ Implement fast public evaluator (Tesauro-style)
+* ✅ Integrate GNU Backgammon neural nets
+* ✅ Add bearoff databases for optimal late-game analysis
 
-- `Board` – Main RL environment and gameplay engine.
-- `Match` – Encodes match state, cube value, scores, turn, and game progression.
-- `Position` – Encodes/decodes the board into a compact string ID and handles move logic.
+### 🔄 Stage 3: Self-Play & RL
 
----
+* Train reinforcement agents using Gym-compatible interface
+* Explore MaskablePPO, AlphaZero-style rollouts
 
-## 🧪 Example Encodings
+### 🔮 Stage 4: Tutor Mode
 
-```python
-from pybg.core.match import Match
-from pybg.core.position import Position
+* Evaluate best plays with win probabilities
+* Show mistake size (centipawn loss) and recommended move
 
-match = Match.decode("cAgAAAAAAAAA")
-position = Position.decode("4HPwATDgc/ABMA")
+### 🌍 Stage 5: Online Play & Cloud Analysis
 
-match_id = match.encode()
-position_id = position.encode()
-```
+* Add socket server for human-vs-human or bot-vs-bot play
+* Match logging and postgame review
 
 ---
 
-## 🧠 Observation Space
+## 🔧 Evaluation Layers (from `eval.py`)
 
-The observation includes:
-- Dice values
-- Bar and borne-off counts
-- Encoded board points (player and opponent)
+* `PositionClass.OVER` — Game is finished, returns deterministic result
+* `PositionClass.BEAROFF1/2` — Uses one-sided or two-sided `.bd` databases
+* `PositionClass.RACE/CONTACT/CRASHED` — Uses either pub\_eval or `gnubg_nn`
 
-## 🎯 Action Space
-
-Actions include:
-- Rolling, doubling, resigning, accepting/rejecting resignations
-- Legal moves derived from current dice roll
-- Action masking for invalid move pruning
+All evaluations respect ply depth, cache results, and support fallback strategies.
 
 ---
 
-## 📈 Rendering
+## 📈 Development Goals
 
-ASCII rendering provides a human-readable board with:
-- Checkers on points
-- Dice, cube, score, pip count
-- Player names and game status
-
----
-
-## 🤖 Reinforcement Learning Ready
-
-The environment is compatible with common RL libraries like Stable-Baselines3 or CleanRL, using discrete or continuous action spaces and optional action masking.
+* ✅ Plug-and-play modules (swap in new net or MET files)
+* ✅ Feature-extracted inputs for explainability
+* 🚧 External action loggers (SGF, JSON, CSV)
+* 🚧 Human-friendly CLI tool (`play.py`, `train.py`, `tutor.py`)
+* 🚧 Discord/Telegram bot for turn-based matches
 
 ---
 
-## 📜 License
+## 🧬 Reproducibility & Integration
 
-MIT License.
+* Export/import `Position` and `Match` via `.encode()` / `.decode()`
+* Store and load cached evaluations with Bearoff DB
+* Works with Jupyter, VSCode, and headless servers
