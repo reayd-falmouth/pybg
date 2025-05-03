@@ -101,6 +101,11 @@ All evaluations respect ply depth, cache results, and support fallback strategie
 * 🚧 Human-friendly CLI tool (`play.py`, `train.py`, `tutor.py`)
 * 🚧 Discord/Telegram bot for turn-based matches
 
+  ## References
+  * https://compgammon.blogspot.com/p/how-to-make-backgammon-bot.html
+  * https://github.com/ardabbour/amca
+  * https://www.gnu.org/software/gnubg/
+
 ---
 
 ## 🧬 Reproducibility & Integration
