@@ -1,11 +1,10 @@
 SRC_DIR := src
-GAME_DIR := $(SRC_DIR)/asciigammon
+GAME_DIR := $(SRC_DIR)/pybg
 ITCH_USER := reayd-falmouth
-ITCH_GAME := asciigammon
+ITCH_GAME := pybg
 BUILD_DIR = $(GAME_DIR)/build
 ZIP_FILE=web.zip
-
-export PYTHONPATH := $(PYTHONPATH):$(SRC_DIR)
+PYTHONPATH := $(PYTHONPATH):$(SRC_DIR)
 
 .PHONY: build deploy clean
 
@@ -51,7 +50,7 @@ run_cartoon_board:
 
 run:
 	@echo "Running game..."
-	@python src/asciigammon/main.py
+	@python -m src.asciigammon.main
 
 black:
 	@echo "Formatting with black..."
@@ -64,7 +63,7 @@ TESTS_SOURCE:=tests/
 test: ## Run pytest with coverage and clear cache
 	@echo "Running pytest with coverage and cache clear..."
 	@poetry run pytest \
-		-v -s \
+		-vv -s \
 		-m unit \
 		--cache-clear \
 		--cov=$(SRC_DIR) \
@@ -84,9 +83,3 @@ pylint:  ## Runs pylint
 check-black: ## Check code formatting with Black
 	@echo "Checking code formatting with Black..."
 	@poetry run black --check .
-
-THEME := original
-copy_theme:
-	@echo "Copying games for $(VERSION)..."
-	@rm -rf $(GAME_DIR)/assets/games
-	@cp -rf $(SRC_DIR)/theme/$(THEME)/* $(GAME_DIR)/

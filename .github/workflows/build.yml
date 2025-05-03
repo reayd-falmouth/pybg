@@ -13,49 +13,44 @@ jobs:
   build:
     strategy:
       matrix:
-        os: [windows-latest, macos-13, macos-14, ubuntu-latest]
-        theme: [original, aquatic]
-    name: Build on ${{ matrix.os }} with theme ${{ matrix.theme }}
+        os: [windows-latest] #, macos-13, macos-14, ubuntu-latest]
+    name: Build on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - name: Install poetry
+        run: pipx install poetry
+
+      - name: Set up python
+        uses: actions/setup-python@v4.4.0
         with:
-          python-version: '3.x'
+          python-version-file: .python-version
+          cache: 'poetry'
 
       - name: Install Dependencies
         run: |
-          pip install -r src/backgammon/requirements.txt
+          pip install -r src/pybg/requirements.txt
           pip install pyinstaller pillow
-
-      - name: Copy games into source
-        run: |
-          make copy_theme THEME=${{ matrix.theme }}
 
       - name: Set Executable Name
         run: |
-          if [ "${{ matrix.theme }}" == "aquatic" ]; then
-            echo "EXEC_NAME=aquagammon" >> $GITHUB_ENV
-          else
-            echo "EXEC_NAME=backgammon" >> $GITHUB_ENV
-          fi
+          echo "EXEC_NAME=pybg" >> $GITHUB_ENV
         shell: bash
 
       - name: Build Executable (Windows)
         if: runner.os == 'Windows'
         run: |
-          cd src/backgammon
+          cd src/pybg
           pyinstaller --onefile --windowed --name ${{ env.EXEC_NAME }} --icon=assets/img/icon/icon_64x64.png --add-data "assets;assets" main.py
         shell: cmd
 
       - name: Build Executable (Linux/macOS)
         if: runner.os != 'Windows'
         run: |
-          cd src/backgammon
+          cd src/pybg
           pyinstaller --onefile --windowed --name ${{ env.EXEC_NAME }} --icon=assets/img/icon/icon_64x64.png --add-data "assets:assets" main.py
         shell: bash
 
@@ -77,5 +72,5 @@ jobs:
       - name: Upload Executable
         uses: actions/upload-artifact@v4
         with:
-          name: asciigammon-${{ env.OS_LABEL }}-${{ env.ARCH || 'x86_64' }}-${{ matrix.theme }}
-          path: src/asciigammon/dist/${{ env.EXEC_NAME }}${{ (runner.os == 'Windows') && '.exe' || '' }}
+          name: pybg-${{ env.OS_LABEL }}-${{ env.ARCH || 'x86_64' }}
+          path: src/pybg/dist/${{ env.EXEC_NAME }}${{ (runner.os == 'Windows') && '.exe' || '' }}
