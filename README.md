@@ -4,8 +4,6 @@
 
 Whether you're building a bot, training reinforcement learning agents, or playing matches with friends, **PyBG** offers a complete, extensible foundation.
 
----
-
 ## ⚙️ Architecture Overview
 
 ```
@@ -24,8 +22,6 @@ PyBG/
 └── examples/
 ```
 
----
-
 ## 🎮 Features
 
 * ♟️ **Full Match Engine** — All rules including cube actions, doubling, resignation types, Crawford, Jacoby, and variants (Backgammon, Nackgammon, Acey-Deucy).
@@ -41,15 +37,11 @@ PyBG/
 * 🧪 **Encodable Positions & Match States** — Supports loading/saving via position strings and match IDs.
 * 🌐 **(Planned) Online Play + Tutor Mode** — Future support for server play, match review, and explainable move guidance.
 
----
-
 Evaluation uses:
 
 * Position class (e.g., race/contact/bearoff)
 * PubEval or GNUBG neural nets
 * 0-ply, 1-ply, and multi-ply lookahead
-
----
 
 ## 🧠 Roadmap for AI Agent Development
 
@@ -81,7 +73,6 @@ Evaluation uses:
 * Add socket server for human-vs-human or bot-vs-bot play
 * Match logging and postgame review
 
----
 
 ## 🔧 Evaluation Layers (from `eval.py`)
 
@@ -91,7 +82,6 @@ Evaluation uses:
 
 All evaluations respect ply depth, cache results, and support fallback strategies.
 
----
 
 ## 📈 Development Goals
 
@@ -101,15 +91,14 @@ All evaluations respect ply depth, cache results, and support fallback strategie
 * 🚧 Human-friendly CLI tool (`play.py`, `train.py`, `tutor.py`)
 * 🚧 Discord/Telegram bot for turn-based matches
 
-  ## References
-  * https://compgammon.blogspot.com/p/how-to-make-backgammon-bot.html
-  * https://github.com/ardabbour/amca
-  * https://www.gnu.org/software/gnubg/
-
----
-
 ## 🧬 Reproducibility & Integration
 
 * Export/import `Position` and `Match` via `.encode()` / `.decode()`
 * Store and load cached evaluations with Bearoff DB
 * Works with Jupyter, VSCode, and headless servers
+
+
+  ## References
+* https://compgammon.blogspot.com/p/how-to-make-backgammon-bot.html
+* https://github.com/ardabbour/amca
+* https://www.gnu.org/software/gnubg/
