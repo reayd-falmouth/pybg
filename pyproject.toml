@@ -73,4 +73,5 @@ omit = [
     "*conftest.py*",  # Exclude all 'conftest.py' files, which are used by pytest for test configurations
     "*setup.py*",     # Exclude 'setup.py', typically used for package and distribution management
     "*/scripts/*",
+    "*/gnubg/*",
 ]
