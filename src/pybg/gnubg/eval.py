@@ -1,7 +1,5 @@
-import random
-import math
 from typing import List
-from pybg.gnubg.pub_eval import pubeval_x, pubeval, pubeval_to_win_probability
+from pybg.gnubg.pub_eval import pubeval, pubeval_to_win_probability
 from pybg.core.board import Board
 from pybg.gnubg.position import PositionClass
 from pybg.gnubg.bearoff_database import BearoffDatabase

@@ -1,5 +1,5 @@
 import pytest
-from pybg.gnubg.bearoff_database import BearoffDatabase
+from archive.scripts.bearoff_database import BearoffDatabase
 from pybg.core.board import Board
 from pybg.gnubg.position import Position, PositionClass
 

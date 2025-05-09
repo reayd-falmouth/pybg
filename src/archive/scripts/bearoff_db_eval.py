@@ -1,4 +1,4 @@
-from pybg.gnubg.bearoff_database import BearoffDatabase
+from archive.scripts.bearoff_database import BearoffDatabase
 from pybg.gnubg.position import Position
 from pybg.core.board import Board
 from pybg.core.helpers import print_eval_results

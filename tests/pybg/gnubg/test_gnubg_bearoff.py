@@ -2,7 +2,7 @@ import subprocess
 import random
 import time
 import re
-from pybg.gnubg.bearoff_database import BearoffDatabase
+from archive.scripts.bearoff_database import BearoffDatabase
 from pybg.gnubg.position import Position
 from pybg.constants import ASSETS_DIR
 
