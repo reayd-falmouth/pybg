@@ -1,48 +1,89 @@
 import json
 import os
-import uuid
-from typing import List, Dict, Tuple
+import pygame
+from datetime import datetime
+from typing import List, Dict, TypedDict
+
+from pybg.constants import ASSETS_DIR
+from pybg.core.events import EVENT_GAME
+from pybg.core.logger import logger
 from pybg.modules.base_module import BaseModule
 
 
+class MoveEntry(TypedDict):
+    timestamp: str
+    game_id: str
+    message: str
+
+class MatchHistoryEntry(TypedDict):
+    created: str
+    moves: List[MoveEntry]
+
 class HistoryManager(BaseModule):
     category = "History"
+    match_history_path = f"{ASSETS_DIR}/match_history.json"
 
     def __init__(self, shell):
         self.shell = shell
-        self.matches: Dict[str, List[Tuple[str, str, str]]] = (
-            {}
-        )  # match_ref -> [(pos_id, match_id, message)]
+        self.matches: Dict[str, MatchHistoryEntry] = {}
         self.match_refs: List[str] = []
         self.current_match_index: int = 0
         self.current_move_index: int = 0
-
-    def new_match(self) -> str:
-        match_ref = str(uuid.uuid4())
-        self.matches[match_ref] = []
-        self.match_refs.append(match_ref)
-        self.current_match_index = len(self.match_refs) - 1
-        self.current_move_index = 0
-        return match_ref
+        self.load_from_file()
 
     def record_move(
-        self, match_ref: str, position_id: str, match_id: str, message: str = ""
+        self, match_ref: str, game_id: str, message: str = ""
     ):
-        if match_ref in self.matches:
-            self.matches[match_ref].append((position_id, match_id, message))
-            self.current_move_index = len(self.matches[match_ref]) - 1
+        now = datetime.now().isoformat()
+
+        if match_ref not in self.matches:
+            self.matches[match_ref] = {
+                "created": now,
+                "moves": []
+            }
+            self.match_refs.append(match_ref)
+
+        self.matches[match_ref]["moves"].append({
+            "timestamp": now,
+            "game_id": game_id,
+            "message": message
+        })
+        self.current_move_index = len(self.matches[match_ref]["moves"]) - 1
+        self.save_to_file(f"{ASSETS_DIR}/match_history.json")
 
     def get_current_match_ref(self) -> str:
         if not self.match_refs:
             return ""
         return self.match_refs[self.current_match_index]
 
-    def get_current_state(self) -> Tuple[str, str, str]:
+    def get_current_state(self) -> tuple[list[str], str]:
         match_ref = self.get_current_match_ref()
-        moves = self.matches.get(match_ref, [])
-        if moves:
-            return moves[self.current_move_index]  # must be a 3-tuple
-        return "", "", ""
+        entry = self.matches.get(match_ref)
+        if not entry or not entry["moves"]:
+            return "", "", ""
+        move = entry["moves"][self.current_move_index]
+        return move["game_id"].split(":"), move["message"]
+
+    def update_view_to_current_move(self):
+        match_ref = self.get_current_match_ref()
+        if match_ref not in self.matches:
+            return
+
+        move = self.matches[match_ref]["moves"][self.current_move_index]
+        pos_id, match_id = move["game_id"].split(":")
+
+        # Update the game board
+        self.shell.game.position = self.shell.game.position.decode(pos_id)
+        self.shell.game.match = self.shell.game.match.decode(match_id)
+
+        # Build move log
+        moves = self.matches[match_ref]["moves"]
+        lines = [f"LOG for Match {match_ref[:8]} (Moves: {len(moves)}):\n"]
+        for i, m in enumerate(moves):
+            prefix = "> " if i == self.current_move_index else "  "
+            lines.append(f"{prefix}{i + 1:2d}. {m['message']}") # | {m['game_id']} | {m['timestamp']}")
+
+        return self.shell.update_output_text("\n".join(lines), show_board=True)
 
     def next_match(self):
         if not self.match_refs:
@@ -52,17 +93,21 @@ class HistoryManager(BaseModule):
             self.current_move_index = 0
 
     def next_move(self):
+        logger.debug(f"next move")
         if not self.match_refs:
             return
         match_ref = self.get_current_match_ref()
-        if self.current_move_index < len(self.matches[match_ref]) - 1:
+        if self.current_move_index < len(self.matches[match_ref]["moves"]) - 1:
             self.current_move_index += 1
+            self.update_view_to_current_move()
 
     def previous_move(self):
+        logger.debug(f"next move")
         if not self.match_refs:
             return
         if self.current_move_index > 0:
             self.current_move_index -= 1
+            self.update_view_to_current_move()
 
     def previous_match(self):
         if not self.match_refs:
@@ -91,7 +136,8 @@ class HistoryManager(BaseModule):
                 f,
             )
 
-    def load_from_file(self, path: str):
+    def load_from_file(self):
+        path = self.match_history_path
         if not os.path.exists(path) or os.stat(path).st_size == 0:
             # Safeguard against empty or missing file
             self.matches = {}
@@ -117,23 +163,28 @@ class HistoryManager(BaseModule):
                 self.current_move_index = 0
 
     def cmd_history(self, args):
-        if (
-            not self.get_current_match_ref()
-            or self.get_current_match_ref() not in self.matches
-        ):
-            return self.shell.update_output_text(
-                "No match history found.", show_board=False
-            )
 
-        history = self.matches[self.get_current_match_ref()]
-        lines = [
-            f"HISTORY for Match {self.get_current_match_ref()[:8]} ({len(history)} moves):\n"
-        ]
-        for i, (pos_id, match_id, message) in enumerate(history):
-            lines.append(
-                f"{i + 1:2d}. Position: {pos_id} | Match: {match_id} | {message}"
-            )
-        return self.shell.update_output_text("\n".join(lines), show_board=False)
+        self.shell.active_module = "history"
+
+        # Try to use current match_ref if there's an active game
+        current_ref = getattr(self.shell.game, "ref", None)
+
+        if current_ref and current_ref in self.matches:
+            self.current_match_index = self.match_refs.index(current_ref)
+            self.current_move_index = len(self.matches[current_ref]["moves"]) - 1
+            return self.update_view_to_current_move()
+
+        # Otherwise, activate browser from the top
+        if not self.match_refs:
+            return self.shell.update_output_text("No match history available.", show_board=True)
+
+        self.current_match_index = 0
+        self.current_move_index = 0
+        self.load_from_file()
+        return self.shell.update_output_text(
+            "History browser activated. Use up/down and left/right to navigate.",
+            show_board=True
+        )
 
     def cmd_goto(self, args):
         if len(args) != 1 or not args[0].isdigit():
@@ -152,7 +203,7 @@ class HistoryManager(BaseModule):
 
         if 0 <= move_index < len(self.matches[self.get_current_match_ref()]):
             self.current_move_index = move_index
-            self.shell.load_from_history()
+            self.load_from_file()
         else:
             return self.shell.update_output_text(
                 "Invalid move number.", show_board=False
@@ -164,9 +215,36 @@ class HistoryManager(BaseModule):
 
     def cmd_save_history(self, args):
         self.save_to_file(
-            f"{self.shell.settings.get('assets_path', './assets')}/match_history.json"
+            f"{ASSETS_DIR}/match_history.json"
         )
         return self.shell.update_output_text("Match history saved.")
+
+    def handle_event(self, event):
+        # Handle game events (regardless of mode)
+        if event.type == EVENT_GAME:
+            logger.debug(f"recording game event {event}")
+            self.record_move(
+                match_ref=event.dict["match_ref"],
+                game_id=event.dict["game_id"],
+                message=event.dict.get("message", "")
+            )
+            return  # ✅ Done, exit early
+
+        # Only handle keys if we're in history mode
+        if self.shell.active_module != "history":
+            return
+
+        # Handle arrow keys
+        if event.type == pygame.KEYDOWN:
+            logger.debug(f"HISTORY KEY: {event.key}")
+            if event.key == pygame.K_UP:
+                self.previous_move()
+            elif event.key == pygame.K_DOWN:
+                self.next_move()
+            elif event.key == pygame.K_LEFT:
+                self.previous_match()
+            elif event.key == pygame.K_RIGHT:
+                self.next_match()
 
     def register(self):
         return (

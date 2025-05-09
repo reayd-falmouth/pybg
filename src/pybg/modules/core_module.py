@@ -72,16 +72,12 @@ class CoreModule(BaseModule):
         }.get(s.settings["variant"], Backgammon)
 
         s.game = game_class()
-        s.game.ref = s.current_match_ref
         s.game.match.length = (
             s.settings["match_length"] if s.settings["game_mode"] == "match" else 0
         )
         s.game.auto_doubles = bool(s.settings["autodoubles"])
         s.game.jacoby = bool(s.settings["jacoby"])
         s.game.start()
-        s.log_current_state(
-            f"Player {s.game.match.turn} wins the opening roll. Dice {s.game.match.dice}"
-        )
         s.player0_agent = create_agent(
             s.settings["player_agent"], PlayerType.ZERO, s.game
         )
@@ -123,9 +119,9 @@ class CoreModule(BaseModule):
     def cmd_roll(self, args):
         self.shell.guard_game()
         self.shell.game.roll()
-        self.shell.log_current_state(
-            f"{self.shell.game.match.turn.name} rolled {self.shell.game.match.dice}"
-        )
+        # self.shell.log_current_state(
+        #     f"{self.shell.game.match.turn.name} rolled {self.shell.game.match.dice}"
+        # )
         return self.shell.update_output_text(show_board=True)
 
     def cmd_move(self, args):
@@ -134,7 +130,7 @@ class CoreModule(BaseModule):
         try:
             moves = self.parse_moves(args)
             s.game.play(moves)
-            s.log_current_state(f"{s.game.match.turn.name} moved {moves}")
+            # s.log_current_state(f"{s.game.match.turn.name} moved {moves}")
         except Exception as e:
             logger.error("Move error:\n" + traceback.format_exc())
             return f"Invalid move: {e}"
@@ -165,7 +161,6 @@ class CoreModule(BaseModule):
                 "backgammon": Resign.BACKGAMMON,
             }
             s.game.resign(resign_map[args[0]])
-            s.log_current_state(f"{s.game.match.turn.name} resigns a {args[0]}")
             return s.update_output_text(show_board=True)
         raise ValueError("Usage: resign [single|gammon|backgammon]")
 
@@ -259,7 +254,7 @@ class CoreModule(BaseModule):
     def _basic(self, cmd):
         self.shell.guard_game()
         getattr(self.shell.game, cmd)()
-        self.shell.log_current_state(f"{self.shell.game.match.turn.name} {cmd}s")
+        # self.shell.log_current_state(f"{self.shell.game.match.turn.name} {cmd}s")
         return self.shell.update_output_text(show_board=True)
 
     def register(self):

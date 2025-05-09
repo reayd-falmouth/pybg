@@ -9,6 +9,7 @@ class CommandRouter:
         self.shell = shell
         self.commands = {}
         self.shortcuts = {}
+        self.modules = []  # 🔥 Add this line
         self.load_modules()
 
     def load_modules(self):
@@ -18,6 +19,7 @@ class CommandRouter:
             module = importlib.import_module(f"pybg.modules.{modname}")
             if hasattr(module, "register"):
                 instance = module.register(self.shell)
+                self.modules.append(instance)  # 🔥 Save instance
                 cmds, keys, help_entries = instance.register()
                 self.commands.update(cmds)
                 self.shortcuts.update(keys)
