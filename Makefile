@@ -66,7 +66,7 @@ test: ## Run pytest with coverage and clear cache
 		-vv -s \
 		-m unit \
 		--cache-clear \
-		--cov=$(SRC_DIR) \
+		--cov=$(SRC_DIR)/pybg \
 		$(TESTS_SOURCE) \
 		--cov-report=term \
 		--cov-report=html
