@@ -11,23 +11,25 @@ lib = ctypes.CDLL(os.path.abspath(f"{ASSETS_DIR}/gnubg/libinputs.so"))
 # Define function signature
 lib.call_get_inputs.argtypes = [
     ctypes.POINTER((ctypes.c_int * 25) * 2),  # board[2][25]
-    ctypes.POINTER(ctypes.c_int),            # which[] array
-    ctypes.POINTER(ctypes.c_float),          # output[] array
-    ctypes.c_int                              # length of which[]
+    ctypes.POINTER(ctypes.c_int),  # which[] array
+    ctypes.POINTER(ctypes.c_float),  # output[] array
+    ctypes.c_int,  # length of which[]
 ]
+
 
 def call_get_inputs(board_array: np.ndarray, which: np.ndarray) -> np.ndarray:
     assert board_array.shape == (2, 25)
     assert which.ndim == 1
 
-    board_c = ((ctypes.c_int * 25) * 2)(*[
-        (ctypes.c_int * 25)(*row) for row in board_array
-    ])
+    board_c = ((ctypes.c_int * 25) * 2)(
+        *[(ctypes.c_int * 25)(*row) for row in board_array]
+    )
     which_c = (ctypes.c_int * len(which))(*which)
     out_c = (ctypes.c_float * len(which))()
 
     lib.call_get_inputs(board_c, which_c, out_c, len(which))
     return np.array(out_c[:], dtype=np.float32)
+
 
 # Map position class to valid input size
 INPUT_COUNTS = {

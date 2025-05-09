@@ -44,10 +44,10 @@ def test_mbase_inputs_numpy_behavior():
     board = np.zeros((2, 25), dtype=int)
 
     # Populate player 0 with specific test cases
-    board[0, 0] = 1   # 1 checker
-    board[0, 1] = 2   # 2 checkers
-    board[0, 2] = 3   # exactly 3
-    board[0, 3] = 7   # >3 checkers
+    board[0, 0] = 1  # 1 checker
+    board[0, 1] = 2  # 2 checkers
+    board[0, 2] = 3  # exactly 3
+    board[0, 3] = 7  # >3 checkers
     board[0, 24] = 5  # bar
 
     inputs = mbase_inputs(board)
@@ -59,24 +59,24 @@ def test_mbase_inputs_numpy_behavior():
     offset = 0
 
     # Point 0: 1 checker
-    assert inputs[offset + 0*4 + 0] == 1.0
-    assert inputs[offset + 0*4 + 1] == 0.0
-    assert inputs[offset + 0*4 + 2] == 0.0
-    assert inputs[offset + 0*4 + 3] == 0.0
+    assert inputs[offset + 0 * 4 + 0] == 1.0
+    assert inputs[offset + 0 * 4 + 1] == 0.0
+    assert inputs[offset + 0 * 4 + 2] == 0.0
+    assert inputs[offset + 0 * 4 + 3] == 0.0
 
     # Point 1: 2 checkers
-    assert inputs[offset + 1*4 + 0] == 0.0
-    assert inputs[offset + 1*4 + 1] == 1.0
-    assert inputs[offset + 1*4 + 2] == 0.0
-    assert inputs[offset + 1*4 + 3] == 0.0
+    assert inputs[offset + 1 * 4 + 0] == 0.0
+    assert inputs[offset + 1 * 4 + 1] == 1.0
+    assert inputs[offset + 1 * 4 + 2] == 0.0
+    assert inputs[offset + 1 * 4 + 3] == 0.0
 
     # Point 2: 3 checkers
-    assert inputs[offset + 2*4 + 2] == 1.0
-    assert inputs[offset + 2*4 + 3] == 0.0
+    assert inputs[offset + 2 * 4 + 2] == 1.0
+    assert inputs[offset + 2 * 4 + 3] == 0.0
 
     # Point 3: 7 checkers
-    assert inputs[offset + 3*4 + 2] == 1.0
-    assert inputs[offset + 3*4 + 3] == (7 - 3) / 6.0
+    assert inputs[offset + 3 * 4 + 2] == 1.0
+    assert inputs[offset + 3 * 4 + 3] == (7 - 3) / 6.0
 
     # Bar (point 24)
     bar_idx = offset + 24 * 4
@@ -89,12 +89,12 @@ def test_mbase_inputs_numpy_behavior():
     assert np.all(inputs[100:] == 0.0)
 
 
-
 def test_shape_of_output():
     board = np.zeros((2, 25), dtype=int)
     result = mxbase_inputs(board)
     assert result.shape == (2, 100)
     assert result.dtype == np.float32
+
 
 def test_single_checker_encoding():
     board = np.zeros((2, 25), dtype=int)
@@ -105,6 +105,7 @@ def test_single_checker_encoding():
     assert result[0, 2] == 0.0
     assert result[0, 3] == 0.0
 
+
 def test_two_checkers_encoding():
     board = np.zeros((2, 25), dtype=int)
     board[0, 0] = 2
@@ -113,6 +114,7 @@ def test_two_checkers_encoding():
     assert result[0, 1] == 1.0  # nc == 2
     assert result[0, 2] == 0.0
     assert result[0, 3] == 0.0
+
 
 def test_three_checkers_encoding():
     board = np.zeros((2, 25), dtype=int)
@@ -123,6 +125,7 @@ def test_three_checkers_encoding():
     assert result[0, 2] == 1.0  # nc >= 3
     assert result[0, 3] == 0.0  # exactly 3, still 0
 
+
 def test_seven_checkers_encoding():
     board = np.zeros((2, 25), dtype=int)
     board[0, 0] = 7
@@ -130,12 +133,14 @@ def test_seven_checkers_encoding():
     assert result[0, 2] == 1.0
     assert pytest.approx(result[0, 3]) == 0.5  # (7 - 3)/8
 
+
 def test_more_than_seven_checkers():
     board = np.zeros((2, 25), dtype=int)
     board[0, 0] = 11
     result = mxbase_inputs(board)
     assert result[0, 2] == 1.0
     assert pytest.approx(result[0, 3]) == 0.5 + (11 - 7) / 16.0
+
 
 def test_bar_checkers_less_than_4():
     board = np.zeros((2, 25), dtype=int)
@@ -146,6 +151,7 @@ def test_bar_checkers_less_than_4():
     assert result[0, base_idx + 1] == 1.0
     assert result[0, base_idx + 2] == 0.0
     assert result[0, base_idx + 3] == 0.0
+
 
 def test_bar_checkers_more_than_3():
     board = np.zeros((2, 25), dtype=int)

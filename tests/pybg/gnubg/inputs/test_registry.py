@@ -9,9 +9,11 @@ class DummyBoard:
     def __init__(self, val):
         self.val = val
 
+
 # Dummy encoder function
 def dummy_encoder(board):
     return [board.val] * 3  # return a list of values for testing
+
 
 def test_register_and_get_nn_inputs():
     # Clear the registry for isolated test
@@ -29,6 +31,7 @@ def test_register_and_get_nn_inputs():
     board = DummyBoard(42)
     result = registry.get_nn_inputs(board, input_type="dummy")
     assert result == [42, 42, 42]
+
 
 def test_get_nn_inputs_unknown_type():
     registry.INPUT_ENCODERS.clear()

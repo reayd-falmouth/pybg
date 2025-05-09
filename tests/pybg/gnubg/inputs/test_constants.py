@@ -38,29 +38,58 @@ def test_constant_values():
     assert c.I_ACONTAIN2 == 17
     assert c.MORE_INPUTS == 18
 
+
 def test_input_label_consistency():
     assert isinstance(c.INPUT_LABELS, list)
     assert all(isinstance(label, str) for label in c.INPUT_LABELS)
     assert len(c.INPUT_LABELS) == c.MORE_INPUTS
 
+
 def test_index_constants_unique():
     indexes = [
-        c.I_BEAROFF, c.I_HOME_BOARD, c.I_OPP_HOME_BOARD, c.I_BLOCKING,
-        c.I_OPP_BLOCKING, c.I_PRIME, c.I_ANCHOR, c.I_BACK_CHEQUER,
-        c.I_CONTAINMENT, c.I_OPP_CONTAINMENT, c.I_ADVANTAGE, c.I_ADVANTAGE2,
-        c.I_CONTACT, c.I_OPP_CONTACT, c.I_PIPCOUNT, c.I_OPP_PIPCOUNT,
-        c.I_POSITION_CLASS, c.I_ACONTAIN2
+        c.I_BEAROFF,
+        c.I_HOME_BOARD,
+        c.I_OPP_HOME_BOARD,
+        c.I_BLOCKING,
+        c.I_OPP_BLOCKING,
+        c.I_PRIME,
+        c.I_ANCHOR,
+        c.I_BACK_CHEQUER,
+        c.I_CONTAINMENT,
+        c.I_OPP_CONTAINMENT,
+        c.I_ADVANTAGE,
+        c.I_ADVANTAGE2,
+        c.I_CONTACT,
+        c.I_OPP_CONTACT,
+        c.I_PIPCOUNT,
+        c.I_OPP_PIPCOUNT,
+        c.I_POSITION_CLASS,
+        c.I_ACONTAIN2,
     ]
     assert len(indexes) == len(set(indexes)), "Duplicate index values found"
+
 
 def test_constants_within_input_vector_size():
     # Check that none of the index constants exceed the input vector size
     indexes = [
-        c.I_BEAROFF, c.I_HOME_BOARD, c.I_OPP_HOME_BOARD, c.I_BLOCKING,
-        c.I_OPP_BLOCKING, c.I_PRIME, c.I_ANCHOR, c.I_BACK_CHEQUER,
-        c.I_CONTAINMENT, c.I_OPP_CONTAINMENT, c.I_ADVANTAGE, c.I_ADVANTAGE2,
-        c.I_CONTACT, c.I_OPP_CONTACT, c.I_PIPCOUNT, c.I_OPP_PIPCOUNT,
-        c.I_POSITION_CLASS, c.I_ACONTAIN2
+        c.I_BEAROFF,
+        c.I_HOME_BOARD,
+        c.I_OPP_HOME_BOARD,
+        c.I_BLOCKING,
+        c.I_OPP_BLOCKING,
+        c.I_PRIME,
+        c.I_ANCHOR,
+        c.I_BACK_CHEQUER,
+        c.I_CONTAINMENT,
+        c.I_OPP_CONTAINMENT,
+        c.I_ADVANTAGE,
+        c.I_ADVANTAGE2,
+        c.I_CONTACT,
+        c.I_OPP_CONTACT,
+        c.I_PIPCOUNT,
+        c.I_OPP_PIPCOUNT,
+        c.I_POSITION_CLASS,
+        c.I_ACONTAIN2,
     ]
     for idx in indexes:
         assert 0 <= idx < c.INPUT_VECTOR_SIZE

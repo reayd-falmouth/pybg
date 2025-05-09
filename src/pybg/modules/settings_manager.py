@@ -71,7 +71,9 @@ class SettingsManager:
         for key, val in self.shell.settings.items():
             desc = SETTING_DEFINITIONS.get(key, {}).get("description", "")
             lines.append(f"{key:<{max_key_len}} : {str(val):<10} | {desc}")
-        return self.shell.update_output_text("\n".join(["CURRENT SETTINGS\n"] + lines), show_board=False)
+        return self.shell.update_output_text(
+            "\n".join(["CURRENT SETTINGS\n"] + lines), show_board=False
+        )
 
     def cmd_settings_help(self, args):
         lines = ["AVAILABLE SETTINGS:\n"]

@@ -16,12 +16,12 @@ POINTS_PER_QUADRANT = int(POINTS / 4)
 
 
 class PositionClass(Enum):
-    OVER = (0,0)  # Game is over (one side has no checkers on the board)
-    CRASHED = (250,200)  # A very poor (or “crashed”) position
-    CONTACT = (250,200)  # A contact position (both sides have heavy contact)
+    OVER = (0, 0)  # Game is over (one side has no checkers on the board)
+    CRASHED = (250, 200)  # A very poor (or “crashed”) position
+    CONTACT = (250, 200)  # A contact position (both sides have heavy contact)
     RACE = (214, 200)  # A pure race position (checkers are far advanced)
-    BEAROFF1 = (0,0)  # Bearoff stage 1 (significant bearing off)
-    BEAROFF2 = (0,0)  # Bearoff stage 2 (nearly finished bearing off)
+    BEAROFF1 = (0, 0)  # Bearoff stage 1 (significant bearing off)
+    BEAROFF2 = (0, 0)  # Bearoff stage 2 (nearly finished bearing off)
 
     def __init__(self, net_input_count, prune_input_count):
         self.net_input_count = net_input_count
@@ -449,7 +449,9 @@ class Position:
 
         # Opponent's side: reversed, and absolute value
         for i in range(24):
-            board[0, i] = abs(self.board_points[23 - i]) if self.board_points[23 - i] < 0 else 0
+            board[0, i] = (
+                abs(self.board_points[23 - i]) if self.board_points[23 - i] < 0 else 0
+            )
         board[0, 24] = self.opponent_bar
 
         return board

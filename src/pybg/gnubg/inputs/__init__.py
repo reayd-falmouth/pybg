@@ -5,5 +5,3 @@ from pybg.gnubg.inputs import crashed
 from pybg.gnubg.inputs import race
 from pybg.gnubg.inputs import contact
 from pybg.gnubg.inputs import bearoff
-
-
