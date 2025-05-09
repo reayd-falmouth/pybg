@@ -1,34 +1,32 @@
 import json
 import os
-from pybg.constants import SETTINGS_PATH, ASSETS_DIR
 
-SCHEMA_PATH = os.path.join(ASSETS_DIR, "settings_schema.json")
-
-def load_settings_schema():
-    with open(SCHEMA_PATH) as f:
-        return json.load(f)
-
-def load_default_settings(schema):
-    return {k: v["default"] for k, v in schema.items()}
+from pybg.constants import SETTINGS_PATH as DEFAULT_SETTINGS_PATH, ASSETS_DIR
 
 
 class SettingsManager:
     category = "Settings"
 
-    def __init__(self, shell):
-        self.shell = shell
-        self.schema = load_settings_schema()
+    def __init__(self, shell, schema_path=None, settings_path=None):
 
-        # Try to load from file, else use defaults
-        if os.path.exists(SETTINGS_PATH):
-            with open(SETTINGS_PATH) as f:
+        self.shell = shell
+        self.schema_path = schema_path or os.path.join(
+            ASSETS_DIR, "settings_schema.json"
+        )
+        self.settings_path = settings_path or DEFAULT_SETTINGS_PATH
+
+        with open(self.schema_path) as f:
+            self.schema = json.load(f)
+
+        if os.path.exists(self.settings_path):
+            with open(self.settings_path) as f:
                 self.shell.settings = json.load(f)
         else:
-            self.shell.settings = load_default_settings(self.schema)
+            self.shell.settings = {k: v["default"] for k, v in self.schema.items()}
             self.save_settings()
 
     def save_settings(self):
-        with open(SETTINGS_PATH, "w") as f:
+        with open(self.settings_path, "w") as f:
             json.dump(self.shell.settings, f, indent=4)
 
     def cmd_set(self, args):
