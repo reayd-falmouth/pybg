@@ -1,4 +1,5 @@
 import os.path
+import sys
 import time
 
 import json
@@ -14,11 +15,11 @@ from pybg.core.board import BoardError
 from pybg.core.command_router import CommandRouter
 from pybg.core.help import Help
 from pybg.core.logger import logger
+from pybg.core.player import PlayerType
+from pybg.core.sound import SoundManager
 from pybg.gnubg.match import GameState
 from pybg.gnubg.match import Match
-from pybg.core.player import PlayerType
 from pybg.gnubg.position import Position
-from pybg.core.sound import SoundManager
 
 WIDTH, HEIGHT = 1000, 600
 TITLE_SCREEN = r"""
@@ -348,6 +349,11 @@ class GameShell:
             dst = "off" if action[2] == -1 else str(action[2] + 1)
             return f"{src}/{dst}"
         return None
+
+    @staticmethod
+    def quit():
+        pygame.quit()
+        sys.exit()
 
     def __str__(self):
         return str(self.game) if self.game else "No game started. Type `new`."

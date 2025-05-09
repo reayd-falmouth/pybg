@@ -1,0 +1,46 @@
+{
+  "game_mode": {
+    "type": "choice",
+    "default": "match",
+    "description": "Choose game mode.",
+    "choices": ["match", "money"]
+  },
+  "match_length": {
+    "type": "int",
+    "default": 5,
+    "description": "Length of the match (must be an odd number > 1)."
+  },
+  "variant": {
+    "type": "choice",
+    "default": "backgammon",
+    "description": "Choose the game variant.",
+    "choices": ["backgammon", "nackgammon", "acey-deucey", "hypergammon"]
+  },
+  "jacoby": {
+    "type": "bool",
+    "default": false,
+    "description": "Enable Jacoby rule (true/false)."
+  },
+  "autodoubles": {
+    "type": "bool",
+    "default": false,
+    "description": "Enable automatic doubles on the first roll (true/false)."
+  },
+  "player_agent": {
+    "type": "choice",
+    "default": "human",
+    "description": "Player agent type.",
+    "choices": ["human", "random", "rl", "gnubg", "online"]
+  },
+  "opponent_agent": {
+    "type": "choice",
+    "default": "random",
+    "description": "Opponent agent type.",
+    "choices": ["human", "random", "rl", "gnubg", "online"]
+  },
+  "hint_top_n": {
+    "type": "int",
+    "default": 5,
+    "description": "Number of top hints to show."
+  }
+}

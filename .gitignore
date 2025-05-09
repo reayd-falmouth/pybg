@@ -172,3 +172,5 @@ cython_debug/
 *.zip
 src/ideas
 tensorboard/
+src/pybg/assets/settings.json
+src/pybg/assets/match_history.json

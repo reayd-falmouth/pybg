@@ -7,18 +7,24 @@ class HelpModule(BaseModule):
         self.shell = shell
 
     def cmd_help(self, args):
-        return self.shell.update_output_text(
-            self.shell.help.get_help(args[0]) if args else self.shell.help.get_help(),
-            show_board=False,
-        )
+        return self.shell.help.get_help(args[0]) if args else self.shell.help.get_help()
+
+    def cmd_quit(self, args):
+        self.shell.quit()
 
     def register(self):
         return (
             {
                 "help": self.cmd_help,
+                "exit": self.cmd_quit,
+                "quit": self.cmd_quit,
             },
             {},
-            {"help": "Show the help menu or help for a specific command"},
+            {
+                "help": "Show the help menu or help for a specific command.",
+                "exit": "Exit the application cleanly.",
+                "quit": "Exit the application cleanly.",
+            },
         )
 
 
