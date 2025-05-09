@@ -1,14 +1,12 @@
-import time
-
 import traceback
 from typing import Tuple
 
-from pybg.core.pub_eval import pubeval, pubeval_x
+from pybg.gnubg.pub_eval import pubeval_x
 from pybg.agents.factory import create_agent
 from pybg.core.board import BoardError
 from pybg.core.logger import logger
-from pybg.core.match import GameState
-from pybg.core.match import Resign
+from pybg.gnubg.match import GameState
+from pybg.gnubg.match import Resign
 from pybg.core.player import PlayerType
 from pybg.modules.base_module import BaseModule
 from pybg.variants import AceyDeucey, Backgammon, Hypergammon, Nackgammon

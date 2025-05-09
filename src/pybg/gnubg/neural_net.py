@@ -1,11 +1,12 @@
-# gnubg_nn.py
+# neural_net.py
 import os
 
 import numpy as np
 
 from pybg.core.board import Board
-from pybg.core.position import PositionClass
+from pybg.gnubg.position import PositionClass
 from pybg.constants import ASSETS_DIR
+from pybg.core.logger import logger
 
 WEIGHTS_FILE = f"{ASSETS_DIR}/gnubg/nngnubg.weights"
 
@@ -208,7 +209,10 @@ class GnubgEvaluator:
                 nTrained = int(params[3])
                 rBetaHidden = float(params[4])
                 rBetaOutput = float(params[5])
-                print(cInput, cHidden, cOutput, nTrained, rBetaHidden, rBetaOutput)
+
+                logger.debug(
+                    cInput, cHidden, cOutput, nTrained, rBetaHidden, rBetaOutput
+                )
 
                 # Load hidden layer weights
                 weights1 = np.zeros((cInput, cHidden), dtype=float)

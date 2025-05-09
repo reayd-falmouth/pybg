@@ -2,8 +2,8 @@ import subprocess
 import random
 import time
 import re
-from pybg.core.bearoff_database import BearoffDatabase
-from pybg.core.position import Position
+from archive.scripts.bearoff_database import BearoffDatabase
+from pybg.gnubg.position import Position
 from pybg.constants import ASSETS_DIR
 
 GNUBG_CMD = "gnubg --tty --quiet"

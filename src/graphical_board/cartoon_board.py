@@ -16,11 +16,11 @@ from pybg.constants import (
 from pybg.core.font import load_fonts
 from pybg.core.helpers import hex_to_rgb
 from pybg.core.helpers import load_games
-from pybg.graphical_board.shader import ShaderRenderer  # Import ShaderRenderer
+from graphical_board.shader import ShaderRenderer  # Import ShaderRenderer
 from pybg.core.sound import SoundManager  # Import the new class
 
 # Import the CheckerPositions2D class from your checker_positions_2d file
-from pybg.graphical_board.checker_positions import CheckerPositions
+from graphical_board.checker_positions import CheckerPositions
 
 
 class CartoonBoard:

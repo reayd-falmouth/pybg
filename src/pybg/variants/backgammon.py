@@ -1,8 +1,7 @@
 """Backgammon subclass"""
 
 from pybg.core.board import Board
-from pybg.core.match import STARTING_MATCH_ID
-from typing import List, Tuple
+from pybg.gnubg.match import STARTING_MATCH_ID
 
 STARTING_POSITION_ID = "4HPwATDgc/ABMA"
 

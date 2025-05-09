@@ -1,8 +1,7 @@
-from pybg.core.bearoff_database import BearoffDatabase
-from pybg.core.position import Position
+from archive.scripts.bearoff_database import BearoffDatabase
+from pybg.gnubg.position import Position
 from pybg.core.board import Board
-from pybg.constants import ASSETS_DIR
-from pybg.core.helpers import format_move, print_eval_results
+from pybg.core.helpers import print_eval_results
 
 # Simple in-memory cache
 position_cache = {}

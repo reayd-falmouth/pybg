@@ -1,13 +1,11 @@
 """Unit tests for backgammon.py"""
 
 import re
-from json import loads
 from typing import List, Optional, Tuple, cast
 
-import pytest
 from pybg.core.board import BoardError, GameState, Resign
 from pybg.core.player import Player, PlayerType
-from pybg.core.position import Position
+from pybg.gnubg.position import Position
 from pybg.variants.backgammon import Backgammon
 import pytest
 

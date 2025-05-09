@@ -2,7 +2,7 @@
 import pytest
 import numpy as np
 from pybg.core.board import Board
-from pybg.core.gnubg_nn import GnubgEvaluator, GnubgNetwork, encode_board
+from pybg.gnubg.neural_net import GnubgEvaluator, GnubgNetwork, encode_board
 
 pytestmark = pytest.mark.unit
 

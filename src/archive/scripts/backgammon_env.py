@@ -5,10 +5,10 @@ from gymnasium import spaces
 
 
 from pybg.core.board import Board
-from pybg.core.match import GameState
+from pybg.gnubg.match import GameState
 
 # from pybg.neuralnet.gnubg_nn import GnubgEvaluator
-from pybg.gnubg_nn.helpers import encode_board_by_size
+from pybg.gnubg.helpers import encode_board_by_size
 
 
 class BackgammonEnv(gym.Env):

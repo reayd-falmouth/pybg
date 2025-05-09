@@ -21,6 +21,8 @@ numpy = "*"
 torch = "2.3.0"
 matplotlib = "^3.10.1"
 aws-lambda-powertools = "^3.10.0"
+pyglet = "^2.1.6"
+requests = "^2.32.3"
 
 [tool.poetry.group.dev.dependencies]
 black = "^25.1.0"
@@ -28,10 +30,14 @@ pillow = "^11.1.0"
 pyinstaller = "^6.12.0"
 pytest = "^8.3.4"
 pytest-cov = "^6.0.0"
+tensorboard = "^2.19.0"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+
+
 
 [tool.poetry.group.linting.dependencies]
 ruff = "^0.0.291"
@@ -67,5 +73,4 @@ omit = [
     "*conftest.py*",  # Exclude all 'conftest.py' files, which are used by pytest for test configurations
     "*setup.py*",     # Exclude 'setup.py', typically used for package and distribution management
     "*/scripts/*",
-    "*/gnubg/*",
 ]

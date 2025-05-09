@@ -8,7 +8,7 @@ from pybg.constants import (
     ASSETS_DIR,
 )
 from pybg.core.font import load_fonts, get_dynamic_font
-from pybg.core.position import Position
+from pybg.gnubg.position import Position
 
 
 class CheckerPositions:
