@@ -118,38 +118,38 @@ def mxbase_inputs(an_board: np.ndarray) -> np.ndarray:
     return inputs
 
 
-def base_inputs_250(an_board: np.ndarray) -> np.ndarray:
-    """
-    Populate the 302-d input vector for both players from the board state.
-
-    Parameters:
-        an_board (np.ndarray): Shape (2, 25) representing the board for both players.
-
-    Returns:
-        np.ndarray: Input vector of shape (302,)
-    """
-    assert an_board.shape == (NUM_SIDES, NUM_POINTS)
-
-    inputs = np.zeros(2 * (6 * NUM_POINTS + 1), dtype=np.float32)  # 302
-
-    for s in range(NUM_SIDES):
-        board = an_board[s]
-        offset = s * 6 * NUM_POINTS + 1  # Start at 1, skip index 0
-        k = 0
-        pip_sum = 0
-
-        for i in range(NUM_POINTS):
-            nc = board[i]
-            inputs[offset + k] = float(nc == 1); k += 1
-            inputs[offset + k] = float(nc == 2); k += 1
-            inputs[offset + k] = float(nc == 3); k += 1
-            inputs[offset + k] = float(nc == 4); k += 1
-            inputs[offset + k] = float(nc == 5); k += 1
-            inputs[offset + k] = float(nc >= 6); k += 1
-
-            if nc > 6:
-                pip_sum += (nc - 6) * (i + 1)
-
-        inputs[offset + k] = float(pip_sum)
-
-    return inputs
+# def base_inputs_250(an_board: np.ndarray) -> np.ndarray:
+#     """
+#     Populate the 302-d input vector for both players from the board state.
+#
+#     Parameters:
+#         an_board (np.ndarray): Shape (2, 25) representing the board for both players.
+#
+#     Returns:
+#         np.ndarray: Input vector of shape (302,)
+#     """
+#     assert an_board.shape == (NUM_SIDES, NUM_POINTS)
+#
+#     inputs = np.zeros(2 * (6 * NUM_POINTS + 1), dtype=np.float32)  # 302
+#
+#     for s in range(NUM_SIDES):
+#         board = an_board[s]
+#         offset = s * 6 * NUM_POINTS + 1  # Start at 1, skip index 0
+#         k = 0
+#         pip_sum = 0
+#
+#         for i in range(NUM_POINTS):
+#             nc = board[i]
+#             inputs[offset + k] = float(nc == 1); k += 1
+#             inputs[offset + k] = float(nc == 2); k += 1
+#             inputs[offset + k] = float(nc == 3); k += 1
+#             inputs[offset + k] = float(nc == 4); k += 1
+#             inputs[offset + k] = float(nc == 5); k += 1
+#             inputs[offset + k] = float(nc >= 6); k += 1
+#
+#             if nc > 6:
+#                 pip_sum += (nc - 6) * (i + 1)
+#
+#         inputs[offset + k] = float(pip_sum)
+#
+#     return inputs
