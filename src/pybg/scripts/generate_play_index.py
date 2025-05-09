@@ -1,6 +1,6 @@
 import pickle
 from pybg.core.board import Board
-from pybg.core.match import GameState
+from pybg.gnubg.match import GameState
 from itertools import product
 import random
 

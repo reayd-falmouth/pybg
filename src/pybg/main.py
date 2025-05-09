@@ -14,13 +14,11 @@ from pybg.core.board import BoardError
 from pybg.core.command_router import CommandRouter
 from pybg.core.help import Help
 from pybg.core.logger import logger
-from pybg.core.match import GameState
-from pybg.core.match import Match
+from pybg.gnubg.match import GameState
+from pybg.gnubg.match import Match
 from pybg.core.player import PlayerType
-from pybg.core.position import Position
+from pybg.gnubg.position import Position
 from pybg.core.sound import SoundManager
-from pybg.modules.history_manager import HistoryManager
-
 
 WIDTH, HEIGHT = 1000, 600
 TITLE_SCREEN = r"""

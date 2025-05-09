@@ -1,7 +1,7 @@
 """AceyDeucy subclass"""
 
 from pybg.core.board import Board
-from pybg.core.match import STARTING_MATCH_ID
+from pybg.gnubg.match import STARTING_MATCH_ID
 
 # AceyDeucy board settings
 STARTING_POSITION_ID = "AAAA/38AAAD/fw"

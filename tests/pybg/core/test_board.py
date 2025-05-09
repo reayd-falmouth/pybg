@@ -12,7 +12,7 @@ from pybg.core.board import (
     Resign,
 )
 from pybg.core.player import Player, PlayerType
-from pybg.core.position import Position
+from pybg.gnubg.position import Position
 
 pytestmark = pytest.mark.unit
 

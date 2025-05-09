@@ -11,9 +11,9 @@ from typing import Any, TypeVar
 from typing import List, NamedTuple, Optional, Tuple
 
 from pybg.core.logger import logger
-from pybg.core.match import GameState, Match, Resign
+from pybg.gnubg.match import GameState, Match, Resign
 from pybg.core.player import Player, PlayerType
-from pybg.core.position import Position
+from pybg.gnubg.position import Position
 
 ObsType = TypeVar("ObsType")
 

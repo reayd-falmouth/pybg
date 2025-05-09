@@ -8,7 +8,7 @@ import struct
 
 from pybg.core.board import Board
 from pybg.core.logger import logger
-from pybg.core.position import Position, PositionClass
+from pybg.gnubg.position import Position, PositionClass
 from pybg.constants import ASSETS_DIR
 
 CACHE_FILE = f"{ASSETS_DIR}/bearoff_cache.json"

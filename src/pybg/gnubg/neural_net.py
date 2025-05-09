@@ -1,10 +1,10 @@
-# gnubg_nn.py
+# neural_net.py
 import os
 
 import numpy as np
 
 from pybg.core.board import Board
-from pybg.core.position import PositionClass
+from pybg.gnubg.position import PositionClass
 from pybg.constants import ASSETS_DIR
 
 WEIGHTS_FILE = f"{ASSETS_DIR}/gnubg/nngnubg.weights"

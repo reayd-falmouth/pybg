@@ -1,10 +1,10 @@
 import random
 import math
 from typing import List
-from pybg.core.pub_eval import pubeval_x, pubeval, pubeval_to_win_probability
+from pybg.gnubg.pub_eval import pubeval_x, pubeval, pubeval_to_win_probability
 from pybg.core.board import Board
-from pybg.core.position import PositionClass
-from pybg.core.bearoff_database import BearoffDatabase
+from pybg.gnubg.position import PositionClass
+from pybg.gnubg.bearoff_database import BearoffDatabase
 
 
 def n_ply_evaluate(

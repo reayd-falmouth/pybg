@@ -1,6 +1,6 @@
 """Unit tests for position.py"""
 
-from pybg.core.position import Position
+from pybg.gnubg.position import Position
 from pybg.variants.backgammon import (
     STARTING_POSITION_ID as BACKGAMMON_STARTING_POSITION_ID,
 )

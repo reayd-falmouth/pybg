@@ -1,6 +1,6 @@
 """Unit tests for match.py"""
 
-from pybg.core.match import STARTING_MATCH_ID, Match
+from pybg.gnubg.match import STARTING_MATCH_ID, Match
 from pybg.core.player import Player, PlayerType
 import pytest
 

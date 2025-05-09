@@ -6,6 +6,7 @@ import os
 import struct
 from enum import Enum
 from typing import List, Optional, Tuple
+import numpy as np
 
 basename = os.path.basename(__file__)
 dirname = os.path.dirname(__file__)
@@ -15,12 +16,16 @@ POINTS_PER_QUADRANT = int(POINTS / 4)
 
 
 class PositionClass(Enum):
-    OVER = 0  # Game is over (one side has no checkers on the board)
-    CRASHED = 1  # A very poor (or “crashed”) position
-    CONTACT = 2  # A contact position (both sides have heavy contact)
-    RACE = 3  # A pure race position (checkers are far advanced)
-    BEAROFF1 = 4  # Bearoff stage 1 (significant bearing off)
-    BEAROFF2 = 5  # Bearoff stage 2 (nearly finished bearing off)
+    OVER = (0,0)  # Game is over (one side has no checkers on the board)
+    CRASHED = (250,200)  # A very poor (or “crashed”) position
+    CONTACT = (250,200)  # A contact position (both sides have heavy contact)
+    RACE = (214, 200)  # A pure race position (checkers are far advanced)
+    BEAROFF1 = (0,0)  # Bearoff stage 1 (significant bearing off)
+    BEAROFF2 = (0,0)  # Bearoff stage 2 (nearly finished bearing off)
+
+    def __init__(self, net_input_count, prune_input_count):
+        self.net_input_count = net_input_count
+        self.prune_input_count = prune_input_count
 
 
 @dataclasses.dataclass(frozen=True)
@@ -281,36 +286,6 @@ class Position:
 
         return position_id
 
-    def to_array(self) -> list:
-        """
-        Return a 28-element array representing the board state,
-        as expected by the GNUBG pub_eval evaluation.
-
-        Convention (from pub_eval.c):
-          - Element 0: opponent's checkers on the bar (stored as a negative integer)
-          - Elements 1 to 24: board locations 1-24 (from computer's perspective)
-              The ordering should be such that element 1 corresponds to board point 24,
-              and element 24 corresponds to board point 1.
-              In these locations, computer's checkers are positive and opponent's are negative.
-          - Element 25: computer's checkers on the bar (a positive integer)
-          - Element 26: computer's checkers borne off (a positive integer)
-          - Element 27: opponent's checkers borne off (a negative integer)
-        """
-        pos = [0] * 28
-        # Element 0: opponent's bar (make it negative)
-        pos[0] = -self.opponent_bar
-        # Elements 1 to 24: reverse the board_points order.
-        board_reversed = list(self.board_points[::-1])
-        for i in range(24):
-            pos[1 + i] = board_reversed[i]
-        # Element 25: computer's bar
-        pos[25] = self.player_bar
-        # Element 26: computer's borne off
-        pos[26] = self.player_off
-        # Element 27: opponent's borne off (negative)
-        pos[27] = -self.opponent_off
-        return pos
-
     def classify(self) -> PositionClass:
         """
         GNUBG-style classification of the board position.
@@ -378,6 +353,36 @@ class Position:
 
         return PositionClass.BEAROFF2
 
+    def to_array(self) -> list:
+        """
+        Return a 28-element array representing the board state,
+        as expected by the GNUBG pub_eval evaluation.
+
+        Convention (from pub_eval.c):
+          - Element 0: opponent's checkers on the bar (stored as a negative integer)
+          - Elements 1 to 24: board locations 1-24 (from computer's perspective)
+              The ordering should be such that element 1 corresponds to board point 24,
+              and element 24 corresponds to board point 1.
+              In these locations, computer's checkers are positive and opponent's are negative.
+          - Element 25: computer's checkers on the bar (a positive integer)
+          - Element 26: computer's checkers borne off (a positive integer)
+          - Element 27: opponent's checkers borne off (a negative integer)
+        """
+        pos = [0] * 28
+        # Element 0: opponent's bar (make it negative)
+        pos[0] = -self.opponent_bar
+        # Elements 1 to 24: reverse the board_points order.
+        board_reversed = list(self.board_points[::-1])
+        for i in range(24):
+            pos[1 + i] = board_reversed[i]
+        # Element 25: computer's bar
+        pos[25] = self.player_bar
+        # Element 26: computer's borne off
+        pos[26] = self.player_off
+        # Element 27: opponent's borne off (negative)
+        pos[27] = -self.opponent_off
+        return pos
+
     def to_board_array(self) -> Tuple[list, list]:
         """
         Convert the board state into two lists of 25 integers each – one for each side.
@@ -426,3 +431,25 @@ class Position:
         board_opp.append(abs(self.opponent_bar))
 
         return board_opp, board_player
+
+    def to_gnubg_input_board(self) -> np.ndarray:
+        """
+        Returns a (2, 25) np.ndarray to pass to GNUBG's getInputs() C function.
+
+        This corresponds to:
+            - anBoard[0][i]: opponent's checkers on point i+1, plus bar at index 24
+            - anBoard[1][i]: player's checkers on point i+1, plus bar at index 24
+        """
+        board = np.zeros((2, 25), dtype=np.int32)
+
+        # Player's side: direct layout
+        for i in range(24):
+            board[1, i] = max(0, self.board_points[i])
+        board[1, 24] = self.player_bar
+
+        # Opponent's side: reversed, and absolute value
+        for i in range(24):
+            board[0, i] = abs(self.board_points[23 - i]) if self.board_points[23 - i] < 0 else 0
+        board[0, 24] = self.opponent_bar
+
+        return board

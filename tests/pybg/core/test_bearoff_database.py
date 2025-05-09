@@ -1,7 +1,7 @@
 import pytest
-from pybg.core.bearoff_database import BearoffDatabase
+from pybg.gnubg.bearoff_database import BearoffDatabase
 from pybg.core.board import Board
-from pybg.core.position import Position, PositionClass
+from pybg.gnubg.position import Position, PositionClass
 
 pytestmark = pytest.mark.unit
 
