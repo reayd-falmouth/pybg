@@ -93,7 +93,6 @@ class HistoryManager(BaseModule):
             self.current_move_index = 0
 
     def next_move(self):
-        logger.debug(f"next move")
         if not self.match_refs:
             return
         match_ref = self.get_current_match_ref()
