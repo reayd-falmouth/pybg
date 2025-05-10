@@ -32,9 +32,8 @@ class CoreModule(BaseModule):
         moves = []
         for arg in move_args:
             if "/" not in arg:
-                hint = self.cmd_hint
                 raise BoardError(
-                    f"Invalid move format: '{arg}'. Expected format: source/dest.\n\nLegal moves:\n{hint}"
+                    f"Invalid move format: '{arg}'. Expected format: source/dest.\n\n"
                 )
             try:
                 source_str, dest_str = arg.split("/")
@@ -42,9 +41,8 @@ class CoreModule(BaseModule):
                 dest = int(dest_str) - 1
                 moves.append((source, dest))
             except ValueError:
-                hint = self.cmd_hint
                 raise BoardError(
-                    f"Invalid numbers in move: '{arg}'. Must be integers like 13/12.\n\nLegal moves:\n{hint}"
+                    f"Invalid numbers in move: '{arg}'. Must be integers like 13/12.\n\n"
                 )
 
         # Validate against legal moves
@@ -72,16 +70,12 @@ class CoreModule(BaseModule):
         }.get(s.settings["variant"], Backgammon)
 
         s.game = game_class()
-        s.game.ref = s.current_match_ref
         s.game.match.length = (
             s.settings["match_length"] if s.settings["game_mode"] == "match" else 0
         )
         s.game.auto_doubles = bool(s.settings["autodoubles"])
         s.game.jacoby = bool(s.settings["jacoby"])
         s.game.start()
-        s.log_current_state(
-            f"Player {s.game.match.turn} wins the opening roll. Dice {s.game.match.dice}"
-        )
         s.player0_agent = create_agent(
             s.settings["player_agent"], PlayerType.ZERO, s.game
         )
@@ -123,9 +117,9 @@ class CoreModule(BaseModule):
     def cmd_roll(self, args):
         self.shell.guard_game()
         self.shell.game.roll()
-        self.shell.log_current_state(
-            f"{self.shell.game.match.turn.name} rolled {self.shell.game.match.dice}"
-        )
+        # self.shell.log_current_state(
+        #     f"{self.shell.game.match.turn.name} rolled {self.shell.game.match.dice}"
+        # )
         return self.shell.update_output_text(show_board=True)
 
     def cmd_move(self, args):
@@ -134,7 +128,7 @@ class CoreModule(BaseModule):
         try:
             moves = self.parse_moves(args)
             s.game.play(moves)
-            s.log_current_state(f"{s.game.match.turn.name} moved {moves}")
+            # s.log_current_state(f"{s.game.match.turn.name} moved {moves}")
         except Exception as e:
             logger.error("Move error:\n" + traceback.format_exc())
             return f"Invalid move: {e}"
@@ -165,93 +159,8 @@ class CoreModule(BaseModule):
                 "backgammon": Resign.BACKGAMMON,
             }
             s.game.resign(resign_map[args[0]])
-            s.log_current_state(f"{s.game.match.turn.name} resigns a {args[0]}")
             return s.update_output_text(show_board=True)
         raise ValueError("Usage: resign [single|gammon|backgammon]")
-
-    def cmd_hint(self, args):
-        s = self.shell
-
-        # Check if user typed a number after "hint"
-        if args and args[0].isdigit():
-            max_hint_moves = int(args[0])
-        else:
-            max_hint_moves = s.settings.get("hint_top_n", 5)
-
-        def format_point(point: int) -> str:
-            if point == -1:
-                return "bar"
-            elif point == 0:
-                return "off"
-            else:
-                return str(point)
-
-        if s.game is None:
-            return "There is no game started. Type `new` to start a game."
-
-        if s.game.match.player != s.game.player.player_type:
-            return "It's not your turn."
-
-        match = s.game.match
-
-        if match.game_state == GameState.RESIGNED:
-            return f"Your opponent has offered to resign a {match.resign.phrase}, accept or reject?"
-
-        if match.game_state == GameState.ROLLED:
-            plays = s.game.generate_plays()
-            if not plays:
-                return "No legal moves. Resign or end turn."
-
-            # 🧠 Evaluate each play
-            evaluated_plays = []
-            for play in plays:
-                position = play.position
-                pos_array = position.to_array()
-                is_race = position.classify().name == "RACE"
-                eval_score = pubeval_x(is_race, pos_array)
-                evaluated_plays.append((eval_score, play))
-
-            # 🔥 Sort plays by best evaluation
-            evaluated_plays.sort(reverse=True, key=lambda x: x[0])
-
-            # ✂️ Prune to top 5
-            evaluated_plays = evaluated_plays[:max_hint_moves]
-
-            hint_lines = []
-
-            # First, find the maximum move string length
-            move_strings = []
-            for score, play in evaluated_plays:
-                move_str = ""
-                for m in play.moves:
-                    src = format_point(m.source + 1)
-                    dst = format_point(m.destination + 1)
-                    move_str += f"{src}/{dst} "
-                move_strings.append(move_str.strip())
-
-            max_move_length = max(len(ms) for ms in move_strings)
-
-            # Now, format nicely
-            for index, ((score, play), move_str) in enumerate(
-                zip(evaluated_plays, move_strings), start=1
-            ):
-                prefix = "> " if index == 1 else "  "  # Best move gets '>'
-                hint_lines.append(
-                    f"{prefix}{index:2d}. {move_str.ljust(max_move_length)}   {score:+.3f}"
-                )
-
-            return self.shell.update_output_text(
-                output_message="\n".join(hint_lines), show_board=True
-            )
-
-        if match.game_state == GameState.DOUBLED:
-            return f"Cube offered at {match.cube_value}, take, drop or redouble?"
-        if match.game_state == GameState.ON_ROLL:
-            return "Roll, double or resign?"
-        if match.game_state == GameState.TAKE:
-            return "Double accepted, roll or resign?"
-
-        return ""
 
     def cmd_show(self, args):
         return self.shell.update_output_text(show_board=True)
@@ -259,7 +168,7 @@ class CoreModule(BaseModule):
     def _basic(self, cmd):
         self.shell.guard_game()
         getattr(self.shell.game, cmd)()
-        self.shell.log_current_state(f"{self.shell.game.match.turn.name} {cmd}s")
+        # self.shell.log_current_state(f"{self.shell.game.match.turn.name} {cmd}s")
         return self.shell.update_output_text(show_board=True)
 
     def register(self):
@@ -275,7 +184,7 @@ class CoreModule(BaseModule):
                 "accept": self.cmd_accept,
                 "reject": self.cmd_reject,
                 "resign": self.cmd_resign,
-                "hint": self.cmd_hint,
+                # "hint": self.cmd_hint,
                 "show": self.cmd_show,
             },
             {},
@@ -290,7 +199,7 @@ class CoreModule(BaseModule):
                 "reject": "Rejects a resignation",
                 "resign": "Resign (single, gammon, backgammon)",
                 "debug": "Debug current game state",
-                "hint": "Show your legal moves or advice",
+                # "hint": "Show your legal moves or advice",
                 "show": "Prints the board to screen",
             },
         )
