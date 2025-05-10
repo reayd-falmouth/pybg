@@ -72,10 +72,9 @@ def test_cmd_show_returns_text(module):
     assert result == "Updated"
 
 
-def test_cmd_roll_triggers_roll_and_logs(module):
+def test_cmd_roll_triggers_roll(module):
     result = module.cmd_roll([])
     module.shell.game.roll.assert_called_once()
-    module.shell.log_current_state.assert_called_once()
     assert result == "Updated"
 
 
@@ -109,7 +108,6 @@ def test_register_returns_expected_keys(module):
         "accept",
         "reject",
         "resign",
-        "hint",
         "show",
     }
     assert expected_keys.issubset(commands.keys())

@@ -32,9 +32,8 @@ class CoreModule(BaseModule):
         moves = []
         for arg in move_args:
             if "/" not in arg:
-                hint = self.cmd_hint
                 raise BoardError(
-                    f"Invalid move format: '{arg}'. Expected format: source/dest.\n\nLegal moves:\n{hint}"
+                    f"Invalid move format: '{arg}'. Expected format: source/dest.\n\n"
                 )
             try:
                 source_str, dest_str = arg.split("/")
@@ -42,9 +41,8 @@ class CoreModule(BaseModule):
                 dest = int(dest_str) - 1
                 moves.append((source, dest))
             except ValueError:
-                hint = self.cmd_hint
                 raise BoardError(
-                    f"Invalid numbers in move: '{arg}'. Must be integers like 13/12.\n\nLegal moves:\n{hint}"
+                    f"Invalid numbers in move: '{arg}'. Must be integers like 13/12.\n\n"
                 )
 
         # Validate against legal moves
