@@ -15,9 +15,11 @@ class MoveEntry(TypedDict):
     game_id: str
     message: str
 
+
 class MatchHistoryEntry(TypedDict):
     created: str
     moves: List[MoveEntry]
+
 
 class HistoryManager(BaseModule):
     category = "History"
@@ -31,23 +33,16 @@ class HistoryManager(BaseModule):
         self.current_move_index: int = 0
         self.load_from_file()
 
-    def record_move(
-        self, match_ref: str, game_id: str, message: str = ""
-    ):
+    def record_move(self, match_ref: str, game_id: str, message: str = ""):
         now = datetime.now().isoformat()
 
         if match_ref not in self.matches:
-            self.matches[match_ref] = {
-                "created": now,
-                "moves": []
-            }
+            self.matches[match_ref] = {"created": now, "moves": []}
             self.match_refs.append(match_ref)
 
-        self.matches[match_ref]["moves"].append({
-            "timestamp": now,
-            "game_id": game_id,
-            "message": message
-        })
+        self.matches[match_ref]["moves"].append(
+            {"timestamp": now, "game_id": game_id, "message": message}
+        )
         self.current_move_index = len(self.matches[match_ref]["moves"]) - 1
         self.save_to_file(f"{ASSETS_DIR}/match_history.json")
 
@@ -81,7 +76,9 @@ class HistoryManager(BaseModule):
         lines = [f"LOG for Match {match_ref[:8]} (Moves: {len(moves)}):\n"]
         for i, m in enumerate(moves):
             prefix = "> " if i == self.current_move_index else "  "
-            lines.append(f"{prefix}{i + 1:2d}. {m['message']}") # | {m['game_id']} | {m['timestamp']}")
+            lines.append(
+                f"{prefix}{i + 1:2d}. {m['message']}"
+            )  # | {m['game_id']} | {m['timestamp']}")
 
         return self.shell.update_output_text("\n".join(lines), show_board=True)
 
@@ -175,14 +172,16 @@ class HistoryManager(BaseModule):
 
         # Otherwise, activate browser from the top
         if not self.match_refs:
-            return self.shell.update_output_text("No match history available.", show_board=True)
+            return self.shell.update_output_text(
+                "No match history available.", show_board=True
+            )
 
         self.current_match_index = 0
         self.current_move_index = 0
         self.load_from_file()
         return self.shell.update_output_text(
             "History browser activated. Use up/down and left/right to navigate.",
-            show_board=True
+            show_board=True,
         )
 
     def cmd_goto(self, args):
@@ -213,9 +212,7 @@ class HistoryManager(BaseModule):
         return self.shell.update_output_text("Deleted current match.")
 
     def cmd_save_history(self, args):
-        self.save_to_file(
-            f"{ASSETS_DIR}/match_history.json"
-        )
+        self.save_to_file(f"{ASSETS_DIR}/match_history.json")
         return self.shell.update_output_text("Match history saved.")
 
     def handle_event(self, event):
@@ -225,7 +222,7 @@ class HistoryManager(BaseModule):
             self.record_move(
                 match_ref=event.dict["match_ref"],
                 game_id=event.dict["game_id"],
-                message=event.dict.get("message", "")
+                message=event.dict.get("message", ""),
             )
             return  # ✅ Done, exit early
 

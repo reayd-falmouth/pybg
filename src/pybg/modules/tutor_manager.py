@@ -10,6 +10,7 @@ from pybg.gnubg.match import GameState
 from pybg.core.logger import logger
 from pybg.core.board import Play
 
+
 class TutorManager(BaseModule):
     category = "Tutor"
 
@@ -31,20 +32,27 @@ class TutorManager(BaseModule):
             self.evaluated_plays.append((score, play))
 
         self.evaluated_plays.sort(reverse=True, key=lambda x: x[0])
-        self.evaluated_plays = self.evaluated_plays[:self.max_hint_moves]
+        self.evaluated_plays = self.evaluated_plays[: self.max_hint_moves]
         self.current_hint_index = 0
 
     def format_play_moves(self, play: Play) -> str:
         def format_point(p: int) -> str:
             return "bar" if p == -1 else "off" if p == 0 else str(p)
 
-        return " ".join(f"{format_point(m.source + 1)}/{format_point(m.destination + 1)}" for m in play.moves)
+        return " ".join(
+            f"{format_point(m.source + 1)}/{format_point(m.destination + 1)}"
+            for m in play.moves
+        )
 
     def cmd_hint(self, args):
         s = self.shell
         s.active_module = "hint"
         # Check if user typed a number after "hint"
-        self.max_hint_moves = int(args[0]) if args and args[0].isdigit() else s.settings.get("hint_top_n", 5)
+        self.max_hint_moves = (
+            int(args[0])
+            if args and args[0].isdigit()
+            else s.settings.get("hint_top_n", 5)
+        )
 
         if not s.game:
             return "There is no game started. Type `new` to start a game."
@@ -121,10 +129,12 @@ class TutorManager(BaseModule):
         if not args or args[0] not in valid_modes:
             return self.shell.update_output_text(
                 "Usage: tutor_mode [regular|tutor|training|competition]",
-                show_board=False
+                show_board=False,
             )
         self.tutor_mode = args[0]
-        return self.shell.update_output_text(f"Tutor mode set to: {self.tutor_mode}", show_board=False)
+        return self.shell.update_output_text(
+            f"Tutor mode set to: {self.tutor_mode}", show_board=False
+        )
 
     def register(self):
         return (
@@ -138,6 +148,7 @@ class TutorManager(BaseModule):
                 "tutor_mode": "Set hint mode: regular, tutor, training, competition",
             },
         )
+
 
 def register(shell):
     mod = TutorManager(shell)

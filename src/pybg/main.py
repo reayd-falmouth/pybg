@@ -169,7 +169,9 @@ class GameShell:
     ):
         move_block = f"\n\n{opponent_move_str}" if opponent_move_str else ""
         header = str(self) if show_board else ""
-        self.output_text = header + move_block + ("\n\n" + output_message if output_message else "")
+        self.output_text = (
+            header + move_block + ("\n\n" + output_message if output_message else "")
+        )
         return self.output_text
 
     def run_command(self, command: str, suppress_board: bool = False):
